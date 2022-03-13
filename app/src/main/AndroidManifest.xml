@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".MateriSubatomik"
+            android:exported="false" />
+        <activity
             android:name=".MateriPengantar"
             android:exported="false" />
         <activity

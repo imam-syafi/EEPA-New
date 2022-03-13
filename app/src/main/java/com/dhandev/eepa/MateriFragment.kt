@@ -34,6 +34,11 @@ class MateriFragment : Fragment() {
             val intent = Intent(activity, MateriPengantar::class.java)
             startActivity(intent)
         }
+
+        binding.subatomik.setOnClickListener {
+            val intent = Intent(activity, MateriSubatomik::class.java)
+            startActivity(intent)
+        }
         return root
     }
 }

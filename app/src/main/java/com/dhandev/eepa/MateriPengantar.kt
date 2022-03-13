@@ -1,14 +1,10 @@
 package com.dhandev.eepa
 
-import android.app.Activity
-import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.core.widget.TextViewCompat
 import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
 
 
@@ -24,6 +20,7 @@ class MateriPengantar : AppCompatActivity() {
         binding = ActivityMateriPengantarBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
         loadUkuranbaru()
+        loadLatarBaru()
 
         with(binding){
             setContentView(root)
@@ -44,15 +41,13 @@ class MateriPengantar : AppCompatActivity() {
             toggleGroup.addOnButtonCheckedListener{toggleGroup, checkedId, isChecked ->
                 if (isChecked){
                     when(checkedId){
-                        R.id.btnSmall -> gantiUkuran(R.style.FontParagrafSmall)
-                        R.id.btnMedium -> gantiUkuran(R.style.FontParagraf)
-                        R.id.btnLarge -> gantiUkuran(R.style.FontParagrafLarge)
-//                        R.id.btnMedium -> body1.setTextAppearance(R.style.FontParagraf)
-//                        R.id.btnLarge -> body1.setTextAppearance(R.style.FontParagrafLarge)
+                        R.id.btnSmall -> gantiUkuran(R.style.FontParagrafSmall, toggleGroup.checkedButtonId)
+                        R.id.btnMedium -> gantiUkuran(R.style.FontParagraf, toggleGroup.checkedButtonId)
+                        R.id.btnLarge -> gantiUkuran(R.style.FontParagrafLarge, toggleGroup.checkedButtonId)
                     }
                 } else {
                     if (toggleGroup.checkedButtonId == View.NO_ID){
-                        body1.setTextAppearance(R.style.FontParagraf)
+                        gantiUkuran(R.style.FontParagraf, toggleGroup.checkedButtonId)
                     }
                 }
 
@@ -61,34 +56,60 @@ class MateriPengantar : AppCompatActivity() {
             toggleGroupColor.addOnButtonCheckedListener{toggleGroup, checkedId, isChecked ->
                 if (isChecked){
                     when(checkedId){
-                        R.id.btnGreen -> latar.setBackgroundColor(getColor(R.color.greenRead))
-                        R.id.btnPeach -> latar.setBackgroundColor(getColor(R.color.peachRead))
-                        R.id.btnOrange -> latar.setBackgroundColor(getColor(R.color.orangeRead))
+                        R.id.btnGreen -> gantiLatar(R.color.greenRead, toggleGroupColor.checkedButtonId)
+                        R.id.btnPeach -> gantiLatar(R.color.peachRead, toggleGroupColor.checkedButtonId)
+                        R.id.btnOrange -> gantiLatar(R.color.orangeRead, toggleGroupColor.checkedButtonId)
                     }
                 } else {
                     if (toggleGroup.checkedButtonId == View.NO_ID){
-                        latar.setBackgroundColor(getColor(R.color.white))
+                        gantiLatar(R.color.white, toggleGroupColor.checkedButtonId)
                     }
                 }
             }
         }
     }
 
-    private fun gantiUkuran(fontParagrafSmall: Int) {
+    private fun gantiLatar(greenRead: Int, pressed: Int) {
+        val latarBaru: Int = greenRead
+        val tombol: Int = pressed
+        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        Editor.putInt("gantiLatar", latarBaru)
+        Editor.putInt("tombolTerpilih", tombol)
+        Editor.apply()
+        Editor.commit()
+        loadLatarBaru()
+    }
+
+    private fun loadLatarBaru() {
+        val sharedLatarId = sharedPred.getInt("gantiLatar", 0)
+        val sharedTombolId = sharedPred.getInt("tombolTerpilih", 3)
+        if (sharedLatarId.equals(0) && sharedTombolId.equals(3)){
+            binding.latar.setBackgroundColor(getColor(R.color.white))
+        } else {
+            binding.latar.setBackgroundColor(getColor(sharedLatarId))
+            binding.toggleGroupColor.check(sharedTombolId)
+        }
+    }
+
+    private fun gantiUkuran(fontParagrafSmall: Int, checkedButtonId: Int) {
         val ukuranBaru: Int = fontParagrafSmall
+        val tombolUkuran : Int = checkedButtonId
         val Editor:SharedPreferences.Editor = sharedPred.edit()
         Editor.putInt("ukuranBaru", ukuranBaru)
+        Editor.putInt("tombolUkuranTerpilih", tombolUkuran)
         Editor.apply()
         Editor.commit()
         loadUkuranbaru()
     }
 
     private fun loadUkuranbaru(){
-        val sharedId = sharedPred.getInt("ukuranBaru", 0)
-        if (sharedId.equals(0)){
+        val sharedUkuranId = sharedPred.getInt("ukuranBaru", 0)
+        val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
+        if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
         } else {
-            binding.body1.setTextAppearance(sharedId)
+            binding.body1.setTextAppearance(sharedUkuranId)
+            binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }
 

@@ -22,6 +22,8 @@ class MateriPengantar : AppCompatActivity() {
         setContentView(R.layout.activity_materi_pengantar)
 
         binding = ActivityMateriPengantarBinding.inflate(layoutInflater)
+        sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        loadUkuranbaru()
 
         with(binding){
             setContentView(root)
@@ -42,9 +44,11 @@ class MateriPengantar : AppCompatActivity() {
             toggleGroup.addOnButtonCheckedListener{toggleGroup, checkedId, isChecked ->
                 if (isChecked){
                     when(checkedId){
-                        R.id.btnSmall -> body1.setTextAppearance(R.style.FontParagrafSmall)
-                        R.id.btnMedium -> body1.setTextAppearance(R.style.FontParagraf)
-                        R.id.btnLarge -> body1.setTextAppearance(R.style.FontParagrafLarge)
+                        R.id.btnSmall -> gantiUkuran(R.style.FontParagrafSmall)
+                        R.id.btnMedium -> gantiUkuran(R.style.FontParagraf)
+                        R.id.btnLarge -> gantiUkuran(R.style.FontParagrafLarge)
+//                        R.id.btnMedium -> body1.setTextAppearance(R.style.FontParagraf)
+//                        R.id.btnLarge -> body1.setTextAppearance(R.style.FontParagrafLarge)
                     }
                 } else {
                     if (toggleGroup.checkedButtonId == View.NO_ID){
@@ -69,4 +73,23 @@ class MateriPengantar : AppCompatActivity() {
             }
         }
     }
+
+    private fun gantiUkuran(fontParagrafSmall: Int) {
+        val ukuranBaru: Int = fontParagrafSmall
+        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        Editor.putInt("ukuranBaru", ukuranBaru)
+        Editor.apply()
+        Editor.commit()
+        loadUkuranbaru()
+    }
+
+    private fun loadUkuranbaru(){
+        val sharedId = sharedPred.getInt("ukuranBaru", 0)
+        if (sharedId.equals(0)){
+            binding.body1.setTextAppearance(R.style.FontParagraf)
+        } else {
+            binding.body1.setTextAppearance(sharedId)
+        }
+    }
+
 }

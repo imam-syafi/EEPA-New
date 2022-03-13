@@ -1,0 +1,72 @@
+package com.dhandev.eepa
+
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
+import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.core.widget.TextViewCompat
+import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
+
+
+class MateriPengantar : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMateriPengantarBinding
+    private lateinit var sharedPred : SharedPreferences
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_materi_pengantar)
+
+        binding = ActivityMateriPengantarBinding.inflate(layoutInflater)
+
+        with(binding){
+            setContentView(root)
+            aturTeks.visibility = View.GONE
+
+            binding.arrowBack.setOnClickListener {
+                onBackPressed()
+            }
+
+            setText.setOnClickListener {
+                if (aturTeks.isVisible){
+                    aturTeks.visibility = View.GONE
+                } else {
+                    aturTeks.visibility = View.VISIBLE
+                }
+            }
+
+            toggleGroup.addOnButtonCheckedListener{toggleGroup, checkedId, isChecked ->
+                if (isChecked){
+                    when(checkedId){
+                        R.id.btnSmall -> body1.setTextAppearance(R.style.FontParagrafSmall)
+                        R.id.btnMedium -> body1.setTextAppearance(R.style.FontParagraf)
+                        R.id.btnLarge -> body1.setTextAppearance(R.style.FontParagrafLarge)
+                    }
+                } else {
+                    if (toggleGroup.checkedButtonId == View.NO_ID){
+                        body1.setTextAppearance(R.style.FontParagraf)
+                    }
+                }
+
+            }
+
+            toggleGroupColor.addOnButtonCheckedListener{toggleGroup, checkedId, isChecked ->
+                if (isChecked){
+                    when(checkedId){
+                        R.id.btnGreen -> latar.setBackgroundColor(getColor(R.color.greenRead))
+                        R.id.btnPeach -> latar.setBackgroundColor(getColor(R.color.peachRead))
+                        R.id.btnOrange -> latar.setBackgroundColor(getColor(R.color.orangeRead))
+                    }
+                } else {
+                    if (toggleGroup.checkedButtonId == View.NO_ID){
+                        latar.setBackgroundColor(getColor(R.color.white))
+                    }
+                }
+            }
+        }
+    }
+}

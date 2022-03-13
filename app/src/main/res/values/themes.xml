@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EasyElementaryParticleApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    
+    <style name="ButtonGeneral">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/rounded_corner_smaller</item>
+        <item name="android:fontFamily">@font/nunito_sans_bold</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="FontParagraf">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:justificationMode">inter_word</item>
+<!--        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>-->
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FontParagrafSmall">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:justificationMode">inter_word</item>
+<!--        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>-->
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="FontParagrafLarge">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:justificationMode">inter_word</item>
+<!--        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>-->
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.news.NewsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/news_bg"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/select_news"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.03">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/nature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/naturebtn"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="10dp"/>
+            <ImageView
+                android:id="@+id/scinews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sciencenewsbtn"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:id="@+id/newsci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/newscientistbtn"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:id="@+id/scitech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scitechdailybtn"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:id="@+id/phyorg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/physorgbtn"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">EasyElementaryParticleApp</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_news">Berita</string>
+    <string name="title_settings">Pengaturan</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="search_hint">Apa yang mau kamu pelajari hari ini?</string>
+    <string name="select_news">Pilih Sumber Berita</string>
+    <string name="Theory">Teori</string>
+    <string name="appearance">Tampilan</string>
+    <string name="ChangeLang">Ubah bahasa</string>
+    <string name="about">Tentang</string>
+    <string name="edit">Ubah Profil</string>
+    <string name="see_all">Lihat Semua</string>
+    <string name="more">Lebih banyak</string>
+    <string name="memory">Asah Pemahaman</string>
+    <string name="example">Contoh</string>
+    <string name="other_features">Fitur Lain</string>
+    <string name="exercise">Latihan</string>
+    <string name="calc">Kalkulator</string>
+    <string name="flashcard">Flashcard</string>
+    <string name="attachment">Lampiran</string>
+    <string name="Intro">Pengantar</string>
+    <string name="standard_model">Model Standar</string>
+    <string name="btn_next">Lanjut</string>
+    <string name="btn_back">Kembali</string>
+    <string name="login_greetings">Sebelum mulai belajar, perkenalkan dirimu dulu yuk.</string>
+    <string name="name">Nama kamu</string>
+    <string name="login">Masuk</string>
+    <string name="log_out">Keluar</string>
+    <string name="erorLogin">Harus terisi</string>
+    <string name="login_success">Login Berhasil</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="_1_pengantar">1. Pengantar</string>
+    <string name="_2_partikel_subatomik">2. Partikel Subatomik</string>
+    <string name="_3_teori_medan_quantum">3. Teori Medan Quantum</string>
+    <string name="_4_model_standar">4. Model Standar</string>
+    <string name="_5_kromodinamika_kuantum">5. Kromodinamika Kuantum</string>
+    <string name="_6_gut_dan_toe">6. GUT dan TOE</string>
+    <string name="ukuran_teks">Ukuran teks</string>
+    <string name="kecil">Kecil</string>
+    <string name="sedang">Sedang</string>
+    <string name="besar">Besar</string>
+    <string name="warna_latar">Warna latar</string>
+    <string name="hijau">Hijau</string>
+    <string name="coklat">Coklat</string>
+    <string name="jingga">Jingga</string>
+</resources>

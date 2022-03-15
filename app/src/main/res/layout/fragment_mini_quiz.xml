@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MiniQuizFragment">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Mini Quiz"
+        style="@style/FontParagrafLarge"/>
+
+    <TextView
+        android:id="@+id/Benar"
+        style="@style/FontParagrafLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Benar : 0/3" />
+
+    <TextView
+        android:id="@+id/soal"
+        style="@style/FontParagraf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul"
+        android:text="Ini adalah soal pertama untuk mini quiz, jawaban benar adalah A?" />
+
+    <RadioGroup
+        android:id="@+id/pilihan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/soal">
+        <RadioButton
+            android:id="@+id/opsi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 1"/>
+        <RadioButton
+            android:id="@+id/opsi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 2"/>
+        <RadioButton
+            android:id="@+id/opsi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 3"/>
+        <RadioButton
+            android:id="@+id/opsi4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 4"/>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/bintangSkor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pilihan"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bintangSkor"
+        android:layout_centerHorizontal="true"
+        android:text="Cek Jawaban"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

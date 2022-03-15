@@ -5,7 +5,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
+import com.dhandev.eepa.ui.home.HomeFragment
 
 
 class MateriPengantar : AppCompatActivity() {
@@ -21,6 +24,10 @@ class MateriPengantar : AppCompatActivity() {
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val fragment: Fragment
+        fragment = MiniQuizFragment()
+        loadFragmentQuiz(fragment)
 
         with(binding){
             setContentView(root)
@@ -67,6 +74,13 @@ class MateriPengantar : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun loadFragmentQuiz(fragment: MiniQuizFragment) {
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.containerQuiz, fragment)
+        transaction.disallowAddToBackStack()
+        transaction.commit()
     }
 
     private fun gantiLatar(greenRead: Int, pressed: Int) {

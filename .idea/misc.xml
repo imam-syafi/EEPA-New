@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/arrow_back.xml" value="0.2385" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/benarsatu.xml" value="0.1545" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/bg_setting_mini.xml" value="0.2385" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/fire.xml" value="0.1545" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/news_bg.xml" value="0.18" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/rounded_corner.xml" value="0.18" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/rounded_corner_atas.xml" value="0.18" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/font/nunito_black.xml" value="0.2625" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/font/nunito_bold.xml" value="0.2625" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout-v26/activity_materi_pengantar.xml" value="0.22146739130434784" />
@@ -15,6 +18,7 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_materi_subatomik.xml" value="0.22146739130434784" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_home.xml" value="0.2722567287784679" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_materi.xml" value="0.2" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_mini_quiz.xml" value="0.264" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_news.xml" value="0.264" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5537918871252204" />

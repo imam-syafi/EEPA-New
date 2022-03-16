@@ -1,6 +1,7 @@
 package com.dhandev.eepa
 
 import android.content.Context
+import android.content.Intent
 import android.os.Binder
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
 import com.dhandev.eepa.databinding.FragmentMateriBinding
 import com.dhandev.eepa.databinding.FragmentMiniQuizBinding
@@ -124,24 +127,25 @@ class MiniQuizFragment : Fragment() {
             submit.top
             when(nilai){
                 3 -> {
-                    bintangSkor.setImageResource(R.drawable.benartiga)
+                    bintangSkor.setAnimation("anim_benartiga.json")
                     soal.setText("Luar Biasa!")
                 }
                 2 -> {
-                    bintangSkor.setImageResource(R.drawable.benardua)
+                    bintangSkor.setAnimation("anim_benardua.json")
                     soal.setText("Keren!")
                 }
                 1 -> {
-                    bintangSkor.setImageResource(R.drawable.benarsatu)
+                    bintangSkor.setAnimation("anim_benarsatu.json")
                     soal.setText("Belajar Lagi ya!")
                 }
                 else -> {
-                    bintangSkor.setImageResource(R.drawable.fire)
+                    bintangSkor.setAnimation("simple_fire.json")
                     soal.setText("Jangan Menyerah!")
                 }
             }
             submit.setOnClickListener {
-                nomorSatu()
+//                nomorSatu()
+
             }
         }
     }

@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/materiFragment"
-        android:name="com.dhandev.eepa.MateriFragment"
+        android:name="com.dhandev.eepa.materi.MateriFragment"
         android:label="fragment_materi"
         tools:layout="@layout/fragment_materi" >
         <action

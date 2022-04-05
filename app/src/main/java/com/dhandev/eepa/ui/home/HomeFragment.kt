@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import com.dhandev.eepa.MateriPengantar
+import com.dhandev.eepa.materi.MateriPengantar
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel

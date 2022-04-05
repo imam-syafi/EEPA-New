@@ -1,4 +1,4 @@
-package com.dhandev.eepa
+package com.dhandev.eepa.materi
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,11 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.navigation.Navigation
-import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
 import com.dhandev.eepa.databinding.FragmentMateriBinding
-import com.dhandev.eepa.databinding.FragmentNewsBinding
 
 class MateriFragment : Fragment() {
 

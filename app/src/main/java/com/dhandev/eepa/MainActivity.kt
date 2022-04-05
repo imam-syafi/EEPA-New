@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 navView.visibility = View.VISIBLE
             }
-
         }
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

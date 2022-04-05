@@ -1,33 +1,25 @@
-package com.dhandev.eepa
+package com.dhandev.eepa.materi
 
 import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
-import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
-import com.dhandev.eepa.ui.home.HomeFragment
+import com.dhandev.eepa.R
+import com.dhandev.eepa.databinding.ActivityMateriSubatomikBinding
 
+class MateriSubatomik : AppCompatActivity() {
 
-class MateriPengantar : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMateriPengantarBinding
+    private lateinit var binding: ActivityMateriSubatomikBinding
     private lateinit var sharedPred : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_materi_pengantar)
-
-        binding = ActivityMateriPengantarBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_materi_subatomik)
+        binding = ActivityMateriSubatomikBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
-
-        val fragment: Fragment
-        fragment = MiniQuizFragment()
-        loadFragmentQuiz(fragment)
 
         with(binding){
             setContentView(root)
@@ -76,17 +68,10 @@ class MateriPengantar : AppCompatActivity() {
         }
     }
 
-    private fun loadFragmentQuiz(fragment: MiniQuizFragment) {
-        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.containerQuiz, fragment)
-        transaction.disallowAddToBackStack()
-        transaction.commit()
-    }
-
     private fun gantiLatar(greenRead: Int, pressed: Int) {
         val latarBaru: Int = greenRead
         val tombol: Int = pressed
-        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        val Editor: SharedPreferences.Editor = sharedPred.edit()
         Editor.putInt("gantiLatar", latarBaru)
         Editor.putInt("tombolTerpilih", tombol)
         Editor.apply()
@@ -98,9 +83,9 @@ class MateriPengantar : AppCompatActivity() {
         val sharedLatarId = sharedPred.getInt("gantiLatar", 0)
         val sharedTombolId = sharedPred.getInt("tombolTerpilih", 3)
         if (sharedLatarId.equals(0) && sharedTombolId.equals(3)){
-            binding.latar.setBackgroundColor(getColor(R.color.white))
+            binding.latarSubatomik.setBackgroundColor(getColor(R.color.white))
         } else {
-            binding.latar.setBackgroundColor(getColor(sharedLatarId))
+            binding.latarSubatomik.setBackgroundColor(getColor(sharedLatarId))
             binding.toggleGroupColor.check(sharedTombolId)
         }
     }
@@ -108,7 +93,7 @@ class MateriPengantar : AppCompatActivity() {
     private fun gantiUkuran(fontParagrafSmall: Int, checkedButtonId: Int) {
         val ukuranBaru: Int = fontParagrafSmall
         val tombolUkuran : Int = checkedButtonId
-        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        val Editor: SharedPreferences.Editor = sharedPred.edit()
         Editor.putInt("ukuranBaru", ukuranBaru)
         Editor.putInt("tombolUkuranTerpilih", tombolUkuran)
         Editor.apply()
@@ -120,11 +105,10 @@ class MateriPengantar : AppCompatActivity() {
         val sharedUkuranId = sharedPred.getInt("ukuranBaru", 0)
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
-            binding.body1.setTextAppearance(R.style.FontParagraf)
+            binding.body2.setTextAppearance(R.style.FontParagraf)
         } else {
-            binding.body1.setTextAppearance(sharedUkuranId)
+            binding.body2.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }
-
 }

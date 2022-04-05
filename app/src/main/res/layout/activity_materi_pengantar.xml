@@ -5,7 +5,7 @@
     android:id="@+id/latar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MateriPengantar">
+    tools:context=".materi.MateriPengantar">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -222,7 +222,7 @@
             android:background="@drawable/rounded_corner"
             android:layout_margin="10dp"
             android:padding="20dp"
-            android:name="com.dhandev.eepa.MiniQuizFragment"
+            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
             app:layout_constraintTop_toBottomOf="@id/body1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -75,7 +75,6 @@ class MateriSubatomik : AppCompatActivity() {
         Editor.putInt("gantiLatar", latarBaru)
         Editor.putInt("tombolTerpilih", tombol)
         Editor.apply()
-        Editor.commit()
         loadLatarBaru()
     }
 
@@ -97,7 +96,6 @@ class MateriSubatomik : AppCompatActivity() {
         Editor.putInt("ukuranBaru", ukuranBaru)
         Editor.putInt("tombolUkuranTerpilih", tombolUkuran)
         Editor.apply()
-        Editor.commit()
         loadUkuranbaru()
     }
 

@@ -50,12 +50,12 @@
     <string name="_3_teori_medan_quantum">3. Teori Medan Quantum</string>
     <string name="_4_model_standar">4. Model Standar</string>
     <string name="_5_kromodinamika_kuantum">5. Kromodinamika Kuantum</string>
-    <string name="_6_gut_dan_toe">6. GUT dan TOE</string>
-    <string name="ukuran_teks">Ukuran teks</string>
+    <string name="_6_beyond_the_standard_model">6. Beyond the Standard Model</string>
+    <string name="ukuran_teks">Ukuran teks :</string>
     <string name="kecil">Kecil</string>
     <string name="sedang">Sedang</string>
     <string name="besar">Besar</string>
-    <string name="warna_latar">Warna latar</string>
+    <string name="warna_latar">Warna latar :</string>
     <string name="hijau">Hijau</string>
     <string name="coklat">Coklat</string>
     <string name="jingga">Jingga</string>

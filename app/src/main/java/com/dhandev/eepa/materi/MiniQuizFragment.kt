@@ -128,24 +128,28 @@ class MiniQuizFragment : Fragment() {
             when(nilai){
                 3 -> {
                     bintangSkor.setAnimation("anim_benartiga.json")
+                    bintangSkor.playAnimation()
                     soal.setText("Luar Biasa!")
                 }
                 2 -> {
                     bintangSkor.setAnimation("anim_benardua.json")
+                    bintangSkor.playAnimation()
                     soal.setText("Keren!")
                 }
                 1 -> {
                     bintangSkor.setAnimation("anim_benarsatu.json")
+                    bintangSkor.playAnimation()
                     soal.setText("Belajar Lagi ya!")
                 }
                 else -> {
                     bintangSkor.setAnimation("simple_fire.json")
+                    bintangSkor.playAnimation()
                     soal.setText("Jangan Menyerah!")
                 }
             }
             submit.setOnClickListener {
-//                nomorSatu()
-
+                nomorSatu()
+                //lottie cannot play
             }
         }
     }

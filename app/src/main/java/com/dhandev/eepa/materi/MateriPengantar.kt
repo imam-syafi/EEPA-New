@@ -2,7 +2,9 @@ package com.dhandev.eepa.materi
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -57,13 +59,12 @@ class MateriPengantar : AppCompatActivity() {
                         gantiUkuran(R.style.FontParagraf, toggleGroup.checkedButtonId)
                     }
                 }
-
             }
 
             toggleGroupColor.addOnButtonCheckedListener{toggleGroup, checkedId, isChecked ->
                 if (isChecked){
                     when(checkedId){
-                        R.id.btnGreen -> gantiLatar(R.color.greenRead, toggleGroupColor.checkedButtonId)
+                        R.id.btnGreen ->  gantiLatar(R.color.greenRead, toggleGroupColor.checkedButtonId)
                         R.id.btnPeach -> gantiLatar(R.color.peachRead, toggleGroupColor.checkedButtonId)
                         R.id.btnOrange -> gantiLatar(R.color.orangeRead, toggleGroupColor.checkedButtonId)
                     }
@@ -73,6 +74,7 @@ class MateriPengantar : AppCompatActivity() {
                     }
                 }
             }
+
         }
     }
 
@@ -90,7 +92,6 @@ class MateriPengantar : AppCompatActivity() {
         Editor.putInt("gantiLatar", latarBaru)
         Editor.putInt("tombolTerpilih", tombol)
         Editor.apply()
-        Editor.commit()
         loadLatarBaru()
     }
 
@@ -112,7 +113,6 @@ class MateriPengantar : AppCompatActivity() {
         Editor.putInt("ukuranBaru", ukuranBaru)
         Editor.putInt("tombolUkuranTerpilih", tombolUkuran)
         Editor.apply()
-        Editor.commit()
         loadUkuranbaru()
     }
 
@@ -126,5 +126,5 @@ class MateriPengantar : AppCompatActivity() {
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }
-
+//TODO: Buat class khusus pengaturan warna latar dan ukuran
 }

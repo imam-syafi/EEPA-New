@@ -158,7 +158,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_sans_black"
@@ -183,12 +183,19 @@
 
         <ImageView
             android:id="@+id/gambar"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_margin="20dp"
             android:adjustViewBounds="true"
             android:src="@drawable/materiscroll1"
-            app:layout_constraintTop_toBottomOf="@id/aturTeks"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aturTeks">
+
+            <tag
+                android:id="@+id/zoomable"
+                android:value="ZoomableViewTag" />
+        </ImageView>
 
         <TextView
             android:id="@+id/bagian1"
@@ -209,8 +216,8 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
             android:lineSpacingMultiplier="1.4"
-            android:text="\t Benda-benda yang ada disekitar kita tersusun dari bagian yang lebih kecil, misalnya buku yang merupakan kumpulan lembaran dan lembaran tersebut merupakan kumpulan bubur kayu. Contoh lain, baju tersusun dari lembaran kain, kain tersebut tersusun dari benang-benang. Dari contoh tersebut, terlihat bahwa benda tersusun dari benda yang lebih sederhana. Hal inilah yang selalu menjadi pertanyaan manusia dari berbagai peradaban, sehingga muncul istilah atomos dari bahasa Yunani yang artinya “tidak dapat dibagi” dan kini dikenal dengan atom (Alatas et al., 2016). Ilmu pengetahuan yang membahas tentang atom adalah fisika.
-    \n \t Fisika merupakan ilmu yang mempelajari bagaimana alam semesta bekerja. Salah satu bagian dari ilmu Fisika adalah fisika partikel elementer. Fisika partikel elementer merupakan topik pelajaran Fisika yang membahas secara lebih mendalam terkait atom atau partikel yang tidak dapat lagi dibagi dan setiap partikel tersebut memiliki karakteristiknya masing-masing (Vissani, 2021). Fisika partikel elementer menarik untuk dipelajari karena mempelajari fondasi dasar atas semua materi yang ada di alam semesta (Passon et al., 2019)"
+            android:text="\t Semua benda yang ada di alam semesta ini tersusun oleh komponen yang lebih kecil. Contohnya galaksi tersusun dari sistem keplanetan yang juga tersusun dari planet-planet dan bintang. Contoh yang lebih sederhana dalam kehidupan sehari-hari yaitu baju, di mana benda tersebut tersusun oleh kain yang juga tersusun oleh ribuan helai benang.
+\n \t Dari dua contoh tersebut, kita bisa mengidentifikasi bahwa bahan penyusunnya masih terus dapat diperoleh hingga tidak bisa dibagi lagi. Saat bahan penyusun tidak dapat dibagi lagi, muncullah istilah atomos (tidak dapat dibagi) yang pertama kali dirumuskan oleh filsuf Yunani yaitu Demokritus dan Leucippus  pada zaman Yunani Kuno 400 tahun sebelum masehi dan kini lebih dikenal dengan istilah."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bagian1" />

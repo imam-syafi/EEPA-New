@@ -1,97 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="90dp"
     tools:context=".materi.MateriFragment">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/news_bg"
-        android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/news_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/arrowBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/arrow_back"
-        android:onClick="goBack"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:onClick="goBack"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans_black"
-        android:text="@string/Theory"
-        android:textColor="@color/white"
-        android:layout_marginHorizontal="20dp"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/arrowBack"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:text="@string/Theory"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/arrowBack"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/intro"
-        style="@style/ButtonGeneral"
-        android:text="@string/_1_pengantar"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/intro"
+                style="@style/ButtonGeneral"
+                android:layout_marginBottom="5dp"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:text="@string/_1_pengantar"
+                app:backgroundTint="@color/biru_seken" />
 
-    <Button
-        android:id="@+id/subatomik"
-        style="@style/ButtonGeneral"
-        android:text="@string/_2_partikel_subatomik"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intro" />
+            <LinearLayout
+                android:id="@+id/part_pengantar"
+                style="@style/bgDropDownList">
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="Perkembangan Teori Atom"/>
+                <View
+                    style="@style/Divider"/>
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="Spin"/>
+                <View
+                    style="@style/Divider"/>
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="Statistika"/>
+                <View
+                    style="@style/Divider"/>
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="Gaya-gaya Dasar"/>
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/TMQ"
-        style="@style/ButtonGeneral"
-        android:text="@string/_3_teori_medan_quantum"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subatomik" />
+            <Button
+                android:id="@+id/subatomik"
+                style="@style/ButtonGeneral"
+                android:text="@string/_2_partikel_subatomik"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:backgroundTint="@color/biru_seken"/>
+            <LinearLayout
+                android:id="@+id/part_subatomik"
+                style="@style/bgDropDownList">
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="Berdasarkan Penyusunnya"/>
+                <View
+                    style="@style/Divider"/>
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="Berdasarkan Statistika"/>
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/standarModel"
-        style="@style/ButtonGeneral"
-        android:text="@string/_4_model_standar"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TMQ" />
+            <Button
+                android:id="@+id/TMQ"
+                style="@style/ButtonGeneral"
+                android:text="@string/_3_teori_medan_quantum"
+                app:backgroundTint="@color/biru_seken" />
 
-    <Button
-        android:id="@+id/Kromodinamika"
-        style="@style/ButtonGeneral"
-        android:text="@string/_5_kromodinamika_kuantum"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/standarModel" />
+            <Button
+                android:id="@+id/standarModel"
+                style="@style/ButtonGeneral"
+                android:text="@string/_4_model_standar"
+                app:backgroundTint="@color/biru_seken" />
 
-    <Button
-        android:id="@+id/Beyond"
-        style="@style/ButtonGeneral"
-        android:text="@string/_6_gut_dan_toe"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Kromodinamika" />
+            <Button
+                android:id="@+id/Kromodinamika"
+                style="@style/ButtonGeneral"
+                android:text="@string/_5_kromodinamika_kuantum"
+                app:backgroundTint="@color/biru_seken" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/Beyond"
+                style="@style/ButtonGeneral"
+                android:layout_marginBottom="5dp"
+                android:text="@string/_6_beyond_the_standard_model"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:backgroundTint="@color/biru_seken" />
+            <LinearLayout
+                android:id="@+id/part_beyond"
+                android:layout_marginBottom="10dp"
+                style="@style/bgDropDownList">
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="GUT (Grand Unification Theory)"/>
+                <View
+                    style="@style/Divider"/>
+                <TextView
+                    style="@style/dropDownList"
+                    android:text="TOE (Theory of Everything)"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

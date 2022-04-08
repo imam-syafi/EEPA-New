@@ -7,6 +7,7 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/benarsatu.xml" value="0.1545" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/bg_onboarding.xml" value="0.212" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/bg_setting_mini.xml" value="0.2385" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/cardlong.xml" value="0.3025" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/edit.xml" value="0.2385" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/fire.xml" value="0.1545" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.176" />
@@ -18,6 +19,7 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/main_bg.xml" value="0.176" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/main_bg_splash.xml" value="0.183" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/news_bg.xml" value="0.18" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/onboarding_card.xml" value="0.183" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/rounded_corner.xml" value="0.18" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/rounded_corner_atas.xml" value="0.18" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/font/nunito_black.xml" value="0.2625" />
@@ -26,9 +28,9 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_main.xml" value="0.22146739130434784" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_materi_pengantar.xml" value="0.2988679352838745" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_materi_subatomik.xml" value="0.22146739130434784" />
-        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_on_boarding.xml" value="0.19924529018924966" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_on_boarding.xml" value="0.2264151024877837" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_splash_screen.xml" value="0.21822916666666667" />
-        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_home.xml" value="0.152" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_home.xml" value="0.2988679352838745" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_materi.xml" value="0.2988679352838745" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_mini_quiz.xml" value="0.264" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_news.xml" value="0.264" />

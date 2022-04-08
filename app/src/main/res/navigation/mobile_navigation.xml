@@ -51,4 +51,9 @@
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <activity
+        android:id="@+id/onBoarding"
+        android:name="com.dhandev.eepa.onBoarding"
+        android:label="activity_on_boarding"
+        tools:layout="@layout/activity_on_boarding" />
 </navigation>

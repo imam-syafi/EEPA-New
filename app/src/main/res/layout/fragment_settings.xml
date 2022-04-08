@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -61,7 +61,7 @@
         app:backgroundTint="@color/biru_seken"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <Button
         android:id="@+id/tampilan"

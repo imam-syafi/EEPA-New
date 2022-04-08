@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_onboarding"
+    app:layoutDescription="@xml/activity_on_boarding_scene"
     tools:context=".onBoarding">
-
 
     <ImageView
         android:id="@+id/gambar1"
@@ -52,14 +52,178 @@
         app:layout_constraintStart_toStartOf="@id/gambar1"
         app:layout_constraintTop_toBottomOf="@id/gambar1" />
 
+    <ImageView
+        android:id="@+id/gambar2"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/model_atom_bohr"
+        android:src="@drawable/atom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/judul2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/di_dalam_atom"
+        android:textColor="@color/abu"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar2"
+        app:layout_constraintTop_toBottomOf="@id/gambar2" />
+
+
+    <TextView
+        android:id="@+id/desc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="@string/proton_neutron_dan_elektron_mungkin_nmenjadi_yang_pertama_terbesit_ndalam_pikiran_anda"
+        android:textColor="@color/abu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar2"
+        app:layout_constraintTop_toBottomOf="@id/gambar2" />
+
+    <ImageView
+        android:id="@+id/gambar3"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/partikel_di_dalam_proton"
+        android:src="@drawable/atom_deep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+
+    <TextView
+        android:id="@+id/judul3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/tahukah_anda"
+        android:textColor="@color/abu"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar3"
+        app:layout_constraintTop_toBottomOf="@id/gambar3" />
+
+    <TextView
+        android:id="@+id/desc3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="@string/ternyata_masih_ada_partikel_yang_lebih_nmendasar_yang_menyusun_partikel_tadi"
+        android:textColor="@color/abu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar3"
+        app:layout_constraintTop_toBottomOf="@id/gambar3" />
+
+    <ImageView
+        android:id="@+id/gambar4"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/partikel_di_dalam_proton"
+        android:src="@drawable/galaxy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+
+    <TextView
+        android:id="@+id/judul4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/sangat_bermanfaat"
+        android:textColor="@color/abu"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar4"
+        app:layout_constraintTop_toBottomOf="@id/gambar4" />
+
+    <TextView
+        android:id="@+id/desc4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="@string/dengan_mempelajari_ini_kita_bisa_nmengetahui_asal_usul_alam_semesta_lo"
+        android:textColor="@color/abu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar4"
+        app:layout_constraintTop_toBottomOf="@id/gambar4" />
+
+    <ImageView
+        android:id="@+id/gambar5"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/partikel_di_dalam_proton"
+        android:src="@drawable/casual_life_3d_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+
+    <TextView
+        android:id="@+id/judul5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/penasaran"
+        android:textColor="@color/abu"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar5"
+        app:layout_constraintTop_toBottomOf="@id/gambar5" />
+
+    <TextView
+        android:id="@+id/desc5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="@string/yuk_pelajari_semua_dengan_eepa_n_easy_elementary_particle_app"
+        android:textColor="@color/abu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar5"
+        app:layout_constraintTop_toBottomOf="@id/gambar5" />
+
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu1"
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:altSrc="@drawable/ic_baseline_circle_24"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:layout_constraintTop_toTopOf="@id/menu3"
         app:layout_constraintEnd_toStartOf="@id/menu2"
+        app:layout_constraintTop_toTopOf="@id/menu3"
+        app:srcCompat="@drawable/ic_outline_circle_24"
         app:tint="@color/blue_500" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -78,10 +242,10 @@
         android:layout_height="20dp"
         android:layout_marginBottom="20dp"
         app:altSrc="@drawable/ic_baseline_circle_24"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_outline_circle_24"
         app:tint="@color/blue_500" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -89,9 +253,9 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:altSrc="@drawable/ic_baseline_circle_24"
-        app:srcCompat="@drawable/ic_outline_circle_24"
         app:layout_constraintStart_toEndOf="@id/menu3"
         app:layout_constraintTop_toTopOf="@id/menu3"
+        app:srcCompat="@drawable/ic_outline_circle_24"
         app:tint="@color/blue_500" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -99,9 +263,10 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:altSrc="@drawable/ic_baseline_circle_24"
-        app:srcCompat="@drawable/ic_outline_circle_24"
         app:layout_constraintStart_toEndOf="@id/menu4"
         app:layout_constraintTop_toTopOf="@id/menu3"
+        app:srcCompat="@drawable/ic_outline_circle_24"
         app:tint="@color/blue_500" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

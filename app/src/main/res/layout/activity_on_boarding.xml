@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_onboarding"
+    tools:context=".onBoarding">
+
+
+    <ImageView
+        android:id="@+id/gambar1"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/siswa_duduk_dan_sedang_berpikir"
+        android:src="@drawable/casual_life_3d_boy_sitting_at_the_desk_doing_exam_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:id="@+id/judul1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:gravity="center_horizontal"
+        android:text="@string/cari_tahu"
+        android:textColor="@color/abu"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar1"
+        app:layout_constraintTop_toBottomOf="@id/gambar1" />
+
+
+    <TextView
+        android:id="@+id/desc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="@string/tahukah_anda_partikel_apa_n_yang_lebih_mendasar_dari_atom"
+        android:textColor="@color/abu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/gambar1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gambar1"
+        app:layout_constraintTop_toBottomOf="@id/gambar1" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/menu1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:altSrc="@drawable/ic_baseline_circle_24"
+        app:srcCompat="@drawable/ic_outline_circle_24"
+        app:layout_constraintTop_toTopOf="@id/menu3"
+        app:layout_constraintEnd_toStartOf="@id/menu2"
+        app:tint="@color/blue_500" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/menu2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:altSrc="@drawable/ic_baseline_circle_24"
+        app:layout_constraintEnd_toStartOf="@id/menu3"
+        app:layout_constraintTop_toTopOf="@id/menu3"
+        app:srcCompat="@drawable/ic_outline_circle_24"
+        app:tint="@color/blue_500" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/menu3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
+        app:altSrc="@drawable/ic_baseline_circle_24"
+        app:srcCompat="@drawable/ic_outline_circle_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@color/blue_500" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/menu4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:altSrc="@drawable/ic_baseline_circle_24"
+        app:srcCompat="@drawable/ic_outline_circle_24"
+        app:layout_constraintStart_toEndOf="@id/menu3"
+        app:layout_constraintTop_toTopOf="@id/menu3"
+        app:tint="@color/blue_500" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/menu5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:altSrc="@drawable/ic_baseline_circle_24"
+        app:srcCompat="@drawable/ic_outline_circle_24"
+        app:layout_constraintStart_toEndOf="@id/menu4"
+        app:layout_constraintTop_toTopOf="@id/menu3"
+        app:tint="@color/blue_500" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

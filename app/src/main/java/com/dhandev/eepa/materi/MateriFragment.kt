@@ -27,6 +27,7 @@ class MateriFragment : Fragment() {
         binding.apply {
             partPengantar.visibility = View.GONE
             partBeyond.visibility = View.GONE
+            partSubatomik.visibility = View.GONE
             binding.arrowBack.setOnClickListener {
                 activity?.onBackPressed()
             }

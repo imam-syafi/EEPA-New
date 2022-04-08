@@ -61,4 +61,7 @@
     <string name="jingga">Jingga</string>
     <string name="materi">Materi</string>
     <string name="referensi">Referensi</string>
+    <string name="cari_tahu">Cari Tahu!</string>
+    <string name="tahukah_anda_partikel_apa_n_yang_lebih_mendasar_dari_atom">Tahukah anda, partikel apa \n yang lebih mendasar dari atom?</string>
+    <string name="siswa_duduk_dan_sedang_berpikir">Siswa duduk dan sedang berpikir</string>
 </resources>

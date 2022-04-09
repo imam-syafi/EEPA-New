@@ -405,4 +405,37 @@
         <OnSwipe motion:dragDirection="dragUp" />
         <OnClick motion:targetId="@id/btnMasuk" />
     </Transition>
+    <ConstraintSet
+        android:id="@+id/showAvatar"
+        motion:deriveConstraintsFrom="@+id/login" >
+        <Constraint
+            android:id="@+id/chooseAvatar"
+            motion:layout_constraintEnd_toEndOf="@id/bgLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/avatar"
+            motion:layout_constraintStart_toStartOf="@id/bgLogin"
+            android:layout_marginTop="5dp" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/login"
+        motion:constraintSetEnd="@+id/showAvatar" >
+        <OnClick motion:targetId="@id/avatar" />
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/showAvatar" >
+        <OnClick motion:targetId="@id/btnSkip" />
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/showAvatar"
+        motion:constraintSetEnd="@+id/onBoard5" >
+        <OnSwipe motion:dragDirection="dragDown" />
+    </Transition>
+    <Transition
+        motion:constraintSetStart="@+id/showAvatar"
+        motion:constraintSetEnd="@+id/start" >
+        <OnSwipe motion:dragDirection="dragDown" />
+    </Transition>
 </MotionScene>

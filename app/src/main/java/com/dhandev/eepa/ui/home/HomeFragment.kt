@@ -10,9 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
 import com.dhandev.eepa.materi.MateriPengantar
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
+import com.dhandev.eepa.onBoarding
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
@@ -45,9 +47,18 @@ class HomeFragment : Fragment() {
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 
-        val username : String?  = sharedPred.getString("userName", "Pengguna")
-        binding.userName.text = username
+        val username : String?  = sharedPred.getString("userName", null)
 
+        if (username != null){
+            binding.userName.text = username
+
+        } else {
+            startActivity(Intent(activity, onBoarding::class.java))
+            activity?.finish()
+        }
+        val baseUrl = "https://docs.google.com/uc?id="
+        val avatar : String? = sharedPred.getString("avatarUrl", null)
+        Glide.with(this).load(baseUrl+avatar).circleCrop().into(binding.imageView2)
 
         return root
     }

@@ -52,6 +52,17 @@
         app:layout_constraintStart_toStartOf="@id/gambar1"
         app:layout_constraintTop_toBottomOf="@id/gambar1" />
 
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/lewati"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/gambar1"
+        app:layout_constraintStart_toStartOf="@id/gambar1"
+        app:layout_constraintTop_toBottomOf="@id/desc1" />
+
     <ImageView
         android:id="@+id/gambar2"
         android:layout_width="0dp"
@@ -256,10 +267,43 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="70dp"
+        android:background="@drawable/rounded_corner"
         android:src="@drawable/avatar"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
         app:layout_constraintTop_toBottomOf="@id/kenalan" />
+
+    <LinearLayout
+        android:id="@+id/chooseAvatar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/bgLogin"
+        app:layout_constraintEnd_toEndOf="@id/bgLogin"
+        app:layout_constraintTop_toBottomOf="@id/avatar">
+        <ImageView
+            android:id="@+id/iv_avatar1"
+            style="@style/avatarChoose"/>
+        <ImageView
+            android:id="@+id/iv_avatar2"
+            style="@style/avatarChoose"/>
+        <ImageView
+            android:id="@+id/iv_avatar3"
+            style="@style/avatarChoose"/>
+        <ImageView
+            android:id="@+id/iv_avatar4"
+            style="@style/avatarChoose"/>
+        <ImageView
+            android:id="@+id/iv_avatar5"
+            style="@style/avatarChoose"/>
+        <ImageView
+            android:id="@+id/iv_avatar6"
+            style="@style/avatarChoose"/>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/editText_user"
@@ -277,7 +321,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
-        app:layout_constraintTop_toBottomOf="@id/avatar" />
+        app:layout_constraintTop_toBottomOf="@id/chooseAvatar" />
 
     <Button
         android:id="@+id/btnMulai"

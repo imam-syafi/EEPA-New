@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".ui.imageViewer.ImageViewerActivity"
+            android:exported="false" />
+        <activity
             android:name=".onBoarding"
             android:exported="false" />
         <activity

@@ -63,23 +63,27 @@
                 android:id="@+id/part_pengantar"
                 style="@style/bgDropDownList">
                 <TextView
+                    android:id="@+id/perkembangan_atom"
                     style="@style/dropDownList"
-                    android:text="Perkembangan Teori Atom"/>
+                    android:text="@string/perkembangan_teori_atom"/>
                 <View
                     style="@style/Divider"/>
                 <TextView
+                    android:id="@+id/spin"
                     style="@style/dropDownList"
-                    android:text="Spin"/>
+                    android:text="@string/spin"/>
                 <View
                     style="@style/Divider"/>
                 <TextView
+                    android:id="@+id/statistika"
                     style="@style/dropDownList"
-                    android:text="Statistika"/>
+                    android:text="@string/statistika"/>
                 <View
                     style="@style/Divider"/>
                 <TextView
+                    android:id="@+id/gaya_dasar"
                     style="@style/dropDownList"
-                    android:text="Gaya-gaya Dasar"/>
+                    android:text="@string/gaya_gaya_dasar"/>
             </LinearLayout>
 
             <Button
@@ -93,12 +97,12 @@
                 style="@style/bgDropDownList">
                 <TextView
                     style="@style/dropDownList"
-                    android:text="Berdasarkan Penyusunnya"/>
+                    android:text="@string/comp_based"/>
                 <View
                     style="@style/Divider"/>
                 <TextView
                     style="@style/dropDownList"
-                    android:text="Berdasarkan Statistika"/>
+                    android:text="@string/stat_based"/>
             </LinearLayout>
 
             <Button
@@ -132,12 +136,12 @@
                 style="@style/bgDropDownList">
                 <TextView
                     style="@style/dropDownList"
-                    android:text="GUT (Grand Unification Theory)"/>
+                    android:text="@string/GUT"/>
                 <View
                     style="@style/Divider"/>
                 <TextView
                     style="@style/dropDownList"
-                    android:text="TOE (Theory of Everything)"/>
+                    android:text="@string/TOE"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

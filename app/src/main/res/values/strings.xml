@@ -79,4 +79,15 @@
     <string name="tuliskan_nama_anda">Tuliskan Nama Anda</string>
     <string name="mulai">Mulai</string>
     <string name="lewati">Lewati</string>
+    <string name="GUT">GUT (Grand Unification Theory)</string>
+    <string name="TOE">TOE (Theory of Everything)</string>
+    <string name="stat_based">Berdasarkan Statistika</string>
+    <string name="comp_based">Berdasarkan Penyusunnya</string>
+    <string name="gaya_gaya_dasar">Gaya-gaya Dasar</string>
+    <string name="statistika">Statistika</string>
+    <string name="spin">Spin</string>
+    <string name="perkembangan_teori_atom">Perkembangan Teori Atom</string>
+    <string name="bagaimana_ini_dimulai">Bagaimana ini dimulai?</string>
+    <string name="intro_2">Pendekatan Saintifik</string>
+    <string name="intro_3">Model Roti Kismis</string>
 </resources>

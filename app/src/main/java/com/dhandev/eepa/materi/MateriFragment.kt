@@ -28,11 +28,11 @@ class MateriFragment : Fragment() {
             partPengantar.visibility = View.GONE
             partBeyond.visibility = View.GONE
             partSubatomik.visibility = View.GONE
-            binding.arrowBack.setOnClickListener {
+            arrowBack.setOnClickListener {
                 activity?.onBackPressed()
             }
 
-            binding.intro.setOnClickListener {
+            intro.setOnClickListener {
                 if (partPengantar.isVisible){
                     partPengantar.visibility = View.GONE
                     intro.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
@@ -42,7 +42,7 @@ class MateriFragment : Fragment() {
                 }
             }
 
-            binding.Beyond.setOnClickListener {
+            Beyond.setOnClickListener {
                 if (partBeyond.isVisible){
                     partBeyond.visibility = View.GONE
                     Beyond.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
@@ -52,7 +52,7 @@ class MateriFragment : Fragment() {
                 }
             }
 
-            binding.subatomik.setOnClickListener {
+            subatomik.setOnClickListener {
                 if (partSubatomik.isVisible){
                     partSubatomik.visibility = View.GONE
                     subatomik.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0)
@@ -60,6 +60,11 @@ class MateriFragment : Fragment() {
                     partSubatomik.visibility = View.VISIBLE
                     subatomik.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0)
                 }
+            }
+
+            perkembanganAtom.setOnClickListener {
+                val intent = Intent(activity, MateriPengantar::class.java)
+                startActivity(intent)
             }
         }
         return root

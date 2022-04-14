@@ -26,7 +26,7 @@ class ImageViewerActivity : AppCompatActivity() {
 
         var URL = sharedPred.getString("url", null)
         var desc = sharedPred.getString("desc", null)
-
+//ss
         Glide.with(this)
             .load(URL)
             .transition(DrawableTransitionOptions.withCrossFade())

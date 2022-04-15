@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".ui.imageViewer.ImageViewerMateriActivity"
+            android:exported="false" />
+        <activity
             android:name=".asah.NomorContohActivity"
             android:exported="false" />
         <activity

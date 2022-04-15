@@ -91,11 +91,12 @@
             app:layout_constraintTop_toBottomOf="@id/userName" />
 
         //perlu linearlayout, agar bisa lihat previewnya
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,20 +106,20 @@
                 android:id="@+id/carousel"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
-                android:layout_margin="20dp"
                 app:autoPlay="true"
                 app:autoPlayDelay="5000"
-                app:carouselBackground="@drawable/rounded_corner"
                 app:carouselType="BLOCK"
                 app:imageScaleType="fitXY"
                 app:scaleOnScroll="false"
+                app:captionTextSize="18sp"
                 app:scalingFactor="0.35"
-                app:showBottomShadow="false"
                 app:showIndicator="true"
                 app:showNavigationButtons="false"
+                app:showBottomShadow="true"
+
                 app:showTopShadow="false">
             </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/textView4"

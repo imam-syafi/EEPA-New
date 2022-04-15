@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -15,7 +16,9 @@ import com.dhandev.eepa.materi.MateriPengantar
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
 import com.dhandev.eepa.onBoarding
+import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class HomeFragment : Fragment() {
@@ -74,25 +77,56 @@ class HomeFragment : Fragment() {
 
         val list = mutableListOf<CarouselItem>()
 
+        val url1 = "https://cache.boston.com/universal/site_graphics/blogs/bigpicture/lhc_08_01/lhc1.jpg"
+        val url2 = "https://docs.google.com/uc?id=1yahQeRW9WFVlC_Aq8lLtd0P07TQKMbms"
+        val url3 = "https://pbs.twimg.com/media/DcDmnE6X4AEwy01?format=jpg&name=medium"
+
+        val desc1 = "Large Hadron Collider (LHC)"
+        val desc2 = "A collision between two proton in the CMS detector"
+        val desc3 = "J.J.Thomson penemu partikel elementer pertama"
 
         list.add(
             CarouselItem(
-                imageDrawable = R.drawable.materiscroll1,
+                imageUrl = url1,
+                caption = desc1
+                )
+        )
+
+        list.add(
+            CarouselItem(
+                imageUrl = url2,
+                caption = desc2
             )
         )
 
         list.add(
             CarouselItem(
-                imageDrawable = R.drawable.materiscroll2,
-            )
-        )
-
-        list.add(
-            CarouselItem(
-                imageDrawable = R.drawable.materiscroll3,
+                imageUrl = url3,
+                caption = desc3
             )
         )
         carousel.setData(list)
+
+        carousel.carouselListener = object : CarouselListener{
+            override fun onClick(position: Int, carouselItem: CarouselItem) {
+                val Editor:SharedPreferences.Editor = sharedPred.edit()
+                when(position){
+                    0 -> Editor.putString("urlHead", url1).putString("desc", desc1).apply()
+                    1 -> Editor.putString("urlHead", url2).putString("desc", desc2).apply()
+                    2 -> Editor.putString("urlHead", url3).putString("desc", desc3).apply()
+                }
+                startActivity(Intent(activity, ImageViewerActivity::class.java))
+            }
+
+            override fun onLongClick(position: Int, carouselItem: CarouselItem) {
+                Toast.makeText(
+                    activity,
+                    "You long clicked at position ${position + 1}.",
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
+            }
+        }
     }
 
     override fun onDestroyView() {

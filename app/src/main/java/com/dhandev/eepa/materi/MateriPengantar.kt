@@ -25,6 +25,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
+import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 import java.net.URL
 
 
@@ -126,8 +127,9 @@ class MateriPengantar : AppCompatActivity() {
         val Editor:SharedPreferences.Editor = sharedPred.edit()
         Editor.putString("url", url)
         Editor.putString("desc", desc)
+        Editor.putInt("id", 1)
         Editor.apply()
-        val intent = Intent(this, ImageViewerActivity::class.java)
+        val intent = Intent(this, ImageViewerMateriActivity::class.java)
         startActivity(intent)
     }
 

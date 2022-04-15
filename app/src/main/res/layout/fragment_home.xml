@@ -255,6 +255,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5">
 
             <TextView
+                android:id="@+id/contoh"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/contohsoal"

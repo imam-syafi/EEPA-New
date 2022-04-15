@@ -17,6 +17,9 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_navigation_home_to_contohActivity"
+            app:destination="@id/contohActivity" />
     </fragment>
 
     <fragment
@@ -56,4 +59,9 @@
         android:name="com.dhandev.eepa.onBoarding"
         android:label="activity_on_boarding"
         tools:layout="@layout/activity_on_boarding" />
+    <activity
+        android:id="@+id/contohActivity"
+        android:name="com.dhandev.eepa.asah.ContohActivity"
+        android:label="activity_contoh"
+        tools:layout="@layout/activity_contoh" />
 </navigation>

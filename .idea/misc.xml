@@ -21,6 +21,7 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/logout.xml" value="0.176" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/main_bg.xml" value="0.176" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/main_bg_splash.xml" value="0.183" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/memuatgambar.xml" value="0.212" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/news_bg.xml" value="0.18" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/onboarding_card.xml" value="0.183" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/drawable/rounded_corner.xml" value="0.18" />
@@ -28,10 +29,12 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/font/nunito_black.xml" value="0.2625" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/font/nunito_bold.xml" value="0.2625" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout-v26/activity_materi_pengantar.xml" value="0.22146739130434784" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_contoh.xml" value="0.2988679352838745" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_image_viewer.xml" value="0.29030797101449274" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_main.xml" value="0.22146739130434784" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_materi_pengantar.xml" value="0.2988679352838745" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_materi_subatomik.xml" value="0.22146739130434784" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_nomor_contoh.xml" value="0.29030797101449274" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_on_boarding.xml" value="0.2264151024877837" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_splash_screen.xml" value="0.21822916666666667" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/fragment_home.xml" value="0.2988679352838745" />

@@ -90,4 +90,10 @@
     <string name="bagaimana_ini_dimulai">Bagaimana ini dimulai?</string>
     <string name="intro_2">Pendekatan Saintifik</string>
     <string name="intro_3">Model Roti Kismis</string>
+    <string name="bullet_3">\n1. Sinar katoda tersusun dari partikel bermuatan negatif \n2. Partikel tersebut harus ada sebagai bagian dari atom, oleh karena massa tiap partikel hanya sekitar 1/2000 massa atom hidrogen \n3. Partikel subatomik ini dapat ditemukan di semua atom</string>
+    <string name="contoh_soal">Contoh Soal</string>
+    <string name="silahkan_pilih_nomor_untuk_melihat_soal_dan_penyelesaiannya">Silahkan pilih nomor untuk melihat soal dan penyelesaiannya!</string>
+    <string name="solusi_contoh_1">Partikel fermion merupakan partikel yang memiliki spin tengahan (1/2) dan mematuhi statistika Fermi-Dirac, sedangkan partikel boson memiliki spin bilangan bulat dan mematuhi statistika Bose-Einstein. Oleh karena itu, elektron termasuk fermion dan foton termasuk boson.</string>
+    <string name="tampilkan_jawaban">Tampilkan jawaban</string>
+    <string name="soal_contoh_1">Jelaskan mengapa elektron termasuk fermion dan foton termasuk boson?</string>
 </resources>

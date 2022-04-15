@@ -44,6 +44,9 @@ class HomeFragment : Fragment() {
             val intent = Intent(activity, MateriPengantar::class.java)
             startActivity(intent)
         }
+        binding.contoh.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_contohActivity)
+        )
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 

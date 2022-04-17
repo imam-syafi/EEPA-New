@@ -50,6 +50,9 @@ class HomeFragment : Fragment() {
         binding.contoh.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_contohActivity)
         )
+        binding.latihan.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_latihanActivity)
+        )
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 

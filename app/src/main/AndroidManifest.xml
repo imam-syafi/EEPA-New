@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".asah.MulaiLatihanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".asah.LatihanActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.imageViewer.ImageViewerMateriActivity"
             android:exported="false" />
         <activity

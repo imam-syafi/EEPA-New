@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_navigation_home_to_contohActivity"
             app:destination="@id/contohActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_latihanActivity"
+            app:destination="@id/latihanActivity" />
     </fragment>
 
     <fragment
@@ -64,4 +67,9 @@
         android:name="com.dhandev.eepa.asah.ContohActivity"
         android:label="activity_contoh"
         tools:layout="@layout/activity_contoh" />
+    <activity
+        android:id="@+id/latihanActivity"
+        android:name="com.dhandev.eepa.asah.LatihanActivity"
+        android:label="activity_latihan"
+        tools:layout="@layout/activity_latihan" />
 </navigation>

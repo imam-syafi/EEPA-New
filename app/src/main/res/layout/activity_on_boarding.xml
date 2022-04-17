@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_onboarding"
+    android:background="@drawable/main_bg_splash"
     app:layoutDescription="@xml/activity_on_boarding_scene"
     tools:context=".onBoarding">
+
 
     <ImageView
         android:id="@+id/gambar1"
@@ -21,15 +22,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.194" />
 
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/swipe_gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/desc1"
+        app:layout_constraintStart_toStartOf="@id/gambar1"
+        app:layout_constraintEnd_toEndOf="@id/gambar1"
+        android:elevation="2dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
     <TextView
         android:id="@+id/judul1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_sans_black"
         android:gravity="center_horizontal"
         android:text="@string/cari_tahu"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@id/gambar1"
         app:layout_constraintHorizontal_bias="0.0"
@@ -41,27 +54,16 @@
         android:id="@+id/desc1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
         android:text="@string/tahukah_anda_partikel_apa_n_yang_lebih_mendasar_dari_atom"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/gambar1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/gambar1"
-        app:layout_constraintTop_toBottomOf="@id/gambar1" />
-
-    <Button
-        android:id="@+id/btnSkip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/lewati"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@id/gambar1"
-        app:layout_constraintStart_toStartOf="@id/gambar1"
-        app:layout_constraintTop_toBottomOf="@id/desc1" />
+        app:layout_constraintTop_toBottomOf="@id/judul1" />
 
     <ImageView
         android:id="@+id/gambar2"
@@ -78,10 +80,10 @@
         android:id="@+id/judul2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_sans_black"
         android:text="@string/di_dalam_atom"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@id/gambar2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -93,16 +95,16 @@
         android:id="@+id/desc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
         android:text="@string/proton_neutron_dan_elektron_mungkin_nmenjadi_yang_pertama_terbesit_ndalam_pikiran_anda"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/gambar2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/gambar2"
-        app:layout_constraintTop_toBottomOf="@id/gambar2" />
+        app:layout_constraintTop_toBottomOf="@id/judul2" />
 
     <ImageView
         android:id="@+id/gambar3"
@@ -120,10 +122,10 @@
         android:id="@+id/judul3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito_sans_black"
         android:text="@string/tahukah_anda"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@id/gambar3"
         app:layout_constraintHorizontal_bias="0.0"
@@ -134,16 +136,16 @@
         android:id="@+id/desc3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
         android:text="@string/ternyata_masih_ada_partikel_yang_lebih_nmendasar_yang_menyusun_partikel_tadi"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/gambar3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/gambar3"
-        app:layout_constraintTop_toBottomOf="@id/gambar3" />
+        app:layout_constraintTop_toBottomOf="@id/judul3" />
 
     <ImageView
         android:id="@+id/gambar4"
@@ -160,10 +162,10 @@
         android:id="@+id/judul4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_sans_black"
         android:text="@string/sangat_bermanfaat"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@id/gambar4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -174,16 +176,16 @@
         android:id="@+id/desc4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
         android:text="@string/dengan_mempelajari_ini_kita_bisa_nmengetahui_asal_usul_alam_semesta_lo"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/gambar4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/gambar4"
-        app:layout_constraintTop_toBottomOf="@id/gambar4" />
+        app:layout_constraintTop_toBottomOf="@id/judul4" />
 
     <ImageView
         android:id="@+id/gambar5"
@@ -201,10 +203,10 @@
         android:id="@+id/judul5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_sans_black"
         android:text="@string/penasaran"
-        android:textColor="@color/abu"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@id/gambar5"
         app:layout_constraintHorizontal_bias="0.0"
@@ -215,27 +217,17 @@
         android:id="@+id/desc5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/nunito"
         android:gravity="center_horizontal"
-        android:text="@string/yuk_pelajari_semua_dengan_eepa_n_easy_elementary_particle_app"
-        android:textColor="@color/abu"
+        android:text="Yuk, kita pelajari bersama!"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/gambar5"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/gambar5"
-        app:layout_constraintTop_toBottomOf="@id/gambar5" />
+        app:layout_constraintTop_toBottomOf="@id/judul5" />
 
-    <Button
-        android:id="@+id/btnMasuk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@id/menu3"
-        app:layout_constraintEnd_toEndOf="@id/desc5"
-        app:layout_constraintStart_toStartOf="@id/desc5"
-        app:layout_constraintTop_toBottomOf="@id/desc5" />
 
     <ImageView
         android:id="@+id/bgLogin"
@@ -244,8 +236,8 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/latar_belakang"
         android:src="@drawable/cardlong"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent" />
 
     <TextView
@@ -267,11 +259,26 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rounded_corner"
-        android:src="@drawable/avatar"
+        android:background="@drawable/rounded_corner_smaller"
+        tools:src="@tools:sample/avatars"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
         app:layout_constraintTop_toBottomOf="@id/kenalan" />
+
+    <TextView
+        android:id="@+id/editImage"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:textColor="@color/white"
+        android:background="#4D000000"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:drawableStart="@drawable/ic_baseline_edit_24"
+        android:text="Ganti Avatar"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/avatar"
+        app:layout_constraintStart_toStartOf="@id/avatar"/>
 
     <LinearLayout
         android:id="@+id/chooseAvatar"
@@ -341,8 +348,7 @@
         app:altSrc="@drawable/ic_baseline_circle_24"
         app:layout_constraintEnd_toStartOf="@id/menu2"
         app:layout_constraintTop_toTopOf="@id/menu3"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:tint="@color/blue_500" />
+        app:srcCompat="@drawable/ic_outline_circle_24" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu2"
@@ -351,20 +357,18 @@
         app:altSrc="@drawable/ic_baseline_circle_24"
         app:layout_constraintEnd_toStartOf="@id/menu3"
         app:layout_constraintTop_toTopOf="@id/menu3"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:tint="@color/blue_500" />
+        app:srcCompat="@drawable/ic_outline_circle_24" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu3"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         app:altSrc="@drawable/ic_baseline_circle_24"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:tint="@color/blue_500" />
+        app:layout_constraintBottom_toTopOf="@id/card"
+        app:srcCompat="@drawable/ic_outline_circle_24" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu4"
@@ -373,8 +377,7 @@
         app:altSrc="@drawable/ic_baseline_circle_24"
         app:layout_constraintStart_toEndOf="@id/menu3"
         app:layout_constraintTop_toTopOf="@id/menu3"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:tint="@color/blue_500" />
+        app:srcCompat="@drawable/ic_outline_circle_24" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu5"
@@ -383,8 +386,26 @@
         app:altSrc="@drawable/ic_baseline_circle_24"
         app:layout_constraintStart_toEndOf="@id/menu4"
         app:layout_constraintTop_toTopOf="@id/menu3"
-        app:srcCompat="@drawable/ic_outline_circle_24"
-        app:tint="@color/blue_500" />
+        app:srcCompat="@drawable/ic_outline_circle_24" />
 
+    <ImageView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-100dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/onboarding_card"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSkip"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:text="Daftar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

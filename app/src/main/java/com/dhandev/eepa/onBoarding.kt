@@ -33,6 +33,8 @@ class onBoarding : AppCompatActivity() {
             val avatar6 = "1xpIiiEan6t1Lh7DONNG9U51CNN_DLv6C"
             var usedAvatar = "1x_lgALTLLNO-_o8f-wTaPEoFCKd8hEO1"
 
+            swipeGesture.setAnimation("swipe_left.json")
+            swipeGesture.playAnimation()
 
             Glide.with(this@onBoarding).load(baseUrl+avatar1).circleCrop().into(ivAvatar1)
             Glide.with(this@onBoarding).load(baseUrl+avatar2).circleCrop().into(ivAvatar2)

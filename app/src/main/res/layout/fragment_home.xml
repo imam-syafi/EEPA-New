@@ -127,6 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:fontFamily="@font/nunito_sans_black"
+            android:layout_marginTop="10dp"
             android:text="@string/materi"
             android:textColor="@color/abu"
             android:textSize="24sp"
@@ -145,7 +146,7 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            app:layout_constraintTop_toTopOf="@id/textView4" />
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
@@ -238,7 +239,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="10dp"
             android:fontFamily="@font/nunito_sans_black"
             android:text="@string/memory"
             android:textColor="@color/abu"
@@ -269,6 +270,7 @@
                 android:textSize="18sp"
                 android:layout_marginRight="15dp"/>
             <TextView
+                android:id="@+id/latihan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/latihan"
@@ -281,6 +283,7 @@
                 android:textSize="18sp"
                 android:layout_marginRight="15dp"/>
             <TextView
+                android:id="@+id/flashcard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/flashcard"
@@ -298,7 +301,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="10dp"
             android:fontFamily="@font/nunito_sans_black"
             android:text="@string/other_features"
             android:textColor="@color/abu"

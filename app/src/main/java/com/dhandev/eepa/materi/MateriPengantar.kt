@@ -13,6 +13,7 @@ import android.text.Spanned
 import android.text.TextUtils
 import android.text.style.BulletSpan
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
 import androidx.core.view.isVisible
@@ -194,11 +195,12 @@ class MateriPengantar : AppCompatActivity() {
             gambar2.visibility = View.VISIBLE
             body2.visibility = View.VISIBLE
             body2.text = "\t Thomson tahu bahwa atom bermuatan netral, oleh karena itu Ia menganggap bahwa harus ada sumber dengan muatan positif pada atom untuk mengimbagi muatan negatif elektron. Hal ini mendorong Thomson pada tahun 1904 untuk mengajukan model bahwa atom dapat dideskripsikan sebagai partikel negatif yang mengambang di dalam sup bermuatan positif. Model ini dikenal dengan model roti kismis (plum pudding), karena deskripsi atom tersebut sangat mirip dengan roti kismis."
+            containerQuiz.visibility = View.VISIBLE
         }
     }
 
     private fun openPageFour() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
     }
 
     private fun focusOnTop() {

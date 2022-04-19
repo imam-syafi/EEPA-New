@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentSettingsBinding
 import com.dhandev.eepa.onBoarding
 
@@ -50,8 +51,11 @@ class SettingsFragment : Fragment() {
         binding.userName.text = username
 
         val baseUrl = "https://docs.google.com/uc?id="
-        val avatar : String? = sharedPred.getString("avatarUrl", null)
-        Glide.with(this).load(baseUrl+avatar).circleCrop().into(binding.imageView5)
+        val avatar : String? = sharedPred.getString("avatarDrawable", "0")
+        when(avatar){
+            "0" -> Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView5)
+            "1" -> Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView5)
+        }
 
         return root
     }

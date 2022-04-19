@@ -3,7 +3,7 @@
     <string name="title_home">Beranda</string>
     <string name="title_news">Berita</string>
     <string name="title_settings">Pengaturan</string>
-    <string name="welcome">Selamat Datang</string>
+    <string name="welcome">Selamat Datang,</string>
     <string name="search_hint">Apa yang mau kamu pelajari hari ini?</string>
     <string name="select_news">Pilih Sumber Berita</string>
     <string name="Theory">Teori</string>
@@ -74,7 +74,6 @@
     <string name="dengan_mempelajari_ini_kita_bisa_nmengetahui_asal_usul_alam_semesta_lo">Dengan mempelajari ini, kita bisa \nmengetahui asal usul alam semesta lo!</string>
     <string name="penasaran">Penasaran?</string>
     <string name="latar_belakang">latar belakang</string>
-    <string name="sebelum_itu_nkenalan_dulu_yuk_string_penasaran">Sebelum itu, \nKenalan dulu yuk!</string>
     <string name="tuliskan_nama_anda">Tuliskan Nama Anda</string>
     <string name="mulai">Mulai</string>
     <string name="lewati">Lewati</string>

@@ -65,9 +65,14 @@ class HomeFragment : Fragment() {
             startActivity(Intent(activity, onBoarding::class.java))
             activity?.finish()
         }
-        val baseUrl = "https://docs.google.com/uc?id="
-        val avatar : String? = sharedPred.getString("avatarUrl", null)
-        Glide.with(this).load(baseUrl+avatar).circleCrop().into(binding.imageView2)
+//        val baseUrl = "https://docs.google.com/uc?id="
+//        val avatar : String? = sharedPred.getString("avatarUrl", null)
+//        Glide.with(this).load(baseUrl+avatar).circleCrop().into(binding.imageView2)
+        val avatar = sharedPred.getString("avatarDrawable", "0")
+        when(avatar){
+            "0" -> Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView2)
+            "1" -> Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView2)
+        }
 
         return root
     }

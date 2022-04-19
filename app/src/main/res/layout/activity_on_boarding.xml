@@ -27,12 +27,12 @@
         android:id="@+id/swipe_gesture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/desc1"
-        app:layout_constraintStart_toStartOf="@id/gambar1"
-        app:layout_constraintEnd_toEndOf="@id/gambar1"
         android:elevation="2dp"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true"/>
+        app:layout_constraintEnd_toEndOf="@id/gambar1"
+        app:layout_constraintStart_toStartOf="@id/gambar1"
+        app:layout_constraintTop_toBottomOf="@id/desc1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
 
     <TextView
         android:id="@+id/judul1"
@@ -247,70 +247,52 @@
         android:layout_marginTop="70dp"
         android:fontFamily="@font/nunito_sans_black"
         android:gravity="center_horizontal"
-        android:text="@string/sebelum_itu_nkenalan_dulu_yuk_string_penasaran"
+        android:text="Sebelum belajar, \nkenalan dulu yuk!"
         android:textColor="@color/abu"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
         app:layout_constraintTop_toTopOf="@id/bgLogin" />
 
-    <ImageView
-        android:id="@+id/avatar"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/rounded_corner_smaller"
-        tools:src="@tools:sample/avatars"
+    <TextView
+        android:id="@+id/pilih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:text="Pilih Avatarmu"
+        android:textColor="@color/abu"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
         app:layout_constraintTop_toBottomOf="@id/kenalan" />
 
-    <TextView
-        android:id="@+id/editImage"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/nunito_sans_bold"
-        android:textColor="@color/white"
-        android:background="#4D000000"
-        android:gravity="center"
-        android:paddingHorizontal="10dp"
-        android:drawableStart="@drawable/ic_baseline_edit_24"
-        android:text="Ganti Avatar"
-        app:layout_constraintBottom_toBottomOf="@id/avatar"
-        app:layout_constraintEnd_toEndOf="@id/avatar"
-        app:layout_constraintStart_toStartOf="@id/avatar"/>
-
     <LinearLayout
-        android:id="@+id/chooseAvatar"
-        android:layout_width="0dp"
+        android:id="@+id/avatar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        android:visibility="gone"
-        android:gravity="center_horizontal"
-        app:layout_constraintStart_toStartOf="@id/bgLogin"
-        app:layout_constraintEnd_toEndOf="@id/bgLogin"
-        app:layout_constraintTop_toBottomOf="@id/avatar">
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pilih">
+
         <ImageView
-            android:id="@+id/iv_avatar1"
-            style="@style/avatarChoose"/>
+            android:id="@+id/avatarMale"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="10dp"
+            tools:src="@tools:sample/avatars" />
+
         <ImageView
-            android:id="@+id/iv_avatar2"
-            style="@style/avatarChoose"/>
-        <ImageView
-            android:id="@+id/iv_avatar3"
-            style="@style/avatarChoose"/>
-        <ImageView
-            android:id="@+id/iv_avatar4"
-            style="@style/avatarChoose"/>
-        <ImageView
-            android:id="@+id/iv_avatar5"
-            style="@style/avatarChoose"/>
-        <ImageView
-            android:id="@+id/iv_avatar6"
-            style="@style/avatarChoose"/>
+            android:id="@+id/avatarFemale"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="10dp"
+            tools:src="@tools:sample/avatars" />
     </LinearLayout>
+
+
 
     <EditText
         android:id="@+id/editText_user"
@@ -320,7 +302,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/white"
-        android:elevation="10dp"
+        android:elevation="3dp"
         android:fontFamily="@font/nunito_sans_bold"
         android:gravity="center"
         android:hint="@string/tuliskan_nama_anda"
@@ -328,18 +310,18 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
-        app:layout_constraintTop_toBottomOf="@id/chooseAvatar" />
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
 
     <Button
         android:id="@+id/btnMulai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/mulai"
         android:textAllCaps="false"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/bgLogin"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
-        app:layout_constraintTop_toBottomOf="@id/editText_user"/>
+        app:layout_constraintStart_toStartOf="@id/bgLogin"
+        app:layout_constraintTop_toBottomOf="@id/editText_user" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu1"
@@ -365,9 +347,9 @@
         android:layout_height="20dp"
         android:layout_marginBottom="10dp"
         app:altSrc="@drawable/ic_baseline_circle_24"
+        app:layout_constraintBottom_toTopOf="@id/card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/card"
         app:srcCompat="@drawable/ic_outline_circle_24" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -407,5 +389,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/card" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

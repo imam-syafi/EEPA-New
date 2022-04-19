@@ -2,6 +2,8 @@ package com.dhandev.eepa
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,47 +34,67 @@ class onBoarding : AppCompatActivity() {
             val avatar5 = "1xGRfxpehowAJzCAHKjELvV87lNGB2IY_"
             val avatar6 = "1xpIiiEan6t1Lh7DONNG9U51CNN_DLv6C"
             var usedAvatar = "1x_lgALTLLNO-_o8f-wTaPEoFCKd8hEO1"
+            var gender = "0"
 
             swipeGesture.setAnimation("swipe_left.json")
             swipeGesture.playAnimation()
 
-            Glide.with(this@onBoarding).load(baseUrl+avatar1).circleCrop().into(ivAvatar1)
-            Glide.with(this@onBoarding).load(baseUrl+avatar2).circleCrop().into(ivAvatar2)
-            Glide.with(this@onBoarding).load(baseUrl+avatar3).circleCrop().into(ivAvatar3)
-            Glide.with(this@onBoarding).load(baseUrl+avatar4).circleCrop().into(ivAvatar4)
-            Glide.with(this@onBoarding).load(baseUrl+avatar5).circleCrop().into(ivAvatar5)
-            Glide.with(this@onBoarding).load(baseUrl+avatar6).circleCrop().into(ivAvatar6)
+            Glide.with(this@onBoarding).load(R.drawable.male).circleCrop().into(avatarMale)
+            Glide.with(this@onBoarding).load(R.drawable.female).circleCrop().into(avatarFemale)
 
-            ivAvatar1.setOnClickListener {
-                usedAvatar = avatar1
-                changeAvatar(usedAvatar)
+            val colorMatrix = ColorMatrix()
+            colorMatrix.setSaturation(0f)
+            val filter = ColorMatrixColorFilter(colorMatrix)
+            avatarMale.setColorFilter(filter)
+            avatarFemale.setColorFilter(filter)
+
+            avatarMale.setOnClickListener{
+                avatarMale.clearColorFilter()
+                avatarFemale.setColorFilter(filter)
+                gender = "0"
+
             }
-            ivAvatar2.setOnClickListener {
-                usedAvatar = avatar2
-                changeAvatar(usedAvatar)
-            }
-            ivAvatar3.setOnClickListener {
-                usedAvatar = avatar3
-                changeAvatar(usedAvatar)
-            }
-            ivAvatar4.setOnClickListener {
-                usedAvatar = avatar4
-                changeAvatar(usedAvatar)
-            }
-            ivAvatar5.setOnClickListener {
-                usedAvatar = avatar5
-                changeAvatar(usedAvatar)
-            }
-            ivAvatar6.setOnClickListener {
-                usedAvatar = avatar6
-                changeAvatar(usedAvatar)
+            avatarFemale.setOnClickListener{
+                avatarFemale.clearColorFilter()
+                avatarMale.setColorFilter(filter)
+                gender = "1"
             }
 
-            Glide.with(this@onBoarding)
-                .load("https://docs.google.com/uc?id=$usedAvatar")
-                .circleCrop()
-                .placeholder(R.drawable.ic_baseline_account_circle_24)
-                .into(avatar)
+//            Glide.with(this@onBoarding).load(baseUrl+avatar3).circleCrop().into(ivAvatar3)
+//            Glide.with(this@onBoarding).load(baseUrl+avatar4).circleCrop().into(ivAvatar4)
+//            Glide.with(this@onBoarding).load(baseUrl+avatar5).circleCrop().into(ivAvatar5)
+//            Glide.with(this@onBoarding).load(baseUrl+avatar6).circleCrop().into(ivAvatar6)
+//
+//            ivAvatar1.setOnClickListener {
+//                usedAvatar = avatar1
+//                changeAvatar(usedAvatar)
+//            }
+//            ivAvatar2.setOnClickListener {
+//                usedAvatar = avatar2
+//                changeAvatar(usedAvatar)
+//            }
+//            ivAvatar3.setOnClickListener {
+//                usedAvatar = avatar3
+//                changeAvatar(usedAvatar)
+//            }
+//            ivAvatar4.setOnClickListener {
+//                usedAvatar = avatar4
+//                changeAvatar(usedAvatar)
+//            }
+//            ivAvatar5.setOnClickListener {
+//                usedAvatar = avatar5
+//                changeAvatar(usedAvatar)
+//            }
+//            ivAvatar6.setOnClickListener {
+//                usedAvatar = avatar6
+//                changeAvatar(usedAvatar)
+//            }
+
+//            Glide.with(this@onBoarding)
+//                .load("https://docs.google.com/uc?id=$usedAvatar")
+//                .circleCrop()
+//                .placeholder(R.drawable.ic_baseline_account_circle_24)
+//                .into(avatar)
 
             btnMulai.setOnClickListener {
                 val username = editTextUser.text.toString()
@@ -81,7 +103,7 @@ class onBoarding : AppCompatActivity() {
                 } else {
                     val Editor:SharedPreferences.Editor = sharedPred.edit()
                     Editor.putString("userName", username)
-                    Editor.putString("avatarUrl", usedAvatar)
+                    Editor.putString("avatarDrawable", gender)
                     Editor.apply()
                     startActivity(Intent(this@onBoarding, MainActivity::class.java))
                     finish()
@@ -90,11 +112,11 @@ class onBoarding : AppCompatActivity() {
         }
     }
 
-    private fun changeAvatar(usedAvatar : String) {
-        Glide.with(this@onBoarding)
-            .load("https://docs.google.com/uc?id=$usedAvatar")
-            .circleCrop()
-            .placeholder(R.drawable.ic_baseline_account_circle_24)
-            .into(binding.avatar)
-    }
+//    private fun changeAvatar(usedAvatar : String) {
+//        Glide.with(this@onBoarding)
+//            .load("https://docs.google.com/uc?id=$usedAvatar")
+//            .circleCrop()
+//            .placeholder(R.drawable.ic_baseline_account_circle_24)
+//            .into(binding.avatar)
+//    }
 }

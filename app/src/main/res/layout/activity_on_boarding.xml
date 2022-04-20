@@ -293,7 +293,6 @@
     </LinearLayout>
 
 
-
     <EditText
         android:id="@+id/editText_user"
         android:layout_width="match_parent"
@@ -306,22 +305,36 @@
         android:fontFamily="@font/nunito_sans_bold"
         android:gravity="center"
         android:hint="@string/tuliskan_nama_anda"
+        android:inputType="textPersonName"
+        android:lines="1"
+        android:maxLines="1"
         android:padding="10dp"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
         app:layout_constraintTop_toBottomOf="@id/avatar" />
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/btnMulai"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="@string/mulai"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/bgLogin"-->
+<!--        app:layout_constraintStart_toStartOf="@id/bgLogin"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/editText_user" />-->
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnMulai"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/mulai"
-        android:textAllCaps="false"
+        android:background="@drawable/rounded_corner"
+        android:text="Mulai"
+        app:layout_constraintBottom_toBottomOf="@id/bgLogin"
         app:layout_constraintEnd_toEndOf="@id/bgLogin"
         app:layout_constraintStart_toStartOf="@id/bgLogin"
-        app:layout_constraintTop_toBottomOf="@id/editText_user" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_user" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/menu1"

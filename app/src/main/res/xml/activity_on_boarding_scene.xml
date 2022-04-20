@@ -486,6 +486,29 @@
             motion:layout_constraintStart_toStartOf="@id/bgLogin"
             android:id="@+id/pilih"
             android:layout_marginTop="8dp" />
+        <Constraint
+            motion:layout_constraintTop_toBottomOf="@+id/editText_user"
+            android:id="@+id/btnMulai"
+            motion:layout_editor_absoluteY="585dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/btnMulai"
+            motion:layout_constraintEnd_toEndOf="@id/bgLogin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/bgLogin"
+            motion:layout_constraintTop_toBottomOf="@+id/editText_user"
+            motion:layout_constraintStart_toStartOf="@id/bgLogin"
+            android:layout_marginStart="10dp" />
+        <Constraint
+            android:id="@+id/btnMulai"
+            motion:layout_constraintEnd_toEndOf="@id/bgLogin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/bgLogin"
+            motion:layout_constraintTop_toBottomOf="@+id/editText_user"
+            motion:layout_constraintStart_toStartOf="@id/bgLogin" />
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/onBoard5"

@@ -40,12 +40,62 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/soalLatihan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sedang Dalam Pengerjaan"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Soal nomor 1"
+        style="@style/FontParagraf"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/pilihan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/soalLatihan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <RadioButton
+            android:id="@+id/opsi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 1"/>
+        <RadioButton
+            android:id="@+id/opsi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 2"/>
+        <RadioButton
+            android:id="@+id/opsi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 3"/>
+        <RadioButton
+            android:id="@+id/opsi4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opsi 4"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/skorTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Skor : 0"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        android:gravity="center_horizontal"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

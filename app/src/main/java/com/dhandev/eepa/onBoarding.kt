@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.dhandev.eepa.databinding.ActivityOnBoardingBinding
@@ -34,7 +35,7 @@ class onBoarding : AppCompatActivity() {
             val avatar5 = "1xGRfxpehowAJzCAHKjELvV87lNGB2IY_"
             val avatar6 = "1xpIiiEan6t1Lh7DONNG9U51CNN_DLv6C"
             var usedAvatar = "1x_lgALTLLNO-_o8f-wTaPEoFCKd8hEO1"
-            var gender = "0"
+            var gender = "3"
 
             swipeGesture.setAnimation("swipe_left.json")
             swipeGesture.playAnimation()
@@ -100,7 +101,10 @@ class onBoarding : AppCompatActivity() {
                 val username = editTextUser.text.toString()
                 if (username.isEmpty()){
                     editTextUser.error = "Nama harus terisi"
-                } else {
+                } else if (gender == "3") {
+                    Toast.makeText(this@onBoarding, "Silahkan pilih avatar", Toast.LENGTH_SHORT).show()
+                }
+                else {
                     val Editor:SharedPreferences.Editor = sharedPred.edit()
                     Editor.putString("userName", username)
                     Editor.putString("avatarDrawable", gender)

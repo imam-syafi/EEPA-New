@@ -33,6 +33,7 @@
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/font/nunito_sans_bold.xml" value="0.32916666666666666" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout-v26/activity_materi_pengantar.xml" value="0.22146739130434784" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_contoh.xml" value="0.2988679352838745" />
+        <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_hasil_latihan.xml" value="0.2988679352838745" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_image_viewer.xml" value="0.29030797101449274" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_image_viewer_materi.xml" value="0.29030797101449274" />
         <entry key="..\:/dhandev/ProgramEEPA/app/src/main/res/layout/activity_latihan.xml" value="0.29030797101449274" />
@@ -57,7 +58,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

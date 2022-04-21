@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg_splash"
+    tools:context=".asah.HasilLatihanActivity">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/headerHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_black"
+        android:gravity="center_horizontal"
+        android:text="Hasil Latihan"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close" />
+
+    <TextView
+        android:id="@+id/descHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center_horizontal"
+        tools:text="Selamat user, Kamu sudah berhasil menyelesaikan soal-soal latihan! \nBerikut rincian hasilnya"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerHasil" />
+
+    <LinearLayout
+        android:id="@+id/rincianHasil"
+        style="@style/bgDropDownList"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descHasil">
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalPertama"
+                style="@style/soalResultLatihan"
+                tools:text="1. Ini Soal Pertama"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawableTint="#D32F2F"
+                android:text="Salah"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKedua"
+                style="@style/soalResultLatihan"
+                tools:text="2. Ini Soal Kedua"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:backgroundTint="#B2DFDB"
+                android:drawableStart="@drawable/ic_baseline_done_24"
+                android:drawableTint="#388E3C"
+                android:text="Benar"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKetiga"
+                style="@style/soalResultLatihan"
+                tools:text="3. Ini Soal Ketiga"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:backgroundTint="#B2DFDB"
+                android:drawableStart="@drawable/ic_baseline_done_24"
+                android:drawableTint="#388E3C"
+                android:text="Benar"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKeempat"
+                style="@style/soalResultLatihan"
+                tools:text="4. Ini Soal Keempat"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:backgroundTint="#B2DFDB"
+                android:drawableStart="@drawable/ic_baseline_done_24"
+                android:drawableTint="#388E3C"
+                android:text="Benar"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKelima"
+                style="@style/soalResultLatihan"
+                tools:text="5. Ini Soal Kelima"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawableTint="#D32F2F"
+                android:text="Salah"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKeenam"
+                style="@style/soalResultLatihan"
+                tools:text="6. Ini Soal Keenam"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawableTint="#D32F2F"
+                android:text="Salah"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKetujuh"
+                style="@style/soalResultLatihan"
+                tools:text="7. Ini Soal Ketujuh"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawableTint="#D32F2F"
+                android:text="Salah"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKedelapan"
+                style="@style/soalResultLatihan"
+                tools:text="8. Ini Soal Kedelapan"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:backgroundTint="#B2DFDB"
+                android:drawableStart="@drawable/ic_baseline_done_24"
+                android:drawableTint="#388E3C"
+                android:text="Benar"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKesembilan"
+                style="@style/soalResultLatihan"
+                tools:text="9. Ini Soal Kesembilan"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:backgroundTint="#B2DFDB"
+                android:drawableStart="@drawable/ic_baseline_done_24"
+                android:drawableTint="#388E3C"
+                android:text="Benar"/>
+        </LinearLayout>
+        <View
+            style="@style/Divider"/>
+        <LinearLayout
+            style="@style/layoutResultLatihan">
+            <TextView
+                android:id="@+id/soalKesepuluh"
+                style="@style/soalResultLatihan"
+                tools:text="10. Ini Soal Kesepuluh"/>
+            <TextView
+                style="@style/jawabanResultLatihan"
+                android:backgroundTint="#B2DFDB"
+                android:drawableStart="@drawable/ic_baseline_done_24"
+                android:drawableTint="#388E3C"
+                android:text="Benar"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/fireworks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="5dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nilai Akhir:"
+        app:layout_constraintTop_toBottomOf="@id/rincianHasil"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/skorTotal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        tools:text="60"
+        android:textSize="30sp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/kataKata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Kata-kata"
+        app:layout_constraintTop_toBottomOf="@id/skorTotal"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

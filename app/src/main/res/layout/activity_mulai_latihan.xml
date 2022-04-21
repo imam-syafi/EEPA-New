@@ -80,14 +80,6 @@
             android:text="Opsi 4"/>
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/skorTotal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Skor : 0"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        android:gravity="center_horizontal"/>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_next"
         android:layout_width="200dp"

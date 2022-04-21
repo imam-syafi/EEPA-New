@@ -1,5 +1,6 @@
 package com.dhandev.eepa.asah
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,6 +11,7 @@ import kotlin.random.Random
 class MulaiLatihanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMulaiLatihanBinding
     var mutableList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    var listHasil = mutableListOf<Int>()
     var skor = 0
     var nomorSoal = 2
     var soal = Random.nextInt(1,11)
@@ -79,6 +81,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(10)
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
@@ -101,6 +104,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban benar"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(9)
             btnNext.setOnClickListener {
                 if (opsi3.isChecked){
                     answer = 1
@@ -123,6 +127,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban benar"
 
+            listHasil.add(8)
             btnNext.setOnClickListener {
                 if (opsi4.isChecked){
                     answer = 1
@@ -145,6 +150,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(7)
             btnNext.setOnClickListener {
                 if (opsi1.isChecked){
                     answer = 1
@@ -167,6 +173,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(6)
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
@@ -189,6 +196,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban benar"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(5)
             btnNext.setOnClickListener {
                 if (opsi3.isChecked){
                     answer = 1
@@ -211,6 +219,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban benar"
 
+            listHasil.add(4)
             btnNext.setOnClickListener {
                 if (opsi4.isChecked){
                     answer = 1
@@ -233,6 +242,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(3)
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
@@ -255,6 +265,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(2)
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
@@ -277,6 +288,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             opsi3.text = "Ini jawaban salah"
             opsi4.text = "Ini jawaban salah"
 
+            listHasil.add(1)
             btnNext.setOnClickListener {
                 if (opsi1.isChecked){
                     answer = 1
@@ -294,24 +306,32 @@ class MulaiLatihanActivity : AppCompatActivity() {
     private fun nextQuestion(answer : Int) {
         binding.apply {
             if (answer == 1) {
-                skor++
-                skorTotal.text = "Skor : $skor"
+                skor+=10
             } else {
-                skorTotal.text = "Skor : $skor"
+                skor
             }
             pilihan.clearCheck()
             if (nomorSoal < 10){
                 soal = Random.nextInt(1,11)
                 randomize(soal)
                 title.text = "Nomor ${nomorSoal++}/10"
+                Toast.makeText(this@MulaiLatihanActivity, listHasil.toString(), Toast.LENGTH_SHORT).show()
             } else if (nomorSoal == 10) {
                 soal = Random.nextInt(1,11)
                 nomorSoal++
                 randomize(soal)
                 title.text = "Nomor 10/10"
                 btnNext.text = "Kumpulkan"
+                Toast.makeText(this@MulaiLatihanActivity, listHasil.toString(), Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this@MulaiLatihanActivity, "Skor total : $skor", Toast.LENGTH_SHORT).show()
+                listHasil.removeAt(0)
+                val intent = Intent(this@MulaiLatihanActivity, HasilLatihanActivity::class.java)
+                val arrayListHasil = ArrayList(listHasil)
+                Toast.makeText(this@MulaiLatihanActivity, arrayListHasil.toString(), Toast.LENGTH_SHORT).show()
+                intent.putIntegerArrayListExtra("urutanSoal", arrayListHasil)
+                intent.putExtra("skor", skor)
+                startActivity(intent)
+                finish()
             }
         }
     }

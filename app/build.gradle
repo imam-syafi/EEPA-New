@@ -57,4 +57,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
     implementation 'io.github.aghajari:ZoomHelper:1.1.0'
 
+    //define and apply styles programmatically to Android views, including custom attributes
+    implementation 'com.airbnb.android:paris:2.0.0'
+
 }

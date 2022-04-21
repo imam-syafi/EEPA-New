@@ -15,4 +15,6 @@
     <color name="greenRead">#A8F29A</color>
     <color name="orangeRead">#EDDD6E</color>
     <color name="greenBright">#46D754</color>
+    <color name="right">#388E3C</color>
+    <color name="wrong">#D32F2F</color>
 </resources>

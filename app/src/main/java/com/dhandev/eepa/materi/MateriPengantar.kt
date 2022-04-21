@@ -259,5 +259,4 @@ class MateriPengantar : AppCompatActivity() {
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }
-//TODO: Buat class khusus pengaturan warna latar dan ukuran
 }

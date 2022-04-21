@@ -13,6 +13,7 @@
         android:layout_height="30dp"
         android:layout_margin="10dp"
         android:src="@drawable/ic_baseline_close_24"
+        app:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -57,10 +58,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="1. Ini Soal Pertama"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:drawableStart="@drawable/ic_baseline_close_24"
-                android:drawableTint="#D32F2F"
-                android:text="Salah"/>
+                android:id="@+id/jawabanPertama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -71,11 +71,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="2. Ini Soal Kedua"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:backgroundTint="#B2DFDB"
-                android:drawableStart="@drawable/ic_baseline_done_24"
-                android:drawableTint="#388E3C"
-                android:text="Benar"/>
+                android:id="@+id/jawabanKedua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -86,11 +84,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="3. Ini Soal Ketiga"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:backgroundTint="#B2DFDB"
-                android:drawableStart="@drawable/ic_baseline_done_24"
-                android:drawableTint="#388E3C"
-                android:text="Benar"/>
+                android:id="@+id/jawabanKetiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -101,11 +97,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="4. Ini Soal Keempat"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:backgroundTint="#B2DFDB"
-                android:drawableStart="@drawable/ic_baseline_done_24"
-                android:drawableTint="#388E3C"
-                android:text="Benar"/>
+                android:id="@+id/jawabanKeempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -116,10 +110,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="5. Ini Soal Kelima"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:drawableStart="@drawable/ic_baseline_close_24"
-                android:drawableTint="#D32F2F"
-                android:text="Salah"/>
+                android:id="@+id/jawabanKelima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -130,10 +123,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="6. Ini Soal Keenam"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:drawableStart="@drawable/ic_baseline_close_24"
-                android:drawableTint="#D32F2F"
-                android:text="Salah"/>
+                android:id="@+id/jawabanKeenam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -144,10 +136,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="7. Ini Soal Ketujuh"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:drawableStart="@drawable/ic_baseline_close_24"
-                android:drawableTint="#D32F2F"
-                android:text="Salah"/>
+                android:id="@+id/jawabanKetujuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -158,11 +149,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="8. Ini Soal Kedelapan"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:backgroundTint="#B2DFDB"
-                android:drawableStart="@drawable/ic_baseline_done_24"
-                android:drawableTint="#388E3C"
-                android:text="Benar"/>
+                android:id="@+id/jawabanKedelapan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -173,11 +162,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="9. Ini Soal Kesembilan"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:backgroundTint="#B2DFDB"
-                android:drawableStart="@drawable/ic_baseline_done_24"
-                android:drawableTint="#388E3C"
-                android:text="Benar"/>
+                android:id="@+id/jawabanKesembilan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
         <View
             style="@style/Divider"/>
@@ -188,11 +175,9 @@
                 style="@style/soalResultLatihan"
                 tools:text="10. Ini Soal Kesepuluh"/>
             <TextView
-                style="@style/jawabanResultLatihan"
-                android:backgroundTint="#B2DFDB"
-                android:drawableStart="@drawable/ic_baseline_done_24"
-                android:drawableTint="#388E3C"
-                android:text="Benar"/>
+                android:id="@+id/jawabanKesepuluh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
 

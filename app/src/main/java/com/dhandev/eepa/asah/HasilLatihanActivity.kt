@@ -5,6 +5,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.airbnb.paris.extensions.style
+import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
 
 class HasilLatihanActivity : AppCompatActivity() {
@@ -37,6 +39,19 @@ class HasilLatihanActivity : AppCompatActivity() {
             soalKesembilan.text = "9. "+ soal(8)
             soalKesepuluh.text = "10. "+ soal(9)
 
+            val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
+            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
+            jawabanPertama.style(jawaban(0))
+            jawabanKedua.style(jawaban(1))
+            jawabanKetiga.style(jawaban(2))
+            jawabanKeempat.style(jawaban(3))
+            jawabanKelima.style(jawaban(4))
+            jawabanKeenam.style(jawaban(5))
+            jawabanKetujuh.style(jawaban(6))
+            jawabanKedelapan.style(jawaban(7))
+            jawabanKesembilan.style(jawaban(8))
+            jawabanKesepuluh.style(jawaban(9))
+
             fireworks.setAnimation("fireworks.json")
             fireworks.playAnimation()
 
@@ -55,6 +70,16 @@ class HasilLatihanActivity : AppCompatActivity() {
             Editor.putInt("latestScore", skor)
             Editor.apply()
         }
+    }
+
+    private fun jawaban(nomor : Int): Int {
+        val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
+        var jawabannya = 0
+        when(urutanJawaban?.get(nomor)){
+            1 -> jawabannya = R.style.jawabanBenar
+            0 -> jawabannya = R.style.jawabanSalah
+        }
+        return jawabannya
     }
 
     private fun soal (nomor : Int) : CharSequence{

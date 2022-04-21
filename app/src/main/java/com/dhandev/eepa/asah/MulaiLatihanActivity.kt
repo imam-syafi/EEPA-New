@@ -12,6 +12,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMulaiLatihanBinding
     var mutableList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     var listHasil = mutableListOf<Int>()
+    var listJawaban = mutableListOf<Int>()
     var skor = 0
     var nomorSoal = 2
     var soal = Random.nextInt(1,11)
@@ -28,14 +29,6 @@ class MulaiLatihanActivity : AppCompatActivity() {
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
-
-//            btnNext.setOnClickListener {
-//                soal = Random.nextInt(1,11)
-//                randomize(soal)
-//                title.text = "Nomor ${nomorSoal++}/10"
-//            }
-
-
         }
     }
     fun randomize(soal : Int) {
@@ -85,11 +78,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -108,11 +103,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi3.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -131,11 +128,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi4.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -154,11 +153,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi1.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -177,11 +178,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -200,11 +203,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi3.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -223,11 +228,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi4.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -246,11 +253,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -269,11 +278,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi2.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -292,11 +303,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
             btnNext.setOnClickListener {
                 if (opsi1.isChecked){
                     answer = 1
+                    listJawaban.add(1)
                     nextQuestion(answer)
                 } else if (pilihan.checkedRadioButtonId == -1) {
                     Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
                 } else {
                     answer = 0
+                    listJawaban.add(0)
                     nextQuestion(answer)
                 }
             }
@@ -315,20 +328,22 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 soal = Random.nextInt(1,11)
                 randomize(soal)
                 title.text = "Nomor ${nomorSoal++}/10"
-                Toast.makeText(this@MulaiLatihanActivity, listHasil.toString(), Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()
             } else if (nomorSoal == 10) {
                 soal = Random.nextInt(1,11)
                 nomorSoal++
                 randomize(soal)
                 title.text = "Nomor 10/10"
                 btnNext.text = "Kumpulkan"
-                Toast.makeText(this@MulaiLatihanActivity, listHasil.toString(), Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()
             } else {
                 listHasil.removeAt(0)
                 val intent = Intent(this@MulaiLatihanActivity, HasilLatihanActivity::class.java)
                 val arrayListHasil = ArrayList(listHasil)
-                Toast.makeText(this@MulaiLatihanActivity, arrayListHasil.toString(), Toast.LENGTH_SHORT).show()
+                val arrayListJawaban = ArrayList(listJawaban)
+//                Toast.makeText(this@MulaiLatihanActivity, arrayListJawaban.toString(), Toast.LENGTH_SHORT).show()
                 intent.putIntegerArrayListExtra("urutanSoal", arrayListHasil)
+                intent.putIntegerArrayListExtra("urutanJawaban", arrayListJawaban)
                 intent.putExtra("skor", skor)
                 startActivity(intent)
                 finish()

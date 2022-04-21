@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:fontFamily="@font/nunito_sans_black"
-            android:text="@string/Theory"
+            android:text="@string/materi"
             android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"

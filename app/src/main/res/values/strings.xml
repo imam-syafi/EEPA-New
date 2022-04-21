@@ -14,11 +14,11 @@
     <string name="see_all">Lihat Semua</string>
     <string name="more">Lebih banyak</string>
     <string name="memory">Asah Pemahaman</string>
-    <string name="example">Contoh</string>
+    <string name="example">Contoh Soal</string>
     <string name="other_features">Fitur Lain</string>
-    <string name="exercise">Latihan</string>
+    <string name="exercise">Soal Latihan</string>
     <string name="calc">Kalkulator</string>
-    <string name="flashcard">Flashcard</string>
+    <string name="flashcard">Benar Salah</string>
     <string name="attachment">Lampiran</string>
     <string name="Intro">Pengantar</string>
     <string name="standard_model">Model Standar</string>

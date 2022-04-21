@@ -132,7 +132,7 @@
         <item name="android:backgroundTint">#F8BBD0</item>
         <item name="android:layout_weight">1</item>
         <item name="android:drawableLeft">@drawable/ic_baseline_close_24</item>
-        <item name="android:drawableTint">#D32F2F</item>
+        <item name="android:drawableTint">@color/wrong</item>
         <item name="android:text">Salah</item>
     </style>
     <style name="jawabanBenar">
@@ -148,8 +148,24 @@
         <item name="android:backgroundTint">#B2DFDB</item>
         <item name="android:layout_weight">1</item>
         <item name="android:drawableLeft">@drawable/ic_baseline_done_24</item>
-        <item name="android:drawableTint">#388E3C</item>
+        <item name="android:drawableTint">@color/right</item>
         <item name="android:text">Benar</item>
+    </style>
+    <style name="jawabanKosong">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:fontFamily">@font/nunito_sans_black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:backgroundTint">@color/abu_terang</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_empty_alt_24</item>
+        <item name="android:drawableTint">@color/abu</item>
+        <item name="android:text">Kosong</item>
     </style>
 
 </resources>

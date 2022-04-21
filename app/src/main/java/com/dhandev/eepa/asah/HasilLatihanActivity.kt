@@ -76,6 +76,7 @@ class HasilLatihanActivity : AppCompatActivity() {
         val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
         var jawabannya = 0
         when(urutanJawaban?.get(nomor)){
+            3 -> jawabannya = R.style.jawabanKosong
             1 -> jawabannya = R.style.jawabanBenar
             0 -> jawabannya = R.style.jawabanSalah
         }
@@ -96,10 +97,12 @@ class HasilLatihanActivity : AppCompatActivity() {
             8 -> isiSoal = "Ini soal kedelapan"
             9 -> isiSoal = "Ini soal kesembilan"
             10 -> isiSoal = "Ini soal kesepuluh"
+            99 -> isiSoal = "Soal belum diakses"
         }
         return isiSoal
     }
 
+    //TODO:SHOW THE RIGHT ANSWER
     override fun onBackPressed() {
         startActivity(Intent(this@HasilLatihanActivity, LatihanActivity::class.java))
         finish()

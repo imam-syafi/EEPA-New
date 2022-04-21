@@ -40,6 +40,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_black"
+        tools:text="13:40"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/soalLatihan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,6 +97,7 @@
         android:id="@+id/btn_next"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
         android:text="@string/btn_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

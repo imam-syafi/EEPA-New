@@ -3,7 +3,9 @@ package com.dhandev.eepa.asah
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Toast
+import com.airbnb.paris.R2.id.time
 import com.dhandev.eepa.databinding.ActivityLatihanBinding
 import com.dhandev.eepa.databinding.ActivityMulaiLatihanBinding
 import kotlin.random.Random
@@ -17,6 +19,8 @@ class MulaiLatihanActivity : AppCompatActivity() {
     var nomorSoal = 2
     var soal = Random.nextInt(1,11)
     var answer = 0
+    lateinit var countdown_timer: CountDownTimer
+    var time_in_milli_seconds = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +29,73 @@ class MulaiLatihanActivity : AppCompatActivity() {
         randomize(soal)
         showSoal(soal)
 
-        binding.apply {
-            arrowBack.setOnClickListener {
-                onBackPressed()
-            }
+        val time = 1 //in minute
+        time_in_milli_seconds = time.toLong() *60000L
+        startTimer(time_in_milli_seconds)
+
+        binding.arrowBack.setOnClickListener {
+            onBackPressed()
         }
     }
+
+    private fun startTimer(timeInMilliSeconds: Long) {
+        countdown_timer = object : CountDownTimer(timeInMilliSeconds, 1000){
+            override fun onTick(p0: Long) {
+                time_in_milli_seconds = p0
+                updateTextUI()
+            }
+
+            override fun onFinish() {
+                listHasil.removeAt(0)
+                defaultListHasil()
+                defaultListJawaban()
+                val intent = Intent(this@MulaiLatihanActivity, HasilLatihanActivity::class.java)
+                val arrayListHasil = ArrayList(listHasil)
+                val arrayListJawaban = ArrayList(listJawaban)
+                intent.putIntegerArrayListExtra("urutanSoal", arrayListHasil)
+                intent.putIntegerArrayListExtra("urutanJawaban", arrayListJawaban)
+                intent.putExtra("skor", skor)
+                startActivity(intent)
+                finish()
+                Toast.makeText(this@MulaiLatihanActivity, "Times UP!", Toast.LENGTH_SHORT).show()
+            }
+        }
+        countdown_timer.start()
+    }
+
+    private fun defaultListJawaban() {
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+    }
+
+    private fun defaultListHasil() {
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+    }
+
+    private fun updateTextUI() {
+        val minute = (time_in_milli_seconds / 1000) / 60
+        val seconds = (time_in_milli_seconds / 1000) % 60
+
+        binding.timer.text = "$minute:$seconds"
+    }
+
     fun randomize(soal : Int) {
 //        var arr: IntArray = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
         if (mutableList.contains(soal)){
@@ -337,6 +402,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 btnNext.text = "Kumpulkan"
 //                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()
             } else {
+                countdown_timer.cancel()
                 listHasil.removeAt(0)
                 val intent = Intent(this@MulaiLatihanActivity, HasilLatihanActivity::class.java)
                 val arrayListHasil = ArrayList(listHasil)

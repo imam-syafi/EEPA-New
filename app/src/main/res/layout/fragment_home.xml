@@ -7,23 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/swipeRefresh"
-
+    android:scrollbars="none"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="ExtraText">
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/news_bg"-->
-<!--            android:adjustViewBounds="true"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/imageView"
@@ -267,8 +257,10 @@
                 android:padding="15dp"
                 android:fontFamily="@font/nunito_sans_black"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                android:layout_marginRight="15dp"/>
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
             <TextView
                 android:id="@+id/latihan"
                 android:layout_width="match_parent"
@@ -280,8 +272,10 @@
                 android:padding="15dp"
                 android:fontFamily="@font/nunito_sans_black"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                android:layout_marginRight="15dp"/>
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
             <TextView
                 android:id="@+id/flashcard"
                 android:layout_width="match_parent"

@@ -28,10 +28,10 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.myLooper()!!).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_navigation_home)
-        }, 3000)
+        }, 2100)
 
         val animation : ObjectAnimator = ObjectAnimator.ofInt(binding.progressCircular, "progress", 0, 110)
-        animation.setDuration(2900)
+        animation.setDuration(2000)
         animation.interpolator
         animation.start()
         binding.version.text ="Partikel Dasar  \nVer ${BuildConfig.VERSION_NAME}"

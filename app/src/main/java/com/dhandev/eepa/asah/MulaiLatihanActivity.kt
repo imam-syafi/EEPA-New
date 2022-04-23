@@ -4,10 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.widget.ImageView
 import android.widget.Toast
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.airbnb.paris.R2.id.time
+import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityLatihanBinding
 import com.dhandev.eepa.databinding.ActivityMulaiLatihanBinding
+import com.dhandev.eepa.onBoarding
+import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import kotlin.random.Random
 
 class MulaiLatihanActivity : AppCompatActivity() {
@@ -30,7 +35,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
         showSoal(soal)
 
         val time = 1 //in minute
-        time_in_milli_seconds = time.toLong() *60000L
+        time_in_milli_seconds = time.toLong() *10000L
         startTimer(time_in_milli_seconds)
 
         binding.arrowBack.setOnClickListener {
@@ -57,7 +62,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 intent.putExtra("skor", skor)
                 startActivity(intent)
                 finish()
-                Toast.makeText(this@MulaiLatihanActivity, "Times UP!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MulaiLatihanActivity, "Waktu Habis!", Toast.LENGTH_SHORT).show()
             }
         }
         countdown_timer.start()
@@ -415,5 +420,33 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    override fun onBackPressed() {
+//        SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+//            .setTitleText("Akhiri Latihan")
+//            .setContentText("Jawaban Anda tidak tersimpan, yakin keluar dari latihan?")
+//            .setConfirmText("Akhiri")
+//            .setConfirmClickListener {
+//                countdown_timer.cancel()
+//                super.onBackPressed()
+//            }
+//            .setCancelText("Tidak")
+//            .setCancelClickListener {sDialog -> sDialog.dismissWithAnimation() }
+//            .show()
+        val BottomSheetDialog = BottomSheetMaterialDialog.Builder(this)
+            .setTitle("Akhiri Latihan?")
+            .setMessage("Jawaban Anda tidak tersimpan, yakin keluar dari latihan?")
+            .setCancelable(true)
+            .setPositiveButton("Akhiri", R.drawable.ic_baseline_done_24) {dialog, which ->
+                countdown_timer.cancel()
+                super.onBackPressed() }
+            .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
+                dialog.dismiss()
+            }
+            .setAnimation("question.json")
+            .build()
+        BottomSheetDialog.show()
+        BottomSheetDialog.animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
     }
 }

@@ -60,4 +60,11 @@ dependencies {
     //define and apply styles programmatically to Android views, including custom attributes
     implementation 'com.airbnb.android:paris:2.0.0'
 
+    //alert dialog
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+    implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.3'
+
+
+
 }

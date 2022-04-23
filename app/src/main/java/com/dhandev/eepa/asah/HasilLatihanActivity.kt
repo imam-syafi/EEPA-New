@@ -23,7 +23,6 @@ class HasilLatihanActivity : AppCompatActivity() {
             sharedPred = this@HasilLatihanActivity.getSharedPreferences("User", MODE_PRIVATE)
 
             close.setOnClickListener {
-                startActivity(Intent(this@HasilLatihanActivity, LatihanActivity::class.java))
                 finish()
             }
             val username : String?  = sharedPred.getString("userName", null)
@@ -40,7 +39,7 @@ class HasilLatihanActivity : AppCompatActivity() {
             soalKesepuluh.text = "10. "+ soal(9)
 
             val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
-            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
             jawabanPertama.style(jawaban(0))
             jawabanKedua.style(jawaban(1))
             jawabanKetiga.style(jawaban(2))
@@ -104,7 +103,6 @@ class HasilLatihanActivity : AppCompatActivity() {
 
     //TODO:SHOW THE RIGHT ANSWER
     override fun onBackPressed() {
-        startActivity(Intent(this@HasilLatihanActivity, LatihanActivity::class.java))
         finish()
     }
 }

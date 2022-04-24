@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_navigation_home_to_latihanActivity"
             app:destination="@id/latihanActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_benarSalahActivity"
+            app:destination="@id/benarSalahActivity" />
     </fragment>
 
     <fragment
@@ -72,4 +75,9 @@
         android:name="com.dhandev.eepa.asah.LatihanActivity"
         android:label="activity_latihan"
         tools:layout="@layout/activity_latihan" />
+    <activity
+        android:id="@+id/benarSalahActivity"
+        android:name="com.dhandev.eepa.asah.BenarSalahActivity"
+        android:label="activity_benar_salah"
+        tools:layout="@layout/activity_benar_salah" />
 </navigation>

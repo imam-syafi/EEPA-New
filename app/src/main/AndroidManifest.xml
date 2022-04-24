@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".asah.ListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".asah.BenarSalahActivity"
+            android:exported="false" />
+        <activity
             android:name=".asah.HasilLatihanActivity"
             android:exported="false" />
         <activity

@@ -53,6 +53,9 @@ class HomeFragment : Fragment() {
         binding.latihan.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_latihanActivity)
         )
+        binding.flashcard.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_benarSalahActivity)
+        )
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 

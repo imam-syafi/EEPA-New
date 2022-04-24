@@ -423,17 +423,6 @@ class MulaiLatihanActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-//        SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-//            .setTitleText("Akhiri Latihan")
-//            .setContentText("Jawaban Anda tidak tersimpan, yakin keluar dari latihan?")
-//            .setConfirmText("Akhiri")
-//            .setConfirmClickListener {
-//                countdown_timer.cancel()
-//                super.onBackPressed()
-//            }
-//            .setCancelText("Tidak")
-//            .setCancelClickListener {sDialog -> sDialog.dismissWithAnimation() }
-//            .show()
         val BottomSheetDialog = BottomSheetMaterialDialog.Builder(this)
             .setTitle("Akhiri Latihan?")
             .setMessage("Jawaban Anda tidak tersimpan, yakin keluar dari latihan?")

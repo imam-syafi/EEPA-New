@@ -94,4 +94,5 @@
     <string name="solusi_contoh_1">Partikel fermion merupakan partikel yang memiliki spin tengahan (1/2) dan mematuhi statistika Fermi-Dirac, sedangkan partikel boson memiliki spin bilangan bulat dan mematuhi statistika Bose-Einstein. Oleh karena itu, elektron termasuk fermion dan foton termasuk boson.</string>
     <string name="tampilkan_jawaban">Tampilkan jawaban</string>
     <string name="soal_contoh_1">Jelaskan mengapa elektron termasuk fermion dan foton termasuk boson?</string>
+    <string name="daftar_pernyataan">Daftar pernyataan</string>
 </resources>

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".ui.settings.TampilanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.settings.TentangActivity"
+            android:exported="false" />
+        <activity
             android:name=".asah.ListActivity"
             android:exported="false" />
         <activity

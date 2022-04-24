@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.TampilanActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/news_bg"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/appearance"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/arrowBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="Pengaturan tampilan berupa ukuran teks dan warna latar hanya berlaku pada menu materi"
+        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/abu"/>
+
+    <LinearLayout
+        android:id="@+id/ukuranText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_sans_black"
+            android:textColor="@color/abu"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:text="@string/ukuran_teks"/>
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:singleSelection="true"
+            app:layout_constraintBottom_toTopOf="@id/toggleGroupColor"
+            app:layout_constraintStart_toStartOf="@id/gambar"
+            app:layout_constraintTop_toBottomOf="@id/gambar"
+            app:layout_constraintEnd_toEndOf="@id/gambar">
+
+            <Button
+                android:id="@+id/btnSmall"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textAllCaps="false"
+                android:textColor="@color/abu"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="@string/kecil"/>
+            <Button
+                android:id="@+id/btnMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textAllCaps="false"
+                android:textColor="@color/abu"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="@string/sedang"/>
+            <Button
+                android:id="@+id/btnLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textAllCaps="false"
+                android:textColor="@color/abu"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="@string/besar"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/warnaLatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ukuranText"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:textColor="@color/abu"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:text="@string/warna_latar"/>
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroupColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/btnGreen"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textAllCaps="false"
+                android:textColor="@color/abu"
+                android:text="@string/hijau" />
+
+            <Button
+                android:id="@+id/btnPeach"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textAllCaps="false"
+                android:textColor="@color/abu"
+                android:text="@string/coklat" />
+
+            <Button
+                android:id="@+id/btnOrange"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textAllCaps="false"
+                android:textColor="@color/abu"
+                android:text="@string/jingga" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPratinjau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pratinjau :"
+        app:layout_constraintTop_toBottomOf="@id/warnaLatar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/nunito_sans_black"
+        android:textColor="@color/abu"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/latar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPratinjau">
+
+        <TextView
+            android:id="@+id/body1"
+            style="@style/FontParagraf"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loremIpsum" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

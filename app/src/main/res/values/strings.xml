@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Partikel Dasar</string>
+    <string name="app_name">Partikel Elementer</string>
     <string name="title_home">Beranda</string>
     <string name="title_news">Berita</string>
     <string name="title_settings">Pengaturan</string>
@@ -95,4 +95,10 @@
     <string name="tampilkan_jawaban">Tampilkan jawaban</string>
     <string name="soal_contoh_1">Jelaskan mengapa elektron termasuk fermion dan foton termasuk boson?</string>
     <string name="daftar_pernyataan">Daftar pernyataan</string>
+    <string name="about_detail"><b>Fisika partikel elementer</b> menarik untuk dipelajari karena mempelajari fondasi dasar atas semua materi yang ada di alam semesta. Pengetahuan di bidang fisika partikel elementer memberikan kontribusi bagi manusia untuk mengetahui apa yang menyusun materi dan bagaimana cara kerjanya, dengan mengetahui hal ini manusia dapat memahami asal muasal alam semesta berdasarkan Teori Big Bang</string>
+    <string name="MuhRamdhan"><b>Muhammad Ramdhan</b>\nPeneliti</string>
+    <string name="DrOktova"><b>Dr. Raden Oktova</b>\nPembimbing</string>
+    <string name="DetailMuhRamdhan">Lahir di Sleman, 7 Desember 2000, saat ini sedang menempuh kuliah di Pendidikan Fisika S1 Universitas Ahmad Dahlan Yogyakarta. Selain tertarik dengan fisika, peneliti juga mendalami dunia <i>programming</i> khususnya pengembangan aplikasi <i>mobile</i> Android.</string>
+    <string name="DetailDrOktova">Lahir di Yogyakarta, 15 Oktober 1961, menempuh studi Fisika S1 dan S2 pada jurusan Fisika FMIPA Universitas Gadjah Mada, Yogyakarta. Menyelesaikan program Doktor dalam bidang fisika nuklir teoritis dengan disertasi berjudul <i>\"Self-consistent β- Decay Calculation on Heavy Deformed Nuclei\"</i> pada Institut für Theoretiche Physik, Universität Hannover, Jerman. Saat ini berstatus dosen negeri Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah V Yogyakarta yang diperbantukan di Universitas Ahmad Dahlan, Yogyakarta.</string>
+    <string name="loremIpsum">Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan</string>
 </resources>

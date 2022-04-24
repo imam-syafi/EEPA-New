@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.bumptech.glide.Glide
 import com.dhandev.eepa.R
@@ -70,6 +71,12 @@ class SettingsFragment : Fragment() {
                     BottomSheetDialog.show()
                 BottomSheetDialog.animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
             }
+            about.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_settings_to_tentangActivity)
+            )
+            tampilan.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_settings_to_tampilanActivity)
+            )
         }
 
         return root

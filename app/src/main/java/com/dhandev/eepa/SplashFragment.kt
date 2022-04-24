@@ -34,7 +34,8 @@ class SplashFragment : Fragment() {
         animation.setDuration(2000)
         animation.interpolator
         animation.start()
-        binding.version.text ="Partikel Dasar  \nVer ${BuildConfig.VERSION_NAME}"
+        val appName = getString(R.string.app_name)
+        binding.version.text ="$appName \nVer ${BuildConfig.VERSION_NAME}"
         Glide.with(this)
             .load(R.drawable.logobarubulat)
             .circleCrop()

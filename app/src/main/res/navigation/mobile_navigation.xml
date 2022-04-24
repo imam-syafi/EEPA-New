@@ -38,7 +38,14 @@
         android:id="@+id/navigation_settings"
         android:name="com.dhandev.eepa.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_tentangActivity"
+            app:destination="@id/tentangActivity" />
+        <action
+            android:id="@+id/action_navigation_settings_to_tampilanActivity"
+            app:destination="@id/tampilanActivity" />
+    </fragment>
     <fragment
         android:id="@+id/materiFragment"
         android:name="com.dhandev.eepa.materi.MateriFragment"
@@ -80,4 +87,14 @@
         android:name="com.dhandev.eepa.asah.BenarSalahActivity"
         android:label="activity_benar_salah"
         tools:layout="@layout/activity_benar_salah" />
+    <activity
+        android:id="@+id/tentangActivity"
+        android:name="com.dhandev.eepa.ui.settings.TentangActivity"
+        android:label="activity_tentang"
+        tools:layout="@layout/activity_tentang" />
+    <activity
+        android:id="@+id/tampilanActivity"
+        android:name="com.dhandev.eepa.ui.settings.TampilanActivity"
+        android:label="activity_tampilan"
+        tools:layout="@layout/activity_tampilan" />
 </navigation>

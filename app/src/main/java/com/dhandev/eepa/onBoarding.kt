@@ -6,6 +6,7 @@ import android.graphics.ColorMatrix
 import android.graphics.ColorMatrixColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
@@ -17,6 +18,7 @@ import com.dhandev.eepa.ui.home.HomeFragment
 class onBoarding : AppCompatActivity() {
     private lateinit var binding: ActivityOnBoardingBinding
     private lateinit var sharedPred : SharedPreferences
+    var gender = "3"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +37,6 @@ class onBoarding : AppCompatActivity() {
             val avatar5 = "1xGRfxpehowAJzCAHKjELvV87lNGB2IY_"
             val avatar6 = "1xpIiiEan6t1Lh7DONNG9U51CNN_DLv6C"
             var usedAvatar = "1x_lgALTLLNO-_o8f-wTaPEoFCKd8hEO1"
-            var gender = "3"
 
             swipeGesture.setAnimation("swipe_left.json")
             swipeGesture.playAnimation()
@@ -97,21 +98,36 @@ class onBoarding : AppCompatActivity() {
 //                .placeholder(R.drawable.ic_baseline_account_circle_24)
 //                .into(avatar)
 
+            editTextUser.setOnKeyListener { _, keyCode, event ->
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                    mulai()
+                    true
+                } else {
+                    false
+                }
+            }
+
             btnMulai.setOnClickListener {
-                val username = editTextUser.text.toString()
-                if (username.isEmpty()){
-                    editTextUser.error = "Nama harus terisi"
-                } else if (gender == "3") {
-                    Toast.makeText(this@onBoarding, "Silahkan pilih avatar", Toast.LENGTH_SHORT).show()
-                }
-                else {
-                    val Editor:SharedPreferences.Editor = sharedPred.edit()
-                    Editor.putString("userName", username)
-                    Editor.putString("avatarDrawable", gender)
-                    Editor.apply()
-                    startActivity(Intent(this@onBoarding, MainActivity::class.java))
-                    finish()
-                }
+                mulai()
+            }
+        }
+    }
+
+    private fun mulai() {
+        binding.apply {
+            val username = editTextUser.text.toString()
+            if (username.isEmpty()){
+                editTextUser.error = "Nama harus terisi"
+            } else if (gender == "3") {
+                Toast.makeText(this@onBoarding, "Silahkan pilih avatar", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                val Editor:SharedPreferences.Editor = sharedPred.edit()
+                Editor.putString("userName", username)
+                Editor.putString("avatarDrawable", gender)
+                Editor.apply()
+                startActivity(Intent(this@onBoarding, MainActivity::class.java))
+                finish()
             }
         }
     }

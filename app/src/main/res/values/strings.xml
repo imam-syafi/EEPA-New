@@ -102,4 +102,6 @@
     <string name="DetailDrOktova">Lahir di Yogyakarta, 15 Oktober 1961, menempuh studi Fisika S1 dan S2 pada jurusan Fisika FMIPA Universitas Gadjah Mada, Yogyakarta. Menyelesaikan program Doktor dalam bidang fisika nuklir teoritis dengan disertasi berjudul <i>\"Self-consistent β- Decay Calculation on Heavy Deformed Nuclei\"</i> pada Institut für Theoretiche Physik, Universität Hannover, Jerman. Saat ini berstatus dosen negeri Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah V Yogyakarta yang diperbantukan di Universitas Ahmad Dahlan, Yogyakarta.</string>
     <string name="loremIpsum">Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan</string>
     <string name="tampilan_disclaimer">Pengaturan tampilan berupa ukuran teks dan warna latar <b>hanya</b> berlaku pada tampilan materi</string>
+    <string name="detail_buku_krane"><b>Modern Physics</b>\nOleh Kenneth S. Krane\n2012</string>
+    <string name="detail_buku_alonso"><b>Fundamental University Physics</b>\nOleh Marcelo Alonso, Edward J. Finn\n2007</string>
 </resources>

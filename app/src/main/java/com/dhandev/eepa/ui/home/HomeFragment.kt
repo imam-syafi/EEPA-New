@@ -1,5 +1,6 @@
 package com.dhandev.eepa.ui.home
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -55,6 +57,9 @@ class HomeFragment : Fragment() {
         )
         binding.flashcard.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_benarSalahActivity)
+        )
+        binding.referensi.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_referensiActivity)
         )
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
@@ -138,6 +143,23 @@ class HomeFragment : Fragment() {
                     .show()
             }
         }
+    }
+
+    //langsung akhiri activity ketika tekan kembali, bahkan setelah bernavigasi ke fragment news maupun settings
+    //sebelumnya akan terjadi penumpukan fragment
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        val callback: OnBackPressedCallback =
+            object : OnBackPressedCallback(true)
+            {
+                override fun handleOnBackPressed() {
+                    activity?.finish()
+                }
+            }
+        requireActivity().onBackPressedDispatcher.addCallback(
+            this,
+            callback
+        )
     }
 
     override fun onDestroyView() {

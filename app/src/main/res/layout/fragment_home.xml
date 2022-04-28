@@ -305,7 +305,7 @@
 
 
         <Button
-            android:id="@+id/kalkulator"
+            android:id="@+id/referensi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/referensi"
@@ -325,6 +325,7 @@
             android:text="@string/referensi"/>
 
         <Button
+            android:id="@+id/lampiran"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_baseline_attach_file_24"
@@ -341,7 +342,7 @@
             android:layout_marginBottom="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fitur"
-            app:layout_constraintStart_toEndOf="@id/kalkulator"
+            app:layout_constraintStart_toEndOf="@id/referensi"
             android:text="@string/attachment"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

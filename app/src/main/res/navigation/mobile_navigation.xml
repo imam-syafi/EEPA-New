@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_navigation_home_to_benarSalahActivity"
             app:destination="@id/benarSalahActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_referensiActivity"
+            app:destination="@id/referensiActivity" />
     </fragment>
 
     <fragment
@@ -97,4 +100,9 @@
         android:name="com.dhandev.eepa.ui.settings.TampilanActivity"
         android:label="activity_tampilan"
         tools:layout="@layout/activity_tampilan" />
+    <activity
+        android:id="@+id/referensiActivity"
+        android:name="com.dhandev.eepa.addition.ReferensiActivity"
+        android:label="activity_referensi"
+        tools:layout="@layout/activity_referensi" />
 </navigation>

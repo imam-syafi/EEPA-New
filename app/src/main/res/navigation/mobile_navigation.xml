@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_navigation_home_to_referensiActivity"
             app:destination="@id/referensiActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_dataActivity"
+            app:destination="@id/dataActivity" />
     </fragment>
 
     <fragment
@@ -105,4 +108,9 @@
         android:name="com.dhandev.eepa.addition.ReferensiActivity"
         android:label="activity_referensi"
         tools:layout="@layout/activity_referensi" />
+    <activity
+        android:id="@+id/dataActivity"
+        android:name="com.dhandev.eepa.addition.dataActivity"
+        android:label="activity_data"
+        tools:layout="@layout/activity_data" />
 </navigation>

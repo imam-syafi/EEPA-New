@@ -53,15 +53,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <Button
-        android:id="@+id/editprofile2"
-        style="@style/ButtonGeneral"
-        android:drawableLeft="@drawable/edit"
-        android:text="@string/edit"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+<!--    <Button-->
+<!--        android:id="@+id/editprofile2"-->
+<!--        style="@style/ButtonGeneral"-->
+<!--        android:drawableLeft="@drawable/edit"-->
+<!--        android:text="@string/edit"-->
+<!--        app:backgroundTint="@color/biru_seken"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/userName" />-->
 
     <Button
         android:id="@+id/tampilan"
@@ -71,7 +71,7 @@
         app:backgroundTint="@color/biru_seken"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editprofile2" />
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <Button
         android:id="@+id/about"

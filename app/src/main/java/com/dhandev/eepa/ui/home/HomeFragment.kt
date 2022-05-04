@@ -61,6 +61,9 @@ class HomeFragment : Fragment() {
         binding.referensi.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_referensiActivity)
         )
+        binding.lampiran.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_dataActivity)
+        )
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 

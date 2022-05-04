@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addition.dataActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/news_bg"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans_black"
+        android:text="@string/attachment"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/arrowBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:background="@drawable/rounded_corner_smaller"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/imageView4">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvFamily"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/nunito_sans_bold"-->
+<!--            android:text="Jenis Partikel"-->
+<!--            android:textColor="@color/abu"-->
+<!--            android:textSize="22sp" />-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/spin_jenis"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:textAlignment="center"-->
+<!--            -->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_height="match_parent" />-->
+<!--    </LinearLayout>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuJenis"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Partikel Subatomik"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        <AutoCompleteTextView
+            android:id="@+id/et_jenisTerpilih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="Pilih jenis partikel"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuJenis2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jenis Distribusi Partikel"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuJenis">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="Pilih jenis distribusi"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuNama"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Partikel"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuJenis2">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="Pilih partikel"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:textColor="@color/abu"
+        android:text="Detail Partikel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuNama"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:stretchColumns="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetail">
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Family" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/family"
+                android:padding="3dip"
+                tools:text="Ctrl-O" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Nama" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/nama"
+                android:padding="3dip"
+                tools:text="Ctrl-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Simbol" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/simbol"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Massa" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/massa"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Lifetime" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/lifetime"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Muatan" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/muatan"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Spin" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/spin"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Fungsi" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/fungsi"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+
+        <TableRow>
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Ditemukan" />
+            <TextView
+                android:padding="3dip"
+                android:text=":" />
+            <TextView
+                android:id="@+id/ditemukan"
+                android:padding="3dip"
+                tools:text="Ctrl-Shift-S" />
+        </TableRow>
+
+        <View style="@style/Divider"/>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

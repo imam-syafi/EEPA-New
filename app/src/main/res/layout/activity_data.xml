@@ -150,154 +150,136 @@
         app:layout_constraintTop_toBottomOf="@id/tvDetail">
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
-                android:text="Family" />
+                style="@style/detailPartikel"
+                android:text="Keluarga" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/family"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-O" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text="Nama" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/nama"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text="Simbol" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/simbol"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-Shift-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text="Massa" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/massa"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-Shift-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
-                android:text="Lifetime" />
+                style="@style/detailPartikel"
+                android:text="Waktu Hidup" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/lifetime"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-Shift-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text="Muatan" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/muatan"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-Shift-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text="Spin" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/spin"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-Shift-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
-                android:text="Fungsi" />
+                style="@style/detailPartikel"
+                android:text="Peran" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/fungsi"
-                android:padding="3dip"
+                style="@style/detailPartikelIsi"
                 tools:text="Ctrl-Shift-S" />
         </TableRow>
 
         <View style="@style/Divider"/>
 
         <TableRow>
-
             <TextView
-                android:layout_column="0"
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text="Ditemukan" />
             <TextView
-                android:padding="3dip"
+                style="@style/detailPartikel"
                 android:text=":" />
             <TextView
                 android:id="@+id/ditemukan"
-                android:padding="3dip"
-                tools:text="Ctrl-Shift-S" />
+                style="@style/detailPartikelIsi"
+                tools:text="Ctrl-Shift-Muhammad ramdhan Pendiidikan Fisika " />
         </TableRow>
 
         <View style="@style/Divider"/>

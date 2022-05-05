@@ -167,5 +167,22 @@
         <item name="android:drawableTint">@color/abu</item>
         <item name="android:text">Kosong</item>
     </style>
+    <style name="detailPartikel">
+        <item name="android:layout_column">0</item>
+        <item name="android:padding">3dip</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/abu</item>
+    </style>
+    <style name="detailPartikelIsi">
+        <item name="android:layout_column">0</item>
+        <item name="android:padding">3dip</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
 
 </resources>

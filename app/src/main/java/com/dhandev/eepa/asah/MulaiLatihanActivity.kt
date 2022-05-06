@@ -35,7 +35,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
         showSoal(soal)
 
         val time = 1 //in minute
-        time_in_milli_seconds = time.toLong() *10000L
+        time_in_milli_seconds = time.toLong() *60000L
         startTimer(time_in_milli_seconds)
 
         binding.arrowBack.setOnClickListener {

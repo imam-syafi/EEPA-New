@@ -59,108 +59,93 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView4">
-        <TextView
+        <EditText
             android:id="@+id/soalPertama"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
-            android:text="1. Ini Pernyataan Pertama"/>
+            style="@style/listPernyataan"
+            android:visibility="visible"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKedua"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
-            android:text=""/>
+            style="@style/listPernyataan"
+            android:visibility="visible"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKetiga"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
-            tools:text="3. Ini Pernyataan Ketiga"/>
+            style="@style/listPernyataan"
+            android:visibility="visible"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKeempat"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
-            tools:text="2. Ini Pernyataan Keempat"/>
+            style="@style/listPernyataan"
+            android:visibility="visible"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKelima"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
-            tools:text="5. Ini Pernyataan Kelima"/>
+            style="@style/listPernyataan"
+            android:visibility="visible"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKeenam"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="6. Ini Pernyataan Keenam"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKetujuh"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="7. Ini Pernyataan Ketujuh"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKedelapan"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="8. Ini Pernyataan Kedelapan"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKesembilan"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="9. Ini Pernyataan Kesembilan"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKesepuluh"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="10. Ini Pernyataan Kesepuluh"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKesebelas"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="11. Ini Pernyataan Kesebelas"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKeduabelas"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="12. Ini Pernyataan Keduabelas"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKetigaelas"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="13. Ini Pernyataan Ketigaelas"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKeempatbelas"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="14. Ini Pernyataan Keempatbelas"/>
         <View
             style="@style/Divider"/>
-        <TextView
+        <EditText
             android:id="@+id/soalKelimabelas"
-            style="@style/soalResultLatihan"
-            android:layout_width="match_parent"
+            style="@style/listPernyataan"
             tools:text="15. Ini Pernyataan Kelimabelas"/>
     </LinearLayout>
 
@@ -168,8 +153,9 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_add_24"
+        android:src="@drawable/ic_baseline_edit_24"
         android:layout_margin="15dp"
+        android:tooltipText="Edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -65,6 +65,11 @@ dependencies {
 
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.3'
 
+    //sharedpref with ListView based on gson
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
 
 
 }

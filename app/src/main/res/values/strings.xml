@@ -104,4 +104,23 @@
     <string name="tampilan_disclaimer">Pengaturan tampilan berupa ukuran teks dan warna latar <b>hanya</b> berlaku pada tampilan materi</string>
     <string name="detail_buku_krane"><b>Modern Physics</b>\nOleh Kenneth S. Krane\n2012</string>
     <string name="detail_buku_alonso"><b>Fundamental University Physics</b>\nOleh Marcelo Alonso, Edward J. Finn\n2007</string>
+    <string name="default_1">Partikel Dasar sangat menarik!</string>
+    <string name="default_2">Fermion mematuhi statistika Fermi-Dirac</string>
+    <string name="default_3">Gluon berperan sebagai lem antar partikel elementer pada Hadron</string>
+    <string name="default_4">LHC singkatan dari Large Hadron Collider</string>
+    <string name="default_5">Elektron adalah partikel elementer pertama yang ditemukan</string>
+    <string name="default_6">Triga</string>
+    <string name="default_7">Pernyataan 7</string>
+    <string name="default_8">CERN berada di Swiss</string>
+    <string name="default_9">Proton terdiri dari partikel yang lebih mendasar</string>
+    <string name="default_10">Quark memiliki spin tengahan</string>
+    <string name="default_11">Standard Model sudah terbukti benar</string>
+    <string name="default_12">GUT singkatan dari Great Unified Theory</string>
+    <string name="default_13">TOE singkatan dari Theory of Everything</string>
+    <string name="default_14">Atomos berarti tidak dapat dibagi</string>
+    <string name="default_15">Pendekatan saintifik perkembangan atom pertama kali dilakukan E.Rutherford</string>
+    <string-array name="benarSalah">
+        <item>Benar</item>
+        <item>Salah</item>
+    </string-array>
 </resources>

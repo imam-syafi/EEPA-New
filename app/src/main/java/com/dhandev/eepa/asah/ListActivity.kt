@@ -6,6 +6,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.datastore.core.DataStore
@@ -19,6 +21,7 @@ import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityListBinding
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import java.lang.reflect.Type
@@ -39,34 +42,19 @@ class ListActivity : AppCompatActivity() {
 //        sharedPred = this.getSharedPreferences("BenarSalah", MODE_PRIVATE)
 //        loadPernyataan()
 
+
         binding.apply {
             arrowBack.setOnClickListener {
                 if (state == "Normal"){
-                    onBackPressed()
+                    super.onBackPressed()
                 } else {
-                    arrowBack.setImageResource(R.drawable.arrow_back)
-                    imageView4.setImageResource(R.drawable.news_bg)
-                    title.setText("Daftar pernyataan")
-                    state = "Normal"
-                    isEditable(false)
-                    fab.visibility = View.VISIBLE
-                    lifecycleScope.launch {
-                        save("1", soalPertama.text.toString())
-                        save("2", soalKedua.text.toString())
-                        save("3", soalKetiga.text.toString())
-                        save("4", soalKeempat.text.toString())
-                        save("5", soalKelima.text.toString())
-                        save("6", soalKeenam.text.toString())
-                        save("7", soalKetujuh.text.toString())
-                    }
-                    Toast.makeText(this@ListActivity, "Perubahan Tersimpan", Toast.LENGTH_SHORT).show()
+                    onBackPressed()
                 }
             }
 
             isEditable(false)
 
             fab.setOnClickListener {
-                val isiSoall15 = soalKelimabelas.text.toString()
                 arrowBack.setImageResource(R.drawable.done)
                 imageView4.setImageResource(R.drawable.news_bg_green)
                 title.setText("Mode Edit")
@@ -76,12 +64,68 @@ class ListActivity : AppCompatActivity() {
             }
 
             lifecycleScope.launch {
-                soalPertama.setText(load("1") ?: "Partikel Dasar sangat menarik!")
-                soalKedua.setText(load("2") ?: "Fermion mematuhi statistika Fermi-Dirac")
-                soalKetiga.setText(load("3") ?: "Gluon berperan sebagai lem antar partikel elementer pada Hadron")
-                soalKeempat.setText(load("4") ?: "LHC singkatan dari Large Hadron Collider")
-                soalKelima.setText(load("5")?: "Elektron adalah partikel elementer pertama yang ditemukan")
+                soalPertama.setText(load("1") ?: resources.getString(R.string.default_1))
+                soalKedua.setText(load("2") ?: resources.getString(R.string.default_2))
+                soalKetiga.setText(load("3") ?: resources.getString(R.string.default_3))
+                soalKeempat.setText(load("4") ?: resources.getString(R.string.default_4))
+                soalKelima.setText(load("5")?: resources.getString(R.string.default_5))
+                soalKeenam.setText(load("6") ?: resources.getString(R.string.default_6))
+                soalKetujuh.setText(load("7") ?: resources.getString(R.string.default_7))
+                soalKedelapan.setText(load("8") ?: resources.getString(R.string.default_8))
+                soalKesembilan.setText(load("9") ?: resources.getString(R.string.default_9))
+                soalKesepuluh.setText(load("10") ?: resources.getString(R.string.default_10))
+                soalKesebelas.setText(load("11") ?: resources.getString(R.string.default_11))
+                soalKeduabelas.setText(load("12") ?: resources.getString(R.string.default_12))
+                soalKetigaelas.setText(load("13") ?: resources.getString(R.string.default_13))
+                soalKeempatbelas.setText(load("14") ?: resources.getString(R.string.default_14))
+                soalKelimabelas.setText(load("15") ?: resources.getString(R.string.default_15))
             }
+            val opt_benarSalah = resources.getStringArray(R.array.benarSalah)
+            val adapterSpinner = ArrayAdapter(this@ListActivity, R.layout.list_item, opt_benarSalah)
+            jawabanPertama.adapter = adapterSpinner
+            jawabanKedua.adapter = adapterSpinner
+            jawabanKetiga.adapter = adapterSpinner
+            jawabanKeempat.adapter = adapterSpinner
+            jawabanKelima.adapter = adapterSpinner
+            jawabanKeenam.adapter = adapterSpinner
+            jawabanKetujuh.adapter = adapterSpinner
+            jawabanKedelapan.adapter = adapterSpinner
+            jawabanKesembilan.adapter = adapterSpinner
+            jawabanKesepuluh.adapter = adapterSpinner
+            jawabanKesebelas.adapter = adapterSpinner
+            jawabanKeduabelas.adapter = adapterSpinner
+            jawabanKetigabelas.adapter = adapterSpinner
+            jawabanKeempatbelas.adapter = adapterSpinner
+            jawabanKelimabelas.adapter = adapterSpinner
+        }
+    }
+
+    private fun modeEdit() {
+        binding.apply {
+            arrowBack.setImageResource(R.drawable.arrow_back)
+            imageView4.setImageResource(R.drawable.news_bg)
+            title.setText("Daftar pernyataan")
+            state = "Normal"
+            isEditable(false)
+            fab.visibility = View.VISIBLE
+            lifecycleScope.launch {
+                save("1", soalPertama.text.toString())
+                save("2", soalKedua.text.toString())
+                save("3", soalKetiga.text.toString())
+                save("4", soalKeempat.text.toString())
+                save("5", soalKelima.text.toString())
+                save("6", soalKeenam.text.toString())
+                save("7", soalKetujuh.text.toString())
+                save("8", soalKedelapan.text.toString())
+                save("9", soalKesembilan.text.toString())
+                save("10", soalKesepuluh.text.toString())
+                save("11", soalKesebelas.text.toString())
+                save("12", soalKeduabelas.text.toString())
+                save("13", soalKetigaelas.text.toString())
+                save("14", soalKeempatbelas.text.toString())
+                save("15", soalKelimabelas.text.toString())
+            }
+            Toast.makeText(this@ListActivity, "Perubahan Tersimpan", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -112,108 +156,109 @@ class ListActivity : AppCompatActivity() {
 
     private fun isEditable(state : Boolean) {
         binding.apply {
-            soalPertama.isEnabled = state
-            soalKedua.isEnabled = state
-            soalKetiga.isEnabled = state
-            soalKeempat.isEnabled = state
-            soalKelima.isEnabled = state
-            soalKeenam.isEnabled = state
-            soalKetujuh.isEnabled = state
-            soalKedelapan.isEnabled = state
-            soalKesembilan.isEnabled = state
-            soalKesepuluh.isEnabled = state
-            soalKesebelas.isEnabled = state
-            soalKeduabelas.isEnabled = state
-            soalKetigaelas.isEnabled = state
-            soalKeempatbelas.isEnabled = state
-            soalKelimabelas.isEnabled = state
+            when(state){
+                true -> {
+                    soalPertama.isEnabled = true
+                    soalKedua.isEnabled = true
+                    soalKetiga.isEnabled = true
+                    soalKeempat.isEnabled = true
+                    soalKelima.isEnabled = true
+                    soalKeenam.isEnabled = true
+                    soalKetujuh.isEnabled = true
+                    soalKedelapan.isEnabled = true
+                    soalKesembilan.isEnabled = true
+                    soalKesepuluh.isEnabled = true
+                    soalKesebelas.isEnabled = true
+                    soalKeduabelas.isEnabled = true
+                    soalKetigaelas.isEnabled = true
+                    soalKeempatbelas.isEnabled = true
+                    soalKelimabelas.isEnabled = true
 
-            if (state){
-                soalKeenam.visibility = View.VISIBLE
-                soalKetujuh.visibility = View.VISIBLE
-                soalKedelapan.visibility = View.VISIBLE
-                soalKesembilan.visibility = View.VISIBLE
-                soalKesepuluh.visibility = View.VISIBLE
-                soalKesebelas.visibility = View.VISIBLE
-                soalKeduabelas.visibility = View.VISIBLE
-                soalKetigaelas.visibility = View.VISIBLE
-                soalKeempatbelas.visibility = View.VISIBLE
-                soalKelimabelas.visibility = View.VISIBLE
-            } else {
-                terisi()
+                    jawabanPertama.visibility = View.VISIBLE
+                    jawabanKedua.visibility = View.VISIBLE
+                    jawabanKetiga.visibility = View.VISIBLE
+                    jawabanKeempat.visibility = View.VISIBLE
+                    jawabanKelima.visibility = View.VISIBLE
+                    jawabanKeenam.visibility = View.VISIBLE
+                    jawabanKetujuh.visibility = View.VISIBLE
+                    jawabanKedelapan.visibility = View.VISIBLE
+                    jawabanKesembilan.visibility = View.VISIBLE
+                    jawabanKesepuluh.visibility = View.VISIBLE
+                    jawabanKesebelas.visibility = View.VISIBLE
+                    jawabanKeduabelas.visibility = View.VISIBLE
+                    jawabanKetigabelas.visibility = View.VISIBLE
+                    jawabanKeempatbelas.visibility = View.VISIBLE
+                    jawabanKelimabelas.visibility = View.VISIBLE
+                }
+                false -> {
+                    soalPertama.isEnabled = false
+                    soalKedua.isEnabled = false
+                    soalKetiga.isEnabled = false
+                    soalKeempat.isEnabled = false
+                    soalKelima.isEnabled = false
+                    soalKeenam.isEnabled = false
+                    soalKetujuh.isEnabled = false
+                    soalKedelapan.isEnabled = false
+                    soalKesembilan.isEnabled = false
+                    soalKesepuluh.isEnabled = false
+                    soalKesebelas.isEnabled = false
+                    soalKeduabelas.isEnabled = false
+                    soalKetigaelas.isEnabled = false
+                    soalKeempatbelas.isEnabled = false
+                    soalKelimabelas.isEnabled = false
+
+                    jawabanPertama.visibility = View.GONE
+                    jawabanKedua.visibility = View.GONE
+                    jawabanKetiga.visibility = View.GONE
+                    jawabanKeempat.visibility = View.GONE
+                    jawabanKelima.visibility = View.GONE
+                    jawabanKeenam.visibility = View.GONE
+                    jawabanKetujuh.visibility = View.GONE
+                    jawabanKedelapan.visibility = View.GONE
+                    jawabanKesembilan.visibility = View.GONE
+                    jawabanKesepuluh.visibility = View.GONE
+                    jawabanKesebelas.visibility = View.GONE
+                    jawabanKeduabelas.visibility = View.GONE
+                    jawabanKetigabelas.visibility = View.GONE
+                    jawabanKeempatbelas.visibility = View.GONE
+                    jawabanKelimabelas.visibility = View.GONE
+                }
             }
         }
     }
 
     private fun terisi() {
         binding.apply {
-            if (soalKelimabelas.text.isNotEmpty()){soalKelimabelas.visibility = View.VISIBLE}
-            else if (soalKeempatbelas.text.isNotEmpty()){soalKelimabelas.visibility = View.GONE}
-            else if (soalKetigaelas.text.isNotEmpty()){soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKeduabelas.text.isNotEmpty()){soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKesebelas.text.isNotEmpty()){soalKeduabelas.visibility = View.GONE
-                soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKesepuluh.text.isNotEmpty()){soalKesebelas.visibility = View.GONE
-                soalKeduabelas.visibility = View.GONE
-                soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKesembilan.text.isNotEmpty()){soalKesepuluh.visibility = View.GONE
-                soalKesebelas.visibility = View.GONE
-                soalKeduabelas.visibility = View.GONE
-                soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKedelapan.text.isNotEmpty()){soalKesembilan.visibility = View.GONE
-                soalKesepuluh.visibility = View.GONE
-                soalKesebelas.visibility = View.GONE
-                soalKeduabelas.visibility = View.GONE
-                soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKetujuh.text.isNotEmpty()){soalKedelapan.visibility = View.GONE
-                soalKesembilan.visibility = View.GONE
-                soalKesepuluh.visibility = View.GONE
-                soalKesebelas.visibility = View.GONE
-                soalKeduabelas.visibility = View.GONE
-                soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
-            else if (soalKeenam.text.isNotEmpty()){soalKetujuh.visibility = View.GONE
-                soalKedelapan.visibility = View.GONE
-                soalKesembilan.visibility = View.GONE
-                soalKesepuluh.visibility = View.GONE
-                soalKesebelas.visibility = View.GONE
-                soalKeduabelas.visibility = View.GONE
-                soalKetigaelas.visibility = View.GONE
-                soalKeempatbelas.visibility = View.GONE
-                soalKelimabelas.visibility = View.GONE}
+            if (soalPertama.text.isEmpty()){soalPertama.error = "Harus diisi"}
+            else if (soalKedua.text.isEmpty()){soalKedua.error = "Harus diisi"}
         }
     }
 
-//    override fun onBackPressed() {
-////        val editor : SharedPreferences.Editor = sharedPred.edit()
-//
-//        binding.apply {
-//            listPernyataan.set(0, soalPertama.text.toString())
-//            listPernyataan.set(1, soalKedua.text.toString())
-//            listPernyataan.set(2, soalKetiga.text.toString())
-//            listPernyataan.set(3, soalKeempat.text.toString())
-//            listPernyataan.set(4, soalKelima.text.toString())
-//            listPernyataan.set(5, soalKeenam.text.toString())
-//            listPernyataan.set(6, soalKetujuh.text.toString())
-//
-//            val listString = ArrayList(listPernyataan) //mutable list to array list
-//
-////            editor.putString("list", listString)
-////            editor.apply()
-//            startActivity(Intent(this@ListActivity, BenarSalahActivity::class.java))
-//            finish()
-//        }
-//    }
+    override fun onBackPressed() {
+       binding.apply {
+           when{
+               state == "Normal" -> super.onBackPressed()
+               soalPertama.text.isEmpty() -> soalPertama.error = "Harus diisi"
+               soalKedua.text.isEmpty() -> soalKedua.error = "Harus diisi"
+               else -> {
+                   val BottomSheetDialog = BottomSheetMaterialDialog.Builder(this@ListActivity)
+                       .setTitle("Simpan Perubahan")
+                       .setMessage("Keluar dan simpan perubahan?")
+                       .setCancelable(true)
+                       .setPositiveButton("Simpan", R.drawable.ic_baseline_done_24) {dialog, which ->
+                           terisi()
+                           modeEdit()
+                           dialog.dismiss()
+                       }
+                       .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
+                           dialog.dismiss()
+                       }
+                       .setAnimation("save.json")
+                       .build()
+                   BottomSheetDialog.show()
+                   BottomSheetDialog.animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
+               }
+           }
+       }
+    }
 }

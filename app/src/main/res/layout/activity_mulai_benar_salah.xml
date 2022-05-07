@@ -58,15 +58,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/rounded_corner_smaller"
-        android:fontFamily="@font/nunito"
+        android:fontFamily="@font/nunito_sans_bold"
         android:padding="10dp"
         android:textColor="@color/abu"
+        android:gravity="center"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
-        tools:text="Teks untuk uji coba" />
+        tools:text="Teks untuk uji coba, Bagaimana dengan teks yang lumayan panjang, apakah akan nyaman terlihat?" />
 
     <ImageView
         android:id="@+id/btnNo"
@@ -74,8 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:src="@drawable/btnno"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/pernyataan" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/btnYes"
@@ -83,8 +84,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:src="@drawable/btnyes"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/pernyataan" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

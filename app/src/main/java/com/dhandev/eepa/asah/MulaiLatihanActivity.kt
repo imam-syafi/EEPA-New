@@ -405,6 +405,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 randomize(soal)
                 title.text = "Nomor 10/10"
                 btnNext.text = "Kumpulkan"
+
 //                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()
             } else {
                 countdown_timer.cancel()

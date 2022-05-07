@@ -101,7 +101,7 @@ class HomeFragment : Fragment() {
         val url3 = "https://pbs.twimg.com/media/DcDmnE6X4AEwy01?format=jpg&name=medium"
 
         val desc1 = "Large Hadron Collider (LHC)"
-        val desc2 = "A collision between two proton in the CMS detector"
+        val desc2 = "Tumbukan antara dua proton di detektor CMS"
         val desc3 = "J.J.Thomson penemu partikel elementer pertama"
 
         list.add(

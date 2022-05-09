@@ -23,7 +23,6 @@ class BenarSalahActivity : AppCompatActivity() {
 
         sharedPref = this.getSharedPreferences("BenarSalah", MODE_PRIVATE)
 
-        val list = sharedPref.getString("list", "gagal").toString()
         binding.apply {
             arrowBack.setOnClickListener {
                 onBackPressed()
@@ -32,22 +31,13 @@ class BenarSalahActivity : AppCompatActivity() {
                 startActivity(Intent(this@BenarSalahActivity, ListActivity::class.java))
             }
             btnMulai.setOnClickListener {
-                lifecycleScope.launch {
-//                    val soal1 = load("1") ?: "NO VALUE"
-//                    Toast.makeText(this@BenarSalahActivity, soal1, Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@BenarSalahActivity, MulaiBenarSalahActivity::class.java))
-                }
+                startActivity(Intent(this@BenarSalahActivity, MulaiBenarSalahActivity::class.java))
+                finish()
+            }
+            lifecycleScope.launch {
+                lastScore.setText("Skor terakhir : " +load("NilaiBS"))
             }
 
-            //SOAL DEFAULT
-
-        }
-    }
-
-    suspend private fun save(key : String, value : String) {
-        val dataStoreKey = stringPreferencesKey(key)
-        dataStore.edit { list ->
-            list[dataStoreKey] = value
         }
     }
 

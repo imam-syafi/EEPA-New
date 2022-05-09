@@ -65,10 +65,17 @@
         app:layout_constraintTop_toBottomOf="@+id/headline" />
 
     <TextView
-        android:id="@+id/example"
+        android:id="@+id/lastScore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btnMulai"/>
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/nunito"
+        tools:text="Skor terakhir : 10"
+        android:textColor="@color/abu"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/btnMulai"
+        tools:layout_editor_absoluteX="20dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnMulai"

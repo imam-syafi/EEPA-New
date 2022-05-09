@@ -25,6 +25,7 @@ class LatihanActivity : AppCompatActivity() {
             lastScore.text = "Skor terakhir : $latest"
             btnMulai.setOnClickListener {
                 startActivity(Intent(this@LatihanActivity, MulaiLatihanActivity::class.java))
+                finish()
             }
         }
     }

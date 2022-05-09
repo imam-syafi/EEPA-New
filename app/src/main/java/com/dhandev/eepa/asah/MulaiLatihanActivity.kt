@@ -430,7 +430,8 @@ class MulaiLatihanActivity : AppCompatActivity() {
             .setCancelable(true)
             .setPositiveButton("Akhiri", R.drawable.ic_baseline_done_24) {dialog, which ->
                 countdown_timer.cancel()
-                super.onBackPressed() }
+                startActivity(Intent(this, LatihanActivity::class.java))
+                finish()}
             .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
                 dialog.dismiss()
             }

@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Toast
@@ -30,8 +31,8 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "li
 
 class ListActivity : AppCompatActivity() {
     private lateinit var binding : ActivityListBinding
-//    private lateinit var sharedPred : SharedPreferences
     var listPernyataan = mutableListOf<String>()
+    var listJawaban = mutableListOf<String>()
     var state = "Normal"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,17 +40,9 @@ class ListActivity : AppCompatActivity() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        sharedPred = this.getSharedPreferences("BenarSalah", MODE_PRIVATE)
-//        loadPernyataan()
-
-
         binding.apply {
             arrowBack.setOnClickListener {
-                if (state == "Normal"){
-                    super.onBackPressed()
-                } else {
-                    onBackPressed()
-                }
+                onBackPressed()
             }
 
             isEditable(false)
@@ -97,6 +90,25 @@ class ListActivity : AppCompatActivity() {
             jawabanKetigabelas.adapter = adapterSpinner
             jawabanKeempatbelas.adapter = adapterSpinner
             jawabanKelimabelas.adapter = adapterSpinner
+
+            //load saved kunci jawaban pada masing-masing spinner
+            lifecycleScope.launch {
+                load("j1")?.let { jawabanPertama.setSelection(it.toInt()) }
+                load("j2")?.let { jawabanKedua.setSelection(it.toInt()) }
+                load("j3")?.let { jawabanKetiga.setSelection(it.toInt()) }
+                load("j4")?.let { jawabanKeempat.setSelection(it.toInt()) }
+                load("j5")?.let { jawabanKelima.setSelection(it.toInt()) }
+                load("j6")?.let { jawabanKeenam.setSelection(it.toInt()) }
+                load("j7")?.let { jawabanKetujuh.setSelection(it.toInt()) }
+                load("j8")?.let { jawabanKedelapan.setSelection(it.toInt()) }
+                load("j9")?.let { jawabanKesembilan.setSelection(it.toInt()) }
+                load("j10")?.let { jawabanKesepuluh.setSelection(it.toInt()) }
+                load("j11")?.let { jawabanKesebelas.setSelection(it.toInt()) }
+                load("j12")?.let { jawabanKeduabelas.setSelection(it.toInt()) }
+                load("j13")?.let { jawabanKetigabelas.setSelection(it.toInt()) }
+                load("j14")?.let { jawabanKeempatbelas.setSelection(it.toInt()) }
+                load("j15")?.let { jawabanKelimabelas.setSelection(it.toInt()) }
+            }
         }
     }
 
@@ -140,19 +152,6 @@ class ListActivity : AppCompatActivity() {
         val preferences = dataStore.data.first()
         return preferences[dataStoreKey]
     }
-
-
-//    private fun loadPernyataan() {
-//        val list = sharedPred.getString("list", "gagal").toString()
-//        val listSplit = list.split(",").toTypedArray()
-//        binding.apply {
-//            soalPertama.setText(listSplit[0])
-//            soalKedua.setText(listSplit[1])
-//            soalKetiga.setText(listSplit[2])
-//            soalKeempat.setText(listSplit[3])
-//            soalKelima.setText(listSplit[4])
-//        }
-//    }
 
     private fun isEditable(state : Boolean) {
         binding.apply {
@@ -237,7 +236,9 @@ class ListActivity : AppCompatActivity() {
     override fun onBackPressed() {
        binding.apply {
            when{
-               state == "Normal" -> super.onBackPressed()
+               state == "Normal" -> {
+                   super.onBackPressed()
+               }
                soalPertama.text.isEmpty() -> soalPertama.error = "Harus diisi"
                soalKedua.text.isEmpty() -> soalKedua.error = "Harus diisi"
                else -> {
@@ -248,6 +249,7 @@ class ListActivity : AppCompatActivity() {
                        .setPositiveButton("Simpan", R.drawable.ic_baseline_done_24) {dialog, which ->
                            terisi()
                            modeEdit()
+                           kunciJawaban()
                            dialog.dismiss()
                        }
                        .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
@@ -260,5 +262,27 @@ class ListActivity : AppCompatActivity() {
                }
            }
        }
+    }
+//TODO : SAVE KUNCI JAWABAN
+    private fun kunciJawaban() {
+        binding.apply {
+            lifecycleScope.launch {
+                save("j1",jawabanPertama.selectedItemPosition.toString())
+                save("j2",jawabanKedua.selectedItemPosition.toString())
+                save("j3",jawabanKetiga.selectedItemPosition.toString())
+                save("j4",jawabanKeempat.selectedItemPosition.toString())
+                save("j5",jawabanKelima.selectedItemPosition.toString())
+                save("j6",jawabanKeenam.selectedItemPosition.toString())
+                save("j7",jawabanKetujuh.selectedItemPosition.toString())
+                save("j8",jawabanKedelapan.selectedItemPosition.toString())
+                save("j9",jawabanKesembilan.selectedItemPosition.toString())
+                save("j10",jawabanKesepuluh.selectedItemPosition.toString())
+                save("j11",jawabanKesebelas.selectedItemPosition.toString())
+                save("j12",jawabanKeduabelas.selectedItemPosition.toString())
+                save("j13",jawabanKetigabelas.selectedItemPosition.toString())
+                save("j14",jawabanKeempatbelas.selectedItemPosition.toString())
+                save("j15",jawabanKelimabelas.selectedItemPosition.toString())
+            }
+        }
     }
 }

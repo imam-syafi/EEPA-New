@@ -123,4 +123,5 @@
         <item>Benar</item>
         <item>Salah</item>
     </string-array>
+    <string name="skorAkhir">Skor Akhir:\n<b>%2$d</b></string>
 </resources>

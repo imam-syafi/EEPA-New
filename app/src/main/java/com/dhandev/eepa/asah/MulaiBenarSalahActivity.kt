@@ -1,28 +1,36 @@
 package com.dhandev.eepa.asah
 
 import android.content.Intent
+import android.content.SharedPreferences
+import android.graphics.ColorMatrix
+import android.graphics.ColorMatrixColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.lifecycle.lifecycleScope
 import com.dhandev.eepa.R
 import com.dhandev.eepa.addition.RandomUnrepeated
 import com.dhandev.eepa.databinding.ActivityMulaiBenarSalahBinding
 import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
+import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 class MulaiBenarSalahActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMulaiBenarSalahBinding
+    private lateinit var sharedPred : SharedPreferences
     lateinit var countdown_timer: CountDownTimer
     var listSoal = mutableListOf<String>()
     var jumlahSoalh = 1
     var time_in_milli_seconds = 0L
     val r = RandomUnrepeated(1,15)
+    var jawaban = "0"   //default "0" = salah, jika bernilai "1" berarti benar
+    var skor = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,39 +77,148 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                 listSoal.add(soal15)
                 showSoal(r.nextInt())
 
+                val colorMatrix = ColorMatrix()
+                colorMatrix.setSaturation(0f)
+                val filter = ColorMatrixColorFilter(colorMatrix)
+                btnYes.setColorFilter(filter)
+                btnNo.setColorFilter(filter)
+
+                //TODO: ATUR AGAR BTN YES NO BISA DISESUAIKAN DENGAN KUNCI JAWABAN
                 btnYes.setOnClickListener {
+                    btnYes.clearColorFilter()
+                    btnNo.visibility = View.GONE
+                    btnNext.visibility = View.VISIBLE
+                    solusi.visibility = View.VISIBLE
+                    when{
+                        jawaban == "0" -> {
+                            solusi.setText("Jawaban Anda: Benar\nKunci: Pernyataan ini benar")
+                            skor++
+                        }
+                        jawaban == "1" -> solusi.setText("Jawaban Anda: Benar\nKunci: Pernyataan ini salah")
+                    }
+                    btnYes.isClickable = false
+                }
+                btnNo.setOnClickListener {
+                    btnNo.clearColorFilter()
+                    btnYes.visibility = View.GONE
+                    btnNext.visibility = View.VISIBLE
+                    solusi.visibility = View.VISIBLE
+                    when{
+                        jawaban == "0" -> solusi.setText("Jawaban Anda: Salah\nKunci: Pernyataan ini benar")
+                        jawaban == "1" -> {
+                            solusi.setText("Jawaban Anda: Salah\nKunci: Pernyataan ini salah")
+                            skor++
+                        }
+                    }
+                    btnNo.isClickable = false
+                }
+                btnNext.setOnClickListener {
+                    btnYes.setColorFilter(filter)
+                    btnNo.setColorFilter(filter)
+                    btnYes.visibility = View.VISIBLE
+                    btnNo.visibility = View.VISIBLE
+                    solusi.setText("")
+                    btnNext.visibility = View.GONE
+                    solusi.visibility = View.GONE
+                    btnYes.isClickable = true
+                    btnNo.isClickable = true
+
                     if (jumlahSoalh < 15){
                         showSoal(r.nextInt())
                         jumlahSoalh++
                         title.text = "Pernyataan ${jumlahSoalh}/15"
                     }
                     else {
-                        Toast.makeText(this@MulaiBenarSalahActivity, "Sudah Sampai AKhir", Toast.LENGTH_SHORT).show()
+                        countdown_timer.cancel()
+                        result()
                     }
                 }
             }
         }
     }
 
-    //TODO:Default 15 soal, tapi pengguna bisa mengedit
+    private fun result() {
+        sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
+        val username : String?  = sharedPred.getString("userName", null)
+        val ResultDialog = MaterialDialog.Builder(this)
+            .setTitle(getString(R.string.skorAkhir, skor, skor))
+            .setMessage("Selamat $username, berikut skor Anda dalam latihan benar salah")
+            .setPositiveButton("Keluar", R.drawable.ic_baseline_done_24) { dialog, which ->
+                lifecycleScope.launch {save("NilaiBS", skor.toString()) }
+                startActivity(Intent(this, BenarSalahActivity::class.java))
+                finish()}
+            .setNegativeButton("Ulang", R.drawable.ic_baseline_refresh_24) { dialog, which ->
+                dialog.dismiss()
+                recreate() }
+            .setAnimation("done.json")
+            .build()
+        ResultDialog.show()
+        ResultDialog.animationView.scaleType = ImageView.ScaleType.CENTER_INSIDE
+    }
+
     private fun showSoal(nomorSoal: Int) {
         binding.apply {
             when(nomorSoal){
-                1 -> pernyataan.setText(listSoal[0])
-                2 -> pernyataan.setText(listSoal[1])
-                3 -> pernyataan.setText(listSoal[2])
-                4 -> pernyataan.setText(listSoal[3])
-                5 -> pernyataan.setText(listSoal[4])
-                6 -> pernyataan.setText(listSoal[5])
-                7 -> pernyataan.setText(listSoal[6])
-                8 -> pernyataan.setText(listSoal[7])
-                9 -> pernyataan.setText(listSoal[8])
-                10 -> pernyataan.setText(listSoal[9])
-                11 -> pernyataan.setText(listSoal[10])
-                12 -> pernyataan.setText(listSoal[11])
-                13 -> pernyataan.setText(listSoal[12])
-                14 -> pernyataan.setText(listSoal[13])
-                15 -> pernyataan.setText(listSoal[14])
+                1 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[0])
+                    jawaban = load("j1") ?: "0"
+                }
+                2 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[1])
+                    jawaban = load("j2") ?: "0" //default jawaban sesuaikan dengan soal
+                }
+                3 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[2])
+                    jawaban = load("j3") ?: "0"
+                }
+                4 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[3])
+                    jawaban = load("j4") ?: "0"
+                }
+                5 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[4])
+                    jawaban = load("j5") ?: "0"
+                }
+                6 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[5])
+                    jawaban = load("j6") ?: "0"
+                }
+                7 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[6])
+                    jawaban = load("j7") ?: "0"
+                }
+                8 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[7])
+                    jawaban = load("j8") ?: "0"
+                }
+                9 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[8])
+                    jawaban = load("j9") ?: "0"
+                }
+                10 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[9])
+                    jawaban = load("j10") ?: "0"
+                }
+                11 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[10])
+                    jawaban = load("j11") ?: "0"
+                }
+                12 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[11])
+                    jawaban = load("j12") ?: "0"
+                }
+                13 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[12])
+                    jawaban = load("j13") ?: "0"
+                }
+                14 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[13])
+                    jawaban = load("j14") ?: "0"
+                }
+                15 -> lifecycleScope.launch{
+                    pernyataan.setText(listSoal[14])
+                    jawaban = load("j15") ?: "0"
+                }
                 else -> pernyataan.setText("Gagal")
             }
         }
@@ -119,6 +236,7 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
 //                startActivity(intent)
 //                finish()
                 Toast.makeText(this@MulaiBenarSalahActivity, "Waktu Habis!", Toast.LENGTH_SHORT).show()
+                result()
             }
         }
         countdown_timer.start()
@@ -129,6 +247,13 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
         val seconds = (time_in_milli_seconds / 1000) % 60
 
         binding.timer.text = "$minute:$seconds"
+    }
+
+    suspend private fun save(key : String, value : String) {
+        val dataStoreKey = stringPreferencesKey(key)
+        dataStore.edit { list ->
+            list[dataStoreKey] = value
+        }
     }
 
     suspend private fun load(key : String) : String? {
@@ -144,7 +269,8 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
             .setCancelable(true)
             .setPositiveButton("Akhiri", R.drawable.ic_baseline_done_24) { dialog, which ->
                 countdown_timer.cancel()
-                super.onBackPressed() }
+                startActivity(Intent(this, BenarSalahActivity::class.java))
+                finish()}
             .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->
                 dialog.dismiss()
             }

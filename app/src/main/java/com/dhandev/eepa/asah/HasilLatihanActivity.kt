@@ -23,7 +23,7 @@ class HasilLatihanActivity : AppCompatActivity() {
             sharedPred = this@HasilLatihanActivity.getSharedPreferences("User", MODE_PRIVATE)
 
             close.setOnClickListener {
-                finish()
+                onBackPressed()
             }
             val username : String?  = sharedPred.getString("userName", null)
             descHasil.text = "Selamat $username, Kamu sudah berhasil menyelesaikan soal-soal latihan! \nBerikut rincian hasilnya:"
@@ -103,6 +103,7 @@ class HasilLatihanActivity : AppCompatActivity() {
 
     //TODO:SHOW THE RIGHT ANSWER
     override fun onBackPressed() {
+        startActivity(Intent(this, LatihanActivity::class.java))
         finish()
     }
 }

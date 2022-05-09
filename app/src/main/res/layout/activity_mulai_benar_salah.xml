@@ -58,15 +58,33 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/rounded_corner_smaller"
+        android:backgroundTint="@color/blue_500"
         android:fontFamily="@font/nunito_sans_bold"
-        android:padding="10dp"
-        android:textColor="@color/abu"
+        android:padding="15dp"
+        android:textColor="@color/white"
         android:gravity="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
         tools:text="Teks untuk uji coba, Bagaimana dengan teks yang lumayan panjang, apakah akan nyaman terlihat?" />
+
+    <TextView
+        android:id="@+id/solusi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_corner_smaller"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:padding="10dp"
+        android:textColor="@color/abu"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pernyataan"
+        tools:text="Bagian Solusi, berisi benar atau salah" />
 
     <ImageView
         android:id="@+id/btnNo"
@@ -76,6 +94,17 @@
         android:src="@drawable/btnno"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/next"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

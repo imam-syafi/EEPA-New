@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -18,6 +19,7 @@ import com.dhandev.eepa.materi.MateriPengantar
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
 import com.dhandev.eepa.onBoarding
+import com.dhandev.eepa.search.SearchActivity
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
@@ -145,6 +147,13 @@ class HomeFragment : Fragment() {
                 )
                     .show()
             }
+        }
+
+        binding.editText.setOnClickListener {
+            startActivity(Intent(requireActivity(), SearchActivity::class.java))
+//            val activityOptionCompat : ActivityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.editText, "search")
+//            val intent = Intent(requireActivity(), SearchActivity::class.java)
+//            startActivity(intent, activityOptionCompat.toBundle())
         }
     }
 

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".search.SearchActivity"
+            android:exported="false"/>
+        <activity
             android:name=".asah.MulaiBenarSalahActivity"
             android:exported="false" />
         <activity

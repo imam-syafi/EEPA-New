@@ -61,7 +61,7 @@
             app:layout_constraintHorizontal_bias="0.944"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
+        <TextView
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -70,12 +70,14 @@
             android:background="@drawable/rounded_corner"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/nunito_sans_bold"
-            android:hint="@string/search_hint"
+            android:text="@string/search_hint"
             android:padding="10dp"
             android:textSize="14sp"
             android:elevation="10dp"
-            android:drawableEnd="@drawable/uil_search"
-            android:drawableTint="@color/abu_terang"
+            android:gravity="center_vertical"
+            android:transitionName="search"
+            app:drawableEndCompat="@drawable/uil_search"
+            app:drawableTint="@color/abu_terang"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userName" />

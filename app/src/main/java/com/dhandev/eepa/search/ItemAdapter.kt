@@ -7,45 +7,42 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.dhandev.eepa.R
+import com.dhandev.eepa.databinding.ItemSearchBinding
 import java.util.*
 
-class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<ItemAdapter.ListViewHolder>(), Filterable {
+class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
 
     var listSearchFilter = ArrayList<Item>()
+    lateinit var mContext: Context
+
+    class ItemHolder(var viewBinding: ItemSearchBinding) :
+        RecyclerView.ViewHolder(viewBinding.root)
+
     init {
         listSearchFilter = listSearch
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_search, parent, false)
-        return ListViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val binding = ItemSearchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val sch = ItemHolder(binding)
+        mContext = parent.context
+        return sch
     }
 
-    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val itemHolder = holder as ItemHolder
         val (name, description, photo) = listSearchFilter[position]
-        holder.imgPhoto.setImageResource(photo)
-        holder.tvName.text = name
-        holder.tvDescription.text = description
-    }
-
-    override fun getItemCount(): Int = listSearchFilter.size
-
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
-        private val context: Context? = itemView.context
-
-        fun ListViewHolder(itemView: View){
-            super.itemView
-            val context = itemView.context
-            itemView.isClickable = true
-            itemView.setOnClickListener(this)
-        }
-
-        override fun onClick(p0: View?) {
-            Toast.makeText(context, "The Item Clicked is: ",Toast.LENGTH_SHORT).show()
+        itemHolder.viewBinding.imgItemPhoto.setImageResource(photo)
+        itemHolder.viewBinding.tvItemDescription.text = description
+        itemHolder.viewBinding.tvItemName.text = name
+        holder.itemView.setOnClickListener {
+            Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()
         }
     }
+
+    override fun getItemCount(): Int {
+        return listSearchFilter.size
+    }
+
 
     override fun getFilter(): Filter {
         return object : Filter(){
@@ -56,7 +53,7 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
                 } else {
                     val resultList = ArrayList<Item>()
                     for (row in listSearch) {
-                        if (row.toString().trim().lowercase(Locale.ROOT).contains(charSearch.trim().lowercase(Locale.ROOT))) {
+                        if (row.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))) {
                             resultList.add(row)
                         }
                     }

@@ -19,19 +19,24 @@ import java.lang.ref.WeakReference
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySearchBinding
     private lateinit var rvItem: RecyclerView
+    lateinit var adapter: ItemAdapter
     private val list = ArrayList<Item>()
-    var listSearched : List<Item> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        rvItem = findViewById(R.id.item)
+        rvItem.layoutManager = LinearLayoutManager(this@SearchActivity)
+        rvItem.setHasFixedSize(true)
+
         binding.apply {
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
             showSoftKeyboard(editText)
+
 
             //Search Method
             editText.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener{
@@ -40,25 +45,16 @@ class SearchActivity : AppCompatActivity() {
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
-                    showFilteredList(newText)
+                    adapter.filter.filter(newText)
                     return false
                 }
 
             })
             //recyclerView
-            rvItem = item
-            rvItem.setHasFixedSize(true)
             list.addAll(listItem)
             showRecyclerList()
         }
 
-    }
-
-    private fun showFilteredList(newtext : String?) {
-        rvItem.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = ItemAdapter(list)
-        listHeroAdapter.filter.filter(newtext)
-        rvItem.adapter = listHeroAdapter
     }
 
     private fun showSoftKeyboard(view: View) {
@@ -82,9 +78,8 @@ class SearchActivity : AppCompatActivity() {
         }
 
     private fun showRecyclerList() {
-        rvItem.layoutManager = LinearLayoutManager(this)
-        val listHeroAdapter = ItemAdapter(list)
-        rvItem.adapter = listHeroAdapter
+        adapter = ItemAdapter(list)
+        rvItem.adapter = adapter
     }
 
 }

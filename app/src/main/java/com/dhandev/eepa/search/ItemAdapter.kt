@@ -1,13 +1,17 @@
 package com.dhandev.eepa.search
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.dhandev.eepa.R
+import com.dhandev.eepa.addition.dummyActivity
 import com.dhandev.eepa.databinding.ItemSearchBinding
+import com.dhandev.eepa.materi.MateriPengantar
 import java.util.*
 
 class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
@@ -35,7 +39,27 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
         itemHolder.viewBinding.tvItemDescription.text = description
         itemHolder.viewBinding.tvItemName.text = name
         holder.itemView.setOnClickListener {
-            Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()
+            when(name){
+                "Perkembangan Teori Atom" ->{mContext.startActivity(Intent(mContext, MateriPengantar::class.java))}
+                else -> {
+                    val intent = Intent(mContext, dummyActivity::class.java)
+                    intent.putExtra("name", name)
+                    intent.putExtra("desc", description)
+                    mContext.startActivity(intent)
+                }
+            }
+//            when(name){
+//                "Perkembangan Teori Atom" ->{mContext.startActivity(Intent(mContext, MateriPengantar::class.java))}
+//                "Spin" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Statistika" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Gaya-gaya dasar" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Partikel berdasarkan penyusunnya" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Partikel berdasarkan statistikanya" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Teori Medan Quantum" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Model Standar" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Kromodinamika Kuantum" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//                "Beyond the Standard Model" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
+//            }
         }
     }
 

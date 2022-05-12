@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
@@ -154,6 +155,22 @@ class HomeFragment : Fragment() {
 //            val activityOptionCompat : ActivityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.editText, "search")
 //            val intent = Intent(requireActivity(), SearchActivity::class.java)
 //            startActivity(intent, activityOptionCompat.toBundle())
+        }
+        binding.apply {
+            scroll.viewTreeObserver
+                .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener{
+                    override fun onScrollChanged() {
+                        if (scroll.getChildAt(0).getBottom()
+                            == (scroll.getHeight() + scroll.getScrollY())) {
+                            tvScroll.visibility = View.GONE
+                        } else {
+                            tvScroll.visibility = View.VISIBLE
+
+                        }
+                    }
+
+                })
+            tvScroll.setOnClickListener { scroll.fullScroll(View.FOCUS_DOWN) }
         }
     }
 

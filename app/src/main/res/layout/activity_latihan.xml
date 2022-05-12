@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_sans_black"
-        android:text="Latihan"
+        android:text="Pilihan Ganda"
         android:textColor="@color/white"
         android:layout_marginHorizontal="20dp"
         android:textSize="24sp"
@@ -39,25 +39,88 @@
         app:layout_constraintStart_toEndOf="@+id/arrowBack"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/headline"
+    <TableLayout
+        android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="10dp"
-        android:fontFamily="@font/nunito"
-        android:justificationMode="inter_word"
-        android:text="Sebelum mengerjakan latihan soal ini, harap perhatikan poin-poin berikut:
-\n\n1. Berdoa sebelum mengerjakan
-\n2. Total ada 10 soal bertipe pilihan ganda
-\n3. Batas durasi pengerjaan dapat Anda sesuaikan melalui tombol &quot;timer&quot;
-\n4. Anda tidak bisa melompati soal maupun kembali ke soal sebelumnya
-\n5. Tekan tombol &quot;lanjutkan&quot; untuk menyimpan jawaban
-\n\nJika Anda sudah siap, silahkan tekan tombol &quot;mulai&quot; di bawah!"
-        android:textColor="@color/abu"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"
-        tools:layout_editor_absoluteX="20dp" />
+        android:layout_marginTop="10dp"
+        android:stretchColumns="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView4">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:justificationMode="inter_word"
+            android:text="Sebelum mengerjakan latihan soal ini, harap perhatikan poin-poin berikut:"
+            android:textColor="@color/abu"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/table"
+            tools:layout_editor_absoluteX="20dp" />
+        <TableRow>
+            <TextView
+                style="@style/detailPartikel"
+                android:textSize="18sp"
+                android:text="1." />
+            <TextView
+                style="@style/detailPartikelIsi"
+                android:textSize="18sp"
+                android:text="@string/petunjuk_1" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/detailPartikel"
+                android:textSize="18sp"
+                android:text="2." />
+            <TextView
+                style="@style/detailPartikelIsi"
+                android:textSize="18sp"
+                android:text="@string/petunjuk_2" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/detailPartikel"
+                android:textSize="18sp"
+                android:text="3." />
+            <TextView
+                style="@style/detailPartikelIsi"
+                android:textSize="18sp"
+                android:text="@string/petunjuk_3" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/detailPartikel"
+                android:textSize="18sp"
+                android:text="4." />
+            <TextView
+                style="@style/detailPartikelIsi"
+                android:textSize="18sp"
+                android:text="@string/petunjuk_4" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/detailPartikel"
+                android:textSize="18sp"
+                android:text="5." />
+            <TextView
+                style="@style/detailPartikelIsi"
+                android:textSize="18sp"
+                android:text="@string/petunjuk_5" />
+        </TableRow>
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:justificationMode="inter_word"
+            android:text="@string/petunjuk_6"
+            android:textColor="@color/abu"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/table"
+            tools:layout_editor_absoluteX="20dp" />
+    </TableLayout>
 
     <TextView
         android:id="@+id/lastScore"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/swipeRefresh"
+    android:id="@+id/scroll"
     android:scrollbars="none"
     tools:context=".ui.home.HomeFragment">
 
@@ -136,6 +136,8 @@
             android:text="@string/see_all"
             android:textColor="@color/abu"
             android:textSize="14sp"
+            android:gravity="center"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/textView4" />
@@ -147,6 +149,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginVertical="5dp"
+            android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
@@ -161,7 +164,8 @@
                     android:id="@+id/introHome"
                     android:layout_width="166dp"
                     android:layout_height="166dp"
-                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp"
                     android:background="@drawable/pengantar"
                     android:text="@string/Intro"
                     android:gravity="start|bottom"
@@ -213,7 +217,7 @@
                     android:id="@+id/more"
                     android:layout_width="166dp"
                     android:layout_height="166dp"
-                    android:layout_marginEnd="15dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/rounded_corner_smaller"
                     android:text="@string/more"
                     android:backgroundTint="@color/blue_500"
@@ -346,5 +350,23 @@
             app:layout_constraintTop_toBottomOf="@id/fitur"
             app:layout_constraintStart_toEndOf="@id/referensi"
             android:text="@string/attachment"/>
+
+        <TextView
+            android:id="@+id/tvScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_smaller"
+            android:backgroundTint="@color/blue_500"
+            android:padding="10dp"
+            android:paddingEnd="15dp"
+            android:drawableStart="@drawable/ic_baseline_arrow_drop_down_24"
+            android:text="Lebih banyak"
+            android:gravity="center"
+            android:layout_marginBottom="-10dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/sharpen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

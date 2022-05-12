@@ -33,6 +33,14 @@ class ReferensiActivity : AppCompatActivity() {
                 url = "https://www.google.co.id/books/edition/Fundamental_University_Physics_Quantum_a/CPZQAAAAMAAJ?hl=id&gbpv=0&bsq=fundamental%20university%20physics%20alonso%20finn"
                 customTabs()
             }
+            Lumen.setOnClickListener {
+                url = "https://courses.lumenlearning.com/boundless-chemistry/chapter/history-of-atomic-structure/"
+                customTabs()
+            }
+            Khan.setOnClickListener {
+                url = "https://www.khanacademy.org/science/chemistry/electronic-structure-of-atoms/history-of-atomic-structure/a/discovery-of-the-electron-and-nucleus"
+                customTabs()
+            }
         }
     }
 

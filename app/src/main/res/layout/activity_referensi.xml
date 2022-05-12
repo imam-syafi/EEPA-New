@@ -116,4 +116,52 @@
             android:textColor="@color/abu" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buku_alonso"
+        android:layout_margin="20dp"
+        android:textSize="22sp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:textColor="@color/abu"
+        android:text="Situs web"/>
+
+    <LinearLayout
+        android:id="@+id/sharpen"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvWebsite">
+        <TextView
+            android:id="@+id/Lumen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_smaller"
+            android:text="Lumen Learning"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:textColor="@color/abu"
+            android:textSize="18sp"/>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/Khan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_smaller"
+            android:text="Khan Academy"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:padding="15dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:textColor="@color/abu"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

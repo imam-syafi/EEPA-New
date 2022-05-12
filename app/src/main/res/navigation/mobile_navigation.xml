@@ -70,6 +70,7 @@
             android:id="@+id/action_splashFragment_to_navigation_home"
             app:destination="@id/navigation_home"
             app:enterAnim="@android:anim/fade_in"
+            app:launchSingleTop="false"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>

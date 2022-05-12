@@ -47,7 +47,7 @@
         android:layout_marginVertical="10dp"
         android:fontFamily="@font/nunito"
         android:justificationMode="inter_word"
-        android:text="Menu ini berisi pernyataan benar dan salah, diharapkan pengguna lebih mudah untuk mengingat materi yang sudah dipelajari. Selain daftar yang sudah tersedia secara bawaan, pengguna juga bisa menambahkan pernyataannya sendiri. Oleh karena itu, tidak ada proses penilaian di sini."
+        android:text="Menu ini berisi pernyataan benar dan salah, diharapkan pengguna lebih mudah untuk mengingat materi yang sudah dipelajari. Selain daftar yang sudah tersedia secara bawaan, pengguna juga bisa mengedit pernyataannya tersebut agar sesuai dengan kebutuhan."
         android:textColor="@color/abu"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,18 +74,41 @@
         android:textColor="@color/abu"
         android:textSize="18sp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/btnMulai"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintBottom_toTopOf="@id/starter" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnMulai"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:id="@+id/starter"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:layout_marginBottom="20dp"
-        android:text="@string/mulai"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_corner"
+            app:backgroundTint="@color/right"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Timer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMulai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/mulai"
+            app:layout_constraintStart_toStartOf="@id/timer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

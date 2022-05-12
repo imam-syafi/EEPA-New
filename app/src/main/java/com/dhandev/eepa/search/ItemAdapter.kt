@@ -43,7 +43,6 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
         return listSearchFilter.size
     }
 
-
     override fun getFilter(): Filter {
         return object : Filter(){
             override fun performFiltering(constraint: CharSequence?): FilterResults {

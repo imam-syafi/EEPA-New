@@ -28,10 +28,10 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.myLooper()!!).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_navigation_home)
-        }, 2100)
+        }, 1600)
 
         val animation : ObjectAnimator = ObjectAnimator.ofInt(binding.progressCircular, "progress", 0, 110)
-        animation.setDuration(2000)
+        animation.setDuration(1500)
         animation.interpolator
         animation.start()
         val appName = getString(R.string.app_name)

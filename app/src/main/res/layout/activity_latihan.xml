@@ -50,10 +50,10 @@
         android:text="Sebelum mengerjakan latihan soal ini, harap perhatikan poin-poin berikut:
 \n\n1. Berdoa sebelum mengerjakan
 \n2. Total ada 10 soal bertipe pilihan ganda
-\n3. Waktu mengerjakan maksimal 15 menit
+\n3. Batas durasi pengerjaan dapat Anda sesuaikan melalui tombol &quot;timer&quot;
 \n4. Anda tidak bisa melompati soal maupun kembali ke soal sebelumnya
 \n5. Tekan tombol &quot;lanjutkan&quot; untuk menyimpan jawaban
-\n\nJika Anda sudah siap, silahkan tekan tombol mulai di bawah!"
+\n\nJika Anda sudah siap, silahkan tekan tombol &quot;mulai&quot; di bawah!"
         android:textColor="@color/abu"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
@@ -69,18 +69,42 @@
         android:textColor="@color/abu"
         android:textSize="18sp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/btnMulai"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintBottom_toTopOf="@id/starter" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnMulai"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:id="@+id/starter"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:layout_marginBottom="20dp"
-        android:text="@string/mulai"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_corner"
+            app:backgroundTint="@color/right"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Timer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMulai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/mulai"
+            app:layout_constraintStart_toStartOf="@id/timer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

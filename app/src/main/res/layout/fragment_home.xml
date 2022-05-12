@@ -108,7 +108,7 @@
                 app:showIndicator="true"
                 app:showNavigationButtons="false"
                 app:showBottomShadow="true"
-
+                app:imagePlaceholder="@drawable/memuatgambar"
                 app:showTopShadow="false">
             </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
         </com.google.android.material.card.MaterialCardView>

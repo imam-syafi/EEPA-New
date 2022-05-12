@@ -93,21 +93,21 @@ class ListActivity : AppCompatActivity() {
 
             //load saved kunci jawaban pada masing-masing spinner
             lifecycleScope.launch {
-                load("j1")?.let { jawabanPertama.setSelection(it.toInt()) }
-                load("j2")?.let { jawabanKedua.setSelection(it.toInt()) }
-                load("j3")?.let { jawabanKetiga.setSelection(it.toInt()) }
-                load("j4")?.let { jawabanKeempat.setSelection(it.toInt()) }
-                load("j5")?.let { jawabanKelima.setSelection(it.toInt()) }
-                load("j6")?.let { jawabanKeenam.setSelection(it.toInt()) }
-                load("j7")?.let { jawabanKetujuh.setSelection(it.toInt()) }
-                load("j8")?.let { jawabanKedelapan.setSelection(it.toInt()) }
-                load("j9")?.let { jawabanKesembilan.setSelection(it.toInt()) }
-                load("j10")?.let { jawabanKesepuluh.setSelection(it.toInt()) }
-                load("j11")?.let { jawabanKesebelas.setSelection(it.toInt()) }
-                load("j12")?.let { jawabanKeduabelas.setSelection(it.toInt()) }
-                load("j13")?.let { jawabanKetigabelas.setSelection(it.toInt()) }
-                load("j14")?.let { jawabanKeempatbelas.setSelection(it.toInt()) }
-                load("j15")?.let { jawabanKelimabelas.setSelection(it.toInt()) }
+                load("j1")?: 1.let { jawabanPertama.setSelection(it)}
+                load("j2")?: 0.let { jawabanKedua.setSelection(it) }
+                load("j3")?: 0.let { jawabanKetiga.setSelection(it) }
+                load("j4")?: 0.let { jawabanKeempat.setSelection(it) }
+                load("j5")?: 0.let { jawabanKelima.setSelection(it) }
+                load("j6")?: 1.let { jawabanKeenam.setSelection(it) }
+                load("j7")?: 0.let { jawabanKetujuh.setSelection(it) }
+                load("j8")?: 1.let { jawabanKedelapan.setSelection(it) }
+                load("j9")?: 0.let { jawabanKesembilan.setSelection(it) }
+                load("j10")?: 0.let { jawabanKesepuluh.setSelection(it) }
+                load("j11")?: 1.let { jawabanKesebelas.setSelection(it) }
+                load("j12")?: 1.let { jawabanKeduabelas.setSelection(it) }
+                load("j13")?: 0.let { jawabanKetigabelas.setSelection(it) }
+                load("j14")?: 0.let { jawabanKeempatbelas.setSelection(it) }
+                load("j15")?: 1.let { jawabanKelimabelas.setSelection(it) }
             }
         }
     }
@@ -263,7 +263,6 @@ class ListActivity : AppCompatActivity() {
            }
        }
     }
-//TODO : SAVE KUNCI JAWABAN
     private fun kunciJawaban() {
         binding.apply {
             lifecycleScope.launch {

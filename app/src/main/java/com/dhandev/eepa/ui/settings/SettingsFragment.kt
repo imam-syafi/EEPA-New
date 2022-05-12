@@ -26,6 +26,7 @@ class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var sharedPred2 : SharedPreferences
 
 
     override fun onCreateView(
@@ -40,6 +41,7 @@ class SettingsFragment : Fragment() {
         val root: View = binding.root
 
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
+        sharedPred2 = this.requireActivity().getSharedPreferences("Tampilan", AppCompatActivity.MODE_PRIVATE)
 
         val username : String?  = sharedPred.getString("userName", "Pengguna")
         binding.userName.text = username
@@ -53,13 +55,20 @@ class SettingsFragment : Fragment() {
 
         binding.apply {
             logout.setOnClickListener {
-
+                val Editor:SharedPreferences.Editor = sharedPred.edit()
+                val Editor2:SharedPreferences.Editor = sharedPred2.edit()
                 val BottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
                     .setTitle("Keluar?")
                     .setMessage("$username, Kamu yakin mau keluar?")
                     .setCancelable(true)
                     .setPositiveButton("Keluar", R.drawable.ic_baseline_done_24){dialog, which ->
-                        sharedPred.edit().remove("userName").apply()
+                        Editor.remove("userName")
+                        Editor2.remove("gantiLatar")
+                        Editor2.remove("tombolTerpilih")
+                        Editor2.remove("ukuranBaru")
+                        Editor2.remove("tombolUkuranTerpilih")
+                        Editor.apply()
+                        Editor2.apply()
                         val intent = Intent(activity, onBoarding::class.java)
                         startActivity(intent)
                         activity?.finish() }

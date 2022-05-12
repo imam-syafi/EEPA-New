@@ -1,6 +1,7 @@
 package com.dhandev.eepa.asah
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -17,6 +18,8 @@ import kotlin.random.Random
 
 class MulaiLatihanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMulaiLatihanBinding
+    private lateinit var sharedPred : SharedPreferences
+
     var mutableList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     var listHasil = mutableListOf<Int>()
     var listJawaban = mutableListOf<Int>()
@@ -34,8 +37,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
         randomize(soal)
         showSoal(soal)
 
-        val time = 1 //in minute
-        time_in_milli_seconds = time.toLong() *60000L
+        sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
+
+        val time = sharedPred.getString("terpilih", "15") //in minute
+        val tepilih = time?.toInt()
+        if (tepilih != null) {
+            time_in_milli_seconds = tepilih.toLong() *60000L
+        }
         startTimer(time_in_milli_seconds)
 
         binding.arrowBack.setOnClickListener {

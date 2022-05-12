@@ -6,10 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityLatihanBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class LatihanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLatihanBinding
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var selectedItem: String
+    private var selectedItemIndex: Int = 0
+    private val items = arrayOf("10", "15", "20")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +31,30 @@ class LatihanActivity : AppCompatActivity() {
                 startActivity(Intent(this@LatihanActivity, MulaiLatihanActivity::class.java))
                 finish()
             }
+            timer.setOnClickListener {
+                showOptionDialog()
+            }
         }
+    }
+
+    private fun showOptionDialog() {
+        selectedItem = items[selectedItemIndex]
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Pilih Durasi Pengerjaan (menit)")
+            .setSingleChoiceItems(items, selectedItemIndex){dialog, which ->
+                selectedItemIndex = which
+                selectedItem = items[which]
+            }
+            .setPositiveButton("Ok"){dialog, which ->
+                val terpilih = selectedItem
+                val Editor : SharedPreferences.Editor = sharedPred.edit()
+                Editor.putString("terpilih", terpilih)
+                Editor.apply()
+            }
+            .setNegativeButton("Batal") { dialog, which ->
+                dialog.dismiss()
+            }
+            .show()
     }
 }

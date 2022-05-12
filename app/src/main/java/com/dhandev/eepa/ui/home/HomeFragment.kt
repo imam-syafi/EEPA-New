@@ -99,12 +99,12 @@ class HomeFragment : Fragment() {
         val list = mutableListOf<CarouselItem>()
 
         val url1 = "https://cache.boston.com/universal/site_graphics/blogs/bigpicture/lhc_08_01/lhc1.jpg"
-        val url2 = "https://docs.google.com/uc?id=1yahQeRW9WFVlC_Aq8lLtd0P07TQKMbms"
+        val url2 = "https://cdni.russiatoday.com/files/news/1e/57/20/00/eeee-run167675-evt876658967-rphi_copy.si.jpg"
         val url3 = "https://pbs.twimg.com/media/DcDmnE6X4AEwy01?format=jpg&name=medium"
 
-        val desc1 = "Large Hadron Collider (LHC)"
-        val desc2 = "Tumbukan antara dua proton di detektor CMS"
-        val desc3 = "J.J.Thomson penemu partikel elementer pertama"
+        val desc1 = "Large Hadron Collider (LHC) bertujuan untuk menguji prediksi beberapa teori fisika partikel yang berbeda, termasuk mengukur karakteristik boson Higgs dan mencari kelompok partikel baru yang diprediksi oleh teori supersimetri, juga menyelesaikan pertanyaan tak terjawab dalam fisika. (Gambar dari boston.com)"
+        val desc2 = "Peristiwa tumbukan proton-proton pada CMS (Compact Muon Solenoid) di mana 4 elektron energi tinggi (garis hijau dan batang merah) diamati. Peristiwa tersebut menunjukkan karakteristik yang diharapkan dari peluruhan boson Higgs tetapi juga konsisten dengan Model Standar. (Gambar dari cds.cern.ch)"
+        val desc3 = "J.J.Thomson penemu partikel elementer pertama melalui eksperimennya menggunakan tabung sinar katoda. (Gambar dari edu.rsc.org)"
 
         list.add(
             CarouselItem(

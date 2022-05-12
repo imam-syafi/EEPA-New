@@ -24,6 +24,7 @@ import kotlinx.coroutines.launch
 class MulaiBenarSalahActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMulaiBenarSalahBinding
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var sharedPred2 : SharedPreferences
     lateinit var countdown_timer: CountDownTimer
     var listSoal = mutableListOf<String>()
     var jumlahSoalh = 1
@@ -37,8 +38,13 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
         binding = ActivityMulaiBenarSalahBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val time = 1 //in minute
-        time_in_milli_seconds = time.toLong() *60000L
+        sharedPred2 = this.getSharedPreferences("BenarSalah", MODE_PRIVATE)
+
+        val time = sharedPred2.getString("terpilih", "3") //in minute
+        val tepilih = time?.toInt()
+        if (tepilih != null) {
+            time_in_milli_seconds = tepilih.toLong() *60000L
+        }
         startTimer(time_in_milli_seconds)
 
         binding.apply {
@@ -80,10 +86,9 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                 val colorMatrix = ColorMatrix()
                 colorMatrix.setSaturation(0f)
                 val filter = ColorMatrixColorFilter(colorMatrix)
-                btnYes.setColorFilter(filter)
-                btnNo.setColorFilter(filter)
+//                btnYes.setColorFilter(filter)
+//                btnNo.setColorFilter(filter)
 
-                //TODO: ATUR AGAR BTN YES NO BISA DISESUAIKAN DENGAN KUNCI JAWABAN
                 btnYes.setOnClickListener {
                     btnYes.clearColorFilter()
                     btnNo.visibility = View.GONE
@@ -113,8 +118,8 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                     btnNo.isClickable = false
                 }
                 btnNext.setOnClickListener {
-                    btnYes.setColorFilter(filter)
-                    btnNo.setColorFilter(filter)
+//                    btnYes.setColorFilter(filter)
+//                    btnNo.setColorFilter(filter)
                     btnYes.visibility = View.VISIBLE
                     btnNo.visibility = View.VISIBLE
                     solusi.setText("")
@@ -161,7 +166,7 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
             when(nomorSoal){
                 1 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[0])
-                    jawaban = load("j1") ?: "0"
+                    jawaban = load("j1") ?: "1"
                 }
                 2 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[1])
@@ -181,7 +186,7 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                 }
                 6 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[5])
-                    jawaban = load("j6") ?: "0"
+                    jawaban = load("j6") ?: "1"
                 }
                 7 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[6])
@@ -189,7 +194,7 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                 }
                 8 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[7])
-                    jawaban = load("j8") ?: "0"
+                    jawaban = load("j8") ?: "1"
                 }
                 9 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[8])
@@ -201,11 +206,11 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                 }
                 11 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[10])
-                    jawaban = load("j11") ?: "0"
+                    jawaban = load("j11") ?: "1"
                 }
                 12 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[11])
-                    jawaban = load("j12") ?: "0"
+                    jawaban = load("j12") ?: "1"
                 }
                 13 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[12])
@@ -217,7 +222,7 @@ class MulaiBenarSalahActivity : AppCompatActivity() {
                 }
                 15 -> lifecycleScope.launch{
                     pernyataan.setText(listSoal[14])
-                    jawaban = load("j15") ?: "0"
+                    jawaban = load("j15") ?: "1"
                 }
                 else -> pernyataan.setText("Gagal")
             }

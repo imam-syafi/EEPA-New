@@ -23,7 +23,7 @@ class NewsFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private var dataUrl : String? = null
+    private var dataUrl : String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,27 +38,27 @@ class NewsFragment : Fragment() {
 
         binding.nature.setOnClickListener{
             dataUrl = "https://www-nature-com.translate.goog/subjects/particle-physics?error=cookies_not_supported&code=fd9ff9c4-4d59-4984-9fdf-4255a2e89596&_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
-            customTab.open(requireContext(), dataUrl.toString())
+            customTab.open(requireContext(), dataUrl)
         }
 
         binding.scinews.setOnClickListener{
             dataUrl = "https://www-sciencenews-org.translate.goog/topic/particle-physics?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
-            customTab.open(requireContext(), dataUrl.toString())
+            customTab.open(requireContext(), dataUrl)
         }
 
         binding.newsci.setOnClickListener {
             dataUrl = "https://www-newscientist-com.translate.goog/article-topic/particle-physics/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
-            customTab.open(requireContext(), dataUrl.toString())
+            customTab.open(requireContext(), dataUrl)
         }
 
         binding.scitech.setOnClickListener {
             dataUrl = "https://scitechdaily-com.translate.goog/tag/particle-physics/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
-            customTab.open(requireContext(), dataUrl.toString())
+            customTab.open(requireContext(), dataUrl)
         }
 
         binding.phyorg.setOnClickListener {
             dataUrl = "https://phys-org.translate.goog/tags/particle+physics/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
-            customTab.open(requireContext(), dataUrl.toString())
+            customTab.open(requireContext(), dataUrl)
         }
 
         return root

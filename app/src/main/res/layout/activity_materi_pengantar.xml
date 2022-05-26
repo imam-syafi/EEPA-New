@@ -212,9 +212,8 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
+            android:text="@string/pengantar1"
             android:lineSpacingMultiplier="1.4"
-            android:text="\t Semua benda yang ada di alam semesta ini tersusun oleh komponen yang lebih kecil. Contohnya galaksi tersusun dari sistem keplanetan yang juga tersusun dari planet-planet dan bintang. Contoh yang lebih sederhana dalam kehidupan sehari-hari yaitu baju, di mana benda tersebut tersusun oleh kain yang juga tersusun oleh ribuan helai benang.
-\n \t Dari dua contoh tersebut, kita bisa mengidentifikasi bahwa bahan penyusunnya masih terus dapat diperoleh hingga tidak bisa dibagi lagi. Saat bahan penyusun tidak dapat dibagi lagi, muncullah istilah atomos (tidak dapat dibagi) yang pertama kali dirumuskan oleh filsuf Yunani yaitu Demokritus dan Leucippus  pada zaman Yunani Kuno 400 tahun sebelum masehi dan kini lebih dikenal dengan istilah."
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bagian" />

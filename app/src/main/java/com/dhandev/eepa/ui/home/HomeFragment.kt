@@ -163,10 +163,7 @@ class HomeFragment : Fragment() {
                         if (scroll.getChildAt(0).getBottom()
                             == (scroll.getHeight() + scroll.getScrollY())) {
                             tvScroll.visibility = View.GONE
-                        } else {
-                            tvScroll.visibility = View.VISIBLE
-
-                        }
+                        } 
                     }
 
                 })

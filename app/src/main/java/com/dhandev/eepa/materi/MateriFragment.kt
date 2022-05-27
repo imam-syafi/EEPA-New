@@ -29,7 +29,7 @@ class MateriFragment : Fragment() {
                 activity?.onBackPressed()
             }
 
-            intro.setOnClickListener {
+            TMQ.setOnClickListener {
                 val intent = Intent(activity, MateriPengantar::class.java)
                 startActivity(intent)
             }

@@ -159,15 +159,12 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_sans_black"
-            android:text="@string/_1_subatomik"
-            android:textColor="@color/white"
+            style="@style/tittle"
+            tools:text="@string/_2_teori_medan_kuantum"
             android:layout_marginHorizontal="20dp"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"
+            app:layout_constraintEnd_toStartOf="@id/setText"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -182,29 +179,20 @@
 
         <ImageView
             android:id="@+id/gambar"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
             android:layout_marginVertical="20dp"
-            tools:src="@tools:sample/avatars"
-            android:adjustViewBounds="true"
-            android:elevation="5dp"
+            style="@style/gambar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/aturTeks">
         </ImageView>
 
         <TextView
-            android:id="@+id/bagian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bagaimana_ini_dimulai"
-            android:layout_marginLeft="20dp"
-            android:layout_marginVertical="10dp"
-            android:fontFamily="@font/nunito_sans_bold"
-            app:layout_constraintTop_toBottomOf="@id/gambar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/body1"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+            android:id="@+id/tv_caption1"
+            android:paddingHorizontal="20dp"
+            style="@style/caption"
+            tools:text="Gambar 1. Large Hadron Collider"
+            app:layout_constraintBottom_toBottomOf="@id/gambar"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/body1"
@@ -212,25 +200,11 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
-            android:text="@string/pengantar1"
+            android:text="@string/m_tmq"
             android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bagian" />
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginVertical="20dp"
-            tools:src="@tools:sample/avatars"
-            android:adjustViewBounds="true"
-            android:elevation="5dp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body1">
-        </ImageView>
+            app:layout_constraintTop_toBottomOf="@id/gambar" />
 
         <TextView
             android:id="@+id/body2"
@@ -238,7 +212,36 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
-            android:visibility="gone"
+            android:text="@string/m_tmq2"
+            android:lineSpacingMultiplier="1.4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/body1" />
+
+        <ImageView
+            android:id="@+id/gambar2"
+            android:layout_marginVertical="20dp"
+            style="@style/gambar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/body2">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_caption2"
+            android:paddingHorizontal="20dp"
+            style="@style/caption"
+            tools:text="Gambar 2. Large Hadron Collider"
+            app:layout_constraintBottom_toBottomOf="@id/gambar2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/body3"
+            style="@style/FontParagraf"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/m_tmq3"
             android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -253,7 +256,7 @@
             android:padding="20dp"
             android:visibility="gone"
             android:name="com.dhandev.eepa.materi.MiniQuizFragment"
-            app:layout_constraintTop_toBottomOf="@id/body2"
+            app:layout_constraintTop_toBottomOf="@id/body3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

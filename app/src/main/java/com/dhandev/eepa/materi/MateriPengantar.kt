@@ -3,8 +3,10 @@ package com.dhandev.eepa.materi
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
+import android.graphics.text.LineBreaker
 import android.net.Uri
 import android.os.Bundle
+import android.text.TextUtils
 import android.text.util.Linkify
 import android.view.View
 import android.widget.Toast
@@ -27,11 +29,11 @@ class MateriPengantar : AppCompatActivity() {
 
     private lateinit var binding: ActivityMateriPengantarBinding
     private lateinit var sharedPred : SharedPreferences
-    var URL : String = "https://www.dictio.id/uploads/db3342/original/3X/0/b/0b8ddd6ce6f47c7b2c3e4de9310d128c547c97a8.jpeg"
-    var URL2 = ""
+    var URL : String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
+    var URL2 = "https://cdn.mos.cms.futurecdn.net/7cvrrJxBe3N4Pfsv8q9oaM.jpg"
     var page = 1
-    var desc = "Demokritus tercatat sebagai orang pertama yang mencetuskan istilah atom"
-    var desc2 = ""
+    var desc = "Large Hadron Collider (Penubruk Hadron Raksasa) adalah pemercepat partikel berenergi tinggi terbesar di dunia, fasilitas percobaan paling kompleks yang pernah dibangun, dan mesin tunggal terbesar di dunia."
+    var desc2 = "Fasilitas-fasilitas yang ada di CERN terdiri dari LHC (Large Hadron Collider), SPS (Super Proton Synchrotron), dan PS (Proton Synchrotron)"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,6 +93,7 @@ class MateriPengantar : AppCompatActivity() {
             }
 
             glideImage()
+            glideImage2()
             gambar.setOnClickListener {
                 openImageViewer(URL, desc)
             }
@@ -117,9 +120,18 @@ class MateriPengantar : AppCompatActivity() {
 //            body1.transformationMethod = LinkTransformationMethod()
 //            body1.movementMethod = LinkMovementMethod.getInstance()
 
+            //buat tittle berjalan
+            title.text = getString(R.string._2_teori_medan_kuantum)
+            title.ellipsize = TextUtils.TruncateAt.MARQUEE
+            title.isSingleLine = true
+            title.marqueeRepeatLimit = -1
+            title.isSelected = true
+
+            tvCaption1.text = getString(R.string.m_tmq_caption)
+            tvCaption2.text = getString(R.string.m_tmq_caption2)
             Linkify.addLinks(body1, Linkify.ALL)
-            body1.movementMethod = BetterLinkMovementMethod.getInstance()
-            body1.movementMethod = BetterLinkMovementMethod.newInstance().apply {
+//            body2.movementMethod = BetterLinkMovementMethod.getInstance()
+            body2.movementMethod = BetterLinkMovementMethod.newInstance().apply {
                 setOnLinkClickListener { textView, url ->
                     customTab.open(this@MateriPengantar, url)
                     true
@@ -173,7 +185,6 @@ class MateriPengantar : AppCompatActivity() {
             URL = "https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/1941/2017/05/30162034/daltons-symbols.gif"
             desc = "Struktur kimia dari Dalton's A New System of Chemical Philosophy"
             glideImage()
-            bagian.text = getString(R.string.intro_2)
             body1.text = "\t Sayangnya, selama berabad-abad berlalu tidak ada perkembangan secara saintifik yang berarti mengenai atom karena sebagian besar filsuf sepakat dengan konsep Aristoteles. Baru pada abad ke-17, tepatnya tahun 1661, Robert Boyle memaparkan diskusinya mengenai atom pada literatur ilmiah yang berjudul The Sceptical Chymist. Namun, ahli kimia dan meteorologi Inggris John Dalton dikreditkan dengan teori atom modern pertama, seperti yang dijelaskan dalam bukunya A New System of Chemical Philosophy yang terbit pada tahun 1808 (bagian I) dan 1810 (bagian II). \tEksperimen Dalton dengan menggunakan gas tercatat sebagai pengukuran paling awal untuk mengetahui massa atom, konsep struktur atom, dan reaktivitas. Secara garis besar, Dalton menjelaskan bahwa:\n1. Semua atom dari unsur tertentu adalah identik\n2. Massa dan ukuran atom berbeda antara unsur satu dan yang lainnya\n3. Atom tidak bisa dihancurkan. Reaksi kimia bisa mengakibatkan penyusunan kembali, tapi tidak akan menghancurkan atau membuat atom baru."
         }
     }
@@ -186,7 +197,6 @@ class MateriPengantar : AppCompatActivity() {
             URL = "https://cdn.kastatic.org/ka-perseus-images/79d080efbc996be3a96eb98195f77e5df00e8f95.png"
             desc = "Diagram tabung sinar katoda yang digunakan oleh J.J.Thomson ketika menemukan elektron"
             glideImage()
-            bagian.text = getString(R.string.intro_3)
             val text = getString(R.string.bullet_3)
 //            val spannableString = SpannableString(text)
 //            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {

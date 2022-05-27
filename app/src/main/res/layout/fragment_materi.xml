@@ -52,38 +52,38 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView4"
             android:orientation="vertical">
             <Button
-                android:id="@+id/intro"
+                android:id="@+id/subatomik"
                 style="@style/ButtonGeneral"
                 android:layout_marginBottom="5dp"
                 android:text="@string/_1_subatomik"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
-                android:id="@+id/subatomik"
+                android:id="@+id/TMQ"
                 style="@style/ButtonGeneral"
                 android:text="@string/_2_teori_medan_kuantum"
                 app:backgroundTint="@color/biru_seken"/>
 
             <Button
-                android:id="@+id/TMQ"
+                android:id="@+id/hadron"
                 style="@style/ButtonGeneral"
                 android:text="@string/_3_hadron"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
-                android:id="@+id/standarModel"
+                android:id="@+id/lepton"
                 style="@style/ButtonGeneral"
                 android:text="@string/_4_lepton"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
-                android:id="@+id/Kromodinamika"
+                android:id="@+id/model_standar"
                 style="@style/ButtonGeneral"
                 android:text="@string/_5_model_standar"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
-                android:id="@+id/Beyond"
+                android:id="@+id/terkini"
                 style="@style/ButtonGeneral"
                 android:layout_marginBottom="5dp"
                 android:text="@string/_6_perkembangan_terkini"

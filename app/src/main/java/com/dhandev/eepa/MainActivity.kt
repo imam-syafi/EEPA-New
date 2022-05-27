@@ -22,17 +22,27 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navController.addOnDestinationChangedListener{_, destination, _ ->
-            if (destination.id == R.id.splashFragment){
-                navView.visibility = View.GONE
-                binding.tvScroll.visibility = View.GONE
-            } else {
-                navView.visibility = View.VISIBLE
-                binding.tvScroll.visibility = View.VISIBLE
+            when(destination.id){
+                R.id.splashFragment -> hideNavScroll()
+                R.id.materiFragment -> hideNavScroll()
+                R.id.navigation_news -> binding.tvScroll.visibility = View.GONE
+                R.id.navigation_settings -> binding.tvScroll.visibility = View.GONE
+                else -> {
+                    navView.visibility = View.VISIBLE
+                    binding.tvScroll.visibility = View.VISIBLE
+                }
             }
         }
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
         navView.setupWithNavController(navController)
+    }
+
+    private fun hideNavScroll() {
+        binding.apply {
+            navView.visibility = View.GONE
+            tvScroll.visibility = View.GONE
+        }
     }
 }

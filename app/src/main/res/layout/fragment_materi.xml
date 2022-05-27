@@ -55,94 +55,39 @@
                 android:id="@+id/intro"
                 style="@style/ButtonGeneral"
                 android:layout_marginBottom="5dp"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
-                android:text="@string/_1_pengantar"
+                android:text="@string/_1_subatomik"
                 app:backgroundTint="@color/biru_seken" />
-
-            <LinearLayout
-                android:id="@+id/part_pengantar"
-                style="@style/bgDropDownList">
-                <TextView
-                    android:id="@+id/perkembangan_atom"
-                    style="@style/dropDownList"
-                    android:text="@string/perkembangan_teori_atom"/>
-                <View
-                    style="@style/Divider"/>
-                <TextView
-                    android:id="@+id/spin"
-                    style="@style/dropDownList"
-                    android:text="@string/spin"/>
-                <View
-                    style="@style/Divider"/>
-                <TextView
-                    android:id="@+id/statistika"
-                    style="@style/dropDownList"
-                    android:text="@string/statistika"/>
-                <View
-                    style="@style/Divider"/>
-                <TextView
-                    android:id="@+id/gaya_dasar"
-                    style="@style/dropDownList"
-                    android:text="@string/gaya_gaya_dasar"/>
-            </LinearLayout>
 
             <Button
                 android:id="@+id/subatomik"
                 style="@style/ButtonGeneral"
-                android:text="@string/_2_partikel_subatomik"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:text="@string/_2_teori_medan_kuantum"
                 app:backgroundTint="@color/biru_seken"/>
-            <LinearLayout
-                android:id="@+id/part_subatomik"
-                style="@style/bgDropDownList">
-                <TextView
-                    style="@style/dropDownList"
-                    android:text="@string/comp_based"/>
-                <View
-                    style="@style/Divider"/>
-                <TextView
-                    style="@style/dropDownList"
-                    android:text="@string/stat_based"/>
-            </LinearLayout>
 
             <Button
                 android:id="@+id/TMQ"
                 style="@style/ButtonGeneral"
-                android:text="@string/_3_teori_medan_quantum"
+                android:text="@string/_3_hadron"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
                 android:id="@+id/standarModel"
                 style="@style/ButtonGeneral"
-                android:text="@string/_4_model_standar"
+                android:text="@string/_4_lepton"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
                 android:id="@+id/Kromodinamika"
                 style="@style/ButtonGeneral"
-                android:text="@string/_5_kromodinamika_kuantum"
+                android:text="@string/_5_model_standar"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
                 android:id="@+id/Beyond"
                 style="@style/ButtonGeneral"
                 android:layout_marginBottom="5dp"
-                android:text="@string/_6_beyond_the_standard_model"
-                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:text="@string/_6_perkembangan_terkini"
                 app:backgroundTint="@color/biru_seken" />
-            <LinearLayout
-                android:id="@+id/part_beyond"
-                android:layout_marginBottom="10dp"
-                style="@style/bgDropDownList">
-                <TextView
-                    style="@style/dropDownList"
-                    android:text="@string/GUT"/>
-                <View
-                    style="@style/Divider"/>
-                <TextView
-                    style="@style/dropDownList"
-                    android:text="@string/TOE"/>
-            </LinearLayout>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

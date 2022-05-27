@@ -45,12 +45,12 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="_1_pengantar">1. Pengantar</string>
-    <string name="_2_partikel_subatomik">2. Partikel Subatomik</string>
-    <string name="_3_teori_medan_quantum">3. Teori Medan Quantum</string>
-    <string name="_4_model_standar">4. Model Standar</string>
-    <string name="_5_kromodinamika_kuantum">5. Kromodinamika Kuantum</string>
-    <string name="_6_beyond_the_standard_model">6. Beyond the Standard Model</string>
+    <string name="_1_subatomik">1. Partikel Subatomik</string>
+    <string name="_2_teori_medan_kuantum">2. Teori Medan Kuantum</string>
+    <string name="_3_hadron">3. Hadron</string>
+    <string name="_4_lepton">4. Lepton</string>
+    <string name="_5_model_standar">5. Model Standar</string>
+    <string name="_6_perkembangan_terkini">6. Perkembangan Terkini</string>
     <string name="ukuran_teks">Ukuran teks :</string>
     <string name="kecil">Kecil</string>
     <string name="sedang">Sedang</string>

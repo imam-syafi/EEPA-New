@@ -162,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_sans_black"
-            android:text="@string/_2_partikel_subatomik"
+            android:text="@string/_2_teori_medan_kuantum"
             android:textColor="@color/white"
             android:layout_marginHorizontal="20dp"
 

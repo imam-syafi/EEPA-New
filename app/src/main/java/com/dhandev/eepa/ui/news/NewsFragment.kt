@@ -36,6 +36,11 @@ class NewsFragment : Fragment() {
         _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.symmetry.setOnClickListener{
+            dataUrl = "https://www-symmetrymagazine-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
+            customTab.open(requireContext(), dataUrl)
+        }
+
         binding.nature.setOnClickListener{
             dataUrl = "https://www-nature-com.translate.goog/subjects/particle-physics?error=cookies_not_supported&code=fd9ff9c4-4d59-4984-9fdf-4255a2e89596&_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=wapp"
             customTab.open(requireContext(), dataUrl)

@@ -350,23 +350,5 @@
             app:layout_constraintTop_toBottomOf="@id/fitur"
             app:layout_constraintStart_toEndOf="@id/referensi"
             android:text="@string/attachment"/>
-
-        <TextView
-            android:id="@+id/tvScroll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner_smaller"
-            android:backgroundTint="@color/blue_500"
-            android:padding="10dp"
-            android:paddingEnd="15dp"
-            android:drawableStart="@drawable/ic_baseline_arrow_drop_down_24"
-            android:text="Lebih banyak"
-            android:gravity="center"
-            android:layout_marginBottom="-10dp"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@id/sharpen"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

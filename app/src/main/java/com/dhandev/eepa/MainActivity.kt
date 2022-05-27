@@ -24,8 +24,10 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             if (destination.id == R.id.splashFragment){
                 navView.visibility = View.GONE
+                binding.tvScroll.visibility = View.GONE
             } else {
                 navView.visibility = View.VISIBLE
+                binding.tvScroll.visibility = View.VISIBLE
             }
         }
         // Passing each menu ID as a set of Ids because each

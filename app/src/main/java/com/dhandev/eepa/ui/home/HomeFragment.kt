@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
@@ -156,18 +157,19 @@ class HomeFragment : Fragment() {
 //            val intent = Intent(requireActivity(), SearchActivity::class.java)
 //            startActivity(intent, activityOptionCompat.toBundle())
         }
+        val scrollDown = activity?.findViewById<TextView>(R.id.tvScroll)
         binding.apply {
             scroll.viewTreeObserver
                 .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener{
                     override fun onScrollChanged() {
                         if (scroll.getChildAt(0).getBottom()
                             == (scroll.getHeight() + scroll.getScrollY())) {
-                            tvScroll.visibility = View.GONE
-                        } 
+                            scrollDown?.visibility = View.GONE
+                        }
                     }
 
                 })
-            tvScroll.setOnClickListener { scroll.fullScroll(View.FOCUS_DOWN) }
+            scrollDown?.setOnClickListener { scroll.fullScroll(View.FOCUS_DOWN) }
         }
     }
 

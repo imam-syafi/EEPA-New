@@ -26,11 +26,12 @@ class MateriFragment : Fragment() {
             arrowBack.setOnClickListener {
                 activity?.onBackPressed()
             }
-
-            TMQ.setOnClickListener {
-                val intent = Intent(activity, MateriTMQ::class.java)
-                startActivity(intent)
-            }
+            subatomik.setOnClickListener { startActivity(Intent(activity, MateriSubatomik::class.java)) }
+            TMQ.setOnClickListener {startActivity(Intent(activity, MateriTMQ::class.java))}
+            hadron.setOnClickListener { startActivity(Intent(activity, MateriHadron::class.java)) }
+            lepton.setOnClickListener { startActivity(Intent(activity, MateriLepton::class.java)) }
+            modelStandar.setOnClickListener { startActivity(Intent(activity, MateriStandarModel::class.java)) }
+            terkini.setOnClickListener { startActivity(Intent(activity, MateriTerkini::class.java)) }
         }
         return root
     }

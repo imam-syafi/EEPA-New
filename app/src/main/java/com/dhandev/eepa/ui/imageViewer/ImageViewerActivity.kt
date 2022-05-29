@@ -11,6 +11,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityImageViewerBinding
+import com.dhandev.eepa.helper.glideImage
 
 class ImageViewerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityImageViewerBinding
@@ -30,12 +31,7 @@ class ImageViewerActivity : AppCompatActivity() {
         var URLGaleri = sharedPredGaleri.getString("urlHead", null)
         var descGaleri = sharedPredGaleri.getString("desc", null)
 
-        Glide.with(this)
-            .load(URLGaleri)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-            .centerInside()
-            .into(binding.gambar)
+        glideImage.load(this, URLGaleri, binding.gambar)
 
         binding.desc.text = descGaleri
 

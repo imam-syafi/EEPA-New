@@ -16,6 +16,7 @@ import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriHadronBinding
 import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
+import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 
 class MateriHadron : AppCompatActivity() {
@@ -82,7 +83,7 @@ class MateriHadron : AppCompatActivity() {
             desc = tvCaption1.text.toString()
             desc2 = ""
 
-            glideImage()
+            glideImage.load(this@MateriHadron, URL, gambar)
 //            glideImage2()
             gambar.setOnClickListener {
                 openImageViewer(URL, desc)
@@ -127,21 +128,6 @@ class MateriHadron : AppCompatActivity() {
         Editor.apply()
         val intent = Intent(this, ImageViewerMateriActivity::class.java)
         startActivity(intent)
-    }
-
-    private fun glideImage() {
-        Glide.with(this)
-            .load(URL)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-            .into(binding.gambar)
-    }
-    private fun glideImage2() {
-        Glide.with(this)
-            .load(URL2)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-            .into(binding.gambar2)
     }
 
     private fun gantiLatar(greenRead: Int, pressed: Int) {

@@ -1,5 +1,6 @@
 package com.dhandev.eepa.materi
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -64,6 +65,10 @@ class MateriSubatomik : AppCompatActivity() {
                         gantiLatar(R.color.white, toggleGroupColor.checkedButtonId)
                     }
                 }
+            }
+
+            btnNext.setOnClickListener {
+                startActivity(Intent(this@MateriSubatomik, MateriTMQ::class.java))
             }
         }
     }

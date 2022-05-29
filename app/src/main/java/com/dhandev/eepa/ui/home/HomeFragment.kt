@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide
 import com.dhandev.eepa.materi.MateriTMQ
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
+import com.dhandev.eepa.materi.MateriSubatomik
 import com.dhandev.eepa.onBoarding
 import com.dhandev.eepa.search.SearchActivity
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
@@ -49,7 +50,7 @@ class HomeFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
         )
         binding.introHome.setOnClickListener {
-            val intent = Intent(activity, MateriTMQ::class.java)
+            val intent = Intent(activity, MateriSubatomik::class.java)
             startActivity(intent)
         }
         binding.contoh.setOnClickListener(

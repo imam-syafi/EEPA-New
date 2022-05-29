@@ -9,6 +9,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityImageViewerMateriBinding
+import com.dhandev.eepa.helper.glideImage
 
 class ImageViewerMateriActivity : AppCompatActivity() {
     private lateinit var binding : ActivityImageViewerMateriBinding
@@ -26,12 +27,7 @@ class ImageViewerMateriActivity : AppCompatActivity() {
         var URL = sharedPred.getString("url", null)
         var desc = sharedPred.getString("desc", null)
 
-        Glide.with(this)
-            .load(URL)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .placeholder(R.drawable.memuatgambar)
-            .centerInside()
-            .into(binding.gambar)
+        glideImage.load(this, URL, binding.gambar)
 
         binding.desc.text = desc
 

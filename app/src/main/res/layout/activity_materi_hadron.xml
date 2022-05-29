@@ -191,7 +191,7 @@
             android:paddingHorizontal="20dp"
             style="@style/caption"
             android:text="Gambar 1. Kuark pada proton (kiri) dan neutron (kanan)"
-            app:layout_constraintBottom_toBottomOf="@id/gambar"
+            app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView

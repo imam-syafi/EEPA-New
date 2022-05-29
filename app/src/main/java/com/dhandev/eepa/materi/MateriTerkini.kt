@@ -6,29 +6,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
-import com.dhandev.eepa.databinding.ActivityMateriLeptonBinding
+import com.dhandev.eepa.databinding.ActivityMateriTerkiniBinding
 import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 
-class MateriLepton : AppCompatActivity() {
-    private lateinit var binding: ActivityMateriLeptonBinding
+class MateriTerkini : AppCompatActivity() {
+    private lateinit var binding: ActivityMateriTerkiniBinding
     private lateinit var sharedPred: SharedPreferences
-    var URL: String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
-    var URL2 = "https://docs.google.com/uc?id=1RhYvt9iXmpw5fy6ZIdBTfdHn_zY1gJ3b"
+    var URL = "https://www.sciencenewsforstudents.org/wp-content/uploads/2022/04/1440_four_fundamental_forces_feat_rev-1030x580.jpg"
+    var URL2 = "https://docs.google.com/uc?id=1S4FN0RlnfKnDs5uDr2glop9pnA2dqgYD"
     var page = 1
-    var desc =
-        "Large Hadron Collider (Penubruk Hadron Raksasa) adalah pemercepat partikel berenergi tinggi terbesar di dunia, fasilitas percobaan paling kompleks yang pernah dibangun, dan mesin tunggal terbesar di dunia."
-    var desc2 =
-        "Fasilitas-fasilitas yang ada di CERN terdiri dari LHC (Large Hadron Collider), SPS (Super Proton Synchrotron), dan PS (Proton Synchrotron)"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMateriLeptonBinding.inflate(layoutInflater)
+        binding = ActivityMateriTerkiniBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
@@ -97,23 +92,29 @@ class MateriLepton : AppCompatActivity() {
                 }
             }
 
-            glideImage.load(this@MateriLepton, URL2, gambar2)
+            val desc = tvCaption1.text.toString() + "\nDari kiri atas secara berurutan arah putaran jarum jam: gaya gravitasi, elektromagnetik, kuat, dan lemah"
+            val desc2 = tvCaption2.text.toString()
 
+            glideImage.load(this@MateriTerkini, URL, gambar)
+            glideImage.load(this@MateriTerkini, URL2, gambar2)
+
+            gambar.setOnClickListener {
+                openImageViewer(URL, desc)
+            }
             gambar2.setOnClickListener {
                 openImageViewer(URL2, desc2)
             }
 
-            btnNext.setOnClickListener {
-                startActivity(Intent(this@MateriLepton, MateriStandarModel::class.java))
-            }
+            btnNext.visibility = View.GONE
 
             btnPrev.setOnClickListener {
-                startActivity(Intent(this@MateriLepton, MateriHadron::class.java))
+                startActivity(Intent(this@MateriTerkini, MateriStandarModel::class.java))
             }
         }
     }
+
     private fun openImageViewer(url : String, desc : String) {
-        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        val Editor: SharedPreferences.Editor = sharedPred.edit()
         Editor.putString("url", url)
         Editor.putString("desc", desc)
         Editor.putInt("id", 1)
@@ -121,11 +122,10 @@ class MateriLepton : AppCompatActivity() {
         val intent = Intent(this, ImageViewerMateriActivity::class.java)
         startActivity(intent)
     }
-
     private fun gantiLatar(greenRead: Int, pressed: Int) {
         val latarBaru: Int = greenRead
         val tombol: Int = pressed
-        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        val Editor: SharedPreferences.Editor = sharedPred.edit()
         Editor.putInt("gantiLatar", latarBaru)
         Editor.putInt("tombolTerpilih", tombol)
         Editor.apply()
@@ -146,7 +146,7 @@ class MateriLepton : AppCompatActivity() {
     private fun gantiUkuran(fontParagrafSmall: Int, checkedButtonId: Int) {
         val ukuranBaru: Int = fontParagrafSmall
         val tombolUkuran : Int = checkedButtonId
-        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        val Editor: SharedPreferences.Editor = sharedPred.edit()
         Editor.putInt("ukuranBaru", ukuranBaru)
         Editor.putInt("tombolUkuranTerpilih", tombolUkuran)
         Editor.apply()

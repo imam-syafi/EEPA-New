@@ -11,6 +11,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriStandarModelBinding
+import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 
 class MateriStandarModel : AppCompatActivity() {
@@ -92,8 +93,8 @@ class MateriStandarModel : AppCompatActivity() {
 
             val desc = tvCaption1.text.toString()
             val desc2 = tvCaption2.text.toString()
-            glideImage()
-            glideImage2()
+            glideImage.load(this@MateriStandarModel, URL, gambar)
+            glideImage.load(this@MateriStandarModel, URL2, gambar2)
             gambar.setOnClickListener {
                 openImageViewer(URL, desc)
             }
@@ -101,8 +102,9 @@ class MateriStandarModel : AppCompatActivity() {
                 openImageViewer(URL2, desc2)
             }
 
+            btnNext.visibility = View.VISIBLE
             btnNext.setOnClickListener {
-//                startActivity(Intent(this@MateriLepton, MateriHadron::class.java))
+                startActivity(Intent(this@MateriStandarModel, MateriTerkini::class.java))
             }
 
             btnPrev.setOnClickListener {
@@ -120,21 +122,7 @@ class MateriStandarModel : AppCompatActivity() {
         val intent = Intent(this, ImageViewerMateriActivity::class.java)
         startActivity(intent)
     }
-    private fun glideImage() {
-        Glide.with(this)
-            .load(URL)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-            .into(binding.gambar)
-    }
-    private fun glideImage2() {
-        Glide.with(applicationContext)
-            .load(URL2)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-            .centerCrop()
-            .into(binding.gambar2)
-    }
+
     private fun gantiLatar(greenRead: Int, pressed: Int) {
         val latarBaru: Int = greenRead
         val tombol: Int = pressed

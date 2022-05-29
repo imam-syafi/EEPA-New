@@ -16,6 +16,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
 import com.dhandev.eepa.helper.customTab
+import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 import me.saket.bettermovementmethod.BetterLinkMovementMethod
 
@@ -87,8 +88,8 @@ class MateriTMQ : AppCompatActivity() {
                 }
             }
 
-            glideImage()
-            glideImage2()
+            glideImage.load(this@MateriTMQ, URL, gambar)
+            glideImage.load(this@MateriTMQ, URL2, gambar2)
             gambar.setOnClickListener {
                 openImageViewer(URL, desc)
             }
@@ -144,73 +145,6 @@ class MateriTMQ : AppCompatActivity() {
         Editor.apply()
         val intent = Intent(this, ImageViewerMateriActivity::class.java)
         startActivity(intent)
-    }
-
-    private fun glideImage() {
-        Glide.with(applicationContext)
-            .load(URL)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .placeholder(R.drawable.memuatgambar)
-            .centerCrop()
-            .into(binding.gambar)
-    }
-    private fun glideImage2() {
-        Glide.with(applicationContext)
-            .load(URL2)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .placeholder(R.drawable.memuatgambar)
-            .centerCrop()
-            .into(binding.gambar2)
-    }
-
-    private fun openPageOne() {
-        recreate()
-        focusOnTop()
-        binding.btnPrev.visibility = View.GONE
-    }
-
-    private fun openPageTwo() {
-        page = 2
-        binding.apply {
-            btnPrev.visibility = View.VISIBLE
-            focusOnTop()
-            URL = "https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/1941/2017/05/30162034/daltons-symbols.gif"
-            desc = "Struktur kimia dari Dalton's A New System of Chemical Philosophy"
-            glideImage()
-            body1.text = "\t Sayangnya, selama berabad-abad berlalu tidak ada perkembangan secara saintifik yang berarti mengenai atom karena sebagian besar filsuf sepakat dengan konsep Aristoteles. Baru pada abad ke-17, tepatnya tahun 1661, Robert Boyle memaparkan diskusinya mengenai atom pada literatur ilmiah yang berjudul The Sceptical Chymist. Namun, ahli kimia dan meteorologi Inggris John Dalton dikreditkan dengan teori atom modern pertama, seperti yang dijelaskan dalam bukunya A New System of Chemical Philosophy yang terbit pada tahun 1808 (bagian I) dan 1810 (bagian II). \tEksperimen Dalton dengan menggunakan gas tercatat sebagai pengukuran paling awal untuk mengetahui massa atom, konsep struktur atom, dan reaktivitas. Secara garis besar, Dalton menjelaskan bahwa:\n1. Semua atom dari unsur tertentu adalah identik\n2. Massa dan ukuran atom berbeda antara unsur satu dan yang lainnya\n3. Atom tidak bisa dihancurkan. Reaksi kimia bisa mengakibatkan penyusunan kembali, tapi tidak akan menghancurkan atau membuat atom baru."
-        }
-    }
-
-    private fun openPageThree() {
-        page = 3
-        binding.apply {
-            btnPrev.visibility = View.VISIBLE
-            focusOnTop()
-            URL = "https://cdn.kastatic.org/ka-perseus-images/79d080efbc996be3a96eb98195f77e5df00e8f95.png"
-            desc = "Diagram tabung sinar katoda yang digunakan oleh J.J.Thomson ketika menemukan elektron"
-            glideImage()
-            val text = getString(R.string.bullet_3)
-//            val spannableString = SpannableString(text)
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-//                spannableString.setSpan(BulletSpan(40, getColor(R.color.blue_500), 20), 10, 22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-//            }
-            body1.text = "\t Pada akhir abad ke-19, tepatnya pada tahun 1897, J.J.Thomson bereksperimen dengan alat tabung sinar katoda (cathode ray tubes). Tabung sinar katoda adalah tabung gelas yang tertutup dari adanya udara masuk. Tegangan tinggi diberikan pada elektroda di salah satu ujung tabung, hal ini menyebabkan terpancarnya partikel dari katoda  (elektroda bermuatan negatif) ke anoda (elektroda bermuatan positif). Tabung ini disebut dengan tabung sinar katoda karena pancaran partikel (sinar katoda) berasal dari katoda. Sinar katoda dapat dideteksi dengan mewarnai ujung jauh tabung dari anoda dengan menggunakan fosfor. Fosfor tersebut akan memercik atau memancarkan cahaya ketika terkena sinar katoda. Untuk lebih jelas, perhatikan gambar pada atas halaman ini. " +
-                    "\n\t Untuk menguji properti sinar katoda, Thomson meletakkan dua plat dengan muatan berlawanan di sekitar sinar katoda. Hasilnya, sinar katoda dibelokkan menjauhi plat bermuatan negatif dan mengarah ke plat bermuatan positif. Hal ini menunjukkan bahwa sinar katoda tersusun dari partikel bermuatan negatif." +
-                    "\n\t Thomson juga meletakkan dua magnet di sisi lain tabung, kemudian mengamati bahwa magnet tersebut juga menyebabkan sinar katoda membelok. Hasil tersebut membantu Thomson untuk menentukan rasio massa terhadap muatan partikel sinar katoda, yang kemudian membawa pada penemuan besar yaitu setiap partikel sinar katoda memiliki massa yang jauh lebih kecil daripada atom lain yang diketahui. Karena merasa kurang yakin, Thomson juga menerapkan elektroda dari jenis logam lain dan hasilnya tetap saja sama. Dari temuannya tersebut, Thomson menyimpulkan:" +
-                    text +
-                    "\n\t Walaupun pada awalnya kontroversial, penemuan Thomson secara perlahan dapat diterima oleh pada ilmuwan. Pada akhirnya, partikel sinar katoda temuannya diberikan nama yang kini kita kenal dengan “elektron”. Adanya temuan Thomson menyangkal teori atom Dalton yang menyatakan bahwa atom tidak dapat dibagi lagi. Untuk menjelaskan keberadaan elektron, diperlukan suatu model atom yang baru."
-            URL2 = "https://docs.google.com/uc?id=1yXr5duPTPbNz2vTlwuA5IQC21l5lrRN1"
-            desc2 = "Model atom Thomson menunjukkan bahwa elektron tersebar didalam lautan muatan positif. Dianalogikan seperti kismis pada roti kismis (plum pudding)"
-            glideImage2()
-            gambar2.visibility = View.VISIBLE
-            body2.visibility = View.VISIBLE
-            body2.text = "\t Thomson tahu bahwa atom bermuatan netral, oleh karena itu Ia menganggap bahwa harus ada sumber dengan muatan positif pada atom untuk mengimbagi muatan negatif elektron. Hal ini mendorong Thomson pada tahun 1904 untuk mengajukan model bahwa atom dapat dideskripsikan sebagai partikel negatif yang mengambang di dalam sup bermuatan positif. Model ini dikenal dengan model roti kismis (plum pudding), karena deskripsi atom tersebut sangat mirip dengan roti kismis."
-            containerQuiz.visibility = View.VISIBLE
-        }
-    }
-
-    private fun openPageFour() {
-        Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
     }
 
     private fun focusOnTop() {

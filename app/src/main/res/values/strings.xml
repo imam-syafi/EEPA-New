@@ -134,6 +134,19 @@
     <string name="pengantar1">\t <b><font color="#388E3C">Semua</font></b> benda yang ada di alam semesta ini tersusun oleh komponen yang lebih kecil. Contohnya <a href="https://en.wikipedia.org/wiki/Galaxy">galaksi</a> tersusun dari sistem keplanetan yang juga tersusun dari planet-planet dan bintang. Contoh yang lebih sederhana dalam kehidupan sehari-hari yaitu baju, di mana benda tersebut tersusun oleh kain yang juga tersusun oleh ribuan helai benang.\n\t Dari dua contoh tersebut, kita bisa mengidentifikasi bahwa bahan penyusunnya masih terus dapat diperoleh hingga tidak bisa dibagi lagi. Saat bahan penyusun tidak dapat dibagi lagi, muncullah istilah atomos (tidak dapat dibagi) yang pertama kali dirumuskan oleh filsuf Yunani yaitu <a href="https://id.wikipedia.org/wiki/Demokritos">Demokritus</a> dan Leucippus  pada zaman Yunani Kuno 400 tahun sebelum masehi dan kini lebih dikenal dengan istilah</string>
 
     <!--    Materi Teori Medan Kuantum-->
+    <string name="m_subatomik"><b><font color="#388E3C">Partikel subatomik</font></b> adalah partikel yang <b><font color="#388E3C">lebih sederhana dari atom</font></b>, salah satunya adalah elektron. Partikel subatomik dikelompokkan menjadi dua kelompok besar, yakni:
+    \n<b><font color="#388E3C">Berdasarkan penyusunnya:</font></b>
+                <ul>
+                    \n<li><b><font color="#388E3C">Partikel Elementer</font></b>, adalah partikel yang <b><font color="#388E3C">tidak tersusun</font></b> dari partikel-partikel lain. Contohnya adalah elektron, neutrino, dsb.</li>
+                    \n<li><b><font color="#388E3C">Partikel Komposit</font></b>, adalah partikel yang <b><font color="#388E3C">tersusun</font></b> dari partikel-partikel lain yaitu <b><font color="#388E3C">kuark</font></b>. Contohnya adalah proton, neutron, dsb.</li>
+                </ul>
+    \n<b><font color="#388E3C">Berdasarkan distribusi tenaganya (statistika):</font></b>
+                <ul>
+                    \n<li><b><font color="#388E3C">Boson</font></b>, adalah partikel dengan <b><font color="#388E3C">spin bilangan bulat</font></b> (s = 0 , 1, ...) dan mengikuti distribusi <b><font color="#388E3C">Bose-Einstein</font></b>. Contohnya adalah foton dan graviton.</li>
+                    \n<li><b><font color="#388E3C">Fermion</font></b>, adalah partikel dengan <b><font color="#388E3C">spin setengah bilangan bulat</font></b> (s = 1/2, 3/2, …) dan mengikuti distribusi <b><font color="#388E3C">Fermi-Dirac</font></b>. Contohnya adalah elektron, proton, dan neutron.</li>
+                </ul>
+    </string>
+
     <string name="m_tmq_caption">Gambar 1. Large Hadron Collider</string>
     <string name="m_tmq_caption2">Gambar 2. Fasilitas-fasilitas di CERN</string>
     <string name="m_tmq">Untuk <b><font color="#388E3C">memudahkan</font></b> dalam mempelajari partikel-partikel subatomik, ilmuwan menggunakan <b><font color="#388E3C">Teori Medan Quantum (Quantum Field Theory = QFT)</font></b>. Dalam QFT, <b><font color="#388E3C">gaya (interaksi)</font></b> digambarkan melalui perantara berupa <b><font color="#388E3C">partikel medan (field particle)</font></b>, contohnya adalah gaya elektromagnetik yang dibawa oleh foton. Selain itu, ada juga <b><font color="#388E3C">partikel yang massa diamnya tidak nol</font></b>, yaitu <b><font color="#388E3C">partikel materi (material particle)</font></b>, contohnya elektron, proton, dan neutron. Sehingga partikel subatomik dapat pula dikelompokkan menjadi partikel medan dan partikel materi.</string>
@@ -153,6 +166,10 @@
         \n<li>Ada 12 gauge boson (pembawa gaya): foton untuk gaya elektromagnetik, tiga boson W dan Z untuk gaya lemah, dan 8 gluon untuk gaya kuat.</li>
         \n<li>Boson higgs, boson yang diperlukan untuk memberikan masa pada gauge boson.</li></ul>
     </string>
+
+    <string name="m_terkini">Model Standar <b><font color="#388E3C">belum mampu</font></b> menjelaskan gaya gravitasi, hal ini karena <b><font color="#388E3C">pada skala subatomik</font></b> gaya gravitasi <b><font color="#388E3C">sangat lemah</font></b>. Selain itu, SM juga belum mampu menjawab mengapa alam semesta ini hanya terbentuk oleh materi, di mana antimateri?. Adapun teori yang berusaha untuk <b><font color="#388E3C">menyatukan gaya gravitasi dengan tiga gaya</font></b> lainnya adalah <b><font color="#388E3C">teori tentang Segalanya</font></b> (Theory of Everything = TOE). Hingga saat ini, para ilmuwan di LHC terus mencari jawaban untuk mewujudkan TOE dengan cara <b><font color="#388E3C">menembakkan</font></b> partikel-partikel hadron dalam kecepatan yang <b><font color="#388E3C">mendekati kecepatan cahaya</font></b>, sehingga akan terjadi tumbukan yang <b><font color="#388E3C">menghasilkan</font></b> pecahan (partikel elementer) dari hadron tersebut.</string>
+    <string name="m_terkini2">Salah satu partikel yang dicari adalah <b><font color="#388E3C">graviton</font></b>, sebuah partikel boson gauge yang dipercaya <b><font color="#388E3C">membawa gaya gravitasi</font></b>. Jika terbukti benar, graviton <b><font color="#388E3C">diduga tidak memiliki massa</font></b> karena gaya gravitasi punya <b><font color="#388E3C">jangkauan yang sangat luas</font></b> dan tampaknya <b><font color="#388E3C">menyebar dengan kecepatan cahaya</font></b>.  Selain TOE, ada juga <b><font color="#388E3C">Teori Penyatuan Besar</font></b> (Grand Unification Theory = GUT) yang merupakan suatu model dalam fisika partikel, di mana pada <b><font color="#388E3C">tenaga tinggi</font></b>, tiga gaya dalam model standar (elektromagnetik, kuat, dan lemah) <b><font color="#388E3C">disatukan dalam satu gaya</font></b>.</string>
+
     <string name="link_hint">Buka tautan di browser</string>
     <!--    search-->
     <string-array name="data_name">

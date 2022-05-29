@@ -2,32 +2,27 @@ package com.dhandev.eepa.materi
 
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Color
-import android.graphics.text.LineBreaker
-import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.text.util.Linkify
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.browser.customtabs.CustomTabColorSchemeParams
-import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.dhandev.eepa.R
-import com.dhandev.eepa.databinding.ActivityMateriPengantarBinding
+import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
 import com.dhandev.eepa.helper.customTab
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 import me.saket.bettermovementmethod.BetterLinkMovementMethod
 
 
-class MateriPengantar : AppCompatActivity() {
+class MateriTMQ : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMateriPengantarBinding
+    private lateinit var binding: ActivityMateriTmqBinding
     private lateinit var sharedPred : SharedPreferences
     var URL : String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
     var URL2 = "https://cdn.mos.cms.futurecdn.net/7cvrrJxBe3N4Pfsv8q9oaM.jpg"
@@ -37,9 +32,9 @@ class MateriPengantar : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_materi_pengantar)
+        setContentView(R.layout.activity_materi_tmq)
 
-        binding = ActivityMateriPengantarBinding.inflate(layoutInflater)
+        binding = ActivityMateriTmqBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
@@ -102,19 +97,11 @@ class MateriPengantar : AppCompatActivity() {
             }
 
             btnNext.setOnClickListener {
-                when(page){
-                    1 -> openPageTwo()
-                    2 -> openPageThree()
-                    3 -> openPageFour()
-                }
+                startActivity(Intent(this@MateriTMQ, MateriHadron::class.java))
             }
 
-            btnPrev.visibility = View.GONE
             btnPrev.setOnClickListener {
-                when(page){
-                    2 -> openPageOne()
-                    3 -> openPageTwo()
-                }
+                startActivity(Intent(this@MateriTMQ, MateriSubatomik::class.java))
             }
 
 //            body1.transformationMethod = LinkTransformationMethod()
@@ -127,20 +114,25 @@ class MateriPengantar : AppCompatActivity() {
             title.marqueeRepeatLimit = -1
             title.isSelected = true
 
+
+
             tvCaption1.text = getString(R.string.m_tmq_caption)
             tvCaption2.text = getString(R.string.m_tmq_caption2)
+
+
             Linkify.addLinks(body1, Linkify.ALL)
 //            body2.movementMethod = BetterLinkMovementMethod.getInstance()
-            body2.movementMethod = BetterLinkMovementMethod.newInstance().apply {
-                setOnLinkClickListener { textView, url ->
-                    customTab.open(this@MateriPengantar, url)
-                    true
-                }
-                setOnLinkLongClickListener { textView, url ->
-                    Toast.makeText(this@MateriPengantar, getString(R.string.link_hint), Toast.LENGTH_SHORT).show()
-                    true
-                }
-            }
+//            body2.movementMethod = BetterLinkMovementMethod.newInstance().apply {
+//                setOnLinkClickListener { textView, url ->
+//                    customTab.open(this@MateriTMQ, url)
+//                    true
+//                }
+//                setOnLinkLongClickListener { textView, url ->
+//                    Toast.makeText(this@MateriTMQ, getString(R.string.link_hint), Toast.LENGTH_SHORT).show()
+//                    true
+//                }
+//            }
+
         }
     }
 
@@ -271,9 +263,11 @@ class MateriPengantar : AppCompatActivity() {
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
             binding.body2.setTextAppearance(R.style.FontParagraf)
+            binding.body3.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
             binding.body2.setTextAppearance(sharedUkuranId)
+            binding.body3.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

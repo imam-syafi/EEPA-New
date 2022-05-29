@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".materi.MateriHadron"
+            android:exported="false" />
+        <activity
             android:name=".addition.dummyActivity"
             android:exported="false" />
         <activity
@@ -66,7 +69,7 @@
             android:name=".materi.MateriSubatomik"
             android:exported="false" />
         <activity
-            android:name=".materi.MateriPengantar"
+            android:name=".materi.MateriTMQ"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

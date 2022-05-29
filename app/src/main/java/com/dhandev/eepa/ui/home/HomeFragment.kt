@@ -12,12 +12,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
-import com.dhandev.eepa.materi.MateriPengantar
+import com.dhandev.eepa.materi.MateriTMQ
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
 import com.dhandev.eepa.onBoarding
@@ -50,7 +49,7 @@ class HomeFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
         )
         binding.introHome.setOnClickListener {
-            val intent = Intent(activity, MateriPengantar::class.java)
+            val intent = Intent(activity, MateriTMQ::class.java)
             startActivity(intent)
         }
         binding.contoh.setOnClickListener(

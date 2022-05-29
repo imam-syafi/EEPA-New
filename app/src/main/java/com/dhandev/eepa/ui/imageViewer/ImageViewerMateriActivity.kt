@@ -7,6 +7,7 @@ import android.view.MotionEvent
 import com.aghajari.zoomhelper.ZoomHelper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityImageViewerMateriBinding
 
@@ -29,7 +30,7 @@ class ImageViewerMateriActivity : AppCompatActivity() {
         Glide.with(this)
             .load(URL)
             .transition(DrawableTransitionOptions.withCrossFade())
-            .placeholder(R.drawable.memuatgambar)
+            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
             .centerInside()
             .into(binding.gambar)
 

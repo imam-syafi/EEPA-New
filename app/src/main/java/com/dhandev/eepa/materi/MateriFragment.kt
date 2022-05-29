@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
-import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentMateriBinding
 
 class MateriFragment : Fragment() {
@@ -30,7 +28,7 @@ class MateriFragment : Fragment() {
             }
 
             TMQ.setOnClickListener {
-                val intent = Intent(activity, MateriPengantar::class.java)
+                val intent = Intent(activity, MateriTMQ::class.java)
                 startActivity(intent)
             }
         }

@@ -2,16 +2,13 @@ package com.dhandev.eepa.search
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import com.dhandev.eepa.R
 import com.dhandev.eepa.addition.dummyActivity
 import com.dhandev.eepa.databinding.ItemSearchBinding
-import com.dhandev.eepa.materi.MateriPengantar
+import com.dhandev.eepa.materi.MateriTMQ
 import java.util.*
 
 class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
@@ -40,7 +37,7 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
         itemHolder.viewBinding.tvItemName.text = name
         holder.itemView.setOnClickListener {
             when(name){
-                "Perkembangan Teori Atom" ->{mContext.startActivity(Intent(mContext, MateriPengantar::class.java))}
+                "Perkembangan Teori Atom" ->{mContext.startActivity(Intent(mContext, MateriTMQ::class.java))}
                 else -> {
                     val intent = Intent(mContext, dummyActivity::class.java)
                     intent.putExtra("name", name)

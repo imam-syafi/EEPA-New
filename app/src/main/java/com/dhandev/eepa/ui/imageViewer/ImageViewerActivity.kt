@@ -9,6 +9,7 @@ import com.aghajari.zoomhelper.ZoomHelper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityImageViewerBinding
 
@@ -33,7 +34,7 @@ class ImageViewerActivity : AppCompatActivity() {
         Glide.with(this)
             .load(URLGaleri)
             .transition(DrawableTransitionOptions.withCrossFade())
-            .placeholder(R.drawable.memuatgambar)
+            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
             .centerInside()
             .into(binding.gambar)
 

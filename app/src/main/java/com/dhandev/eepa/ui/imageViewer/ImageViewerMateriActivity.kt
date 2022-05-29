@@ -4,7 +4,6 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import com.aghajari.zoomhelper.ZoomHelper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.target.Target
@@ -30,14 +29,11 @@ class ImageViewerMateriActivity : AppCompatActivity() {
         Glide.with(this)
             .load(URL)
             .transition(DrawableTransitionOptions.withCrossFade())
-            .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
+            .placeholder(R.drawable.memuatgambar)
             .centerInside()
             .into(binding.gambar)
 
         binding.desc.text = desc
 
-    }
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        return ZoomHelper.getInstance().dispatchTouchEvent(ev!!,this) || super.dispatchTouchEvent(ev)
     }
 }

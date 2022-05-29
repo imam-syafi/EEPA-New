@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/latar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".materi.MateriLepton">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/aturTeks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|bottom"
+            android:layout_marginTop="-120dp"
+            android:background="@drawable/bg_setting_mini"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_sans_black"
+                    android:textColor="@color/abu"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/ukuran_teks"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    app:singleSelection="true"
+                    app:layout_constraintBottom_toTopOf="@id/toggleGroupColor"
+                    app:layout_constraintStart_toStartOf="@id/gambar"
+                    app:layout_constraintTop_toBottomOf="@id/gambar"
+                    app:layout_constraintEnd_toEndOf="@id/gambar">
+
+                    <Button
+                        android:id="@+id/btnSmall"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/nunito_sans_black"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/kecil"/>
+                    <Button
+                        android:id="@+id/btnMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_black"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/sedang"/>
+                    <Button
+                        android:id="@+id/btnLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_black"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/besar"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/nunito_sans_black"
+                    android:textColor="@color/abu"
+                    android:layout_weight="1"
+                    android:text="@string/warna_latar"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleGroupColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    app:singleSelection="true">
+
+                    <Button
+                        android:id="@+id/btnGreen"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_black"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu"
+                        android:text="@string/hijau" />
+
+                    <Button
+                        android:id="@+id/btnPeach"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_black"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu"
+                        android:text="@string/coklat" />
+
+                    <Button
+                        android:id="@+id/btnOrange"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_black"
+                        android:textAllCaps="false"
+                        android:textColor="@color/abu"
+                        android:text="@string/jingga" />
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/news_bg"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/tittle"
+            android:text="@string/_4_lepton"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/arrowBack"
+            app:layout_constraintEnd_toStartOf="@id/setText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/setText"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_baseline_settings_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/body1"
+            style="@style/FontParagraf"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/m_lepton"
+            android:lineSpacingMultiplier="1.4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aturTeks" />
+
+        <ImageView
+            android:id="@+id/gambar2"
+            android:layout_marginVertical="20dp"
+            style="@style/gambar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/body1">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/body3"
+            style="@style/FontParagraf"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/m_lepton2"
+            android:lineSpacingMultiplier="1.4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gambar2" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/containerQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
+            app:layout_constraintTop_toBottomOf="@id/body3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/blue_500"
+            android:src="@drawable/ic_baseline_navigate_before_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/blue_500"
+            android:src="@drawable/ic_baseline_navigate_next_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

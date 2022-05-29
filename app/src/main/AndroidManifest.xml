@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".materi.MateriLepton"
+            android:exported="false" />
+        <activity
             android:name=".materi.MateriHadron"
             android:exported="false" />
         <activity

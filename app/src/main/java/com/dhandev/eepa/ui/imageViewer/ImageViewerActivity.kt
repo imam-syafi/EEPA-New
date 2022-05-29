@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.RoundedCorner
-import com.aghajari.zoomhelper.ZoomHelper
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
@@ -40,8 +39,5 @@ class ImageViewerActivity : AppCompatActivity() {
 
         binding.desc.text = descGaleri
 
-    }
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        return ZoomHelper.getInstance().dispatchTouchEvent(ev!!,this) || super.dispatchTouchEvent(ev)
     }
 }

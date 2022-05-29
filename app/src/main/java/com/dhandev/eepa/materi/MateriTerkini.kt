@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
@@ -18,7 +19,7 @@ class MateriTerkini : AppCompatActivity() {
     private lateinit var binding: ActivityMateriTerkiniBinding
     private lateinit var sharedPred: SharedPreferences
     var URL = "https://www.sciencenewsforstudents.org/wp-content/uploads/2022/04/1440_four_fundamental_forces_feat_rev-1030x580.jpg"
-    var URL2 = "https://docs.google.com/uc?id=1S4FN0RlnfKnDs5uDr2glop9pnA2dqgYD"
+    var URL2 = "https://docs.google.com/uc?id=1S4j3UJMYxcSnBbFBKgDKu-usPiJWb0Mg"
     var page = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,6 +92,12 @@ class MateriTerkini : AppCompatActivity() {
                     }
                 }
             }
+
+            //buat tittle berjalan
+            title.ellipsize = TextUtils.TruncateAt.MARQUEE
+            title.isSingleLine = true
+            title.marqueeRepeatLimit = -1
+            title.isSelected = true
 
             val desc = tvCaption1.text.toString() + "\nDari kiri atas secara berurutan arah putaran jarum jam: gaya gravitasi, elektromagnetik, kuat, dan lemah"
             val desc2 = tvCaption2.text.toString()

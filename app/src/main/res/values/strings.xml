@@ -171,6 +171,8 @@
     <string name="m_terkini2">Salah satu partikel yang dicari adalah <b><font color="#388E3C">graviton</font></b>, sebuah partikel boson gauge yang dipercaya <b><font color="#388E3C">membawa gaya gravitasi</font></b>. Jika terbukti benar, graviton <b><font color="#388E3C">diduga tidak memiliki massa</font></b> karena gaya gravitasi punya <b><font color="#388E3C">jangkauan yang sangat luas</font></b> dan tampaknya <b><font color="#388E3C">menyebar dengan kecepatan cahaya</font></b>.  Selain TOE, ada juga <b><font color="#388E3C">Teori Penyatuan Besar</font></b> (Grand Unification Theory = GUT) yang merupakan suatu model dalam fisika partikel, di mana pada <b><font color="#388E3C">tenaga tinggi</font></b>, tiga gaya dalam model standar (elektromagnetik, kuat, dan lemah) <b><font color="#388E3C">disatukan dalam satu gaya</font></b>.</string>
 
     <string name="link_hint">Buka tautan di browser</string>
+    <string name="garis_waktu_penemuan">Garis Waktu Penemuan</string>
+    <string name="sumber_timeline">Sumber: <a href="https://en.wikipedia.org/wiki/Timeline_of_particle_discoveries">Wikipedia</a></string>
     <!--    search-->
     <string-array name="data_name">
         <item>Perkembangan Teori Atom</item>

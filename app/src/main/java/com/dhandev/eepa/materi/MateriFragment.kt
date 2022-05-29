@@ -32,6 +32,7 @@ class MateriFragment : Fragment() {
             lepton.setOnClickListener { startActivity(Intent(activity, MateriLepton::class.java)) }
             modelStandar.setOnClickListener { startActivity(Intent(activity, MateriStandarModel::class.java)) }
             terkini.setOnClickListener { startActivity(Intent(activity, MateriTerkini::class.java)) }
+            timeline.setOnClickListener { startActivity(Intent(activity, MateriTimeline::class.java)) }
         }
         return root
     }

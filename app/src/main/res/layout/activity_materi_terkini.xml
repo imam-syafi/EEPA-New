@@ -190,7 +190,7 @@
             android:id="@+id/tv_caption1"
             android:paddingHorizontal="20dp"
             style="@style/caption"
-            android:text="Gambar 1. Illustrasi Empat Gaya Dasar"
+            android:text="Gambar Illustrasi Empat Gaya Dasar"
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -211,7 +211,7 @@
             android:paddingHorizontal="20dp"
             android:layout_marginTop="20dp"
             style="@style/caption"
-            android:text="Tabel 1. Gaya dasar serta partikel medannya"
+            android:text="Tabel gaya-gaya dasar serta partikel medannya"
             app:layout_constraintTop_toBottomOf="@id/body1"
             app:layout_constraintBottom_toTopOf="@id/gambar2"
             app:layout_constraintStart_toStartOf="parent"/>

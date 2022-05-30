@@ -10,7 +10,7 @@ import com.dhandev.eepa.databinding.BaseListItemBinding
 import com.lriccardo.timelineview.TimelineAdapter
 import com.lriccardo.timelineview.TimelineView
 
-class BaseAdapter(val items: List<String>, val desc: List<String>) : RecyclerView.Adapter<BaseAdapter.BaseViewHolder>(), TimelineAdapter {
+class BaseAdapter(val items: List<String>, val desc: List<CharSequence>) : RecyclerView.Adapter<BaseAdapter.BaseViewHolder>(), TimelineAdapter {
 
     private var onItemClickCallback : OnItemClickCallback? = null
     fun setOnItemClickCallback (onItemClickCallback: OnItemClickCallback){
@@ -23,7 +23,7 @@ class BaseAdapter(val items: List<String>, val desc: List<String>) : RecyclerVie
     }
 
     inner class BaseViewHolder(val binding: BaseListItemBinding) :RecyclerView.ViewHolder(binding.root){
-        fun bind(items: String, desc: String){
+        fun bind(items: String, desc: CharSequence){
             binding.apply {
                 root.setOnClickListener {
                     onItemClickCallback?.onItemClicked(items, desc)
@@ -66,6 +66,6 @@ class BaseAdapter(val items: List<String>, val desc: List<String>) : RecyclerVie
         return super.getLinePadding(position)
     }
     interface OnItemClickCallback{
-        fun onItemClicked(items: String, desc: String)
+        fun onItemClicked(items: String, desc: CharSequence)
     }
 }

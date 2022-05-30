@@ -20,7 +20,7 @@ import me.saket.bettermovementmethod.BetterLinkMovementMethod
 class MateriTimeline : AppCompatActivity() {
     private lateinit var binding: ActivityMateriTimelineBinding
     var listItem = mutableListOf<String>()
-    var listDesc = mutableListOf<String>()
+    var listDesc = mutableListOf<CharSequence>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,27 +109,27 @@ class MateriTimeline : AppCompatActivity() {
     }
 
     private fun listDesc() {
-        val desc1 = "Ditemukan oleh J.J. Thomson melalui eksperimen tabung sinar katoda"
-        val desc2 = "Dicetuskan oleh Albert Einstein hingga akhirnya dipopulerkan dengan nama foton oleh Gilbert N. Lewis pada 1926"
-        val desc3 = "Eksperimen dengan menggunakan lembaran emas di mana Rutherford berhasil menemukan adanya inti atom yang sangat kecil namun sangat berat."
-        val desc4 = "Ditemukan oleh James Chadwick pada eksperimen di mana Ia membombardir Berilium dengan partikel alfa dari peluruhan radioaktif alami Polonium."
-        val desc5 = "Ditemukan oleh Carl D. Anderson secara tidak sengaja pada eksperimen ruang kabut, di mana terdapat lintasan partikel yang menunjukkan ciri-ciri elektron namun dengan muatan positif."
-        val desc6 = "Ditemukan oleh Seth Neddermeyer dkk. pada eksperimen pengukuran sinar kosmis menggunakan ruang kabut."
-        val desc7 = "Ditemukan oleh Kelompok peneliti yang dipimpin C.F.Powell, sebelumnya partikel ini sudah siprediksi oleh Hideki Yukawa pada 1935"
-        val desc8 = "George Dixon dan Clifford C.C. menemukan kaon sebagai partikel strange pertama yang ditemukan"
-        val desc9 = "V.D. Hopper dan S.Biswas menemukan partikel ini dari hasil tumbukan proton dan neutron"
-        val desc10 = "Owen Chamberlain dkk. menemukan antiproton dengan cara memborbardir target tembaga dengan proton berenergi tinggi dari proton synchrotron di University of California, Berkeley."
-        val desc11 = "Frederick R. dan Clyde C. membuktikan keberadaan partikel ini, setelah sebelumnya diprediksi keberadaannya oleh Wolfgang Pauli pada 1930. Penemuan ini juga yang pertama untuk partikel neutrino"
-        val desc12 = "Ditemukan oleh grup peneliti yang dipimpin oleh Leon Lederman setelah menyadari bahwa partikel yang mereka temukan berbeda dengan neutrino sebelumnya"
-        val desc13 = "Ditemukan melalui eksperimen di Brookhaven National Laboratory"
-        val desc14 = "Martine Lewis menemukan partikel ini saat mengobservasi peluruhan partikel yang menjadi muon dan elektron di Stanford Linear Accelerator Centre"
-        val desc15 = "Setelah diprediksi oleh Kobayashi dan Maskawa pada 1973, partikel ini berhasil ditemukan di Fermilab"
-        val desc16 = "Ditemukan secara tidak langsung saat peristiwa three-jet di DESY (Deutsches Elektronen-Synchrotron)"
-        val desc17 = "Ditemukan oleh Carlo Rubbia dan Simon di CERN"
-        val desc18 = "Ditemukan di Fermilab"
-        val desc19 = "Diproduksi dan diukur pada eksperimen LEAR (Low Energy Antiproton Ring) di CERN"
-        val desc20 = "Pertama kali diamati secara langsung di Fermilab"
-        val desc21 = "Ditemukan pada eksperimen menggunakan Compact Muon Solenoid dan ATLAS di Large Hadron Collider di CERN"
+        val desc1 = getText(R.string.t_desc1)
+        val desc2 = getText(R.string.t_desc2)
+        val desc3 = getText(R.string.t_desc3)
+        val desc4 = getText(R.string.t_desc4)
+        val desc5 = getText(R.string.t_desc5)
+        val desc6 = getText(R.string.t_desc6)
+        val desc7 = getText(R.string.t_desc7)
+        val desc8 = getText(R.string.t_desc8)
+        val desc9 = getText(R.string.t_desc9)
+        val desc10 = getText(R.string.t_desc10)
+        val desc11 = getText(R.string.t_desc11)
+        val desc12 = getText(R.string.t_desc12)
+        val desc13 = getText(R.string.t_desc13)
+        val desc14 = getText(R.string.t_desc14)
+        val desc15 = getText(R.string.t_desc15)
+        val desc16 = getText(R.string.t_desc16)
+        val desc17 = getText(R.string.t_desc17)
+        val desc18 = getText(R.string.t_desc18)
+        val desc19 = getText(R.string.t_desc19)
+        val desc20 = getText(R.string.t_desc20)
+        val desc21 = getText(R.string.t_desc21)
         listDesc.add(desc1)
         listDesc.add(desc2)
         listDesc.add(desc3)

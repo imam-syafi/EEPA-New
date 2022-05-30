@@ -5,7 +5,7 @@
     android:id="@+id/latar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".materi.MateriTMQ">
+    tools:context=".materi.MateriPositron">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -160,7 +160,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/tittle"
-            tools:text="@string/_3_teori_medan_kuantum"
+            android:text="@string/penemuan_positron"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"
@@ -190,7 +190,7 @@
             android:id="@+id/tv_caption1"
             android:paddingHorizontal="20dp"
             style="@style/caption"
-            tools:text="Gambar 1. Large Hadron Collider"
+            android:text="Gambar 1. lintasan pada ruang kabut (cloud chamber)"
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -200,23 +200,11 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
-            android:text="@string/m_tmq"
+            android:text="@string/m_positron"
             android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_caption1" />
-
-        <TextView
-            android:id="@+id/body2"
-            style="@style/FontParagraf"
-            android:paddingHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_tmq2"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body1" />
 
         <ImageView
             android:id="@+id/gambar2"
@@ -224,14 +212,14 @@
             style="@style/gambar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body2">
+            app:layout_constraintTop_toBottomOf="@id/body1">
         </ImageView>
 
         <TextView
             android:id="@+id/tv_caption2"
             android:paddingHorizontal="20dp"
             style="@style/caption"
-            tools:text="Gambar 2. Large Hadron Collider"
+            android:text="Gambar 2. Berbagai perkiraan lintasan partikel pada ruang kabut"
             app:layout_constraintTop_toBottomOf="@id/gambar2"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -241,49 +229,12 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
-            android:text="@string/m_tmq3"
+            android:text="@string/m_positron2"
             android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_caption2" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/containerQuiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:visibility="gone"
-            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
-            app:layout_constraintTop_toBottomOf="@id/body3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageButton
-            android:id="@+id/btn_prev"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/blue_500"
-            android:src="@drawable/ic_baseline_navigate_before_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
-
-        <ImageButton
-            android:id="@+id/btn_next"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/blue_500"
-            android:src="@drawable/ic_baseline_navigate_next_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

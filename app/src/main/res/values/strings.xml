@@ -46,11 +46,12 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="_1_subatomik">1. Partikel Subatomik</string>
-    <string name="_2_teori_medan_kuantum">2. Teori Medan Kuantum</string>
-    <string name="_3_hadron">3. Hadron</string>
-    <string name="_4_lepton">4. Lepton</string>
-    <string name="_5_model_standar">5. Model Standar</string>
-    <string name="_6_perkembangan_terkini">6. Perkembangan Terkini</string>
+    <string name="_2_garis_waktu_penemuan">2. Garis Waktu Penemuan</string>
+    <string name="_3_teori_medan_kuantum">3. Teori Medan Kuantum</string>
+    <string name="_4_hadron">4. Hadron</string>
+    <string name="_5_lepton">5. Lepton</string>
+    <string name="_6_model_standar">6. Model Standar</string>
+    <string name="_7_perkembangan_terkini">7. Perkembangan Terkini</string>
     <string name="ukuran_teks">Ukuran teks :</string>
     <string name="kecil">Kecil</string>
     <string name="sedang">Sedang</string>
@@ -160,18 +161,17 @@
     <string name="m_lepton">Selain hadron ada juga famili <b><font color="#388E3C">lepton</font></b>. Lepton adalah partikel elementer dengan <b><font color="#388E3C">spin ½</font></b> dan <b><font color="#EF5350">tidak mengalami gaya kuat</font></b> seperti halnya hadron. Nama lepton berasal dari bahasa Yunani “leptos” yang artinya kecil atau ringan, hal ini sangat sesuai karena lepton itu ringan. Lepton ada dua jenis, yaitu <b><font color="#388E3C">bermuatan dan tidak bermuatan</font></b>. Data lengkapnya dapat dilihat pada tabel berikut.</string>
     <string name="m_lepton2"><b><font color="#388E3C">Setiap partikel memiliki antipartikel</font></b>. Antipartikel sangat mirip dengan partikel, hanya saja dengan <b><font color="#388E3C">muatan yang berlawanan</font></b>. Sebagai contoh elektron, antipartikelnya adalah antielektron atau yang biasa disebut dengan positron. Sehingga jika dijumlahkan, keseluruhan cacah lepton adalah 12 partikel.</string>
 
-    <string name="m_standar">Pengembangan model standar dilakukan <b><font color="#388E3C">secara bertahap</font></b> selama paruh kedua abad ke-20 yang dilakukan oleh ilmuwan di seluruh dunia. Model ini <b><font color="#388E3C">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti kuark top (1995), tau neutrino (2000), dan boson higgs (2012). 	\nGambar di atas menunjukkan model standar lengkap dengan berbagai keterangannya. Daftar (ringkasan) lengkap cacah total partikel elementer dalam model standar dapat dilihat pada tabel berikut.</string>
+    <string name="m_standar">Pengembangan model standar dilakukan <b><font color="#388E3C">secara bertahap</font></b> selama paruh kedua abad ke-20 yang dilakukan oleh ilmuwan di seluruh dunia. Model ini <b><font color="#388E3C">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti kuark top (1995), tau neutrino (2000), dan partikel tuhan/ boson higgs (2012). 	\nGambar di atas menunjukkan model standar lengkap dengan berbagai keterangannya. Daftar (ringkasan) lengkap cacah total partikel elementer dalam model standar dapat dilihat pada tabel berikut.</string>
     <string name="m_standar2">Keterangan:\n<ul><li><b><font color="#388E3C">Enam rasa (flavor) kuark:</font></b> up, down, bottom, top, strange, dan charm</li>
-        \n<li><b><font color="#388E3C">Enam jenis lepton:</font></b> elektron, neutrino elektron, muon, neutrino muon, tau, neutrino muon.</li>
+        \n<li><b><font color="#388E3C">Enam jenis lepton:</font></b> elektron, neutrino elektron, muon, neutrino muon, tau, neutrino tau.</li>
         \n<li><b><font color="#388E3C">Ada 12 gauge boson (pembawa gaya):</font></b> foton untuk gaya elektromagnetik, tiga boson W dan Z untuk gaya lemah, dan 8 gluon untuk gaya kuat.</li>
         \n<li><b><font color="#388E3C">Boson higgs</font></b>, boson yang diperlukan untuk memberikan massa pada gauge boson.</li></ul>
     </string>
 
-    <string name="m_terkini">Model Standar <b><font color="#EF5350">belum mampu</font></b> menjelaskan gaya gravitasi, hal ini karena <b><font color="#388E3C">pada skala subatomik</font></b> gaya gravitasi <b><font color="#EF5350">sangat lemah</font></b>. Adapun teori yang berusaha untuk <b><font color="#388E3C">menyatukan gaya gravitasi dengan tiga gaya dasar lainnya</font></b> (lihat gambar di atas) adalah <b><font color="#388E3C">teori tentang Segalanya</font></b> (Theory of Everything = TOE). Hingga saat ini, para ilmuwan di LHC terus mencari solusi untuk mewujudkan TOE dengan cara <b><font color="#388E3C">menembakkan</font></b> partikel-partikel hadron dalam kecepatan yang <b><font color="#388E3C">mendekati kecepatan cahaya</font></b>, sehingga akan terjadi tumbukan yang <b><font color="#388E3C">menghasilkan</font></b> pecahan (partikel elementer) dari hadron tersebut.</string>
+    <string name="m_terkini">Model Standar <b><font color="#EF5350">belum mampu</font></b> menjelaskan gaya gravitasi, hal ini karena <b><font color="#388E3C">pada skala subatomik</font></b> gaya gravitasi <b><font color="#EF5350">sangat lemah</font></b>. Adapun teori yang berusaha untuk <b><font color="#388E3C">menyatukan gaya gravitasi dengan tiga gaya dasar lainnya</font></b> (lihat gambar di atas) adalah <b><font color="#388E3C">Teori Tentang Segalanya</font></b> (Theory of Everything = TOE). Hingga saat ini, para ilmuwan di LHC terus mencari solusi untuk mewujudkan TOE dengan cara <b><font color="#388E3C">menembakkan</font></b> partikel-partikel hadron dalam kecepatan yang <b><font color="#388E3C">mendekati kecepatan cahaya</font></b>, sehingga akan terjadi tumbukan yang <b><font color="#388E3C">menghasilkan</font></b> pecahan (partikel elementer) dari hadron tersebut.</string>
     <string name="m_terkini2">Salah satu partikel yang dicari adalah <b><font color="#388E3C">graviton</font></b>, sebuah partikel boson gauge yang dipercaya <b><font color="#388E3C">membawa gaya gravitasi</font></b> (lihat tabel). Jika terbukti benar, graviton <b><font color="#388E3C">diduga tidak memiliki massa</font></b> karena gaya gravitasi punya <b><font color="#388E3C">jangkauan yang sangat luas</font></b> dan tampaknya <b><font color="#388E3C">menyebar dengan kecepatan cahaya</font></b>.  Selain TOE, ada juga <b><font color="#388E3C">Teori Penyatuan Besar</font></b> (Grand Unification Theory = GUT) yang merupakan suatu model dalam fisika partikel, di mana pada <b><font color="#388E3C">tenaga tinggi</font></b>, tiga gaya dalam model standar (elektromagnetik, kuat, dan lemah) <b><font color="#388E3C">disatukan dalam satu gaya</font></b>.</string>
 
     <string name="link_hint">Buka tautan di browser</string>
-    <string name="garis_waktu_penemuan">7. Garis Waktu Penemuan</string>
     <string name="sumber_timeline">Sumber: <a href="https://en.wikipedia.org/wiki/Timeline_of_particle_discoveries">Wikipedia</a></string>
 
     <string name="t_desc1">Ditemukan oleh <b><font color="#388E3C">J.J. Thomson</font></b> melalui <b><font color="#388E3C">eksperimen tabung sinar katoda</font></b></string>
@@ -196,6 +196,11 @@
     <string name="t_desc20">Pertama kali diamati secara langsung di <b><font color="#388E3C">Fermilab</font></b></string>
     <string name="t_desc21">Ditemukan pada eksperimen menggunakan <b><font color="#388E3C">Compact Muon Solenoid dan ATLAS di Large Hadron Collider</font></b> di CERN</string>
 
+    <string name="penemuan_positron">Penemuan Positron</string>
+    <string name="m_positron">Perhatikan Gambar 1, terlihat Jari-jari lengkungan lintasan <b><font color="#388E3C">di atas plat timbal lebih kecil</font></b> dibandingkan lintasan yang di bawah. Hal ini mengindikasikan bahwa partikel tersebut bergerak <b><font color="#388E3C">lebih lambat di atas plat</font></b> daripada di bawah, karenanya jari-jari lintasan semakin mengecil.
+Dari lintasan tersebut, dapat dikatakan bahwa partikel itu <b><font color="#388E3C">bermuatan positif</font></b>, namun dengan massa yang <b><font color="#388E3C">jauh lebih kecil</font></b> dari proton. Hal tersebut dapat diketahui karena <b><font color="#388E3C">medan magnet mengarah ke dalam bidang (tanda +)</font></b>. Sesuai dengan kaidah tangan kanan untuk muatan bergerak,jika itu <b><font color="#388E3C">elektron</font></b> maka jari-jari lintasannya <b><font color="#388E3C">semakin besar</font></b>, dan jika itu <b><font color="#388E3C">proton</font></b> maka <b><font color="#388E3C">tidak akan terjadi pembelokan</font></b> yang besar dan lintasannya pun <b><font color="#388E3C">lebih pendek</font></b> mengingat massanya yang besar (lihat Gambar 2).
+</string>
+    <string name="m_positron2">Akhirnya, Anderson menyadari bahwa positron <b><font color="#388E3C">mirip</font></b> dengan elektron, hanya saja dengan <b><font color="#388E3C">muatan yang berlawanan</font></b>. Hal ini menjadi penemuan pertama adanya antipartikel. Sebelumnya, keberadaan antipartikel <b><font color="#388E3C">sudah diprediksi oleh Paul Dirac pada 1931</font></b>. Dari penemuan ini, Carl Anderson diberikan penghargaan Nobel Fisika pada 1936.</string>
     <!--    search-->
     <string-array name="data_name">
         <item>Perkembangan Teori Atom</item>

@@ -27,12 +27,12 @@ class MateriFragment : Fragment() {
                 activity?.onBackPressed()
             }
             subatomik.setOnClickListener { startActivity(Intent(activity, MateriSubatomik::class.java)) }
+            timeline.setOnClickListener { startActivity(Intent(activity, MateriTimeline::class.java)) }
             TMQ.setOnClickListener {startActivity(Intent(activity, MateriTMQ::class.java))}
             hadron.setOnClickListener { startActivity(Intent(activity, MateriHadron::class.java)) }
             lepton.setOnClickListener { startActivity(Intent(activity, MateriLepton::class.java)) }
             modelStandar.setOnClickListener { startActivity(Intent(activity, MateriStandarModel::class.java)) }
             terkini.setOnClickListener { startActivity(Intent(activity, MateriTerkini::class.java)) }
-            timeline.setOnClickListener { startActivity(Intent(activity, MateriTimeline::class.java)) }
         }
         return root
     }

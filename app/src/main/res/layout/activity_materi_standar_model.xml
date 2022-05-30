@@ -160,7 +160,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/tittle"
-            android:text="@string/_5_model_standar"
+            android:text="@string/_6_model_standar"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"

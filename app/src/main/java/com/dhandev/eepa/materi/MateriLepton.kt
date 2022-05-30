@@ -103,6 +103,9 @@ class MateriLepton : AppCompatActivity() {
                 openImageViewer(URL2, desc2)
             }
 
+            penemuanPositron.setOnClickListener {
+                startActivity(Intent(this@MateriLepton, MateriPositron::class.java))
+            }
             btnNext.setOnClickListener {
                 startActivity(Intent(this@MateriLepton, MateriStandarModel::class.java))
             }

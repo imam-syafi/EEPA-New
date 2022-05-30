@@ -160,7 +160,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/tittle"
-            android:text="@string/_3_hadron"
+            android:text="@string/_4_hadron"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"

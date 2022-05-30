@@ -160,7 +160,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/tittle"
-            android:text="@string/_4_lepton"
+            android:text="@string/_5_lepton"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"
@@ -221,15 +221,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/gambar2" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/containerQuiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:visibility="gone"
-            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
+        <Button
+            android:id="@+id/penemuan_positron"
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:text="@string/penemuan_positron"
             app:layout_constraintTop_toBottomOf="@id/body3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -245,7 +241,7 @@
             android:src="@drawable/ic_baseline_navigate_before_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/penemuan_positron"/>
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -258,6 +254,6 @@
             android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/penemuan_positron"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

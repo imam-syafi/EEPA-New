@@ -160,7 +160,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/tittle"
-            android:text="@string/_6_perkembangan_terkini"
+            android:text="@string/_7_perkembangan_terkini"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"

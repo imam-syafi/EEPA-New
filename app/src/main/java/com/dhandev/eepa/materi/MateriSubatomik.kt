@@ -68,7 +68,7 @@ class MateriSubatomik : AppCompatActivity() {
             }
 
             btnNext.setOnClickListener {
-                startActivity(Intent(this@MateriSubatomik, MateriTMQ::class.java))
+                startActivity(Intent(this@MateriSubatomik, MateriTimeline::class.java))
             }
         }
     }

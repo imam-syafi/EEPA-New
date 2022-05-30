@@ -11,33 +11,28 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.dhandev.eepa.R
+import com.dhandev.eepa.databinding.ActivityMateriPositronBinding
 import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
 import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 
 
-class MateriTMQ : AppCompatActivity() {
+class MateriPositron : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMateriTmqBinding
+    private lateinit var binding: ActivityMateriPositronBinding
     private lateinit var sharedPred : SharedPreferences
-    var URL : String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
-    var URL2 = "https://cdn.mos.cms.futurecdn.net/7cvrrJxBe3N4Pfsv8q9oaM.jpg"
+    var URL : String = "https://upload.wikimedia.org/wikipedia/commons/5/5a/PositronDiscovery.png"
+    var URL2 = "https://docs.google.com/uc?id=1YNNe_DU-bm3NdgveE_TwyeTynxPeUPo2"
     var page = 1
-    var desc = "Large Hadron Collider (Penubruk Hadron Raksasa) adalah pemercepat partikel berenergi tinggi terbesar di dunia, fasilitas percobaan paling kompleks yang pernah dibangun, dan mesin tunggal terbesar di dunia."
-    var desc2 = "Fasilitas-fasilitas yang ada di CERN terdiri dari LHC (Large Hadron Collider), SPS (Super Proton Synchrotron), PS (Proton Synchrotron), serta fasilitas masa depan dengan keliling 100 km"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_materi_tmq)
+        setContentView(R.layout.activity_materi_positron)
 
-        binding = ActivityMateriTmqBinding.inflate(layoutInflater)
+        binding = ActivityMateriPositronBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
-
-        val fragment: Fragment
-        fragment = MiniQuizFragment()
-        loadFragmentQuiz(fragment)
 
         binding.apply{
             setContentView(root)
@@ -83,8 +78,10 @@ class MateriTMQ : AppCompatActivity() {
                 }
             }
 
-            glideImage.load(this@MateriTMQ, URL, gambar)
-            glideImage.load(this@MateriTMQ, URL2, gambar2)
+            glideImage.load(this@MateriPositron, URL, gambar)
+            glideImage.load(this@MateriPositron, URL2, gambar2)
+            val desc = tvCaption1.text.toString()
+            val desc2 = tvCaption2.text.toString()
             gambar.setOnClickListener {
                 openImageViewer(URL, desc)
             }
@@ -92,28 +89,14 @@ class MateriTMQ : AppCompatActivity() {
                 openImageViewer(URL2, desc2)
             }
 
-            btnNext.setOnClickListener {
-                startActivity(Intent(this@MateriTMQ, MateriHadron::class.java))
-            }
-
-            btnPrev.setOnClickListener {
-                startActivity(Intent(this@MateriTMQ, MateriTimeline::class.java))
-            }
-
 //            body1.transformationMethod = LinkTransformationMethod()
 //            body1.movementMethod = LinkMovementMethod.getInstance()
 
             //buat tittle berjalan
-            title.text = getString(R.string._3_teori_medan_kuantum)
             title.ellipsize = TextUtils.TruncateAt.MARQUEE
             title.isSingleLine = true
             title.marqueeRepeatLimit = -1
             title.isSelected = true
-
-
-
-            tvCaption1.text = getString(R.string.m_tmq_caption)
-            tvCaption2.text = getString(R.string.m_tmq_caption2)
 
 
             Linkify.addLinks(body1, Linkify.ALL)
@@ -191,11 +174,9 @@ class MateriTMQ : AppCompatActivity() {
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
-            binding.body2.setTextAppearance(R.style.FontParagraf)
             binding.body3.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
-            binding.body2.setTextAppearance(sharedUkuranId)
             binding.body3.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }

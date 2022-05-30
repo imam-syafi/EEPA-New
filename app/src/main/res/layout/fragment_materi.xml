@@ -58,43 +58,45 @@
                 android:text="@string/_1_subatomik"
                 app:backgroundTint="@color/biru_seken" />
 
+
+            <Button
+                android:id="@+id/timeline"
+                style="@style/ButtonGeneral"
+                android:layout_marginBottom="5dp"
+                android:text="@string/_2_garis_waktu_penemuan"
+                app:backgroundTint="@color/biru_seken" />
+
             <Button
                 android:id="@+id/TMQ"
                 style="@style/ButtonGeneral"
-                android:text="@string/_2_teori_medan_kuantum"
+                android:text="@string/_3_teori_medan_kuantum"
                 app:backgroundTint="@color/biru_seken"/>
 
             <Button
                 android:id="@+id/hadron"
                 style="@style/ButtonGeneral"
-                android:text="@string/_3_hadron"
+                android:text="@string/_4_hadron"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
                 android:id="@+id/lepton"
                 style="@style/ButtonGeneral"
-                android:text="@string/_4_lepton"
+                android:text="@string/_5_lepton"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
                 android:id="@+id/model_standar"
                 style="@style/ButtonGeneral"
-                android:text="@string/_5_model_standar"
+                android:text="@string/_6_model_standar"
                 app:backgroundTint="@color/biru_seken" />
 
             <Button
                 android:id="@+id/terkini"
                 style="@style/ButtonGeneral"
                 android:layout_marginBottom="5dp"
-                android:text="@string/_6_perkembangan_terkini"
+                android:text="@string/_7_perkembangan_terkini"
                 app:backgroundTint="@color/biru_seken" />
 
-            <Button
-                android:id="@+id/timeline"
-                style="@style/ButtonGeneral"
-                android:layout_marginBottom="5dp"
-                android:text="@string/garis_waktu_penemuan"
-                app:backgroundTint="@color/biru_seken" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

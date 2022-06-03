@@ -35,10 +35,6 @@ class MateriTMQ : AppCompatActivity() {
         loadUkuranbaru()
         loadLatarBaru()
 
-        val fragment: Fragment
-        fragment = MiniQuizFragment()
-        loadFragmentQuiz(fragment)
-
         binding.apply{
             setContentView(root)
             aturTeks.visibility = View.GONE
@@ -84,12 +80,8 @@ class MateriTMQ : AppCompatActivity() {
             }
 
             glideImage.load(this@MateriTMQ, URL, gambar)
-            glideImage.load(this@MateriTMQ, URL2, gambar2)
             gambar.setOnClickListener {
                 openImageViewer(URL, desc)
-            }
-            gambar2.setOnClickListener {
-                openImageViewer(URL2, desc2)
             }
 
             btnNext.setOnClickListener {
@@ -113,8 +105,6 @@ class MateriTMQ : AppCompatActivity() {
 
 
             tvCaption1.text = getString(R.string.m_tmq_caption)
-            tvCaption2.text = getString(R.string.m_tmq_caption2)
-
 
             Linkify.addLinks(body1, Linkify.ALL)
 //            body2.movementMethod = BetterLinkMovementMethod.getInstance()
@@ -140,19 +130,6 @@ class MateriTMQ : AppCompatActivity() {
         Editor.apply()
         val intent = Intent(this, ImageViewerMateriActivity::class.java)
         startActivity(intent)
-    }
-
-    private fun focusOnTop() {
-        binding.latar.isFocusableInTouchMode = true
-        binding.latar.smoothScrollTo(0,0)
-        binding.latar.fullScroll(View.FOCUS_UP)
-    }
-
-    private fun loadFragmentQuiz(fragment: MiniQuizFragment) {
-        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.containerQuiz, fragment)
-        transaction.disallowAddToBackStack()
-        transaction.commit()
     }
 
     private fun gantiLatar(greenRead: Int, pressed: Int) {
@@ -191,12 +168,16 @@ class MateriTMQ : AppCompatActivity() {
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
-            binding.body2.setTextAppearance(R.style.FontParagraf)
-            binding.body3.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik1.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik12.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik2.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik22.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
-            binding.body2.setTextAppearance(sharedUkuranId)
-            binding.body3.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik1.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik12.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik2.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik22.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

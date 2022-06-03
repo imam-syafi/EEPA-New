@@ -190,74 +190,85 @@
             android:id="@+id/tv_caption1"
             android:paddingHorizontal="20dp"
             style="@style/caption"
-            tools:text="Gambar 1. Large Hadron Collider"
+            tools:text="Gambar Large Hadron Collider"
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/body1"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_tmq"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption1" />
-
-        <TextView
-            android:id="@+id/body2"
-            style="@style/FontParagraf"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_tmq2"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body1" />
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_marginVertical="20dp"
-            style="@style/gambar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body2">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/tv_caption2"
-            android:paddingHorizontal="20dp"
-            style="@style/caption"
-            tools:text="Gambar 2. Large Hadron Collider"
-            app:layout_constraintTop_toBottomOf="@id/gambar2"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/body3"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_tmq3"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption2" />
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/containerQuiz"
+        <LinearLayout
+            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:visibility="gone"
-            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
-            app:layout_constraintTop_toBottomOf="@id/body3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_caption1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/headline1"
+                style="@style/headline"
+                android:text="Definisi" />
+
+            <TextView
+                android:id="@+id/body1"
+                style="@style/FontParagraf"
+                android:text="@string/m_tmq_"/>
+            <TextView
+                android:id="@+id/headline2"
+                style="@style/headline"
+                android:text="Partikel berdasarkan massa diam:" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_subatomik1"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_tmq_1" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_subatomik1_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_tmq_1_2" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/headline3"
+                style="@style/headline"
+                android:text="Model-model dari QFT:" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_subatomik2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_tmq_2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_subatomik2_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_tmq_2_2" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/btn_prev"
@@ -270,7 +281,7 @@
             android:src="@drawable/ic_baseline_navigate_before_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -283,6 +294,6 @@
             android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

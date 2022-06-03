@@ -130,13 +130,6 @@ class MateriPositron : AppCompatActivity() {
         binding.latar.fullScroll(View.FOCUS_UP)
     }
 
-    private fun loadFragmentQuiz(fragment: MiniQuizFragment) {
-        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.containerQuiz, fragment)
-        transaction.disallowAddToBackStack()
-        transaction.commit()
-    }
-
     private fun gantiLatar(greenRead: Int, pressed: Int) {
         val latarBaru: Int = greenRead
         val tombol: Int = pressed

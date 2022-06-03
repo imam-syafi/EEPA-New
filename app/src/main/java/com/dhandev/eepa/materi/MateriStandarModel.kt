@@ -110,12 +110,17 @@ class MateriStandarModel : AppCompatActivity() {
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriHadron::class.java))
             }
+            mStandar2.setOnClickListener { focusOnBottom() }
             footnote1.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriTimeline::class.java))
             }
         }
     }
-
+    private fun focusOnBottom() {
+        binding.latar.isFocusableInTouchMode = true
+        binding.latar.smoothScrollTo(0, binding.latar.height)
+        binding.latar.fullScroll(View.FOCUS_DOWN)
+    }
     private fun openImageViewer(url : String, desc : String) {
         val Editor:SharedPreferences.Editor = sharedPred.edit()
         Editor.putString("url", url)

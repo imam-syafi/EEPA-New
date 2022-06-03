@@ -194,62 +194,62 @@
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/body1"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_terkini"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption1" />
-
-        <TextView
-            android:id="@+id/tv_caption2"
-            android:paddingHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            style="@style/caption"
-            android:text="Tabel gaya-gaya dasar serta partikel medannya"
-            app:layout_constraintTop_toBottomOf="@id/body1"
-            app:layout_constraintBottom_toTopOf="@id/gambar2"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_marginBottom="20dp"
-            style="@style/gambar"
+        <LinearLayout
+            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption2">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/body3"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/m_terkini2"
-            android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gambar2" />
+            app:layout_constraintTop_toBottomOf="@id/tv_caption1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/headline1"
+                style="@style/headline"
+                android:text="A. Kelemahan Model Standar" />
+            <TextView
+                android:id="@+id/body1"
+                style="@style/FontParagraf"
+                android:text="@string/m_terkini"/>
+            <TextView
+                android:id="@+id/headline2"
+                style="@style/headline"
+                android:text="B. TOE" />
+            <TextView
+                android:id="@+id/body2"
+                style="@style/FontParagraf"
+                android:text="@string/m_terkini2"/>
+            <TextView
+                android:id="@+id/tv_caption2"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                style="@style/caption"
+                android:text="Tabel gaya-gaya dasar serta partikel medannya"/>
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/containerQuiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:visibility="gone"
-            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
-            app:layout_constraintTop_toBottomOf="@id/body3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <ImageView
+                android:id="@+id/gambar2"
+                android:layout_marginBottom="20dp"
+                style="@style/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ImageView>
+            <TextView
+                android:id="@+id/headline3"
+                style="@style/headline"
+                android:background="@color/greenBright"
+                android:text="Graviton" />
+            <TextView
+                android:id="@+id/body3"
+                style="@style/FontParagraf"
+                android:text="@string/m_terkini3"/>
+            <TextView
+                android:id="@+id/headline4"
+                style="@style/headline"
+                android:text="C. GUT" />
+            <TextView
+                android:id="@+id/body4"
+                style="@style/FontParagraf"
+                android:text="@string/m_terkini4"/>
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/btn_prev"
@@ -262,7 +262,7 @@
             android:src="@drawable/ic_baseline_navigate_before_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -275,6 +275,6 @@
             android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

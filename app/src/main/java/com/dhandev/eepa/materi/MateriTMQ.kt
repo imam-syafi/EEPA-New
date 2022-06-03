@@ -97,14 +97,14 @@ class MateriTMQ : AppCompatActivity() {
             }
 
             btnPrev.setOnClickListener {
-                startActivity(Intent(this@MateriTMQ, MateriTimeline::class.java))
+                startActivity(Intent(this@MateriTMQ, MateriSubatomik::class.java))
             }
 
 //            body1.transformationMethod = LinkTransformationMethod()
 //            body1.movementMethod = LinkMovementMethod.getInstance()
 
             //buat tittle berjalan
-            title.text = getString(R.string._3_teori_medan_kuantum)
+            title.text = getString(R.string._2_teori_medan_kuantum)
             title.ellipsize = TextUtils.TruncateAt.MARQUEE
             title.isSingleLine = true
             title.marqueeRepeatLimit = -1

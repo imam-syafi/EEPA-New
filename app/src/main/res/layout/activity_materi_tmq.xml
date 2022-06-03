@@ -160,7 +160,7 @@
         <TextView
             android:id="@+id/title"
             style="@style/tittle"
-            tools:text="@string/_3_teori_medan_kuantum"
+            tools:text="@string/_2_teori_medan_kuantum"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"
@@ -209,7 +209,6 @@
         <TextView
             android:id="@+id/body2"
             style="@style/FontParagraf"
-            android:paddingHorizontal="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
             android:text="@string/m_tmq2"

@@ -30,7 +30,7 @@
         android:id="@+id/title"
         style="@style/tittle"
         android:layout_marginHorizontal="20dp"
-        android:text="@string/_2_garis_waktu_penemuan"
+        android:text="@string/garis_waktu_penemuan"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/arrowBack"

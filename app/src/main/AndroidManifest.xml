@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".addition.LampiranActivity"
+            android:exported="false" />
+        <activity
             android:name=".materi.MateriPositron"
             android:exported="false" />
         <activity

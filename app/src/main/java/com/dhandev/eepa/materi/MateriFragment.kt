@@ -27,7 +27,6 @@ class MateriFragment : Fragment() {
                 activity?.onBackPressed()
             }
             subatomik.setOnClickListener { startActivity(Intent(activity, MateriSubatomik::class.java)) }
-            timeline.setOnClickListener { startActivity(Intent(activity, MateriTimeline::class.java)) }
             TMQ.setOnClickListener {startActivity(Intent(activity, MateriTMQ::class.java))}
             hadron.setOnClickListener { startActivity(Intent(activity, MateriHadron::class.java)) }
             lepton.setOnClickListener { startActivity(Intent(activity, MateriLepton::class.java)) }

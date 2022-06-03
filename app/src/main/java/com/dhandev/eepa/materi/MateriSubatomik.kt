@@ -108,9 +108,17 @@ class MateriSubatomik : AppCompatActivity() {
         val sharedUkuranId = sharedPred.getInt("ukuranBaru", 0)
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
-            binding.body2.setTextAppearance(R.style.FontParagraf)
+            binding.body1.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik1.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik12.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik2.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik22.setTextAppearance(R.style.FontParagraf)
         } else {
-            binding.body2.setTextAppearance(sharedUkuranId)
+            binding.body1.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik1.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik12.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik2.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik22.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

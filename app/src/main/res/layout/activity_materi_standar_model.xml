@@ -194,62 +194,136 @@
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/body1"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_standar"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption1" />
-
-        <TextView
-            android:id="@+id/tv_caption2"
-            android:paddingHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            style="@style/caption"
-            android:text="Tabel cacah partikel elementer pada Model Standar"
-            app:layout_constraintTop_toBottomOf="@id/body1"
-            app:layout_constraintBottom_toTopOf="@id/gambar2"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_marginBottom="20dp"
-            style="@style/gambar"
+        <LinearLayout
+            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption2">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/body3"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/m_standar2"
-            android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gambar2" />
+            app:layout_constraintTop_toBottomOf="@id/tv_caption1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/headline1"
+                style="@style/headline"
+                android:text="A. Perkembangan" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_standar"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_standar" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_standar2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_standar2" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/headline2"
+                style="@style/headline"
+                android:text="B. Partikel di Model Standar" />
+            <TextView
+                android:id="@+id/m_standar3"
+                style="@style/FontParagraf"
+                android:paddingHorizontal="20dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="0dp"
+                android:text="@string/m_standar3" />
+            <TextView
+                android:id="@+id/tv_caption2"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                style="@style/caption"
+                android:text="Tabel cacah partikel elementer pada Model Standar"/>
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/containerQuiz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:visibility="gone"
-            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
-            app:layout_constraintTop_toBottomOf="@id/body3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <ImageView
+                android:id="@+id/gambar2"
+                android:layout_marginBottom="20dp"
+                style="@style/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/m_standar4"
+                style="@style/FontParagraf"
+                android:paddingHorizontal="20dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="0dp"
+                android:text="@string/m_standar4" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_standar5"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_standar5" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_standar6"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_standar6" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_standar7"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_standar7" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_standar8"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_standar8" />
+                </TableRow>
+            </TableLayout>
+            <View
+                style="@style/Divider"
+                android:layout_height="3dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Footnote:"
+                android:textStyle="italic"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+            <TextView
+                android:id="@+id/footnote1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/footnote1"
+                android:textColor="#0044cc"
+                android:layout_marginHorizontal="15dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/btn_prev"
@@ -262,7 +336,7 @@
             android:src="@drawable/ic_baseline_navigate_before_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -275,6 +349,6 @@
             android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

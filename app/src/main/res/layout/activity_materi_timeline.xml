@@ -40,35 +40,11 @@
         android:id="@+id/timeline"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintBottom_toTopOf="@id/sumber"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="24dp">
     </androidx.recyclerview.widget.RecyclerView>
-
-    <ImageButton
-        android:id="@+id/btn_prev"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/rounded_corner"
-        android:backgroundTint="@color/blue_500"
-        android:src="@drawable/ic_baseline_navigate_before_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <ImageButton
-        android:id="@+id/btn_next"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/rounded_corner"
-        android:backgroundTint="@color/blue_500"
-        android:src="@drawable/ic_baseline_navigate_next_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/sumber"

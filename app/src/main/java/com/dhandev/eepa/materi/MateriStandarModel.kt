@@ -110,6 +110,9 @@ class MateriStandarModel : AppCompatActivity() {
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriHadron::class.java))
             }
+            footnote1.setOnClickListener {
+                startActivity(Intent(this@MateriStandarModel, MateriTimeline::class.java))
+            }
         }
     }
 
@@ -158,11 +161,23 @@ class MateriStandarModel : AppCompatActivity() {
         val sharedUkuranId = sharedPred.getInt("ukuranBaru", 0)
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
-            binding.body1.setTextAppearance(R.style.FontParagraf)
-            binding.body3.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar2.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar3.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar4.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar5.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar6.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar7.setTextAppearance(R.style.FontParagraf)
+            binding.mStandar8.setTextAppearance(R.style.FontParagraf)
         } else {
-            binding.body1.setTextAppearance(sharedUkuranId)
-            binding.body3.setTextAppearance(sharedUkuranId)
+            binding.mStandar.setTextAppearance(sharedUkuranId)
+            binding.mStandar2.setTextAppearance(sharedUkuranId)
+            binding.mStandar3.setTextAppearance(sharedUkuranId)
+            binding.mStandar4.setTextAppearance(sharedUkuranId)
+            binding.mStandar5.setTextAppearance(sharedUkuranId)
+            binding.mStandar6.setTextAppearance(sharedUkuranId)
+            binding.mStandar7.setTextAppearance(sharedUkuranId)
+            binding.mStandar8.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

@@ -190,51 +190,81 @@
             android:id="@+id/tv_caption1"
             android:paddingHorizontal="20dp"
             style="@style/caption"
-            android:text="Gambar 1. lintasan pada ruang kabut (cloud chamber)"
+            android:text="@string/m_positron_caption1"
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/body1"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_positron"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
+        <LinearLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption1" />
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_marginVertical="20dp"
-            style="@style/gambar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body1">
-        </ImageView>
+            app:layout_constraintTop_toBottomOf="@id/tv_caption1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/headline1"
+                style="@style/headline"
+                android:text="A. Analisa Gambar" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_positron"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_positron" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_positron2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_positron2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_positron3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_positron3" />
+                </TableRow>
+            </TableLayout>
+            <ImageView
+                android:id="@+id/gambar2"
+                android:layout_marginVertical="20dp"
+                android:layout_height="wrap_content"
+                style="@style/gambar">
+            </ImageView>
 
-        <TextView
-            android:id="@+id/tv_caption2"
-            android:paddingHorizontal="20dp"
-            style="@style/caption"
-            android:text="Gambar 2. Berbagai perkiraan lintasan partikel pada ruang kabut"
-            app:layout_constraintTop_toBottomOf="@id/gambar2"
-            app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_caption2"
+                android:paddingHorizontal="20dp"
+                style="@style/caption"
+                android:text="@string/m_positron_caption2"/>
 
-        <TextView
-            android:id="@+id/body3"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_positron2"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption2" />
+            <TextView
+                android:id="@+id/headline2"
+                style="@style/headline"
+                android:text="B. Antipartikel Pertama" />
+            <TextView
+                android:id="@+id/body3"
+                style="@style/FontParagraf"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/m_positron4"
+                android:lineSpacingMultiplier="1.4"/>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

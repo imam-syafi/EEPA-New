@@ -99,7 +99,6 @@ class MateriPositron : AppCompatActivity() {
             title.isSelected = true
 
 
-            Linkify.addLinks(body1, Linkify.ALL)
 //            body2.movementMethod = BetterLinkMovementMethod.getInstance()
 //            body2.movementMethod = BetterLinkMovementMethod.newInstance().apply {
 //                setOnLinkClickListener { textView, url ->
@@ -173,10 +172,14 @@ class MateriPositron : AppCompatActivity() {
         val sharedUkuranId = sharedPred.getInt("ukuranBaru", 0)
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
-            binding.body1.setTextAppearance(R.style.FontParagraf)
+            binding.mPositron.setTextAppearance(R.style.FontParagraf)
+            binding.mPositron2.setTextAppearance(R.style.FontParagraf)
+            binding.mPositron3.setTextAppearance(R.style.FontParagraf)
             binding.body3.setTextAppearance(R.style.FontParagraf)
         } else {
-            binding.body1.setTextAppearance(sharedUkuranId)
+            binding.mPositron.setTextAppearance(sharedUkuranId)
+            binding.mPositron2.setTextAppearance(sharedUkuranId)
+            binding.mPositron3.setTextAppearance(sharedUkuranId)
             binding.body3.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }

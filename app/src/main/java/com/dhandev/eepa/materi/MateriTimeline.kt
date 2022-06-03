@@ -30,13 +30,6 @@ class MateriTimeline : AppCompatActivity() {
 
         binding.apply {
             arrowBack.setOnClickListener { onBackPressed() }
-            btnNext.setOnClickListener {
-                startActivity(Intent(this@MateriTimeline, MateriTMQ::class.java))
-            }
-
-            btnPrev.setOnClickListener {
-                startActivity(Intent(this@MateriTimeline, MateriSubatomik::class.java))
-            }
             Linkify.addLinks(sumber, Linkify.ALL)
             sumber.movementMethod = BetterLinkMovementMethod.newInstance().apply {
                 setOnLinkClickListener { textView, url ->

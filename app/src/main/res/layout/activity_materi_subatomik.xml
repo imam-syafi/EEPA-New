@@ -188,7 +188,7 @@
             <TextView
                 android:id="@+id/headline1"
                 style="@style/headline"
-                android:text="Definisi" />
+                android:text="A. Definisi" />
 
             <TextView
                 android:id="@+id/body1"
@@ -198,7 +198,7 @@
             <TextView
                 android:id="@+id/headline2"
                 style="@style/headline"
-                android:text="Pembagian berdasarkan susunan partikel:" />
+                android:text="B. Pembagian berdasarkan susunan partikel:" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -228,7 +228,7 @@
             <TextView
                 android:id="@+id/headline3"
                 style="@style/headline"
-                android:text="Pembagian berdasarkan spin partikel:" />
+                android:text="C. Pembagian berdasarkan spin partikel:" />
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

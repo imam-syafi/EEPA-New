@@ -194,66 +194,132 @@
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/body1"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_hadron"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption1" />
-
-        <TextView
-            android:id="@+id/body2"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_hadron2"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body1" />
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_marginVertical="20dp"
-            style="@style/gambar"
-            android:src="@drawable/muatan_proton"
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:layout_marginHorizontal="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body2">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/body3"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_hadron3"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gambar2" />
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/containerQuiz"
+        <LinearLayout
+            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:visibility="gone"
-            android:name="com.dhandev.eepa.materi.MiniQuizFragment"
-            app:layout_constraintTop_toBottomOf="@id/body3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_caption1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/headline1"
+                style="@style/headline"
+                android:text="A. Definisi" />
+
+            <TextView
+                android:id="@+id/body1"
+                style="@style/FontParagraf"
+                android:text="@string/m_hadron_"/>
+            <TextView
+                android:id="@+id/headline2"
+                style="@style/headline"
+                android:text="B. Baryon" />
+            <TextView
+                android:id="@+id/m_hadron_"
+                style="@style/FontParagraf"
+                android:text="@string/m_hadron_1"/>
+            <TextView
+                android:id="@+id/subheadline3"
+                style="@style/headline"
+                android:background="@color/greenBright"
+                android:text="Kuark" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_kuark_1"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_kuark_1" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_kuark_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_kuark_2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_kuark_3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_kuark_3" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/body_bullet"
+                        android:text=""/>
+                    <ImageView
+                        android:id="@+id/m_hadron_kuark_4"
+                        style="@style/gambar"
+                        android:src="@drawable/muatan_proton"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="250dp"/>
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_kuark_5"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_kuark_4" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:id="@+id/headline3"
+                style="@style/headline"
+                android:text="C. Meson" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_hadron_meson_1"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_meson" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_hadron_meson_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_meson_2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_hadron_meson_3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_meson_3" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/btn_prev"
@@ -266,7 +332,7 @@
             android:src="@drawable/ic_baseline_navigate_before_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -279,6 +345,6 @@
             android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/containerQuiz"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -103,9 +103,6 @@ class MateriTMQ : AppCompatActivity() {
             title.isSelected = true
 
 
-
-            tvCaption1.text = getString(R.string.m_tmq_caption)
-
             Linkify.addLinks(body1, Linkify.ALL)
 //            body2.movementMethod = BetterLinkMovementMethod.getInstance()
 //            body2.movementMethod = BetterLinkMovementMethod.newInstance().apply {

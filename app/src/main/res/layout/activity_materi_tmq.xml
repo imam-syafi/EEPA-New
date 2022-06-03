@@ -190,7 +190,7 @@
             android:id="@+id/tv_caption1"
             android:paddingHorizontal="20dp"
             style="@style/caption"
-            tools:text="Gambar Large Hadron Collider"
+            android:text="@string/m_tmq_caption"
             app:layout_constraintTop_toBottomOf="@id/gambar"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -205,7 +205,7 @@
             <TextView
                 android:id="@+id/headline1"
                 style="@style/headline"
-                android:text="Definisi" />
+                android:text="A. Definisi" />
 
             <TextView
                 android:id="@+id/body1"
@@ -214,7 +214,7 @@
             <TextView
                 android:id="@+id/headline2"
                 style="@style/headline"
-                android:text="Partikel berdasarkan massa diam:" />
+                android:text="B. Partikel berdasarkan massa diam:" />
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -243,7 +243,7 @@
             <TextView
                 android:id="@+id/headline3"
                 style="@style/headline"
-                android:text="Model-model dari QFT:" />
+                android:text="C. Model-model dari QFT:" />
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

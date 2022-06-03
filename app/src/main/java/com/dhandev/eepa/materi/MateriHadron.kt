@@ -166,12 +166,24 @@ class MateriHadron : AppCompatActivity() {
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
-            binding.body2.setTextAppearance(R.style.FontParagraf)
-            binding.body3.setTextAppearance(R.style.FontParagraf)
+            binding.mHadron.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronKuark1.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronKuark2.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronKuark3.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronKuark5.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronMeson1.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronMeson2.setTextAppearance(R.style.FontParagraf)
+            binding.mHadronMeson3.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
-            binding.body2.setTextAppearance(sharedUkuranId)
-            binding.body3.setTextAppearance(sharedUkuranId)
+            binding.mHadron.setTextAppearance(sharedUkuranId)
+            binding.mHadronKuark1.setTextAppearance(sharedUkuranId)
+            binding.mHadronKuark2.setTextAppearance(sharedUkuranId)
+            binding.mHadronKuark3.setTextAppearance(sharedUkuranId)
+            binding.mHadronKuark5.setTextAppearance(sharedUkuranId)
+            binding.mHadronMeson1.setTextAppearance(sharedUkuranId)
+            binding.mHadronMeson2.setTextAppearance(sharedUkuranId)
+            binding.mHadronMeson3.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

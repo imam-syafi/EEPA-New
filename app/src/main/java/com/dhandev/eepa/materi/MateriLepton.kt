@@ -21,10 +21,6 @@ class MateriLepton : AppCompatActivity() {
     var URL: String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
     var URL2 = "https://docs.google.com/uc?id=1RhYvt9iXmpw5fy6ZIdBTfdHn_zY1gJ3b"
     var page = 1
-    var desc =
-        "Large Hadron Collider (Penubruk Hadron Raksasa) adalah pemercepat partikel berenergi tinggi terbesar di dunia, fasilitas percobaan paling kompleks yang pernah dibangun, dan mesin tunggal terbesar di dunia."
-    var desc2 =
-        "Fasilitas-fasilitas yang ada di CERN terdiri dari LHC (Large Hadron Collider), SPS (Super Proton Synchrotron), dan PS (Proton Synchrotron)"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,6 +95,7 @@ class MateriLepton : AppCompatActivity() {
 
             glideImage.load(this@MateriLepton, URL2, gambar2)
 
+            val desc2 = tvCaption2.text.toString()
             gambar2.setOnClickListener {
                 openImageViewer(URL2, desc2)
             }
@@ -161,10 +158,14 @@ class MateriLepton : AppCompatActivity() {
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
-            binding.body3.setTextAppearance(R.style.FontParagraf)
+            binding.mAntipartikel.setTextAppearance(R.style.FontParagraf)
+            binding.mAntipartikel2.setTextAppearance(R.style.FontParagraf)
+            binding.mAntipartikel3.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
-            binding.body3.setTextAppearance(sharedUkuranId)
+            binding.mAntipartikel.setTextAppearance(sharedUkuranId)
+            binding.mAntipartikel2.setTextAppearance(sharedUkuranId)
+            binding.mAntipartikel3.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

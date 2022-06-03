@@ -177,56 +177,83 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
-        <TextView
-            android:id="@+id/body1"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/m_lepton"
-            android:lineSpacingMultiplier="1.4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/aturTeks" />
-
-        <TextView
-            android:id="@+id/tv_caption2"
-            android:paddingHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            style="@style/caption"
-            android:text="Tabel Partikel Lepton"
-            app:layout_constraintTop_toBottomOf="@id/body1"
-            app:layout_constraintBottom_toTopOf="@id/gambar2"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <ImageView
-            android:id="@+id/gambar2"
-            android:layout_marginBottom="20dp"
-            style="@style/gambar"
+        <LinearLayout
+            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption2">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/body3"
-            style="@style/FontParagraf"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/m_lepton2"
-            android:lineSpacingMultiplier="1.4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gambar2" />
+            app:layout_constraintTop_toBottomOf="@id/aturTeks"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/headline1"
+                style="@style/headline"
+                android:text="A. Definisi" />
+            <TextView
+                android:id="@+id/body1"
+                style="@style/FontParagraf"
+                android:text="@string/m_lepton"/>
+            <TextView
+                android:id="@+id/tv_caption2"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                style="@style/caption"
+                android:text="Tabel Partikel Lepton"
+                app:layout_constraintTop_toBottomOf="@id/body"
+                app:layout_constraintBottom_toTopOf="@id/gambar2"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+                android:id="@+id/gambar2"
+                android:layout_marginBottom="20dp"
+                style="@style/gambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ImageView>
+            <TextView
+                android:id="@+id/headline2"
+                style="@style/headline"
+                android:text="B. Antipartikel" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_antipartikel"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_lepton2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_antipartikel2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_lepton2_2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_antipartikel3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_lepton2_3" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/penemuan_positron"
             style="@style/ButtonGeneral"
             app:backgroundTint="@color/biru_seken"
             android:text="@string/penemuan_positron"
-            app:layout_constraintTop_toBottomOf="@id/body3"
+            app:layout_constraintTop_toBottomOf="@id/body"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

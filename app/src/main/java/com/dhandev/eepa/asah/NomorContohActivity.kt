@@ -29,9 +29,11 @@ class NomorContohActivity : AppCompatActivity() {
             }
             btnShow.setOnClickListener {
                 if (table.isVisible){
+                    btnShow.text = getString(R.string.tampilkan_jawaban)
                     table.visibility = View.GONE
                     cleanAnswer()
                 } else {
+                    btnShow.text = getString(R.string.sembunyikan_jawaban)
                     table.visibility = View.VISIBLE
                     when(page){
                         1 -> pilihan2.setTextColor(ContextCompat.getColor(this@NomorContohActivity, R.color.greenBright))

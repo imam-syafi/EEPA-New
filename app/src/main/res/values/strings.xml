@@ -164,14 +164,14 @@
     <string name="m_hadron_kuark_3">Agar lebih jelas, ambil contoh kuark pada proton untuk menghitung muatan proton, di mana: </string>
     <string name="m_hadron_kuark_4">Hasilnya <b><font color="#0BDA51">sesuai dengan muatan proton</font></b> yaitu +<i>e</i> = 1.602 x 10⁻¹⁹ C.</string>
     <string name="m_hadron_meson">Partikel hadron ini tersusun dari <b><font color="#0BDA51">dua kuark saja</font></b> (satu kuark dan satu antikuark).\nMisal: pion (<i>π</i>+) tersusun dari kuark up dan antikuark down.</string>
-    <string name="m_hadron_meson_2"><b><font color="#0BDA51">Antipartikel</font></b> dari suatu meson adalah kuark dan antikuarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar</font></b>.\nMisal: antipion (<i>π</i>-) tersusun dari kuark down dan antikuark up.</string>
+    <string name="m_hadron_meson_2"><b><font color="#0BDA51">Antipartikel</font></b> dari suatu meson adalah kuark dan antikuarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar (partikel menjadi antipartikel, dan sebaliknya)</font></b>.\nMisal: antipion (<i>π</i>-) tersusun dari kuark down dan antikuark up.</string>
     <string name="m_hadron_meson_3">Meson menjadi <b><font color="#FF160C">sangat tidak stabil</font></b>, karena tersusun dari sebuah partikel dan antipartikel.</string>
     <string name="m_hadron_footnote1">(1) Partikel bebas</string>
     <string name="m_hadron_footnote2">(2) Percobaan tetes minyak oleh Millikan</string>
 
     <string name="m_lepton">Lepton adalah partikel elementer dengan <b><font color="#0BDA51">spin ½</font></b> dan <b><font color="#FF160C">tidak mengalami gaya kuat</font></b> seperti halnya hadron.\nLepton ada dua jenis, yaitu <b><font color="#0BDA51">bermuatan dan tidak bermuatan</font></b>. Data lengkapnya dapat dilihat pada tabel.</string>
     <string name="m_lepton2"><b><font color="#0BDA51">Setiap partikel memiliki antipartikel</font></b>. Antipartikel sangat mirip dengan partikel, hanya saja dengan <b><font color="#0BDA51">muatan yang berlawanan</font></b>.</string>
-    <string name="m_lepton2_2">Misal: elektron, antipartikelnya adalah <b><font color="#0BDA51">antielektron</font></b> atau yang biasa disebut dengan <b><font color="#0BDA51">positron</font></b>.</string>
+    <string name="m_lepton2_2">Misal: elektron, antipartikelnya adalah <b><font color="#0BDA51">antielektron</font></b> atau yang biasa disebut dengan <b><font color="#0BDA51">positron</font></b><font color="#0044cc">⁽¹⁾</font>.</string>
     <string name="m_lepton2_3">Sehingga jika dijumlahkan, keseluruhan cacah lepton adalah <b><font color="#0BDA51">12 partikel</font></b>.</string>
 
     <string name="m_standar">Pengembangan model standar dilakukan <b><font color="#0BDA51">secara bertahap</font></b> selama paruh kedua abad ke-20 yang dilakukan oleh ilmuwan di seluruh dunia.</string>
@@ -250,7 +250,7 @@
     <string name="opsi_soal_3_2">Antikuark up dan kuark charm</string>
     <string name="opsi_soal_3_3">Kuark Strange dan antikuark down</string>
     <string name="opsi_soal_3_4">Kuark down dan antikuark strange</string>
-    <string name="solusi_contoh_3">Kaon merupakan meson. Antipartikel dari suatu meson adalah kuark dan antikuarknya itu sendiri, namun saling tertukar.</string>
+    <string name="solusi_contoh_3">Kaon merupakan meson. Antipartikel dari suatu meson adalah kuark dan antikuarknya itu sendiri, namun saling tertukar (partikel menjadi antipartikel, dan sebaliknya).</string>
     <string name="solusi_contoh_3_2">Pilihan a salah, karena sama saja dengan kuark pada kaon, namun urutan penulisannya dibalik.</string>
     <string name="solusi_contoh_3_3">Pilihan b salah, karena kaon tidak memiliki kuark up maupun charm</string>
     <string name="solusi_contoh_3_4">Pilihan c benar, karena kuark saling bertukar. Antikuark strange menjadi kuark strange dan kuark down menjadi antikuark down.</string>
@@ -275,6 +275,8 @@
     <string name="solusi_contoh_5_2">Pilihan b salah, karena malah menjelaskan partikel gluon.</string>
     <string name="solusi_contoh_5_3">Pilihan c salah, karena masih banyak partikel hipotesis yang belum terbukti secara eksperimen. Misal: dark matter dan graviton.</string>
     <string name="solusi_contoh_5_4">Pilihan d benar, setiap benda maupun partikel memiliki massa, massa ini berasal dari adanya boson higgs. Oleh karena itu, partikel ini dikenal juga dengan partikel tuhan.</string>
+    <string name="m_lepton_footnote_1">(1) Penemuan Positron</string>
+    <string name="sembunyikan_jawaban">Sembunyikan Jawaban</string>
 
     <!--    search-->
     <string-array name="data_name">

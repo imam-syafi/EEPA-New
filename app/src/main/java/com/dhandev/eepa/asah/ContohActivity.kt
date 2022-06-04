@@ -17,6 +17,13 @@ class ContohActivity : AppCompatActivity() {
         sharedPred = this.getSharedPreferences("Contoh Soal", MODE_PRIVATE)
 
         binding.apply {
+
+            cth1.text = "1. " + getString(R.string.contoh_soal_1)
+            cth2.text = "2. " + getString(R.string.contoh_soal_2)
+            cth3.text = "3. " + getString(R.string.contoh_soal_3)
+            cth4.text = "4. " + getString(R.string.contoh_soal_4)
+            cth5.text = "5. " + getString(R.string.contoh_soal_5)
+
             val Editor:SharedPreferences.Editor = sharedPred.edit()
             arrowBack.setOnClickListener {
                 onBackPressed()

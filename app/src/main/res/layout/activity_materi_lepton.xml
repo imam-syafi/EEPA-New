@@ -246,16 +246,19 @@
                         android:text="@string/m_lepton2_3" />
                 </TableRow>
             </TableLayout>
+            <View
+                style="@style/Divider"
+                android:layout_height="3dp"/>
+            <TextView
+                style="@style/footnote"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/nunito"/>
+            <TextView
+                android:id="@+id/footnote1"
+                android:text="@string/m_lepton_footnote_1"
+                android:layout_marginHorizontal="15dp"
+                style="@style/footnoteContent"/>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/penemuan_positron"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:text="@string/penemuan_positron"
-            app:layout_constraintTop_toBottomOf="@id/body"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
 
         <ImageButton
             android:id="@+id/btn_prev"
@@ -268,7 +271,7 @@
             android:src="@drawable/ic_baseline_navigate_before_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/penemuan_positron"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
 
         <ImageButton
             android:id="@+id/btn_next"
@@ -281,6 +284,6 @@
             android:src="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/penemuan_positron"/>
+            app:layout_constraintTop_toBottomOf="@id/body"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -46,6 +46,7 @@
         android:text="@string/silahkan_pilih_nomor_untuk_melihat_soal_dan_penyelesaiannya"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
+        android:justificationMode="inter_word"
         android:fontFamily="@font/nunito_sans_bold"
         android:textColor="@color/abu"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
@@ -56,31 +57,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/headline"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
+        <Button
             android:id="@+id/cth1"
-            style="@style/btnContohSoal"
-            android:text="1"/>
-        <TextView
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:lines="1"
+            android:ellipsize="marquee"/>
+        <Button
             android:id="@+id/cth2"
-            style="@style/btnContohSoal"
-            android:text="2"/>
-        <TextView
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:lines="1"
+            android:ellipsize="marquee"/>
+        <Button
             android:id="@+id/cth3"
-            style="@style/btnContohSoal"
-            android:text="3"/>
-        <TextView
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:lines="1"
+            android:ellipsize="marquee"/>
+        <Button
             android:id="@+id/cth4"
-            style="@style/btnContohSoal"
-            android:text="4"/>
-        <TextView
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:lines="1"
+            android:ellipsize="marquee"/>
+        <Button
             android:id="@+id/cth5"
-            style="@style/btnContohSoal"
-            android:text="5"/>
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:lines="1"
+            android:ellipsize="marquee"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

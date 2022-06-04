@@ -100,7 +100,8 @@ class MateriLepton : AppCompatActivity() {
                 openImageViewer(URL2, desc2)
             }
 
-            penemuanPositron.setOnClickListener {
+            mAntipartikel2.setOnClickListener { focusOnBottom() }
+            footnote1.setOnClickListener {
                 startActivity(Intent(this@MateriLepton, MateriPositron::class.java))
             }
             btnNext.setOnClickListener {
@@ -112,6 +113,12 @@ class MateriLepton : AppCompatActivity() {
             }
         }
     }
+    private fun focusOnBottom() {
+        binding.latar.isFocusableInTouchMode = true
+        binding.latar.smoothScrollTo(0, binding.latar.height)
+        binding.latar.fullScroll(View.FOCUS_DOWN)
+    }
+
     private fun openImageViewer(url : String, desc : String) {
         val Editor:SharedPreferences.Editor = sharedPred.edit()
         Editor.putString("url", url)

@@ -17,24 +17,32 @@ class ContohActivity : AppCompatActivity() {
         sharedPred = this.getSharedPreferences("Contoh Soal", MODE_PRIVATE)
 
         binding.apply {
+            val Editor:SharedPreferences.Editor = sharedPred.edit()
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
             cth1.setOnClickListener {
-                val Editor:SharedPreferences.Editor = sharedPred.edit()
                 Editor.putInt("nomor", 1)
                 Editor.apply()
                 startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
             }
             cth2.setOnClickListener {
-                val Editor:SharedPreferences.Editor = sharedPred.edit()
                 Editor.putInt("nomor", 2)
                 Editor.apply()
                 startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
             }
             cth3.setOnClickListener {
-                val Editor:SharedPreferences.Editor = sharedPred.edit()
                 Editor.putInt("nomor", 3)
+                Editor.apply()
+                startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
+            }
+            cth4.setOnClickListener {
+                Editor.putInt("nomor", 4)
+                Editor.apply()
+                startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
+            }
+            cth5.setOnClickListener {
+                Editor.putInt("nomor", 5)
                 Editor.apply()
                 startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
             }

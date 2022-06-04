@@ -268,6 +268,18 @@
                         android:text="@string/m_tmq_2_2" />
                 </TableRow>
             </TableLayout>
+            <View
+                style="@style/Divider"
+                android:layout_height="3dp"/>
+            <TextView
+                style="@style/footnote"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/nunito"/>
+            <TextView
+                android:id="@+id/footnote1"
+                android:text="@string/m_tmq_footnote1"
+                android:layout_marginHorizontal="15dp"
+                style="@style/footnoteContent"/>
         </LinearLayout>
 
         <ImageButton

@@ -303,7 +303,7 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="10dp"
             android:fontFamily="@font/nunito_sans_black"
-            android:text="@string/other_features"
+            android:text="@string/other_menus"
             android:textColor="@color/abu"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"

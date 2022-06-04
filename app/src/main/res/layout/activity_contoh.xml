@@ -76,50 +76,11 @@
         <TextView
             android:id="@+id/cth4"
             style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
             android:text="4"/>
         <TextView
             android:id="@+id/cth5"
             style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
             android:text="5"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/row1"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:id="@+id/cth6"
-            style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
-            android:text="6"/>
-        <TextView
-            android:id="@+id/cth7"
-            style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
-            android:text="7"/>
-        <TextView
-            android:id="@+id/cth8"
-            style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
-            android:text="8"/>
-        <TextView
-            android:id="@+id/cth9"
-            style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
-            android:text="9"/>
-        <TextView
-            android:id="@+id/cth10"
-            style="@style/btnContohSoal"
-            android:backgroundTint="@color/abu_terang"
-            android:paddingHorizontal="12dp"
-            android:text="10"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

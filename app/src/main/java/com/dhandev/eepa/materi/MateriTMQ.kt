@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
+import com.dhandev.eepa.helper.customTab
 import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 
@@ -115,8 +116,14 @@ class MateriTMQ : AppCompatActivity() {
 //                    true
 //                }
 //            }
-
+            mSubatomik2.setOnClickListener { focusOnBottom() }
+            footnote1.setOnClickListener { customTab.open(this@MateriTMQ, "https://home.cern/science/physics/higgs-boson") }
         }
+    }
+    private fun focusOnBottom() {
+        binding.latar.isFocusableInTouchMode = true
+        binding.latar.smoothScrollTo(0, binding.latar.height)
+        binding.latar.fullScroll(View.FOCUS_DOWN)
     }
 
     private fun openImageViewer(url : String, desc : String) {

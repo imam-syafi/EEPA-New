@@ -319,6 +319,23 @@
                         android:text="@string/m_hadron_meson_3" />
                 </TableRow>
             </TableLayout>
+            <View
+                style="@style/Divider"
+                android:layout_height="3dp"/>
+            <TextView
+               style="@style/footnote"
+                android:layout_marginHorizontal="15dp"
+                android:fontFamily="@font/nunito"/>
+            <TextView
+                android:id="@+id/footnote1"
+                android:text="@string/m_hadron_footnote1"
+                android:layout_marginHorizontal="15dp"
+                style="@style/footnoteContent"/>
+            <TextView
+                android:id="@+id/footnote2"
+                android:text="@string/m_hadron_footnote2"
+                android:layout_marginHorizontal="15dp"
+                style="@style/footnoteContent"/>
         </LinearLayout>
 
         <ImageButton

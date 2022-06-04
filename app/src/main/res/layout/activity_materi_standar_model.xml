@@ -307,22 +307,14 @@
                 style="@style/Divider"
                 android:layout_height="3dp"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Footnote:"
-                android:textStyle="italic"
+                style="@style/footnote"
                 android:layout_marginHorizontal="15dp"
-                android:textSize="16sp"
                 android:fontFamily="@font/nunito"/>
             <TextView
                 android:id="@+id/footnote1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/footnote1"
-                android:textColor="#0044cc"
+                android:text="@string/m_standar_footnote1"
                 android:layout_marginHorizontal="15dp"
-                android:textSize="16sp"
-                android:fontFamily="@font/nunito"/>
+                style="@style/footnoteContent"/>
         </LinearLayout>
 
         <ImageButton

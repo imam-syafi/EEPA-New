@@ -2,12 +2,15 @@ package com.dhandev.eepa.asah
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
+import java.text.DecimalFormat
 
 class HasilLatihanActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHasilLatihanBinding
@@ -37,6 +40,11 @@ class HasilLatihanActivity : AppCompatActivity() {
             soalKedelapan.text = "8. "+ soal(7)
             soalKesembilan.text = "9. "+ soal(8)
             soalKesepuluh.text = "10. "+ soal(9)
+            soalKesebelas.text = "11. "+ soal(10)
+            soalKeduabelas.text = "12. "+ soal(11)
+            soalKetigabelas.text = "13. "+ soal(12)
+            soalKeempatbelas.text = "14. "+ soal(13)
+            soalKelimabelas.text = "15. "+ soal(14)
 
             val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
 //            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
@@ -50,19 +58,35 @@ class HasilLatihanActivity : AppCompatActivity() {
             jawabanKedelapan.style(jawaban(7))
             jawabanKesembilan.style(jawaban(8))
             jawabanKesepuluh.style(jawaban(9))
+            jawabanKesebelas.style(jawaban(10))
+            jawabanKeduabelas.style(jawaban(11))
+            jawabanKetigabelas.style(jawaban(12))
+            jawabanKeempatbelas.style(jawaban(13))
+            jawabanKelimabelas.style(jawaban(14))
 
             fireworks.setAnimation("fireworks.json")
             fireworks.playAnimation()
 
-            skorTotal.text = skor.toString()
-            when(skor){
-                in 90..100 -> kataKata.text = "Luar biasa, pertahankan! 😍"
-                in 70..80 -> kataKata.text = "Hebat, tingkatkan! ✨"
-                in 60..70 -> kataKata.text = "Cukup baik, belajar lagi! 👍"
-                else -> kataKata.text = "Kurang, belajar lebih giat lagi ya! 👌"
-            }
-            soalKesepuluh.setOnClickListener {
-                Toast.makeText(this@HasilLatihanActivity, "Bisa ditekan kok! Mantap", Toast.LENGTH_SHORT).show()
+            val final : Double = (skor.toDouble()/150.0)*100.0
+            val df : DecimalFormat = DecimalFormat("#.##")
+            skorTotal.text = df.format(final).toString()
+            when(final){
+                in 85.0..100.0 -> {
+                    skorTotal.setTextColor(Color.BLUE)
+                    kataKata.text = "Luar biasa, pertahankan! 😍"
+                }
+                in 70.0..84.9 -> {
+                    skorTotal.setTextColor(resources.getColor(R.color.right))
+                    kataKata.text = "Hebat, tingkatkan! ✨"
+                }
+                in 55.0..69.9 -> {
+                    skorTotal.setTextColor(resources.getColor(R.color.yellow))
+                    kataKata.text = "Cukup baik, belajar lagi! 👍"
+                }
+                else -> {
+                    skorTotal.setTextColor(Color.RED)
+                    kataKata.text = "Kurang, belajar lebih giat lagi ya! 👌"
+                }
             }
 
             val Editor:SharedPreferences.Editor = sharedPred.edit()
@@ -86,16 +110,21 @@ class HasilLatihanActivity : AppCompatActivity() {
         val urutanSoal = intent.getIntegerArrayListExtra("urutanSoal")
         var isiSoal= "Ini soal"
         when(urutanSoal?.get(nomor)){
-            1 -> isiSoal = "Ini soal pertama"
-            2 -> isiSoal = "Ini soal kedua"
-            3 -> isiSoal = "Ini soal ketiga"
-            4 -> isiSoal = "Ini soal keempat"
-            5 -> isiSoal = "Ini soal kelima"
-            6 -> isiSoal = "Ini soal keenam"
-            7 -> isiSoal = "Ini soal ketujuh"
-            8 -> isiSoal = "Ini soal kedelapan"
-            9 -> isiSoal = "Ini soal kesembilan"
-            10 -> isiSoal = "Ini soal kesepuluh"
+            1 -> isiSoal = getString(R.string.soal_1)
+            2 -> isiSoal = getString(R.string.soal_2)
+            3 -> isiSoal = getString(R.string.soal_3)
+            4 -> isiSoal = getString(R.string.soal_4)
+            5 -> isiSoal = getString(R.string.soal_5)
+            6 -> isiSoal = getString(R.string.soal_6)
+            7 -> isiSoal = getString(R.string.soal_7)
+            8 -> isiSoal = getString(R.string.soal_8)
+            9 -> isiSoal = getString(R.string.soal_9)
+            10 -> isiSoal = getString(R.string.soal_10)
+            11 -> isiSoal = getString(R.string.soal_11)
+            12 -> isiSoal = getString(R.string.soal_12)
+            13 -> isiSoal = getString(R.string.soal_13)
+            14 -> isiSoal = getString(R.string.soal_14)
+            15 -> isiSoal = getString(R.string.soal_15)
             99 -> isiSoal = "Soal belum diakses"
         }
         return isiSoal

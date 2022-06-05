@@ -17,4 +17,5 @@
     <color name="greenBright">#46D754</color>
     <color name="right">#388E3C</color>
     <color name="wrong">#D32F2F</color>
+    <color name="yellow">#FFA000</color>
 </resources>

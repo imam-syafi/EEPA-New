@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityLatihanBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.text.DecimalFormat
 
 class LatihanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLatihanBinding
@@ -22,11 +23,13 @@ class LatihanActivity : AppCompatActivity() {
         sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
 
         val latest = sharedPred.getInt("latestScore", 0)
+        val final : Double = (latest.toDouble()/150.0)*100.0
+        val df : DecimalFormat = DecimalFormat("#.##")
         binding.apply {
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
-            lastScore.text = "Skor terakhir : $latest"
+            lastScore.text = "Skor terakhir : ${df.format(final)}"
             btnMulai.setOnClickListener {
                 startActivity(Intent(this@LatihanActivity, MulaiLatihanActivity::class.java))
                 finish()

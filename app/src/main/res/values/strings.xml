@@ -125,7 +125,7 @@
     <string name="skorAkhir">Skor Akhir:\n<b>%2$d</b></string>
     <string name="petunjuk_1"><b>Berdoa</b> sebelum mengerjakan.</string>
     <string name="petunjuk_2">Total ada <b>10 soal</b> bertipe pilihan ganda.</string>
-    <string name="petunjuk_3">Batas durasi pengerjaan <b>dapat Anda sesuaikan</b> melalui tombol <b>timer</b>.</string>
+    <string name="petunjuk_3">Batas durasi pengerjaan <b>dapat Anda sesuaikan</b> melalui tombol <b>timer hijau</b>.</string>
     <string name="petunjuk_4">Anda <b>tidak bisa</b> melompati soal maupun kembali ke soal sebelumnya.</string>
     <string name="petunjuk_5">Tekan tombol <b>lanjutkan</b> untuk menyimpan jawaban dan melanjutkan ke soal berikutnya.</string>
     <string name="petunjuk_6">Jika Anda sudah siap, silahkan tekan tombol <b>mulai</b> di bawah!</string>
@@ -277,6 +277,23 @@
     <string name="solusi_contoh_5_4">Pilihan d benar, setiap benda maupun partikel memiliki massa, massa ini berasal dari adanya boson higgs. Oleh karena itu, partikel ini dikenal juga dengan partikel tuhan.</string>
     <string name="m_lepton_footnote_1">(1) Penemuan Positron</string>
     <string name="sembunyikan_jawaban">Sembunyikan Jawaban</string>
+
+    <string name="soal_15">Berikut ini yang termasuk kelemahan Model Standar adalah?</string>
+    <string name="soal_14">Rasa (flavor) kuark terdiri dari?</string>
+    <string name="soal_13">Partikel yang disebut juga sebagai <b>partikel</b> tuhan adalah?</string>
+    <string name="soal_12">Partikel dengan spin ½ dan tidak mengalami gaya kuat disebut?</string>
+    <string name="soal_11">Berikut ini yang termasuk lepton <b>bermuatan</b> dan <b>tidak bermuatan</b> adalah?</string>
+    <string name="soal_10">Meson sangat <b>tidak</b> stabil karena?</string>
+    <string name="soal_9">Partikel yang tersusun dari tiga kuark disebut sebagai?</string>
+    <string name="soal_8">Gluon berperan sebagai?</string>
+    <string name="soal_7">Model QFT (Quantum Field Theory) yang mampu menjelaskan gaya elektromagnetik, kuat dan lemah adalah?</string>
+    <string name="soal_6">Partikel yang massa diamnya <b>tidak</b> nol disebut dengan?</string>
+    <string name="soal_5">Positron ditemukan secara tidak sengaja melalui eksperimen apa?</string>
+    <string name="soal_4">Partikel elementer pertama yang berhasil ditemukan adalah?</string>
+    <string name="soal_3">Graviton termasuk boson karena?</string>
+    <string name="soal_2">Berdasarkan <b>spin</b>, partikel subatomik dikelompokkan menjadi dua, yaitu?</string>
+    <string name="soal_1">Berdasarkan <b>susunannya</b>, partikel subatomik dikelompokkan menjadi dua, yaitu?</string>
+
 
     <!--    search-->
     <string-array name="data_name">

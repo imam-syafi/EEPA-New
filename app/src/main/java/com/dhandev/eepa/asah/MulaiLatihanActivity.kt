@@ -2,11 +2,13 @@ package com.dhandev.eepa.asah
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.airbnb.paris.R2.id.time
 import com.dhandev.eepa.R
@@ -20,12 +22,12 @@ class MulaiLatihanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMulaiLatihanBinding
     private lateinit var sharedPred : SharedPreferences
 
-    var mutableList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    var mutableList = mutableListOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
     var listHasil = mutableListOf<Int>()
     var listJawaban = mutableListOf<Int>()
     var skor = 0
     var nomorSoal = 2
-    var soal = Random.nextInt(1,11)
+    var soal = Random.nextInt(1,16)
     var answer = 0
     lateinit var countdown_timer: CountDownTimer
     var time_in_milli_seconds = 0L
@@ -87,9 +89,19 @@ class MulaiLatihanActivity : AppCompatActivity() {
         listJawaban.add(3)
         listJawaban.add(3)
         listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
+        listJawaban.add(3)
     }
 
     private fun defaultListHasil() {
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
+        listHasil.add(99)
         listHasil.add(99)
         listHasil.add(99)
         listHasil.add(99)
@@ -117,7 +129,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
             mutableList.remove(soal)
 //            binding.soalLatihan.text = mutableList.toString()
         } else if (!mutableList.contains(soal)){
-            randomize(Random.nextInt(1,11))
+            randomize(Random.nextInt(1,16))
         } else if (mutableList.isEmpty()){
             Toast.makeText(this, "Sudah nomor terakhir", Toast.LENGTH_SHORT).show()
         }
@@ -139,17 +151,147 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 8 -> SoalKedelapan()
                 9 -> SoalKesembilan()
                 10 -> SoalKesepuluh()
+                11 -> SoalKesebelas()
+                12 -> SoalKeduabelas()
+                13 -> SoalKetigabelas()
+                14 -> SoalKeempatbelas()
+                15 -> SoalKelimabelas()
 
+            }
+        }
+    }
+
+    private fun SoalKelimabelas() {
+        binding.apply {
+            soalLatihan.text = getString(R.string.soal_15)
+            opsi1.text = "Hanya mampu menjelaskan gaya gravitasi"
+            opsi2.text = "Belum mampu menjelaskan gaya gravitasi"
+            opsi3.text = "Boson Higgs belum terbukti secara eksperimen"
+            opsi4.text = "Hanya teori saja, tanpa ada bukti eksperimen"
+
+            listHasil.add(15)
+            btnNext.setOnClickListener {
+                if (opsi2.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
+            }
+        }
+    }
+
+    private fun SoalKeempatbelas() {
+        binding.apply {
+            soalLatihan.text = getString(R.string.soal_14)
+            opsi1.text = "Up, Down, Bottom, Top, Strange dan Charm"
+            opsi2.text = "Elektron, Elektron Neutrino, Muon, Muon Neutrino, Tau dan Tau Neutrino"
+            opsi3.text = "Up, Down, Bottom, Elektron, Muon, dan Tau"
+            opsi4.text = "Proton, Neutron, Pion, dan Kaon"
+
+            listHasil.add(14)
+            btnNext.setOnClickListener {
+                if (opsi1.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
+            }
+        }
+    }
+
+    private fun SoalKetigabelas() {
+        binding.apply {
+            soalLatihan.text = getString(R.string.soal_13)
+            opsi1.text = "Boson W⁺ dan W⁻"
+            opsi2.text = "Boson Z⁰"
+            opsi3.text = "Boson Higgs"
+            opsi4.text = "Gluon"
+
+            listHasil.add(13)
+            btnNext.setOnClickListener {
+                if (opsi3.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
+            }
+        }
+    }
+
+    private fun SoalKeduabelas() {
+        binding.apply {
+            soalLatihan.text = getString(R.string.soal_12)
+            opsi1.text = "Hadron"
+            opsi2.text = "Lepton"
+            opsi3.text = "Baryon"
+            opsi4.text = "Meson"
+
+            listHasil.add(12)
+            btnNext.setOnClickListener {
+                if (opsi2.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
+            }
+        }
+    }
+
+    private fun SoalKesebelas() {
+        binding.apply {
+            soalLatihan.text = getString(R.string.soal_11)
+            opsi1.text = "Elektron dan Antielektron"
+            opsi2.text = "Muon dan Tau Neutrino"
+            opsi3.text = "Elektron Neutrino dan Muon Neutrino"
+            opsi4.text = "Antimuon dan Antielektron"
+
+            listHasil.add(11)
+            btnNext.setOnClickListener {
+                if (opsi2.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
             }
         }
     }
 
     private fun SoalKesepuluh() {
         binding.apply {
-            soalLatihan.text = "Meson sangat tidak stabil karena?"
+            soalLatihan.text = getString(R.string.soal_10)
             opsi1.text = "Tersusun dari tiga kuark"
             opsi2.text = "Tersusun dari sebuah partikel dan antipartikel"
-            opsi3.text = "Tidak tersusun dari partikel lainh"
+            opsi3.text = "Tidak tersusun dari partikel lain"
             opsi4.text = "Tidak mengalami gaya kuat"
 
             listHasil.add(10)
@@ -171,7 +313,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKesembilan() {
         binding.apply {
-            soalLatihan.text = "Partikel yang tersusun dari tiga kuark disebut sebagai?"
+            soalLatihan.text = getString(R.string.soal_9)
             opsi1.text = "Baryon"
             opsi2.text = "Meson"
             opsi3.text = "Lepton"
@@ -196,7 +338,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKedelapan() {
         binding.apply {
-            soalLatihan.text = "Gluon berperan sebagai?"
+            soalLatihan.text = getString(R.string.soal_8)
             opsi1.text = "Partikel pembawa gaya elektromagnetik"
             opsi2.text = "Partikel pembawa gaya lemah"
             opsi3.text = "Partikel pembawa gaya kuat"
@@ -221,7 +363,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKetujuh() {
         binding.apply {
-            soalLatihan.text = "Model QFT (Quantum Field Theory) yang mampu menjelaskan gaya elektromagnetik, kuat dan lemah adalah?"
+            soalLatihan.text = getString(R.string.soal_7)
             opsi1.text = "Kromodinamika Kuantum"
             opsi2.text = "Teori Tentang Segalanya"
             opsi3.text = "Model Standar"
@@ -246,7 +388,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKeenam() {
         binding.apply {
-            soalLatihan.text = "Partikel yang massa diamnya tidak nol disebut dengan?"
+            soalLatihan.text = getString(R.string.soal_6)
             opsi1.text = "Partikel medan"
             opsi2.text = "Partikel Fermion"
             opsi3.text = "Partikel Boson"
@@ -271,7 +413,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKelima() {
         binding.apply {
-            soalLatihan.text = "Positron ditemukan secara tidak sengaja melalui eksperimen apa?"
+            soalLatihan.text = getString(R.string.soal_5)
             opsi1.text = "Tabung sinar katoda"
             opsi2.text = "Gold Foil Experiment"
             opsi3.text = "Ruang Kabut"
@@ -296,7 +438,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKeempat() {
         binding.apply {
-            soalLatihan.text = "Partikel elementer pertama yang berhasil ditemukan adalah?"
+            soalLatihan.text = getString(R.string.soal_4)
             opsi1.text = "Elektron"
             opsi2.text = "Proton"
             opsi3.text = "Neutron"
@@ -321,7 +463,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKetiga() {
         binding.apply {
-            soalLatihan.text = "Graviton termasuk boson karena?"
+            soalLatihan.text = getString(R.string.soal_3)
             opsi1.text = "Memiliki spin setengah bilangan bulat"
             opsi2.text = "Memiliki spin bilangan bulat"
             opsi3.text = "Tersusun dari partikel yang lebih sederhana"
@@ -346,7 +488,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKedua() {
         binding.apply {
-            soalLatihan.text = "Berdasarkan spin, partikel subatomik dikelompokkan menjadi dua, yaitu?"
+            soalLatihan.text = getString(R.string.soal_2)
             opsi1.text = "Partikel elementer dan komposit"
             opsi2.text = "Partikel fermion dan boson"
             opsi3.text = "Partikel elementer dan fermion"
@@ -371,7 +513,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalPertama() {
         binding.apply {
-            soalLatihan.text = "Berdasarkan susunannya, partikel subatomik dikelompokkan menjadi dua, yaitu?"
+            soalLatihan.text = getString(R.string.soal_1)
             opsi1.text = "Partikel elementer dan komposit"
             opsi2.text = "Partikel fermion dan boson"
             opsi3.text = "Partikel elementer dan fermion"
@@ -402,17 +544,18 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 skor
             }
             pilihan.clearCheck()
-            if (nomorSoal < 10){
-                soal = Random.nextInt(1,11)
+            if (nomorSoal < 15){
+                soal = Random.nextInt(1,16)
                 randomize(soal)
-                title.text = "Nomor ${nomorSoal++}/10"
+                title.text = "Nomor ${nomorSoal++}/15"
 //                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()
-            } else if (nomorSoal == 10) {
-                soal = Random.nextInt(1,11)
+            } else if (nomorSoal == 15) {
+                soal = Random.nextInt(1,16)
                 nomorSoal++
                 randomize(soal)
-                title.text = "Nomor 10/10"
+                title.text = "Nomor 15/15"
                 btnNext.text = "Kumpulkan"
+                btnNext.backgroundTintList = ContextCompat.getColorStateList(this@MulaiLatihanActivity, R.color.right)
 
 //                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()
             } else {

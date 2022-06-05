@@ -146,11 +146,11 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKesepuluh() {
         binding.apply {
-            soalLatihan.text = "Ini soal kesepuluh"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban benar"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Meson sangat tidak stabil karena?"
+            opsi1.text = "Tersusun dari tiga kuark"
+            opsi2.text = "Tersusun dari sebuah partikel dan antipartikel"
+            opsi3.text = "Tidak tersusun dari partikel lainh"
+            opsi4.text = "Tidak mengalami gaya kuat"
 
             listHasil.add(10)
             btnNext.setOnClickListener {
@@ -171,63 +171,13 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKesembilan() {
         binding.apply {
-            soalLatihan.text = "Ini soal kesembilan"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban salah"
-            opsi3.text = "Ini jawaban benar"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Partikel yang tersusun dari tiga kuark disebut sebagai?"
+            opsi1.text = "Baryon"
+            opsi2.text = "Meson"
+            opsi3.text = "Lepton"
+            opsi4.text = "Partikel Bebas"
 
             listHasil.add(9)
-            btnNext.setOnClickListener {
-                if (opsi3.isChecked){
-                    answer = 1
-                    listJawaban.add(1)
-                    nextQuestion(answer)
-                } else if (pilihan.checkedRadioButtonId == -1) {
-                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
-                } else {
-                    answer = 0
-                    listJawaban.add(0)
-                    nextQuestion(answer)
-                }
-            }
-        }
-    }
-
-    private fun SoalKedelapan() {
-        binding.apply {
-            soalLatihan.text = "Ini soal kedelapan"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban salah"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban benar"
-
-            listHasil.add(8)
-            btnNext.setOnClickListener {
-                if (opsi4.isChecked){
-                    answer = 1
-                    listJawaban.add(1)
-                    nextQuestion(answer)
-                } else if (pilihan.checkedRadioButtonId == -1) {
-                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
-                } else {
-                    answer = 0
-                    listJawaban.add(0)
-                    nextQuestion(answer)
-                }
-            }
-        }
-    }
-
-    private fun SoalKetujuh() {
-        binding.apply {
-            soalLatihan.text = "Ini soal ketujuh"
-            opsi1.text = "Ini jawaban benar"
-            opsi2.text = "Ini jawaban salah"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban salah"
-
-            listHasil.add(7)
             btnNext.setOnClickListener {
                 if (opsi1.isChecked){
                     answer = 1
@@ -244,17 +194,67 @@ class MulaiLatihanActivity : AppCompatActivity() {
         }
     }
 
+    private fun SoalKedelapan() {
+        binding.apply {
+            soalLatihan.text = "Gluon berperan sebagai?"
+            opsi1.text = "Partikel pembawa gaya elektromagnetik"
+            opsi2.text = "Partikel pembawa gaya lemah"
+            opsi3.text = "Partikel pembawa gaya kuat"
+            opsi4.text = "Partikel pembawa gaya gravitasi"
+
+            listHasil.add(8)
+            btnNext.setOnClickListener {
+                if (opsi3.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
+            }
+        }
+    }
+
+    private fun SoalKetujuh() {
+        binding.apply {
+            soalLatihan.text = "Model QFT (Quantum Field Theory) yang mampu menjelaskan gaya elektromagnetik, kuat dan lemah adalah?"
+            opsi1.text = "Kromodinamika Kuantum"
+            opsi2.text = "Teori Tentang Segalanya"
+            opsi3.text = "Model Standar"
+            opsi4.text = "Teori Penyatuan Besar"
+
+            listHasil.add(7)
+            btnNext.setOnClickListener {
+                if (opsi3.isChecked){
+                    answer = 1
+                    listJawaban.add(1)
+                    nextQuestion(answer)
+                } else if (pilihan.checkedRadioButtonId == -1) {
+                    Toast.makeText(this@MulaiLatihanActivity, "Silahkan pilih jawaban", Toast.LENGTH_SHORT).show()
+                } else {
+                    answer = 0
+                    listJawaban.add(0)
+                    nextQuestion(answer)
+                }
+            }
+        }
+    }
+
     private fun SoalKeenam() {
         binding.apply {
-            soalLatihan.text = "Ini soal keenam"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban benar"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Partikel yang massa diamnya tidak nol disebut dengan?"
+            opsi1.text = "Partikel medan"
+            opsi2.text = "Partikel Fermion"
+            opsi3.text = "Partikel Boson"
+            opsi4.text = "Partikel Materi"
 
             listHasil.add(6)
             btnNext.setOnClickListener {
-                if (opsi2.isChecked){
+                if (opsi4.isChecked){
                     answer = 1
                     listJawaban.add(1)
                     nextQuestion(answer)
@@ -271,11 +271,11 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKelima() {
         binding.apply {
-            soalLatihan.text = "Ini soal kelima"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban salah"
-            opsi3.text = "Ini jawaban benar"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Positron ditemukan secara tidak sengaja melalui eksperimen apa?"
+            opsi1.text = "Tabung sinar katoda"
+            opsi2.text = "Gold Foil Experiment"
+            opsi3.text = "Ruang Kabut"
+            opsi4.text = "LHC di CERN"
 
             listHasil.add(5)
             btnNext.setOnClickListener {
@@ -296,15 +296,15 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKeempat() {
         binding.apply {
-            soalLatihan.text = "Ini soal keempat"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban salah"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban benar"
+            soalLatihan.text = "Partikel elementer pertama yang berhasil ditemukan adalah?"
+            opsi1.text = "Elektron"
+            opsi2.text = "Proton"
+            opsi3.text = "Neutron"
+            opsi4.text = "Positron"
 
             listHasil.add(4)
             btnNext.setOnClickListener {
-                if (opsi4.isChecked){
+                if (opsi1.isChecked){
                     answer = 1
                     listJawaban.add(1)
                     nextQuestion(answer)
@@ -321,11 +321,11 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKetiga() {
         binding.apply {
-            soalLatihan.text = "Ini soal ketiga"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban benar"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Graviton termasuk boson karena?"
+            opsi1.text = "Memiliki spin setengah bilangan bulat"
+            opsi2.text = "Memiliki spin bilangan bulat"
+            opsi3.text = "Tersusun dari partikel yang lebih sederhana"
+            opsi4.text = "Tidak tersusun dari partikel lain"
 
             listHasil.add(3)
             btnNext.setOnClickListener {
@@ -346,11 +346,11 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalKedua() {
         binding.apply {
-            soalLatihan.text = "Ini soal kedua"
-            opsi1.text = "Ini jawaban salah"
-            opsi2.text = "Ini jawaban benar"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Berdasarkan spin, partikel subatomik dikelompokkan menjadi dua, yaitu?"
+            opsi1.text = "Partikel elementer dan komposit"
+            opsi2.text = "Partikel fermion dan boson"
+            opsi3.text = "Partikel elementer dan fermion"
+            opsi4.text = "Partikel komposit dan boson"
 
             listHasil.add(2)
             btnNext.setOnClickListener {
@@ -371,11 +371,11 @@ class MulaiLatihanActivity : AppCompatActivity() {
 
     private fun SoalPertama() {
         binding.apply {
-            soalLatihan.text = "Ini soal pertama"
-            opsi1.text = "Ini jawaban benar"
-            opsi2.text = "Ini jawaban salah"
-            opsi3.text = "Ini jawaban salah"
-            opsi4.text = "Ini jawaban salah"
+            soalLatihan.text = "Berdasarkan susunannya, partikel subatomik dikelompokkan menjadi dua, yaitu?"
+            opsi1.text = "Partikel elementer dan komposit"
+            opsi2.text = "Partikel fermion dan boson"
+            opsi3.text = "Partikel elementer dan fermion"
+            opsi4.text = "Partikel komposit dan boson"
 
             listHasil.add(1)
             btnNext.setOnClickListener {

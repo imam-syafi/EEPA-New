@@ -162,7 +162,7 @@
             android:fontFamily="@font/nunito_sans_black"
             android:textAllCaps="false"
             android:textColor="@color/abu"
-            android:text="@string/jingga" />
+            android:text="@string/kuning" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 

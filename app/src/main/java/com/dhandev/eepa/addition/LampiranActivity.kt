@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dhandev.eepa.databinding.ActivityLampiranBinding
+import com.dhandev.eepa.materi.MateriPositron
 import com.dhandev.eepa.materi.MateriTimeline
 
 class LampiranActivity : AppCompatActivity() {
@@ -18,6 +19,7 @@ class LampiranActivity : AppCompatActivity() {
                 onBackPressed()
             }
             timeline.setOnClickListener { startActivity(Intent(this@LampiranActivity, MateriTimeline::class.java)) }
+            positron.setOnClickListener { startActivity(Intent(this@LampiranActivity, MateriPositron::class.java)) }
         }
     }
 }

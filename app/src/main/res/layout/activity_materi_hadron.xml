@@ -129,7 +129,7 @@
                         android:fontFamily="@font/nunito_sans_black"
                         android:textAllCaps="false"
                         android:textColor="@color/abu"
-                        android:text="@string/jingga" />
+                        android:text="@string/kuning" />
 
                 </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -259,18 +259,21 @@
                         android:layout_marginHorizontal="0dp"
                         android:text="@string/m_hadron_kuark_3" />
                 </TableRow>
-                <TableRow>
-                    <TextView
-                        style="@style/body_bullet"
-                        android:text=""/>
-                    <ImageView
-                        android:id="@+id/m_hadron_kuark_4"
-                        style="@style/gambar"
-                        android:src="@drawable/muatan_proton"
-                        android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="250dp"/>
-                </TableRow>
+            </TableLayout>
+            <ImageView
+                android:id="@+id/m_hadron_kuark_4"
+                style="@style/gambar"
+                android:src="@drawable/muatan_proton"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:layout_height="230dp"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
                 <TableRow>
                     <TextView style="@style/body_bullet"
                         android:textColor="@color/greenBright"/>

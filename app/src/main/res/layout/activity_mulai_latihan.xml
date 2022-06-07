@@ -58,6 +58,8 @@
         android:layout_height="wrap_content"
         android:text="Berdasarkan penyusunnya partikel subatomik dikelompokkan menjadi dua, yaitu?"
         style="@style/FontParagraf"
+        android:background="@drawable/rounded_corner_smaller"
+        android:padding="10dp"
         android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
         app:layout_constraintStart_toStartOf="parent"

@@ -5,8 +5,6 @@ import android.content.SharedPreferences
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
@@ -80,7 +78,7 @@ class HasilLatihanActivity : AppCompatActivity() {
                     kataKata.text = "Hebat, tingkatkan! ✨"
                 }
                 in 55.0..69.9 -> {
-                    skorTotal.setTextColor(resources.getColor(R.color.yellow))
+                    skorTotal.setTextColor(resources.getColor(R.color.orange))
                     kataKata.text = "Cukup baik, belajar lagi! 👍"
                 }
                 else -> {

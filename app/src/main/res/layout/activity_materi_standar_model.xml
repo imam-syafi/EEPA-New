@@ -218,7 +218,7 @@
                         style="@style/FontParagraf"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar" />
+                        android:text="@string/m_standar2_alter" />
                 </TableRow>
                 <TableRow>
                     <TextView style="@style/body_bullet"/>
@@ -227,7 +227,7 @@
                         style="@style/FontParagraf"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar2" />
+                        android:text="@string/m_standar2_alter2" />
                 </TableRow>
             </TableLayout>
             <TextView

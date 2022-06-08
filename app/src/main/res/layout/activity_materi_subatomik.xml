@@ -257,7 +257,7 @@
             <TextView
                 android:id="@+id/headline4"
                 style="@style/headline"
-                android:text="D. Pembagian berdasarkan berdasarkan massa diam partikel:" />
+                android:text="D. Pembagian berdasarkan massa diam partikel:" />
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

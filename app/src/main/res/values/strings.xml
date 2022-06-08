@@ -176,6 +176,8 @@
 
     <string name="m_standar">Pengembangan model standard dilakukan <b><font color="#0BDA51">secara bertahap</font></b> selama paruh kedua abad ke-20 yang dilakukan oleh ilmuwan di seluruh dunia.</string>
     <string name="m_standar2">Model ini <b><font color="#0BDA51">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti quark top (1995), tau neutrino (2000), dan boson higgs (2012)<font color="#0096FF">⁽¹⁾</font>.</string>
+    <string name="m_standar2_alter">Dikembangkan pada awal 1970-an, model standard telah berhasil menjelaskan <b><font color="#0BDA51">hampir semua</font></b> hasil eksperimen dan <b><font color="#0BDA51">secara tepat</font></b> memprediksi berbagai fenomena.</string>
+    <string name="m_standar2_alter2">Seiring waktu dan melalui banyak eksperimen, model ini telah ditetapkan sebagai <b><font color="#0BDA51">teori fisika yang teruji dengan baik</font></b>, puncaknya adalah ditemukannya boson higgs pada 2012<font color="#0096FF">⁽¹⁾</font>.</string>
     <string name="m_standar3">Gambar di atas menunjukkan model standard lengkap dengan berbagai keterangannya. Daftar (ringkasan) lengkap cacah total partikel elementer dalam model standard dapat dilihat pada tabel.</string>
     <string name="m_standar4">Keterangan:</string>
     <string name="m_standar5"><b><font color="#0BDA51">Enam rasa (<i>flavor</i>) quark:</font></b> up, down, bottom, top, strange, dan charm</string>

@@ -211,39 +211,11 @@
                 android:id="@+id/body1"
                 style="@style/FontParagraf"
                 android:text="@string/m_tmq_"/>
-            <TextView
-                android:id="@+id/headline2"
-                style="@style/headline"
-                android:text="B. Partikel berdasarkan massa diam:" />
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp"
-                android:stretchColumns="1">
-                <TableRow>
-                    <TextView style="@style/body_bullet"/>
-                    <TextView
-                        android:id="@+id/m_subatomik1"
-                        style="@style/FontParagraf"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_tmq_1" />
-                </TableRow>
-                <TableRow>
-                    <TextView style="@style/body_bullet"/>
-                    <TextView
-                        android:id="@+id/m_subatomik1_2"
-                        style="@style/FontParagraf"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_tmq_1_2" />
-                </TableRow>
-            </TableLayout>
 
             <TextView
                 android:id="@+id/headline3"
                 style="@style/headline"
-                android:text="C. Model-model dari QFT:" />
+                android:text="B. Model-model dari QFT:" />
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -253,6 +253,35 @@
                         android:text="@string/m_subatomik2_2" />
                 </TableRow>
             </TableLayout>
+
+            <TextView
+                android:id="@+id/headline4"
+                style="@style/headline"
+                android:text="D. Pembagian berdasarkan berdasarkan massa diam partikel:" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_subatomik3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_tmq_1" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/m_subatomik3_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_tmq_1_2" />
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
 
 

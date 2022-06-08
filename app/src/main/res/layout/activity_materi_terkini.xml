@@ -214,10 +214,30 @@
                 android:id="@+id/headline2"
                 style="@style/headline"
                 android:text="B. TOE" />
-            <TextView
-                android:id="@+id/body2"
-                style="@style/FontParagraf"
-                android:text="@string/m_terkini2"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/body2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_terkini2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/body2_1"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_terkini2_1" />
+                </TableRow>
+            </TableLayout>
             <TextView
                 android:id="@+id/tv_caption2"
                 android:paddingHorizontal="20dp"
@@ -237,10 +257,30 @@
                 style="@style/headline"
                 android:background="@color/greenBright"
                 android:text="Graviton" />
-            <TextView
-                android:id="@+id/body3"
-                style="@style/FontParagraf"
-                android:text="@string/m_terkini3"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/body3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_terkini3" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"/>
+                    <TextView
+                        android:id="@+id/body3_1"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_terkini3_1" />
+                </TableRow>
+            </TableLayout>
             <TextView
                 android:id="@+id/headline4"
                 style="@style/headline"

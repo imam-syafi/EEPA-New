@@ -99,8 +99,7 @@ class NomorContohActivity : AppCompatActivity() {
             poin2.setText(R.string.solusi_contoh_1_2)
             poin3.setText(R.string.solusi_contoh_1_3)
             poin4.setText(R.string.solusi_contoh_1_4)
-            poin5.setText(R.string.solusi_contoh_1_5)
-            row5.visibility = View.VISIBLE
+            row5.visibility = View.GONE
         }
     }
 
@@ -139,8 +138,7 @@ class NomorContohActivity : AppCompatActivity() {
             poin2.setText(R.string.solusi_contoh_3_2)
             poin3.setText(R.string.solusi_contoh_3_3)
             poin4.setText(R.string.solusi_contoh_3_4)
-            poin5.setText(R.string.solusi_contoh_3_5)
-            row5.visibility = View.VISIBLE
+            row5.visibility = View.GONE
         }
     }
 

@@ -8,13 +8,14 @@ import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.dhandev.eepa.addition.dummyActivity
 import com.dhandev.eepa.databinding.ItemSearchBinding
-import com.dhandev.eepa.materi.MateriTMQ
+import com.dhandev.eepa.materi.*
 import java.util.*
 
 class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
 
     var listSearchFilter = ArrayList<Item>()
     lateinit var mContext: Context
+    lateinit var charSearch: String
 
     class ItemHolder(var viewBinding: ItemSearchBinding) :
         RecyclerView.ViewHolder(viewBinding.root)
@@ -37,7 +38,16 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
         itemHolder.viewBinding.tvItemName.text = name
         holder.itemView.setOnClickListener {
             when(name){
-                "Perkembangan Teori Atom" ->{mContext.startActivity(Intent(mContext, MateriTMQ::class.java))}
+                "Partikel Subatomik" ->{
+                    val intent = Intent(mContext, MateriSubatomik::class.java)
+                    intent.putExtra("highlight", charSearch)
+                    mContext.startActivity(intent)
+                }
+                "Teori Medan Kuantum" ->{mContext.startActivity(Intent(mContext, MateriTMQ::class.java))}
+                "Hadron" ->{mContext.startActivity(Intent(mContext, MateriHadron::class.java))}
+                "Lepton" ->{mContext.startActivity(Intent(mContext, MateriLepton::class.java))}
+                "Model Standard" ->{mContext.startActivity(Intent(mContext, MateriStandarModel::class.java))}
+                "Perkembangan Terkini" ->{mContext.startActivity(Intent(mContext, MateriTerkini::class.java))}
                 else -> {
                     val intent = Intent(mContext, dummyActivity::class.java)
                     intent.putExtra("name", name)
@@ -67,7 +77,7 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
     override fun getFilter(): Filter {
         return object : Filter(){
             override fun performFiltering(constraint: CharSequence?): FilterResults {
-                val charSearch = constraint.toString()
+                charSearch = constraint.toString()
                 if (charSearch.isEmpty()) {
                     listSearchFilter = listSearch
                 } else {

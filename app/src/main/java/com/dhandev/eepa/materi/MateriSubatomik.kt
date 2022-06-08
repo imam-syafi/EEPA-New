@@ -2,12 +2,18 @@ package com.dhandev.eepa.materi
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.BackgroundColorSpan
 import android.view.View
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriSubatomikBinding
+
 
 class MateriSubatomik : AppCompatActivity() {
 
@@ -21,6 +27,12 @@ class MateriSubatomik : AppCompatActivity() {
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val highlight = intent.getStringExtra("highlight")
+        if (highlight != null) {
+            Toast.makeText(this, highlight, Toast.LENGTH_SHORT).show()
+            setHighLightedText(binding.mSubatomik1, highlight)
+        }
 
         with(binding){
             setContentView(root)
@@ -113,13 +125,38 @@ class MateriSubatomik : AppCompatActivity() {
             binding.mSubatomik12.setTextAppearance(R.style.FontParagraf)
             binding.mSubatomik2.setTextAppearance(R.style.FontParagraf)
             binding.mSubatomik22.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik3.setTextAppearance(R.style.FontParagraf)
+            binding.mSubatomik32.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
             binding.mSubatomik1.setTextAppearance(sharedUkuranId)
             binding.mSubatomik12.setTextAppearance(sharedUkuranId)
             binding.mSubatomik2.setTextAppearance(sharedUkuranId)
             binding.mSubatomik22.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik3.setTextAppearance(sharedUkuranId)
+            binding.mSubatomik32.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
+        }
+    }
+
+    fun setHighLightedText(tv: TextView, textToHighlight: String) {
+        val tvt = tv.text.toString()
+        var ofe = tvt.indexOf(textToHighlight, 0)
+        val wordToSpan: Spannable = SpannableString(tv.text)
+        var ofs = 0
+        while (ofs < tvt.length && ofe != -1) {
+            ofe = tvt.indexOf(textToHighlight, ofs)
+            if (ofe == -1) break else {
+                // set color here
+                wordToSpan.setSpan(
+                    BackgroundColorSpan(-0x100),
+                    ofe,
+                    ofe + textToHighlight.length,
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                )
+                tv.setText(wordToSpan, TextView.BufferType.SPANNABLE)
+            }
+            ofs = ofe + 1
         }
     }
 }

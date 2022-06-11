@@ -71,19 +71,19 @@ class HasilLatihanActivity : AppCompatActivity() {
             when(final){
                 in 85.0..100.0 -> {
                     skorTotal.setTextColor(Color.BLUE)
-                    kataKata.text = "Luar biasa, pertahankan! 😍"
+                    descHasil.text = "Luar biasa, pertahankan! 😍"
                 }
                 in 70.0..84.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.right))
-                    kataKata.text = "Hebat, tingkatkan! ✨"
+                    descHasil.text = "Hebat, tingkatkan! ✨"
                 }
                 in 55.0..69.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.orange))
-                    kataKata.text = "Cukup baik, belajar lagi! 👍"
+                    descHasil.text = "Cukup baik, belajar lagi! 👍"
                 }
                 else -> {
                     skorTotal.setTextColor(Color.RED)
-                    kataKata.text = "Kurang, belajar lebih giat lagi ya! 👌"
+                    descHasil.text = "Kurang, belajar lebih giat lagi ya! 👌"
                 }
             }
 

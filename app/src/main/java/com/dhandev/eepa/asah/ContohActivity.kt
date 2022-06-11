@@ -23,6 +23,7 @@ class ContohActivity : AppCompatActivity() {
             cth3.text = "3. " + getString(R.string.contoh_soal_3)
             cth4.text = "4. " + getString(R.string.contoh_soal_4)
             cth5.text = "5. " + getString(R.string.contoh_soal_5)
+            cth6.text = "6. " + getString(R.string.contoh_soal_6)
 
             val Editor:SharedPreferences.Editor = sharedPred.edit()
             arrowBack.setOnClickListener {
@@ -50,6 +51,11 @@ class ContohActivity : AppCompatActivity() {
             }
             cth5.setOnClickListener {
                 Editor.putInt("nomor", 5)
+                Editor.apply()
+                startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
+            }
+            cth6.setOnClickListener {
+                Editor.putInt("nomor", 6)
                 Editor.apply()
                 startActivity(Intent(this@ContohActivity, NomorContohActivity::class.java))
             }

@@ -171,17 +171,17 @@
 
     <string name="m_lepton"><b><font color="#FFA000">Lepton</font></b> adalah partikel elementer dengan <b><font color="#0BDA51">spin ½</font></b> dan <b><font color="#FF160C">tidak mengalami gaya kuat</font></b> seperti halnya hadron.\nLepton ada dua jenis, yaitu <b><font color="#0BDA51">bermuatan dan tidak bermuatan</font></b>. Data lengkapnya dapat dilihat pada tabel.</string>
     <string name="m_lepton2"><b><font color="#0BDA51">Setiap partikel memiliki antipartikel</font></b>. Antipartikel sangat mirip dengan partikel, hanya saja dengan <b><font color="#0BDA51">muatan yang berlawanan</font></b>.</string>
-    <string name="m_lepton2_2">Misal: elektron, antipartikelnya adalah <b><font color="#FFA000">antielektron</font></b> atau yang biasa disebut dengan <b><font color="#FFA000">positron</font></b><font color="#0044cc">⁽¹⁾</font>.</string>
+    <string name="m_lepton2_2">Misal: elektron muatan listriknya -<i>e</i>, antipartikelnya adalah <b><font color="#FFA000">antielektron</font></b> atau yang biasa disebut dengan <b><font color="#FFA000">positron bermuatan +<i>e</i></font></b><font color="#0044cc">⁽¹⁾</font>.</string>
     <string name="m_lepton2_3">Sehingga jika dijumlahkan, keseluruhan cacah lepton adalah <b><font color="#0BDA51">12 partikel</font></b>.</string>
 
     <string name="m_standar">Pengembangan model standard dilakukan <b><font color="#0BDA51">secara bertahap</font></b> selama paruh kedua abad ke-20 yang dilakukan oleh ilmuwan di seluruh dunia.</string>
-    <string name="m_standar2">Model ini <b><font color="#0BDA51">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti quark top (1995), tau neutrino (2000), dan boson higgs (2012)<font color="#0096FF">⁽¹⁾</font>.</string>
+    <string name="m_standar2">Model ini <b><font color="#0BDA51">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti quark top (1995),neutrino tau (2000), dan boson higgs (2012)<font color="#0096FF">⁽¹⁾</font>.</string>
     <string name="m_standar2_alter">Dikembangkan pada awal 1970-an, model standard telah berhasil menjelaskan <b><font color="#0BDA51">hampir semua</font></b> hasil eksperimen dan <b><font color="#0BDA51">secara tepat</font></b> memprediksi berbagai fenomena.</string>
     <string name="m_standar2_alter2">Seiring waktu dan melalui banyak eksperimen, model ini telah ditetapkan sebagai <b><font color="#0BDA51">teori fisika yang teruji dengan baik</font></b>, puncaknya adalah ditemukannya boson higgs pada 2012<font color="#0096FF">⁽¹⁾</font>.</string>
     <string name="m_standar3">Gambar di atas menunjukkan model standard lengkap dengan berbagai keterangannya. Daftar (ringkasan) lengkap cacah total partikel elementer dalam model standard dapat dilihat pada tabel.</string>
     <string name="m_standar4">Keterangan:</string>
     <string name="m_standar5"><b><font color="#0BDA51">Enam rasa (<i>flavor</i>) quark:</font></b> up, down, bottom, top, strange, dan charm</string>
-    <string name="m_standar6"><b><font color="#0BDA51">Enam jenis lepton:</font></b> elektron, neutrino elektron, muon, neutrino muon, tau, neutrino tau.</string>
+    <string name="m_standar6"><b><font color="#0BDA51">Enam jenis lepton:</font></b> elektron, neutrino elektron, muon, neutrino muon, tau, dan neutrino tau.</string>
     <string name="m_standar7"><b><font color="#0BDA51">Ada 12 gauge boson (pembawa gaya):</font></b> foton untuk gaya elektromagnetik, tiga boson W dan Z untuk gaya lemah, dan 8 gluon untuk gaya kuat.</string>
     <string name="m_standar8"><b><font color="#0BDA51">Boson higgs</font></b>, boson yang diperlukan untuk memberikan massa pada gauge boson.</string>
     <string name="m_standar_footnote1">(1) Garis waktu penemuan partikel</string>
@@ -263,7 +263,7 @@
     <string name="contoh_soal_4">Berikut ini yang termasuk lepton bermuatan dan tidak bermuatan adalah?</string>
     <string name="opsi_soal_4_1">Tau dan antitau</string>
     <string name="opsi_soal_4_2">Tau dan muon neutrino</string>
-    <string name="opsi_soal_4_3">Muon neutrino dan tau neutrino</string>
+    <string name="opsi_soal_4_3">Muon neutrino danneutrino tau</string>
     <string name="opsi_soal_4_4">Antitau dan antimuon</string>
     <string name="solusi_contoh_4">Pilihan a salah, karena keduanya adalah <b><font color="#0BDA51">partikel bermuatan</font></b>.</string>
     <string name="solusi_contoh_4_2">Pilihan b benar, karena tau <b><font color="#0BDA51">bermuatan -<i>e</i></font></b> dan muon neutrino <b><font color="#0BDA51">tidak bermuatan</font></b>.</string>
@@ -273,14 +273,24 @@
     <string name="contoh_soal_5">Boson yang berperan untuk memberikan massa pada gauge bosons adalah?</string>
     <string name="opsi_soal_5_1">Boson W.</string>
     <string name="opsi_soal_5_2">Boson Z.</string>
-    <string name="opsi_soal_5_3">Boson Higgs</string>
-    <string name="opsi_soal_5_4">Gluon</string>
+    <string name="opsi_soal_5_3">Gluon</string>
+    <string name="opsi_soal_5_4">Boson Higgs</string>
     <string name="solusi_contoh_5">Pilihan a salah, karena <b><font color="#FFA000">boson W</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya lemah</font></b></string>
     <string name="solusi_contoh_5_2">Pilihan b salah, karena <b><font color="#FFA000">boson Z</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya lemah</font></b></string>
-    <string name="solusi_contoh_5_3">Pilihan c benar, karena <b><font color="#FFA000">boson higgs</font></b> berperan untuk <b><font color="#0BDA51">memberikan massa pada gauge bosons</font></b></string>
-    <string name="solusi_contoh_5_4">Pilihan d salah, karena <b><font color="#FFA000">gluon</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya kuat</font></b> antara quark yang satu dengan quark yang lain.</string>
+    <string name="solusi_contoh_5_3">Pilihan c salah, karena <b><font color="#FFA000">gluon</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya kuat</font></b> antara quark yang satu dengan quark yang lain.</string>
+    <string name="solusi_contoh_5_4">Pilihan d benar, karena <b><font color="#FFA000">boson higgs</font></b> berperan untuk <b><font color="#0BDA51">memberikan massa pada gauge bosons</font></b></string>
     <string name="m_lepton_footnote_1">(1) Penemuan Positron</string>
     <string name="sembunyikan_jawaban">Sembunyikan Jawaban</string>
+
+    <string name="contoh_soal_6">Berikut ini yang termasuk kelemahan model standard adalah?</string>
+    <string name="opsi_soal_6_1">Hanya mampu menjelaskan gaya gravitasi</string>
+    <string name="opsi_soal_6_2">Belum mampu menjelaskan gaya gravitasi</string>
+    <string name="opsi_soal_6_3">Boson Higgs belum terbukti secara eksperimen</string>
+    <string name="opsi_soal_6_4">Hanya teori saja, tanpa ada bukti eksperimen</string>
+    <string name="solusi_contoh_6">Pilihan a salah, karena model standard <b><font color="#0BDA51">belum menjelaskan</font></b> gaya gravitasi.</string>
+    <string name="solusi_contoh_6_2">Pilihan b benar, karena model standard sudah menjelaskan <b><font color="#0BDA51">tiga gaya dasar kecuali gaya gravitasi</font></b> yang pada skala subatomik sangat lemah.</string>
+    <string name="solusi_contoh_6_3">Pilihan c salah, karena boson higgs <b><font color="#0BDA51">sudah terbukti keberadaannya</font></b> pada tahun 2012 melalui eksperimen menggunakan LHC di CERN, Switzerland.</string>
+    <string name="solusi_contoh_6_4">Pilihan d salah, karena model standard sudah banyak terbukti <b><font color="#0BDA51">baik secara teori maupun eksperimen</font></b>.</string>
 
     <string name="soal_15">Berikut ini yang termasuk kelemahan Model Standard adalah?</string>
     <string name="soal_14">Rasa (flavor) quark terdiri atas?</string>

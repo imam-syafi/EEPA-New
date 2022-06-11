@@ -91,6 +91,12 @@
             app:backgroundTint="@color/biru_seken"
             android:lines="1"
             android:ellipsize="marquee"/>
+        <Button
+            android:id="@+id/cth6"
+            style="@style/ButtonGeneral"
+            app:backgroundTint="@color/biru_seken"
+            android:lines="1"
+            android:ellipsize="marquee"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

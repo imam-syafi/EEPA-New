@@ -43,6 +43,7 @@ class NomorContohActivity : AppCompatActivity() {
                         3 -> utils.textColorAndMode(this@NomorContohActivity, pilihan3, R.color.greenBright, Typeface.DEFAULT_BOLD)
                         4 -> utils.textColorAndMode(this@NomorContohActivity, pilihan2, R.color.greenBright, Typeface.DEFAULT_BOLD)
                         5 -> utils.textColorAndMode(this@NomorContohActivity, pilihan4, R.color.greenBright, Typeface.DEFAULT_BOLD)
+                        6 -> utils.textColorAndMode(this@NomorContohActivity, pilihan2, R.color.greenBright, Typeface.DEFAULT_BOLD)
                     }
                 }
             }
@@ -53,6 +54,7 @@ class NomorContohActivity : AppCompatActivity() {
                     2 -> contohSoal3()
                     3 -> contohSoal4()
                     4 -> contohSoal5()
+                    5 -> contohSoal6()
                 }
             }
             btnPrev.visibility = View.GONE
@@ -63,6 +65,7 @@ class NomorContohActivity : AppCompatActivity() {
                     3 -> contohSoal2()
                     4 -> contohSoal3()
                     5 -> contohSoal4()
+                    6 -> contohSoal5()
                 }
             }
         }
@@ -72,6 +75,7 @@ class NomorContohActivity : AppCompatActivity() {
             3 -> contohSoal3()
             4 -> contohSoal4()
             5 -> contohSoal5()
+            6 -> contohSoal6()
         }
     }
 
@@ -166,7 +170,7 @@ class NomorContohActivity : AppCompatActivity() {
         binding.apply {
             nomorSoal.text = "Soal nomor $page"
             btnPrev.visibility = View.VISIBLE
-            btnNext.visibility = View.GONE
+            btnNext.visibility = View.VISIBLE
             table.visibility = View.GONE
             soal.setText(R.string.contoh_soal_5)
             pilihan1.text = getString(R.string.opsi_soal_5_1)
@@ -177,6 +181,26 @@ class NomorContohActivity : AppCompatActivity() {
             poin2.setText(R.string.solusi_contoh_5_2)
             poin3.setText(R.string.solusi_contoh_5_3)
             poin4.setText(R.string.solusi_contoh_5_4)
+            row5.visibility = View.GONE
+        }
+    }
+
+    private fun contohSoal6() {
+        page = 6
+        binding.apply {
+            nomorSoal.text = "Soal nomor $page"
+            btnPrev.visibility = View.VISIBLE
+            btnNext.visibility = View.GONE
+            table.visibility = View.GONE
+            soal.setText(R.string.contoh_soal_6)
+            pilihan1.text = getString(R.string.opsi_soal_6_1)
+            pilihan2.text = getString(R.string.opsi_soal_6_2)
+            pilihan3.text = getString(R.string.opsi_soal_6_3)
+            pilihan4.text = getString(R.string.opsi_soal_6_4)
+            poin1.setText(R.string.solusi_contoh_6)
+            poin2.setText(R.string.solusi_contoh_6_2)
+            poin3.setText(R.string.solusi_contoh_6_3)
+            poin4.setText(R.string.solusi_contoh_6_4)
             row5.visibility = View.GONE
         }
     }

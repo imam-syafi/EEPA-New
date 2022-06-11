@@ -33,222 +33,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/close" />
 
-        <TextView
-            android:id="@+id/descHasil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:gravity="center_horizontal"
-            tools:text="Selamat user, Kamu sudah berhasil menyelesaikan soal-soal latihan! \nBerikut rincian hasilnya"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/headerHasil" />
-
-        <LinearLayout
-            android:id="@+id/rincianHasil"
-            style="@style/bgDropDownList"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/descHasil">
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalPertama"
-                    style="@style/soalResultLatihan"
-                    tools:text="1. Ini Soal Pertama"/>
-                <TextView
-                    android:id="@+id/jawabanPertama"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKedua"
-                    style="@style/soalResultLatihan"
-                    tools:text="2. Ini Soal Kedua"/>
-                <TextView
-                    android:id="@+id/jawabanKedua"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKetiga"
-                    style="@style/soalResultLatihan"
-                    tools:text="3. Ini Soal Ketiga"/>
-                <TextView
-                    android:id="@+id/jawabanKetiga"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKeempat"
-                    style="@style/soalResultLatihan"
-                    tools:text="4. Ini Soal Keempat"/>
-                <TextView
-                    android:id="@+id/jawabanKeempat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKelima"
-                    style="@style/soalResultLatihan"
-                    tools:text="5. Ini Soal Kelima"/>
-                <TextView
-                    android:id="@+id/jawabanKelima"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKeenam"
-                    style="@style/soalResultLatihan"
-                    tools:text="6. Ini Soal Keenam"/>
-                <TextView
-                    android:id="@+id/jawabanKeenam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKetujuh"
-                    style="@style/soalResultLatihan"
-                    tools:text="7. Ini Soal Ketujuh"/>
-                <TextView
-                    android:id="@+id/jawabanKetujuh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKedelapan"
-                    style="@style/soalResultLatihan"
-                    tools:text="8. Ini Soal Kedelapan"/>
-                <TextView
-                    android:id="@+id/jawabanKedelapan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKesembilan"
-                    style="@style/soalResultLatihan"
-                    tools:text="9. Ini Soal Kesembilan"/>
-                <TextView
-                    android:id="@+id/jawabanKesembilan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKesepuluh"
-                    style="@style/soalResultLatihan"
-                    tools:text="10. Ini Soal Kesepuluh"/>
-                <TextView
-                    android:id="@+id/jawabanKesepuluh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKesebelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="11. Ini Soal Kesepuluh"/>
-                <TextView
-                    android:id="@+id/jawabanKesebelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKeduabelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="12. Ini Soal Kesepuluh"/>
-                <TextView
-                    android:id="@+id/jawabanKeduabelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKetigabelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="13. Ini Soal Kesepuluh"/>
-                <TextView
-                    android:id="@+id/jawabanKetigabelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKeempatbelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="14. Ini Soal Kesepuluh"/>
-                <TextView
-                    android:id="@+id/jawabanKeempatbelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <View
-                style="@style/Divider"/>
-            <LinearLayout
-                style="@style/layoutResultLatihan">
-                <TextView
-                    android:id="@+id/soalKelimabelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="15. Ini Soal Kesepuluh"/>
-                <TextView
-                    android:id="@+id/jawabanKelimabelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </LinearLayout>
-
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/fireworks"
             android:layout_width="match_parent"
@@ -261,43 +45,284 @@
             app:lottie_loop="true" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nilai Akhir:"
-            app:layout_constraintTop_toBottomOf="@id/rincianHasil"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:textSize="16sp"
-            android:gravity="center_horizontal"/>
-
-        <TextView
             android:id="@+id/skorTotal"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:padding="15dp"
             android:gravity="center"
             tools:text="60"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:fontFamily="@font/nunito_sans_black"
             android:background="@drawable/rounded_corner"
             android:backgroundTint="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintTop_toBottomOf="@id/headerHasil"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
-            android:id="@+id/kataKata"
+            android:id="@+id/descHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:gravity="center_horizontal"
+            tools:text="Selamat user, Kamu sudah berhasil menyelesaikan soal-soal latihan!"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/skorTotal" />
+
+        <View
+            style="@style/Divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descHasil" />
+
+        <TextView
+            android:id="@+id/rincian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Kata-kata"
-            app:layout_constraintTop_toBottomOf="@id/skorTotal"
-            android:layout_marginTop="5dp"
-            android:paddingBottom="20dp"
+            android:text="Rincian jawaban latihan:"
+            app:layout_constraintTop_toBottomOf="@id/descHasil"
+            android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/nunito_sans_bold"
             android:textSize="18sp"
             android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/rincianHasil"
+            style="@style/bgDropDownList"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rincian">
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalPertama"
+                    style="@style/soalResultLatihan"
+                    tools:text="1. Ini Soal Pertama" />
+
+                <TextView
+                    android:id="@+id/jawabanPertama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKedua"
+                    style="@style/soalResultLatihan"
+                    tools:text="2. Ini Soal Kedua" />
+
+                <TextView
+                    android:id="@+id/jawabanKedua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKetiga"
+                    style="@style/soalResultLatihan"
+                    tools:text="3. Ini Soal Ketiga" />
+
+                <TextView
+                    android:id="@+id/jawabanKetiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKeempat"
+                    style="@style/soalResultLatihan"
+                    tools:text="4. Ini Soal Keempat" />
+
+                <TextView
+                    android:id="@+id/jawabanKeempat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKelima"
+                    style="@style/soalResultLatihan"
+                    tools:text="5. Ini Soal Kelima" />
+
+                <TextView
+                    android:id="@+id/jawabanKelima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKeenam"
+                    style="@style/soalResultLatihan"
+                    tools:text="6. Ini Soal Keenam" />
+
+                <TextView
+                    android:id="@+id/jawabanKeenam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKetujuh"
+                    style="@style/soalResultLatihan"
+                    tools:text="7. Ini Soal Ketujuh" />
+
+                <TextView
+                    android:id="@+id/jawabanKetujuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKedelapan"
+                    style="@style/soalResultLatihan"
+                    tools:text="8. Ini Soal Kedelapan" />
+
+                <TextView
+                    android:id="@+id/jawabanKedelapan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKesembilan"
+                    style="@style/soalResultLatihan"
+                    tools:text="9. Ini Soal Kesembilan" />
+
+                <TextView
+                    android:id="@+id/jawabanKesembilan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKesepuluh"
+                    style="@style/soalResultLatihan"
+                    tools:text="10. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKesepuluh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKesebelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="11. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKesebelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKeduabelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="12. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKeduabelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKetigabelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="13. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKetigabelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKeempatbelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="14. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKeempatbelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKelimabelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="15. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKelimabelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

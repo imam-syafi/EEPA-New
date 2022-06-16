@@ -154,7 +154,7 @@
 
     <string name="m_hadron">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua sub famili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>. Baryon adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">tiga quark</font></b>, contohnya adalah nukleon, di mana proton terdiri atas dua quark up dan satu quark down serta neutron yang terdiri atas satu quark up dan dua quark down (lihat Gambar di atas).</string>
     <string name="m_hadron2">Berbeda dengan <a href="https://en.wikipedia.org/wiki/Free_particle">partikel bebas</a>, muatan quark <b><font color="#FF160C">bukan</font></b> kelipatan bilangan bulat dari e, melainkan <b><font color="#0BDA51">pecahan</font></b>, muatan quark up (u) = +2e/3, down(d) = -e/3. Tetapi hingga saat ini, quark <b><font color="#0BDA51">belum bisa dibuktikan</font></b> kehadirannya secara langsung sebagai partikel bebas, jadi <b><font color="#0BDA51">masih aman</font></b> untuk berasumsi bahwa semua partikel bebas di alam mempunyai muatan yang merupakan kelipatan bulat e, sesuai dengan <a href="https://www.coursehero.com/study-guides/introchem/millikans-oil-drop-experiment/">percobaan tetes minyak oleh Millikan</a>. Agar lebih jelas, ambil contoh quark pada proton untuk menghitung muatan proton, di mana: </string>
-    <string name="m_hadron3">Dapat dilihat, bahwa hasilnya sesuai dengan muatan proton yaitu +e = 1.602 x 10⁻¹⁹ C. Coba buktikan dengan cara yang sama untuk muatan neutron! \nKemudian ada meson, partikel hadron ini tersusun atas <b><font color="#0BDA51">dua quark saja</font></b> (satu quark dan satu antikuark). Contoh meson adalah pion (π+) tersusun atas quark up dan antikuark down. <b><font color="#0BDA51">Antipartikel</font></b> dari suatu meson adalah quark dan antikuarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar</font></b>, jadi antipion (π-) tersusun atas quark down dan antikuark up. Meson menjadi <b><font color="#FF160C">sangat tidak stabil</font></b>, karena tersusun atas sebuah partikel dan antipartikel.</string>
+    <string name="m_hadron3">Dapat dilihat, bahwa hasilnya sesuai dengan muatan proton yaitu +e = 1.602 x 10⁻¹⁹ C. Coba buktikan dengan cara yang sama untuk muatan neutron! \nKemudian ada meson, partikel hadron ini tersusun atas <b><font color="#0BDA51">dua quark saja</font></b> (satu quark dan satu antiquark). Contoh meson adalah pion (π+) tersusun atas quark up dan antiquark down. <b><font color="#0BDA51">Antipartikel</font></b> dari suatu meson adalah quark dan antiquarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar</font></b>, jadi antipion (π-) tersusun atas quark down dan antiquark up. Meson menjadi <b><font color="#FF160C">sangat tidak stabil</font></b>, karena tersusun atas sebuah partikel dan antipartikel.</string>
 
 <!--    revisi-->
     <string name="m_hadron_">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua sub famili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>.</string>
@@ -163,8 +163,8 @@
     <string name="m_hadron_kuark_2">Tetapi hingga saat ini, quark <b><font color="#0BDA51">belum bisa dibuktikan</font></b> kehadirannya secara langsung sebagai partikel bebas. Jadi, <b><font color="#0BDA51">masih aman</font></b> untuk berasumsi bahwa semua partikel bebas di alam mempunyai muatan yang merupakan kelipatan bulat <i>e</i>, sesuai dengan percobaan tetes minyak oleh Millikan<font color="#0096FF">⁽²⁾</font>.</string>
     <string name="m_hadron_kuark_3">Agar lebih jelas, ambil contoh quark pada proton untuk menghitung muatan proton, di mana: </string>
     <string name="m_hadron_kuark_4">Hasilnya <b><font color="#0BDA51">sesuai dengan muatan proton</font></b> yaitu +<i>e</i> = 1.602 x 10⁻¹⁹ C.</string>
-    <string name="m_hadron_meson"><b><font color="#FFA000">Meson</font></b> adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">dua quark saja</font></b> (satu quark dan satu antikuark).\nMisal: pion (<i>π</i>+) tersusun atas quark up dan antikuark down.</string>
-    <string name="m_hadron_meson_2"><b><font color="#FFA000">Antipartikel</font></b> dari suatu meson adalah quark dan antikuarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar (partikel menjadi antipartikel, dan sebaliknya)</font></b>.\nMisal: antipion (<i>π</i>-) tersusun atas quark down dan antikuark up.</string>
+    <string name="m_hadron_meson"><b><font color="#FFA000">Meson</font></b> adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">dua quark saja</font></b> (satu quark dan satu antiquark).\nMisal: pion (<i>π</i>+) tersusun atas quark up dan antiquark down.</string>
+    <string name="m_hadron_meson_2"><b><font color="#FFA000">Antipartikel</font></b> dari suatu meson adalah quark dan antiquarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar (partikel menjadi antipartikel, dan sebaliknya)</font></b>.\nMisal: antipion (<i>π</i>-) tersusun atas quark down dan antiquark up.</string>
     <string name="m_hadron_meson_3">Meson menjadi <b><font color="#FF160C">sangat tidak stabil</font></b>, karena tersusun atas sebuah partikel dan antipartikel.</string>
     <string name="m_hadron_footnote1">(1) Partikel bebas</string>
     <string name="m_hadron_footnote2">(2) Percobaan tetes minyak oleh Millikan</string>
@@ -187,7 +187,7 @@
     <string name="m_standar_footnote1">(1) Garis waktu penemuan partikel</string>
 
     <string name="m_terkini">Model Standard <b><font color="#FF160C">belum mampu</font></b> menjelaskan gaya gravitasi, hal ini karena <b><font color="#0BDA51">pada skala subatomik</font></b> gaya gravitasi <b><font color="#FF160C">sangat lemah</font></b>.</string>
-    <string name="m_terkini2">Adapun teori yang berusaha untuk <b><font color="#0BDA51">menyatukan gaya gravitasi dengan tiga gaya dasar lainnya</font></b> (lihat gambar) adalah <b><font color="#FFA000">Teori Tentang Segalanya</font></b> (<i>Theory of Everything</i> = TOE).</string>
+    <string name="m_terkini2">Adapun teori yang berusaha untuk <b><font color="#0BDA51">menyatukan gaya gravitasi dengan tiga gaya dasar lainnya</font></b> (lihat gambar) adalah <b><font color="#FFA000">Teori tentang Segalanya</font></b> (<i>Theory of Everything</i> = TOE).</string>
     <string name="m_terkini2_1">Hingga saat ini, para ilmuwan di LHC terus mencari solusi untuk mewujudkan TOE dengan cara <b><font color="#0BDA51">menembakkan</font></b> partikel-partikel hadron dalam kecepatan yang <b><font color="#0BDA51">mendekati kecepatan cahaya</font></b>, sehingga akan terjadi tumbukan yang <b><font color="#0BDA51">menghasilkan</font></b> pecahan (partikel elementer) dari hadron tersebut.</string>
     <string name="m_terkini3">Salah satu partikel yang dicari pada TOE adalah <b><font color="#FFA000">graviton</font></b>, sebuah partikel gauge boson yang dipercaya <b><font color="#0BDA51">membawa gaya gravitasi</font></b> (lihat tabel).</string>
     <string name="m_terkini3_1">Jika terbukti benar, graviton <b><font color="#0BDA51">diduga tidak memiliki massa</font></b> karena gaya gravitasi punya <b><font color="#0BDA51">jangkauan yang sangat luas</font></b> dan tampaknya <b><font color="#0BDA51">menyebar dengan kecepatan cahaya</font></b>.</string>
@@ -228,53 +228,53 @@
     <string name="footnote">Footnote:</string>
 
 
-    <string name="contoh_soal_1">Berdasarkan susunannya, partikel subatomik dikelompokkan menjadi dua, yaitu</string>
-    <string name="opsi_soal_1_1">Partikel fermion dan boson</string>
-    <string name="opsi_soal_1_2">Partikel elementer dan komposit</string>
-    <string name="opsi_soal_1_3">Partikel elementer dan fermion</string>
-    <string name="opsi_soal_1_4">Partikel komposit dan boson</string>
+    <string name="contoh_soal_1">Berdasarkan susunannya, partikel subatomik dikelompokkan menjadi dua, yaitu…</string>
+    <string name="opsi_soal_1_1">Partikel fermion dan boson.</string>
+    <string name="opsi_soal_1_2">Partikel elementer dan komposit.</string>
+    <string name="opsi_soal_1_3">Partikel elementer dan fermion.</string>
+    <string name="opsi_soal_1_4">Partikel komposit dan boson.</string>
     <string name="solusi_contoh_1">Pilihan a salah, karena keduanya adalah kelompok partikel subatomik <b><font color="#0BDA51">berdasarkan spinnya</font></b>.</string>
     <string name="solusi_contoh_1_2">Pilihan b benar, karena keduanya adalah kelompok partikel subatomik <b><font color="#0BDA51">berdasarkan susunannya</font></b>.</string>
     <string name="solusi_contoh_1_3">Pilihan c salah, karena partikel elementer adalah salah satu kelompok partikel subatomik <b><font color="#0BDA51">berdasarkan susunannya</font></b>, sedangkan fermion <b><font color="#0BDA51">berdasarkan spinnya</font></b>.</string>
     <string name="solusi_contoh_1_4">Pilihan d salah, karena partikel komposit adalah salah satu kelompok partikel subatomik <b><font color="#0BDA51">berdasarkan susunannya</font></b>, sedangkan boson <b><font color="#0BDA51">berdasarkan spinnya</font></b>.</string>
     <string name="solusi_contoh_1_5">Pilihan d salah, karena lepton adalah partikel dengan <b><font color="#0BDA51">spin ½</font></b> dan <b><font color="#FF160C">tidak mengalami gaya kuat</font></b>. Proton dan neutron memiliki <b><font color="#0BDA51">spin ½</font></b>, namun partikel-partikel ini tersusun atas tiga quark yang <b><font color="#0BDA51">mengalami gaya kuat</font></b>.</string>
 
-    <string name="contoh_soal_2">Model QFT (Quantum Field Theory) yang menjelaskan gaya kuat yang terjadi antara quark dan gluon adalah?</string>
-    <string name="opsi_soal_2_1">Kromodinamika kuantum</string>
-    <string name="opsi_soal_2_2">Teori Tentang Segalanya</string>
-    <string name="opsi_soal_2_3">Model Standard</string>
-    <string name="opsi_soal_2_4">Teori Penyatuan Besar</string>
+    <string name="contoh_soal_2">Model QFT (Quantum Field Theory) yang menjelaskan gaya kuat yang terjadi antara quark dan gluon adalah…</string>
+    <string name="opsi_soal_2_1">Kromodinamika Kuantum.</string>
+    <string name="opsi_soal_2_2">Teori tentang Segalanya.</string>
+    <string name="opsi_soal_2_3">Model Standard.</string>
+    <string name="opsi_soal_2_4">Teori Penyatuan Besar.</string>
     <string name="solusi_contoh_2">Pilihan a benar, karena <b><font color="#FFA000">Kromodinamika Kuantum</font></b> menjelaskan <b><font color="#0BDA51">gaya kuat yang terjadi antara quark dan gluon</font></b>.</string>
-    <string name="solusi_contoh_2_2">Pilihan b salah, karena <b><font color="#FFA000">Teori Tentang Segalanya</font></b> merupakan teori yang <b><font color="#0BDA51">menyatukan empat gaya dasar</font></b> (gravitasi, elektromagnetik, kuat dan lemah).</string>
+    <string name="solusi_contoh_2_2">Pilihan b salah, karena <b><font color="#FFA000">Teori tentang Segalanya</font></b> merupakan teori yang <b><font color="#0BDA51">menyatukan empat gaya dasar</font></b> (gravitasi, elektromagnetik, kuat dan lemah).</string>
     <string name="solusi_contoh_2_3">Pilihan c salah, karena <b><font color="#FFA000">Model Standard</font></b> menjelaskan <b><font color="#0BDA51">gaya kuat, elektromagnetik, dan lemah</font></b>.</string>
     <string name="solusi_contoh_2_4">Pilihan d salah, karena <b><font color="#FFA000">Teori Penyatuan Besar</font></b> menjelaskan di mana pada <b><font color="#0BDA51">tenaga tinggi</font></b>, tiga gaya pada Model Standard <b><font color="#0BDA51">disatukan dalam satu gaya</font></b>.</string>
 
-    <string name="contoh_soal_3">Partikel yang tersusun atas tiga kuark disebut sebagai?</string>
-    <string name="opsi_soal_3_1">Lepton</string>
-    <string name="opsi_soal_3_2">Meson</string>
-    <string name="opsi_soal_3_3">Baryon</string>
-    <string name="opsi_soal_3_4">Pion</string>
+    <string name="contoh_soal_3">Partikel yang tersusun atas tiga quark disebut sebagai…</string>
+    <string name="opsi_soal_3_1">Lepton.</string>
+    <string name="opsi_soal_3_2">Meson.</string>
+    <string name="opsi_soal_3_3">Baryon.</string>
+    <string name="opsi_soal_3_4">Pion.</string>
     <string name="solusi_contoh_3">Pilihan a salah, karena <b><font color="#FFA000">lepton</font></b> adalah partikel elementer yang <b><font color="#FF160C">tidak tersusun atas partikel lain</font></b>.</string>
-    <string name="solusi_contoh_3_2">Pilihan b salah, karena <b><font color="#FFA000">meson</font></b> adalah partikel hadron yang hanya tersusun atas <b><font color="#0BDA51">dua kuark</font></b>.</string>
-    <string name="solusi_contoh_3_3">Pilihan c benar, karena <b><font color="#FFA000">baryon</font></b> adalah partikel hadron yang tersusun atas<b><font color="#0BDA51"> tiga kuark</font></b>.</string>
+    <string name="solusi_contoh_3_2">Pilihan b salah, karena <b><font color="#FFA000">meson</font></b> adalah partikel hadron yang hanya tersusun atas <b><font color="#0BDA51">dua quark</font></b>.</string>
+    <string name="solusi_contoh_3_3">Pilihan c benar, karena <b><font color="#FFA000">baryon</font></b> adalah partikel hadron yang tersusun atas<b><font color="#0BDA51"> tiga quark</font></b>.</string>
     <string name="solusi_contoh_3_4">Pilihan d salah, karena <b><font color="#FFA000">pion</font></b> adalah partikel meson.</string>
     <string name="solusi_contoh_3_5">Pilihan d salah, karena <b><font color="#0BDA51">sama saja</font></b> dengan quark pada kaon.</string>
 
-    <string name="contoh_soal_4">Berikut ini yang termasuk lepton bermuatan dan tidak bermuatan adalah?</string>
-    <string name="opsi_soal_4_1">Tau dan antitau</string>
-    <string name="opsi_soal_4_2">Tau dan muon neutrino</string>
-    <string name="opsi_soal_4_3">Muon neutrino danneutrino tau</string>
-    <string name="opsi_soal_4_4">Antitau dan antimuon</string>
+    <string name="contoh_soal_4">Berikut ini yang termasuk lepton bermuatan dan tidak bermuatan adalah…</string>
+    <string name="opsi_soal_4_1">Tau dan antitau.</string>
+    <string name="opsi_soal_4_2">Tau dan neutrino muon.</string>
+    <string name="opsi_soal_4_3">Neutrino muon dan neutrino tau.</string>
+    <string name="opsi_soal_4_4">Antitau dan antimuon.</string>
     <string name="solusi_contoh_4">Pilihan a salah, karena keduanya adalah <b><font color="#0BDA51">partikel bermuatan</font></b>.</string>
-    <string name="solusi_contoh_4_2">Pilihan b benar, karena tau <b><font color="#0BDA51">bermuatan -<i>e</i></font></b> dan muon neutrino <b><font color="#0BDA51">tidak bermuatan</font></b>.</string>
+    <string name="solusi_contoh_4_2">Pilihan b benar, karena tau <b><font color="#0BDA51">bermuatan -<i>e</i></font></b> dan neutrino muon <b><font color="#0BDA51">tidak bermuatan</font></b>.</string>
     <string name="solusi_contoh_4_3">Pilihan c salah, karena keduanya adalah partikel <b><font color="#0BDA51">tidak bermuatan</font></b>.</string>
     <string name="solusi_contoh_4_4">Pilihan d salah, karena  keduanya adalah partikel <b><font color="#0BDA51">bermuatan</font></b>.</string>
 
-    <string name="contoh_soal_5">Boson yang berperan untuk memberikan massa pada gauge bosons adalah?</string>
+    <string name="contoh_soal_5">Boson yang berperan untuk memberikan massa pada gauge bosons adalah…</string>
     <string name="opsi_soal_5_1">Boson W.</string>
     <string name="opsi_soal_5_2">Boson Z.</string>
-    <string name="opsi_soal_5_3">Gluon</string>
-    <string name="opsi_soal_5_4">Boson Higgs</string>
+    <string name="opsi_soal_5_3">Gluon.</string>
+    <string name="opsi_soal_5_4">Boson Higgs.</string>
     <string name="solusi_contoh_5">Pilihan a salah, karena <b><font color="#FFA000">boson W</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya lemah</font></b></string>
     <string name="solusi_contoh_5_2">Pilihan b salah, karena <b><font color="#FFA000">boson Z</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya lemah</font></b></string>
     <string name="solusi_contoh_5_3">Pilihan c salah, karena <b><font color="#FFA000">gluon</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya kuat</font></b> antara quark yang satu dengan quark yang lain.</string>
@@ -282,11 +282,11 @@
     <string name="m_lepton_footnote_1">(1) Penemuan Positron</string>
     <string name="sembunyikan_jawaban">Sembunyikan Jawaban</string>
 
-    <string name="contoh_soal_6">Berikut ini yang termasuk kelemahan model standard adalah?</string>
-    <string name="opsi_soal_6_1">Hanya mampu menjelaskan gaya gravitasi</string>
-    <string name="opsi_soal_6_2">Belum mampu menjelaskan gaya gravitasi</string>
-    <string name="opsi_soal_6_3">Boson Higgs belum terbukti secara eksperimen</string>
-    <string name="opsi_soal_6_4">Hanya teori saja, tanpa ada bukti eksperimen</string>
+    <string name="contoh_soal_6">Berikut ini yang termasuk kelemahan model standard adalah…</string>
+    <string name="opsi_soal_6_1">Hanya mampu menjelaskan gaya gravitasi.</string>
+    <string name="opsi_soal_6_2">Belum mampu menjelaskan gaya gravitasi.</string>
+    <string name="opsi_soal_6_3">Boson Higgs belum terbukti secara eksperimen.</string>
+    <string name="opsi_soal_6_4">Hanya teori saja, tanpa ada bukti eksperimen.</string>
     <string name="solusi_contoh_6">Pilihan a salah, karena model standard <b><font color="#0BDA51">belum menjelaskan</font></b> gaya gravitasi.</string>
     <string name="solusi_contoh_6_2">Pilihan b benar, karena model standard sudah menjelaskan <b><font color="#0BDA51">tiga gaya dasar kecuali gaya gravitasi</font></b> yang pada skala subatomik sangat lemah.</string>
     <string name="solusi_contoh_6_3">Pilihan c salah, karena boson higgs <b><font color="#0BDA51">sudah terbukti keberadaannya</font></b> pada tahun 2012 melalui eksperimen menggunakan LHC di CERN, Switzerland.</string>
@@ -320,11 +320,11 @@
     </string-array>
     <string-array name="data_description">
         <item>Partikel subatomik, kecil, atom, susunannya, spin, elementer, komposit, boson, fermion, bose-einstein, fermi-dirac, materi, medan</item>
-        <item>Teori medan kuantum, quantum field theory, qft, digambarkan, partikel medan, model standard, tiga gaya dasar, boson higgs, large hadron collider, lhc, cern, kromodinamika kuantum, quantum chromodynamics, qcd, gaya kuat, gluon</item>
+        <item>Teori medan kuantum, quantum field theory, qft, digambarkan, partikel medan, model standard, tiga gaya dasar, boson higgs, large hadron collider, lhc, cern, Kromodinamika Kuantum, quantum chromodynamics, qcd, gaya kuat, gluon</item>
         <item>famili hadron, sub famili, baryon, meson, tiga quark, proton, neutron, quark, partikel bebas, tetes minyak millikan, muatan proton, dua quark, antipartikel, sangat tidak stabil</item>
         <item>lepton, spin, tidak mengalami gaya kuat, bermuatan, tidak bermuatan, elektron, neutrino, muon, tau, antipartikel, muatan berlawanan, positron, cacah lepton </item>
         <item>abad ke-20, ilmuwan, model standard, flavor, rasa, gauge boson, boson W, boson Z, gluon, tabel cacah partikel elementer, boson higgs</item>
-        <item>kelemahan, gravitasi, skala subatomik, teori tentang segalanya, theory of everything, toe, LHC, mendekati kecepatan cahaya, gaya dasar, graviton, tidak memiliki massa, teori penyatuan besar, grand unification theory, gut, tenaga tinggi, satu gaya</item>
+        <item>kelemahan, gravitasi, skala subatomik, Teori tentang Segalanya, theory of everything, toe, LHC, mendekati kecepatan cahaya, gaya dasar, graviton, tidak memiliki massa, teori penyatuan besar, grand unification theory, gut, tenaga tinggi, satu gaya</item>
     </string-array>
     <integer-array name="data_photo">
         <item>@drawable/logobarubulat</item>
@@ -333,5 +333,16 @@
         <item>@drawable/logobarubulat</item>
         <item>@drawable/logobarubulat</item>
         <item>@drawable/logobarubulat</item>
+    </integer-array>
+
+<!--    searchOnBrowser-->
+    <string-array name="data_name_">
+        <item>Partikel Subatomik</item>
+    </string-array>
+    <string-array name="data_search_engine">
+        <item>Cari di luar aplikasi dengan Google</item>
+    </string-array>
+    <integer-array name="data_photo_">
+        <item>@drawable/google</item>
     </integer-array>
 </resources>

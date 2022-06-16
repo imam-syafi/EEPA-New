@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.dhandev.eepa.R
 import com.dhandev.eepa.addition.dummyActivity
 import com.dhandev.eepa.databinding.ItemSearchBinding
+import com.dhandev.eepa.helper.customTab
 import com.dhandev.eepa.materi.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
 
@@ -49,24 +52,13 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
                 "Model Standard" ->{mContext.startActivity(Intent(mContext, MateriStandarModel::class.java))}
                 "Perkembangan Terkini" ->{mContext.startActivity(Intent(mContext, MateriTerkini::class.java))}
                 else -> {
-                    val intent = Intent(mContext, dummyActivity::class.java)
-                    intent.putExtra("name", name)
-                    intent.putExtra("desc", description)
-                    mContext.startActivity(intent)
+//                    val intent = Intent(mContext, dummyActivity::class.java)
+//                    intent.putExtra("name", name)
+//                    intent.putExtra("desc", description)
+//                    mContext.startActivity(intent)
+                    customTab.open(mContext, "https://www.google.com/search?q=$name&oq=a&aqs=chrome..69i57j69i60l6j69i65.1322j0j9&sourceid=chrome&ie=UTF-8")
                 }
             }
-//            when(name){
-//                "Perkembangan Teori Atom" ->{mContext.startActivity(Intent(mContext, MateriPengantar::class.java))}
-//                "Spin" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Statistika" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Gaya-gaya dasar" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Partikel berdasarkan penyusunnya" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Partikel berdasarkan statistikanya" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Teori Medan Quantum" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Model Standar" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Kromodinamika Kuantum" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//                "Beyond the Standard Model" -> {Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show()}
-//            }
         }
     }
 
@@ -85,6 +77,15 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
                     for (row in listSearch) {
                         if (row.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))) {
                             resultList.add(row)
+                        } else {
+                            val dataName = charSearch
+                            val dataDescription = mContext.resources.getStringArray(R.array.data_search_engine)
+                            val dataPhoto = mContext.resources.obtainTypedArray(R.array.data_photo_)
+                            for (i in dataDescription.indices) {
+                                val item = Item(dataName,dataDescription[i], dataPhoto.getResourceId(i, -1))
+                                resultList.clear()
+                                resultList.add(item)
+                            }
                         }
                     }
                     listSearchFilter = resultList

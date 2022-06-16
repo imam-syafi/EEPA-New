@@ -1,6 +1,8 @@
 package com.dhandev.eepa
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -8,11 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.dhandev.eepa.databinding.ActivityMainBinding
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var attempt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,16 +48,6 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             navView.visibility = View.GONE
             tvScroll.visibility = View.GONE
-        }
-    }
-
-    //pengecekan agar tidak keluar secara tidak sengaja
-    override fun onBackPressed() {
-        if (attempt == 0){
-            attempt = 1
-            Toast.makeText(this, "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT).show()
-        } else {
-            super.onBackPressed()
         }
     }
 }

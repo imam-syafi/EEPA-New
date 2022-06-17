@@ -19,14 +19,20 @@ class MateriSubatomik : AppCompatActivity() {
 
     private lateinit var binding: ActivityMateriSubatomikBinding
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_materi_subatomik)
         binding = ActivityMateriSubatomikBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 1)
+        editLastRead.apply()
 
         val highlight = intent.getStringExtra("highlight")
         if (highlight != null) {

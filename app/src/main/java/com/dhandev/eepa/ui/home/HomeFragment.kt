@@ -3,7 +3,9 @@ package com.dhandev.eepa.ui.home
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.graphics.Color.argb
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,10 +22,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
-import com.dhandev.eepa.materi.MateriTMQ
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
-import com.dhandev.eepa.materi.MateriSubatomik
+import com.dhandev.eepa.materi.*
 import com.dhandev.eepa.onBoarding
 import com.dhandev.eepa.search.SearchActivity
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
@@ -47,32 +48,13 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.more.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
-        )
-        binding.seeAll.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
-        )
-        binding.introHome.setOnClickListener {
-            val intent = Intent(activity, MateriSubatomik::class.java)
-            startActivity(intent)
-        }
-        binding.contoh.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_contohActivity)
-        )
-        binding.latihan.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_latihanActivity)
-        )
-        binding.flashcard.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_benarSalahActivity)
-        )
-        binding.referensi.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_referensiActivity)
-        )
-        binding.lampiran.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_lampiranActivity)
-        )
-
+//        binding.introHome.setOnClickListener {
+//            val intent = Intent(activity, MateriSubatomik::class.java)
+//            startActivity(intent)
+//        }
+//        binding.more.setOnClickListener(
+//            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
+//        )
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 
         val username : String?  = sharedPred.getString("userName", null)
@@ -89,8 +71,63 @@ class HomeFragment : Fragment() {
 //        Glide.with(this).load(baseUrl+avatar).circleCrop().into(binding.imageView2)
         val avatar = sharedPred.getString("avatarDrawable", "0")
         when(avatar){
-            "0" -> Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView2)
-            "1" -> Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView2)
+            "0" -> {
+                Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView2)
+                binding.iconMateri.setImageResource(R.drawable.business_3d_businessman_in_dark_blue_suit_with_phone_looking_straight)
+//                binding.horizontalScrollView.background.setColorFilter(Color.parseColor("#ECF3FE"), PorterDuff.Mode.SRC_ATOP)
+            }
+            "1" -> {
+                Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView2)
+                binding.iconMateri.setImageResource(R.drawable.business_3d_businesswoman_in_red_suit_looking_at_phone)
+//                binding.horizontalScrollView.background.setColorFilter(Color.parseColor("#FEECF8"), PorterDuff.Mode.SRC_ATOP)
+            }
+        }
+
+        val valueSubMateri = sharedPred.getInt("subMateri", 0)
+
+        binding.apply {
+            if (valueSubMateri==0){
+                mulaiOrLanjut.text = getString(R.string.mulaiBelajar)
+                lastRead.text = getString(R.string._1_subatomik)
+            } else {
+                mulaiOrLanjut.text = getString(R.string.lanjutBelajar)
+                when(valueSubMateri){
+                    1 -> lastRead.text = getString(R.string._1_subatomik)
+                    2 -> lastRead.text = getString(R.string._2_teori_medan_kuantum)
+                    3 -> lastRead.text = getString(R.string._3_hadron)
+                    4 -> lastRead.text = getString(R.string._4_lepton)
+                    5 -> lastRead.text = getString(R.string._5_model_standar)
+                    6 -> lastRead.text = getString(R.string._6_perkembangan_terkini)
+                }
+            }
+            horizontalScrollView.setOnClickListener{
+                when(valueSubMateri){
+                    0, 1 -> startActivity(Intent(activity, MateriSubatomik::class.java))
+                    2 -> startActivity(Intent(activity, MateriTMQ::class.java))
+                    3 -> startActivity(Intent(activity, MateriHadron::class.java))
+                    4 -> startActivity(Intent(activity, MateriLepton::class.java))
+                    5 -> startActivity(Intent(activity, MateriStandarModel::class.java))
+                    6 -> startActivity(Intent(activity, MateriTerkini::class.java))
+                }
+            }
+            seeAll.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
+            )
+            contoh.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_contohActivity)
+            )
+            latihan.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_latihanActivity)
+            )
+            flashcard.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_benarSalahActivity)
+            )
+            referensi.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_referensiActivity)
+            )
+            lampiran.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_lampiranActivity)
+            )
         }
 
         return root
@@ -197,5 +234,40 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        val valueSubMateri = sharedPred.getInt("subMateri", 0)
+        binding.apply {
+            if (valueSubMateri==0){
+                mulaiOrLanjut.text = getString(R.string.mulaiBelajar)
+                lastRead.text = getString(R.string._1_subatomik)
+            } else {
+                mulaiOrLanjut.text = getString(R.string.lanjutBelajar)
+                when(valueSubMateri){
+                    1 -> lastRead.text = getString(R.string._1_subatomik)
+                    2 -> lastRead.text = getString(R.string._2_teori_medan_kuantum)
+                    3 -> lastRead.text = getString(R.string._3_hadron)
+                    4 -> lastRead.text = getString(R.string._4_lepton)
+                    5 -> lastRead.text = getString(R.string._5_model_standar)
+                    6 -> lastRead.text = getString(R.string._6_perkembangan_terkini)
+                    7 -> lastRead.text = getString(R.string.garis_waktu_penemuan)
+                    8 -> lastRead.text = getString(R.string.penemuan_positron)
+                }
+            }
+            horizontalScrollView.setOnClickListener{
+                when(valueSubMateri){
+                    0, 1 -> startActivity(Intent(activity, MateriSubatomik::class.java))
+                    2 -> startActivity(Intent(activity, MateriTMQ::class.java))
+                    3 -> startActivity(Intent(activity, MateriHadron::class.java))
+                    4 -> startActivity(Intent(activity, MateriLepton::class.java))
+                    5 -> startActivity(Intent(activity, MateriStandarModel::class.java))
+                    6 -> startActivity(Intent(activity, MateriTerkini::class.java))
+                    7 -> startActivity(Intent(activity, MateriTimeline::class.java))
+                    8 -> startActivity(Intent(activity, MateriPositron::class.java))
+                }
+            }
+        }
+        super.onResume()
     }
 }

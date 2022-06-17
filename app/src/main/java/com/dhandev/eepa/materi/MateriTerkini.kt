@@ -18,6 +18,7 @@ import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 class MateriTerkini : AppCompatActivity() {
     private lateinit var binding: ActivityMateriTerkiniBinding
     private lateinit var sharedPred: SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
     var URL = "https://www.sciencenewsforstudents.org/wp-content/uploads/2022/04/1440_four_fundamental_forces_feat_rev-1030x580.jpg"
     var URL2 = "https://docs.google.com/uc?id=1S4j3UJMYxcSnBbFBKgDKu-usPiJWb0Mg"
     var page = 1
@@ -28,8 +29,13 @@ class MateriTerkini : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 6)
+        editLastRead.apply()
 
         binding.apply {
             setContentView(root)

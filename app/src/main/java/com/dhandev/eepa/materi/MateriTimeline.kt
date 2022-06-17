@@ -1,6 +1,7 @@
 package com.dhandev.eepa.materi
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.Resources
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -22,11 +23,17 @@ class MateriTimeline : AppCompatActivity() {
     private lateinit var binding: ActivityMateriTimelineBinding
     var listItem = mutableListOf<String>()
     var listDesc = mutableListOf<CharSequence>()
+    private lateinit var sharedPredLastRead : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMateriTimelineBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 7)
+        editLastRead.apply()
 
         binding.apply {
             arrowBack.setOnClickListener { onBackPressed() }

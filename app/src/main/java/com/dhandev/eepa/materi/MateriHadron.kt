@@ -23,6 +23,7 @@ import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 class MateriHadron : AppCompatActivity() {
     private lateinit var binding: ActivityMateriHadronBinding
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
     var URL : String = "https://docs.google.com/uc?id=1QYZnzK2G8UdSegnq9Xg7c7b5kOMmEO6-"
     var URL2 = "https://docs.google.com/uc?id=1QZQtDK-fm-HKcNa3YXAz0Tf8TCMaMjTr"
     var page = 1
@@ -35,8 +36,13 @@ class MateriHadron : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 3)
+        editLastRead.apply()
 
         binding.apply{
             setContentView(root)

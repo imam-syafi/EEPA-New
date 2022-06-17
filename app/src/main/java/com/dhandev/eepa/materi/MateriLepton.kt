@@ -18,6 +18,7 @@ import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 class MateriLepton : AppCompatActivity() {
     private lateinit var binding: ActivityMateriLeptonBinding
     private lateinit var sharedPred: SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
     var URL: String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
     var URL2 = "https://docs.google.com/uc?id=1RhYvt9iXmpw5fy6ZIdBTfdHn_zY1gJ3b"
     var page = 1
@@ -28,8 +29,13 @@ class MateriLepton : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 4)
+        editLastRead.apply()
 
         binding.apply {
             setContentView(root)

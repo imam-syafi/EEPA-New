@@ -17,6 +17,7 @@ import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 class MateriStandarModel : AppCompatActivity() {
     private lateinit var binding : ActivityMateriStandarModelBinding
     private lateinit var sharedPred: SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
     var URL = "https://docs.google.com/uc?id=1S3frX3nmvgm7-YPEfRpxZDynPUOWWmTd"
     var URL2 = "https://docs.google.com/uc?id=1S4FN0RlnfKnDs5uDr2glop9pnA2dqgYD"
     var page = 1
@@ -26,8 +27,13 @@ class MateriStandarModel : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 5)
+        editLastRead.apply()
 
         binding.apply {
             setContentView(root)

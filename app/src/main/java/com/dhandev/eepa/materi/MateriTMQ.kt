@@ -21,6 +21,7 @@ class MateriTMQ : AppCompatActivity() {
 
     private lateinit var binding: ActivityMateriTmqBinding
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
     var URL : String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
     var URL2 = "https://cdn.mos.cms.futurecdn.net/7cvrrJxBe3N4Pfsv8q9oaM.jpg"
     var page = 1
@@ -33,8 +34,13 @@ class MateriTMQ : AppCompatActivity() {
 
         binding = ActivityMateriTmqBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 2)
+        editLastRead.apply()
 
         binding.apply{
             setContentView(root)

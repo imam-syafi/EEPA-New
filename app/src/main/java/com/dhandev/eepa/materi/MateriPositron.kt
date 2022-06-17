@@ -21,6 +21,7 @@ class MateriPositron : AppCompatActivity() {
 
     private lateinit var binding: ActivityMateriPositronBinding
     private lateinit var sharedPred : SharedPreferences
+    private lateinit var sharedPredLastRead : SharedPreferences
     var URL : String = "https://upload.wikimedia.org/wikipedia/commons/5/5a/PositronDiscovery.png"
     var URL2 = "https://docs.google.com/uc?id=1YNNe_DU-bm3NdgveE_TwyeTynxPeUPo2"
     var page = 1
@@ -31,8 +32,13 @@ class MateriPositron : AppCompatActivity() {
 
         binding = ActivityMateriPositronBinding.inflate(layoutInflater)
         sharedPred = this.getSharedPreferences("Tampilan", MODE_PRIVATE)
+        sharedPredLastRead = this.getSharedPreferences("User", MODE_PRIVATE)
         loadUkuranbaru()
         loadLatarBaru()
+
+        val editLastRead = sharedPredLastRead.edit()
+        editLastRead.putInt("subMateri", 8)
+        editLastRead.apply()
 
         binding.apply{
             setContentView(root)

@@ -12,7 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:ignore="ExtraText">
 
         <androidx.appcompat.widget.Toolbar
@@ -139,96 +139,141 @@
             android:gravity="center"
             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/textView4" />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-        <HorizontalScrollView
+<!--        <HorizontalScrollView-->
+<!--            android:id="@+id/horizontalScrollView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginVertical="5dp"-->
+<!--            android:scrollbars="none"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView4"-->
+<!--            tools:ignore="UselessParent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/introHome"-->
+<!--                    android:layout_width="166dp"-->
+<!--                    android:layout_height="166dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginRight="15dp"-->
+<!--                    android:background="@drawable/pengantar"-->
+<!--                    android:text="@string/Intro"-->
+<!--                    android:gravity="start|bottom"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:fontFamily="@font/nunito_sans_black"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="166dp"-->
+<!--                    android:layout_height="166dp"-->
+<!--                    android:layout_marginEnd="15dp"-->
+<!--                    android:background="@drawable/model_standar"-->
+<!--                    android:text="@string/standard_model"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:gravity="start|bottom"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:fontFamily="@font/nunito_sans_black"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="166dp"-->
+<!--                    android:layout_height="166dp"-->
+<!--                    android:layout_marginEnd="15dp"-->
+<!--                    android:background="@drawable/fermion"-->
+<!--                    android:text="Fermion"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:gravity="start|bottom"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:fontFamily="@font/nunito_sans_black"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="166dp"-->
+<!--                    android:layout_height="166dp"-->
+<!--                    android:layout_marginEnd="15dp"-->
+<!--                    android:background="@drawable/bosons"-->
+<!--                    android:text="Boson"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:gravity="start|bottom"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:fontFamily="@font/nunito_sans_black"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/more"-->
+<!--                    android:layout_width="166dp"-->
+<!--                    android:layout_height="166dp"-->
+<!--                    android:layout_marginEnd="20dp"-->
+<!--                    android:background="@drawable/rounded_corner_smaller"-->
+<!--                    android:text="@string/more"-->
+<!--                    android:backgroundTint="@color/blue_500"-->
+<!--                    android:gravity="start|bottom"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:fontFamily="@font/nunito_sans_black"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="18sp"/>-->
+
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
+
+        <LinearLayout
             android:id="@+id/horizontalScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginVertical="5dp"
-            android:scrollbars="none"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_corner_smaller"
+            android:paddingStart="110dp"
+            android:paddingEnd="15dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/iconMateri"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            tools:ignore="UselessParent">
-
-            <LinearLayout
+            app:layout_constraintStart_toStartOf="@id/iconMateri"
+            app:layout_constraintTop_toBottomOf="@id/textView4" >
+            <TextView
+                android:id="@+id/mulaiOrLanjut"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:text="@string/mulaiBelajar"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:textColor="@color/abu"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/lastRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1_subatomik"
+                android:maxLines="2"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textColor="@color/abu"
+                android:textSize="20sp"
+                android:ellipsize="marquee"/>
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/introHome"
-                    android:layout_width="166dp"
-                    android:layout_height="166dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/pengantar"
-                    android:text="@string/Intro"
-                    android:gravity="start|bottom"
-                    android:padding="15dp"
-                    android:fontFamily="@font/nunito_sans_black"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:layout_width="166dp"
-                    android:layout_height="166dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/model_standar"
-                    android:text="@string/standard_model"
-                    android:singleLine="true"
-                    android:gravity="start|bottom"
-                    android:padding="15dp"
-                    android:fontFamily="@font/nunito_sans_black"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:layout_width="166dp"
-                    android:layout_height="166dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/fermion"
-                    android:text="Fermion"
-                    android:singleLine="true"
-                    android:gravity="start|bottom"
-                    android:padding="15dp"
-                    android:fontFamily="@font/nunito_sans_black"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:layout_width="166dp"
-                    android:layout_height="166dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/bosons"
-                    android:text="Boson"
-                    android:singleLine="true"
-                    android:gravity="start|bottom"
-                    android:padding="15dp"
-                    android:fontFamily="@font/nunito_sans_black"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/more"
-                    android:layout_width="166dp"
-                    android:layout_height="166dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/rounded_corner_smaller"
-                    android:text="@string/more"
-                    android:backgroundTint="@color/blue_500"
-                    android:gravity="start|bottom"
-                    android:padding="15dp"
-                    android:fontFamily="@font/nunito_sans_black"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
-
-            </LinearLayout>
-        </HorizontalScrollView>
+        <ImageView
+            android:id="@+id/iconMateri"
+            android:layout_width="115dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/business_3d_businessman_in_dark_blue_suit_with_phone_looking_straight"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4" />
 
         <TextView
             android:id="@+id/textView5"
@@ -259,7 +304,7 @@
                 android:background="@drawable/contohsoal"
                 android:text="@string/example"
                 android:gravity="start|bottom"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:padding="15dp"
                 android:fontFamily="@font/nunito_sans_black"
                 android:textColor="@color/white"
@@ -274,7 +319,7 @@
                 android:background="@drawable/latihan"
                 android:text="@string/exercise"
                 android:gravity="start|bottom"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:padding="15dp"
                 android:fontFamily="@font/nunito_sans_black"
                 android:textColor="@color/white"
@@ -289,7 +334,7 @@
                 android:background="@drawable/benarsalah"
                 android:text="@string/flashcard"
                 android:gravity="start|bottom"
-                android:layout_weight="3"
+                android:layout_weight="1"
                 android:padding="15dp"
                 android:fontFamily="@font/nunito_sans_black"
                 android:textColor="@color/white"

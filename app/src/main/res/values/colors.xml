@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="biru_seken">#ECF3FE</color>
+    <color name="pink_seken">#FEECF8</color>
     <color name="blue_200">#5EB5F1</color>
     <color name="blue_500">#309AE3</color>
     <color name="blue_700">#057BCC</color>

@@ -23,7 +23,7 @@
             android:minHeight="?attr/actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
@@ -69,12 +69,12 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_corner"
             android:backgroundTint="@color/white"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:text="@string/search_hint"
-            android:padding="10dp"
-            android:textSize="14sp"
             android:elevation="10dp"
+            android:fontFamily="@font/nunito_sans_bold"
             android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/search_hint"
+            android:textSize="14sp"
             android:transitionName="search"
             app:drawableEndCompat="@drawable/uil_search"
             app:drawableTint="@color/abu_terang"
@@ -83,13 +83,14 @@
             app:layout_constraintTop_toBottomOf="@id/userName" />
 
         //perlu linearlayout, agar bisa lihat previewnya
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
             android:layout_margin="20dp"
             android:gravity="center_horizontal"
+            app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText">
@@ -100,17 +101,16 @@
                 android:layout_height="170dp"
                 app:autoPlay="true"
                 app:autoPlayDelay="5000"
+                app:captionTextSize="18sp"
                 app:carouselType="BLOCK"
+                app:imagePlaceholder="@drawable/memuatgambar"
                 app:imageScaleType="fitXY"
                 app:scaleOnScroll="false"
-                app:captionTextSize="18sp"
                 app:scalingFactor="0.35"
+                app:showBottomShadow="true"
                 app:showIndicator="true"
                 app:showNavigationButtons="false"
-                app:showBottomShadow="true"
-                app:imagePlaceholder="@drawable/memuatgambar"
-                app:showTopShadow="false">
-            </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+                app:showTopShadow="false"></org.imaginativeworld.whynotimagecarousel.ImageCarousel>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
@@ -118,8 +118,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:fontFamily="@font/nunito_sans_black"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_sans_black"
             android:text="@string/materi"
             android:textColor="@color/abu"
             android:textSize="24sp"
@@ -132,146 +132,148 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginEnd="20dp"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
             android:fontFamily="@font/nunito_sans_bold"
+            android:gravity="center"
             android:text="@string/see_all"
             android:textColor="@color/abu"
             android:textSize="14sp"
-            android:gravity="center"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:layout_constraintBottom_toBottomOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" />
 
-<!--        <HorizontalScrollView-->
-<!--            android:id="@+id/horizontalScrollView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_marginVertical="5dp"-->
-<!--            android:scrollbars="none"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/textView4"-->
-<!--            tools:ignore="UselessParent">-->
+        <!--        <HorizontalScrollView-->
+        <!--            android:id="@+id/horizontalScrollView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:layout_marginVertical="5dp"-->
+        <!--            android:scrollbars="none"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView4"-->
+        <!--            tools:ignore="UselessParent">-->
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:orientation="horizontal">-->
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="horizontal">-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/introHome"-->
-<!--                    android:layout_width="166dp"-->
-<!--                    android:layout_height="166dp"-->
-<!--                    android:layout_marginLeft="20dp"-->
-<!--                    android:layout_marginRight="15dp"-->
-<!--                    android:background="@drawable/pengantar"-->
-<!--                    android:text="@string/Intro"-->
-<!--                    android:gravity="start|bottom"-->
-<!--                    android:padding="15dp"-->
-<!--                    android:fontFamily="@font/nunito_sans_black"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="18sp"/>-->
+        <!--                <TextView-->
+        <!--                    android:id="@+id/introHome"-->
+        <!--                    android:layout_width="166dp"-->
+        <!--                    android:layout_height="166dp"-->
+        <!--                    android:layout_marginLeft="20dp"-->
+        <!--                    android:layout_marginRight="15dp"-->
+        <!--                    android:background="@drawable/pengantar"-->
+        <!--                    android:text="@string/Intro"-->
+        <!--                    android:gravity="start|bottom"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:fontFamily="@font/nunito_sans_black"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="18sp"/>-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="166dp"-->
-<!--                    android:layout_height="166dp"-->
-<!--                    android:layout_marginEnd="15dp"-->
-<!--                    android:background="@drawable/model_standar"-->
-<!--                    android:text="@string/standard_model"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:gravity="start|bottom"-->
-<!--                    android:padding="15dp"-->
-<!--                    android:fontFamily="@font/nunito_sans_black"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="18sp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="166dp"-->
+        <!--                    android:layout_height="166dp"-->
+        <!--                    android:layout_marginEnd="15dp"-->
+        <!--                    android:background="@drawable/model_standar"-->
+        <!--                    android:text="@string/standard_model"-->
+        <!--                    android:singleLine="true"-->
+        <!--                    android:gravity="start|bottom"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:fontFamily="@font/nunito_sans_black"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="18sp"/>-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="166dp"-->
-<!--                    android:layout_height="166dp"-->
-<!--                    android:layout_marginEnd="15dp"-->
-<!--                    android:background="@drawable/fermion"-->
-<!--                    android:text="Fermion"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:gravity="start|bottom"-->
-<!--                    android:padding="15dp"-->
-<!--                    android:fontFamily="@font/nunito_sans_black"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="18sp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="166dp"-->
+        <!--                    android:layout_height="166dp"-->
+        <!--                    android:layout_marginEnd="15dp"-->
+        <!--                    android:background="@drawable/fermion"-->
+        <!--                    android:text="Fermion"-->
+        <!--                    android:singleLine="true"-->
+        <!--                    android:gravity="start|bottom"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:fontFamily="@font/nunito_sans_black"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="18sp"/>-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="166dp"-->
-<!--                    android:layout_height="166dp"-->
-<!--                    android:layout_marginEnd="15dp"-->
-<!--                    android:background="@drawable/bosons"-->
-<!--                    android:text="Boson"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:gravity="start|bottom"-->
-<!--                    android:padding="15dp"-->
-<!--                    android:fontFamily="@font/nunito_sans_black"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="18sp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="166dp"-->
+        <!--                    android:layout_height="166dp"-->
+        <!--                    android:layout_marginEnd="15dp"-->
+        <!--                    android:background="@drawable/bosons"-->
+        <!--                    android:text="Boson"-->
+        <!--                    android:singleLine="true"-->
+        <!--                    android:gravity="start|bottom"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:fontFamily="@font/nunito_sans_black"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="18sp"/>-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/more"-->
-<!--                    android:layout_width="166dp"-->
-<!--                    android:layout_height="166dp"-->
-<!--                    android:layout_marginEnd="20dp"-->
-<!--                    android:background="@drawable/rounded_corner_smaller"-->
-<!--                    android:text="@string/more"-->
-<!--                    android:backgroundTint="@color/blue_500"-->
-<!--                    android:gravity="start|bottom"-->
-<!--                    android:padding="15dp"-->
-<!--                    android:fontFamily="@font/nunito_sans_black"-->
-<!--                    android:textColor="@color/white"-->
-<!--                    android:textSize="18sp"/>-->
+        <!--                <TextView-->
+        <!--                    android:id="@+id/more"-->
+        <!--                    android:layout_width="166dp"-->
+        <!--                    android:layout_height="166dp"-->
+        <!--                    android:layout_marginEnd="20dp"-->
+        <!--                    android:background="@drawable/rounded_corner_smaller"-->
+        <!--                    android:text="@string/more"-->
+        <!--                    android:backgroundTint="@color/blue_500"-->
+        <!--                    android:gravity="start|bottom"-->
+        <!--                    android:padding="15dp"-->
+        <!--                    android:fontFamily="@font/nunito_sans_black"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="18sp"/>-->
 
-<!--            </LinearLayout>-->
-<!--        </HorizontalScrollView>-->
+        <!--            </LinearLayout>-->
+        <!--        </HorizontalScrollView>-->
 
         <LinearLayout
             android:id="@+id/horizontalScrollView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="vertical"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/rounded_corner_smaller"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
             android:paddingStart="110dp"
             android:paddingEnd="15dp"
-            android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="@id/iconMateri"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/iconMateri"
-            app:layout_constraintTop_toBottomOf="@id/textView4" >
+            app:layout_constraintTop_toBottomOf="@id/textView4">
+
             <TextView
                 android:id="@+id/mulaiOrLanjut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mulaiBelajar"
                 android:fontFamily="@font/nunito_sans_bold"
+                android:text="@string/mulaiBelajar"
                 android:textColor="@color/abu"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/lastRead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/_1_subatomik"
-                android:maxLines="2"
+                android:ellipsize="marquee"
                 android:fontFamily="@font/nunito_sans_black"
+                android:maxLines="2"
+                android:text="@string/_1_subatomik"
                 android:textColor="@color/abu"
-                android:textSize="20sp"
-                android:ellipsize="marquee"/>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/iconMateri"
             android:layout_width="115dp"
             android:layout_height="0dp"
+            android:layout_marginStart="15dp"
             android:adjustViewBounds="true"
             android:src="@drawable/business_3d_businessman_in_dark_blue_suit_with_phone_looking_straight"
-            android:layout_marginStart="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView4" />
 
@@ -288,58 +290,65 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
-        <LinearLayout
-            android:id="@+id/sharpen"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView5">
+        <TextView
+            android:id="@+id/contoh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_smaller"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/nunito_sans_black"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/example"
+            android:textColor="@color/abu"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="55dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/iconContohSoal" />
 
-            <TextView
-                android:id="@+id/contoh"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/contohsoal"
-                android:text="@string/example"
-                android:gravity="start|bottom"
-                android:layout_weight="1"
-                android:padding="15dp"
-                android:fontFamily="@font/nunito_sans_black"
-                android:textColor="@color/white"
-                android:textSize="18sp"/>
-            <View
-                android:layout_width="15dp"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/latihan"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/latihan"
-                android:text="@string/exercise"
-                android:gravity="start|bottom"
-                android:layout_weight="1"
-                android:padding="15dp"
-                android:fontFamily="@font/nunito_sans_black"
-                android:textColor="@color/white"
-                android:textSize="18sp"/>
-            <View
-                android:layout_width="15dp"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/flashcard"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/benarsalah"
-                android:text="@string/flashcard"
-                android:gravity="start|bottom"
-                android:layout_weight="1"
-                android:padding="15dp"
-                android:fontFamily="@font/nunito_sans_black"
-                android:textColor="@color/white"
-                android:textSize="18sp"/>
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/iconContohSoal"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/contohsoal"
+            app:layout_constraintEnd_toEndOf="@+id/contoh"
+            app:layout_constraintStart_toStartOf="@+id/contoh"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/latihan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_corner_smaller"
+            android:backgroundTint="#FFCCBC"
+            android:fontFamily="@font/nunito_sans_black"
+            android:gravity="center_horizontal|bottom"
+            android:text="@string/exercise"
+            android:textColor="@color/abu"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="55dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/iconLatihan" />
+
+        <ImageView
+            android:id="@+id/iconLatihan"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/latihan"
+            app:layout_constraintEnd_toEndOf="@+id/latihan"
+            app:layout_constraintStart_toStartOf="@+id/latihan"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/fitur"
@@ -352,48 +361,55 @@
             android:textColor="@color/abu"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sharpen" />
+            app:layout_constraintTop_toBottomOf="@+id/contoh" />
 
 
         <Button
             android:id="@+id/referensi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/referensi"
-            android:background="@drawable/rounded_corner_smaller"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:textAlignment="viewStart"
-            android:letterSpacing="0"
-            android:textAllCaps="false"
-            android:textColor="@color/abu"
-            android:layout_marginRight="15dp"
-            android:textSize="18sp"
-            app:backgroundTint="@color/biru_seken"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@id/fitur"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rounded_corner_smaller"
+            android:drawableLeft="@drawable/referensi"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:letterSpacing="0"
+            android:text="@string/referensi"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/abu"
+            android:textSize="18sp"
+            app:backgroundTint="@color/biru_seken"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/referensi"/>
+            app:layout_constraintTop_toBottomOf="@id/fitur" />
 
         <Button
             android:id="@+id/lampiran"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_attach_file_24"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/rounded_corner_smaller"
+            android:drawableLeft="@drawable/ic_baseline_attach_file_24"
             android:fontFamily="@font/nunito_sans_bold"
-            android:textAlignment="viewStart"
             android:letterSpacing="0"
+            android:text="@string/attachment"
+            android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/abu"
             android:textSize="18sp"
             app:backgroundTint="@color/biru_seken"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fitur"
             app:layout_constraintStart_toEndOf="@id/referensi"
-            android:text="@string/attachment"/>
+            app:layout_constraintTop_toBottomOf="@id/fitur" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

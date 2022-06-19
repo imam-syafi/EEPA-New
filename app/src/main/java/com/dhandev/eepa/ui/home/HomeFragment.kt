@@ -119,9 +119,9 @@ class HomeFragment : Fragment() {
             latihan.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_latihanActivity)
             )
-            flashcard.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_benarSalahActivity)
-            )
+//            flashcard.setOnClickListener(
+//                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_benarSalahActivity)
+//            )
             referensi.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_referensiActivity)
             )

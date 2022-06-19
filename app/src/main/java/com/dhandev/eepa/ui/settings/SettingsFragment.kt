@@ -63,6 +63,7 @@ class SettingsFragment : Fragment() {
                     .setCancelable(true)
                     .setPositiveButton("Keluar", R.drawable.ic_baseline_done_24){dialog, which ->
                         Editor.remove("userName")
+                        Editor.remove("subMateri")
                         Editor2.remove("gantiLatar")
                         Editor2.remove("tombolTerpilih")
                         Editor2.remove("ukuranBaru")

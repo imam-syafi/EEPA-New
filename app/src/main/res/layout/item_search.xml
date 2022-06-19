@@ -44,7 +44,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:textSize="16sp"
-                android:textStyle="bold"
+                android:fontFamily="@font/nunito_sans_black"
+                android:textColor="@color/abu"
                 tools:text="Judul Besar Materi" />
 
             <TextView
@@ -54,6 +55,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/nunito"
+                android:textColor="@color/abu"
                 android:ellipsize="end"
                 android:maxLines="2"
                 tools:text="Tag materi yang termasuk" />

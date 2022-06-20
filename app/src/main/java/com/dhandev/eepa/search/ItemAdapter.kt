@@ -71,9 +71,9 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
         return object : Filter(){
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 charSearch = constraint.toString()
-                if (charSearch.isEmpty()) {
+                if (charSearch.isEmpty()) { //cek apakah kolom pencarian kosong/tidak
                     listSearchFilter = listSearch
-                } else if (listSearch.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))){
+                } else if (listSearch.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))){ //cek apakah input kata terdapat pada listSearch
                     val resultList = ArrayList<Item>()
                     for (row in listSearch) {
                         val rowString = row.toString().lowercase(Locale.ROOT)
@@ -82,7 +82,7 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
                         }
                     }
                     listSearchFilter = resultList
-                } else {
+                } else {        //jika terdapat input namunya tidak ditemukan pada listSearch, tampilkan pencarian dengan Google
                     val dataName = charSearch
                     val dataDescription = mContext.resources.getStringArray(R.array.data_search_engine)
                     val dataPhoto = mContext.resources.obtainTypedArray(R.array.data_photo_)

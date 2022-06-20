@@ -278,10 +278,10 @@ class MulaiLatihanActivity : AppCompatActivity() {
     private fun SoalKeenambelas() {
         binding.apply {
             soalLatihan.setText(R.string.soal_16)
-            opsi1.text = "Up, Down, Bottom, Top, Strange dan Charm"
-            opsi2.text = "Elektron, Elektron Neutrino, Muon, Muon Neutrino, Tau dan Tau Neutrino"
-            opsi3.text = "Up, Down, Bottom, Elektron, Muon, dan Tau"
-            opsi4.text = "Proton, Neutron, Pion, dan Kaon"
+            opsi1.text = "Up, down, bottom, top, strange dan charm"
+            opsi2.text = "Elektron, neutrino elektron , muon, neutrino muon, tau dan Neutrino tau"
+            opsi3.text = "Up, down, bottom, elektron, muon, dan tau"
+            opsi4.text = "Proton, neutron, pion, dan kaon"
 
             listHasil.add(16)
             btnNext.setOnClickListener {

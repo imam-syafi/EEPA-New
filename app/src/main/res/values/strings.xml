@@ -103,6 +103,7 @@
     <string name="tampilan_disclaimer">Pengaturan tampilan berupa ukuran teks dan warna latar <b>hanya</b> berlaku pada tampilan materi</string>
     <string name="detail_buku_krane"><b>Modern Physics</b>\nOleh Kenneth S. Krane\n2012</string>
     <string name="detail_buku_alonso"><b>Fundamental University Physics</b>\nOleh Marcelo Alonso, Edward J. Finn\n2007</string>
+    <string name="detail_wiki_elementer"><b>Elementary Particle</b>\nOleh Wikipedia, <i>The Free Encyclopedia</i></string>
     <string name="default_1">Partikel elementer merupakan satu-satunya partikel subatomik</string>
     <string name="default_2">Fermion mematuhi statistika Fermi-Dirac</string>
     <string name="default_3">Gluon berperan sebagai lem antar partikel elementer pada Hadron</string>
@@ -141,14 +142,14 @@
     <string name="m_tmq_caption">Gambar <i>Large Hadron Collider</i></string>
     <string name="m_tmq_caption2">Gambar 2. Fasilitas-fasilitas di CERN</string>
     <string name="m_tmq"><b><font color="#0BDA51">Untuk menjelaskan</font></b> partikel-partikel subatomik, ilmuwan menggunakan <b><font color="#0BDA51">Teori Medan Quantum</font></b> (<i>Quantum Field Theory</i> = QFT). Dalam QFT, <b><font color="#0BDA51">gaya (interaksi)</font></b> digambarkan melalui perantara berupa <b><font color="#0BDA51">partikel medan (field particle)</font></b>, contohnya adalah gaya elektromagnetik yang dibawa oleh foton. Selain itu, ada juga partikel yang <b><font color="#FF160C">massa diamnya tidak nol</font></b>, yaitu <b><font color="#0BDA51">partikel materi (material particle)</font></b>, contohnya elektron, proton, dan neutron. Sehingga partikel subatomik dapat pula dikelompokkan menjadi partikel medan dan partikel materi.</string>
-    <string name="m_tmq2"><b><font color="#0BDA51">Dalam QFT terdapat berbagai model</font></b>, salah satunya yang populer adalah <b><font color="#0BDA51">Model Standard</font></b> (Standard Model = SM). Model ini adalah QFT yang mampu menjelaskan <b><font color="#0BDA51">tiga gaya dasar, yaitu elektromagnetik, kuat, dan lemah</font></b>. SM berhasil diselesaikan dengan terbuktinya keberadaan <b><font color="#0BDA51">boson higgs</font></b> pada tahun 2012 menggunakan LHC (lihat Gambar 1) di <a href="https://home.cern/science/physics/higgs-boson">CERN</a> (Centre Européen pour la Recherche Nucléaire) di Geneva, Switzerland (lihat Gambar 2).</string>
+    <string name="m_tmq2"><b><font color="#0BDA51">Dalam QFT terdapat berbagai model</font></b>, salah satunya yang populer adalah <b><font color="#0BDA51">Model Standard</font></b> (Standard Model = SM). Model ini adalah QFT yang mampu menjelaskan <b><font color="#0BDA51">tiga gaya dasar, yaitu elektromagnetik, kuat, dan lemah</font></b>. SM berhasil diselesaikan dengan terbuktinya keberadaan <b><font color="#0BDA51">boson Higgs</font></b> pada tahun 2012 menggunakan LHC (lihat Gambar 1) di <a href="https://home.cern/science/physics/higgs-boson">CERN</a> (Centre Européen pour la Recherche Nucléaire) di Geneva, Switzerland (lihat Gambar 2).</string>
     <string name="m_tmq3">Model lain dari QFT adalah <b><font color="#0BDA51">Kromodinamika Kuantum</font></b> (Quantum Chromodynamics = QCD). Model ini menjelaskan <b><font color="#0BDA51">gaya kuat yang terjadi antara quark dan gluon</font></b>. Gluon adalah partikel elementer yang bertindak sebagai <b><font color="#0BDA51">partikel pertukaran (gauge boson)</font></b> untuk gaya kuat antara quark yang satu dengan quark yang lainnya. Kata gluon sendiri diambil dari bahasa inggris glue yang artinya lem, nama yang sesuai dengan peran partikel ini.</string>
 
 <!--    revisi-->
     <string name="m_tmq_"><b><font color="#0BDA51">Untuk menjelaskan</font></b> partikel-partikel subatomik, ilmuwan menggunakan <b><font color="#FFA000">Teori Medan Quantum</font></b> (<i>Quantum Field Theory</i> = QFT). Teori ini digunakan untuk menyusun model-model mekanika kuantum partikel-partikel subatomik, di mana gaya <b><font color="#0BDA51">digambarkan</font></b> melalui perantara <b><font color="#FFA000">partikel medan</font></b>. </string>
     <string name="m_tmq_1"><b><font color="#FFA000">Partikel materi</font></b> (<i>material particle</i>), yaitu partikel dengan <b><font color="#FF160C">massa diam tidak nol</font></b>.\nMisal: elektron, proton, dsb.</string>
     <string name="m_tmq_1_2"><b><font color="#FFA000">Partikel medan</font></b> (<i>field particle</i>), yaitu partikel dengan <b><font color="#0BDA51">massa diam nol</font></b>.\nMisal: foton, graviton, dsb.</string>
-    <string name="m_tmq_2"><b><font color="#FFA000">Model Standard </font></b>(<i>Standard Model</i> = SM)\nModel ini menjelaskan <b><font color="#0BDA51">tiga gaya dasar, yaitu elektromagnetik, kuat, dan lemah</font></b>. SM berhasil diselesaikan dengan terbuktinya keberadaan <b><font color="#FFA000">boson higgs</font></b> pada tahun 2012<font color="#0096FF">⁽¹⁾</font> menggunakan LHC (lihat Gambar) di CERN (<i>Centre Européen pour la Recherche Nucléaire</i>) di Geneva, Switzerland.</string>
+    <string name="m_tmq_2"><b><font color="#FFA000">Model Standard </font></b>(<i>Standard Model</i> = SM)\nModel ini menjelaskan <b><font color="#0BDA51">tiga gaya dasar, yaitu elektromagnetik, kuat, dan lemah</font></b>. SM berhasil diselesaikan dengan terbuktinya keberadaan <b><font color="#FFA000">boson Higgs</font></b> pada tahun 2012<font color="#0096FF">⁽¹⁾</font> menggunakan LHC (lihat Gambar) di CERN (<i>Centre Européen pour la Recherche Nucléaire</i>) di Geneva, Switzerland.</string>
     <string name="m_tmq_2_2"><b><font color="#FFA000">Kromodinamika Kuantum </font></b>(<i>Quantum Chromodynamics</i> = QCD)\nModel ini menjelaskan <b><font color="#0BDA51">gaya kuat yang terjadi antara quark dan gluon</font></b>. Gluon adalah partikel elementer yang bertindak sebagai <b><font color="#FFA000">partikel pertukaran (gauge boson)</font></b> untuk gaya kuat antara quark yang satu dengan quark yang lainnya.</string>
     <string name="m_tmq_footnote1">(1) Penemuan Boson Higgs</string>
 
@@ -177,9 +178,9 @@
     <string name="m_lepton2_3">Sehingga jika dijumlahkan, keseluruhan cacah lepton adalah <b><font color="#0BDA51">12 partikel</font></b>.</string>
 
     <string name="m_standar">Pengembangan model standard dilakukan <b><font color="#0BDA51">secara bertahap</font></b> selama paruh kedua abad ke-20 yang dilakukan oleh ilmuwan di seluruh dunia.</string>
-    <string name="m_standar2">Model ini <b><font color="#0BDA51">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti quark top (1995),neutrino tau (2000), dan boson higgs (2012)<font color="#0096FF">⁽¹⁾</font>.</string>
+    <string name="m_standar2">Model ini <b><font color="#0BDA51">selesai diformulasikan pada pertengahan 1970-an</font></b> setelah quark dikonfirmasi keberadaannya melalui eksperimen. Setelah itu, partikel yang ditemukan terus bertambah, seperti quark top (1995),neutrino tau (2000), dan boson Higgs (2012)<font color="#0096FF">⁽¹⁾</font>.</string>
     <string name="m_standar2_alter">Dikembangkan pada awal 1970-an, model standard telah berhasil menjelaskan <b><font color="#0BDA51">hampir semua</font></b> hasil eksperimen dan <b><font color="#0BDA51">secara tepat</font></b> memprediksi berbagai fenomena.</string>
-    <string name="m_standar2_alter2">Seiring waktu dan melalui banyak eksperimen, model ini telah ditetapkan sebagai <b><font color="#0BDA51">teori fisika yang teruji dengan baik</font></b>, puncaknya adalah ditemukannya boson higgs pada 2012<font color="#0096FF">⁽¹⁾</font>.</string>
+    <string name="m_standar2_alter2">Seiring waktu dan melalui banyak eksperimen, model ini telah ditetapkan sebagai <b><font color="#0BDA51">teori fisika yang teruji dengan baik</font></b>, puncaknya adalah ditemukannya boson Higgs pada 2012<font color="#0096FF">⁽¹⁾</font>.</string>
     <string name="m_standar3">Gambar di atas menunjukkan model standard lengkap dengan berbagai keterangannya. Daftar (ringkasan) lengkap cacah total partikel elementer dalam model standard dapat dilihat pada tabel.</string>
     <string name="m_standar4">Keterangan:</string>
     <string name="m_standar5"><b><font color="#0BDA51">Enam rasa (<i>flavor</i>) quark:</font></b> up, down, bottom, top, strange, dan charm</string>
@@ -280,7 +281,7 @@
     <string name="solusi_contoh_5">Pilihan a salah, karena <b><font color="#FFA000">boson W</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya lemah</font></b></string>
     <string name="solusi_contoh_5_2">Pilihan b salah, karena <b><font color="#FFA000">boson Z</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya lemah</font></b></string>
     <string name="solusi_contoh_5_3">Pilihan c salah, karena <b><font color="#FFA000">gluon</font></b> berperan sebagai <b><font color="#0BDA51">pembawa gaya kuat</font></b> antara quark yang satu dengan quark yang lain.</string>
-    <string name="solusi_contoh_5_4">Pilihan d benar, karena <b><font color="#FFA000">boson higgs</font></b> berperan untuk <b><font color="#0BDA51">memberikan massa pada gauge bosons</font></b></string>
+    <string name="solusi_contoh_5_4">Pilihan d benar, karena <b><font color="#FFA000">boson Higgs</font></b> berperan untuk <b><font color="#0BDA51">memberikan massa pada gauge bosons</font></b></string>
     <string name="m_lepton_footnote_1">(1) Penemuan Positron</string>
     <string name="sembunyikan_jawaban">Sembunyikan Jawaban</string>
 
@@ -291,7 +292,7 @@
     <string name="opsi_soal_6_4">Hanya teori saja, tanpa ada bukti eksperimen</string>
     <string name="solusi_contoh_6">Pilihan a salah, karena model standard <b><font color="#0BDA51">belum menjelaskan</font></b> gaya gravitasi.</string>
     <string name="solusi_contoh_6_2">Pilihan b benar, karena model standard sudah menjelaskan <b><font color="#0BDA51">tiga gaya dasar kecuali gaya gravitasi</font></b> yang pada skala subatomik sangat lemah.</string>
-    <string name="solusi_contoh_6_3">Pilihan c salah, karena boson higgs <b><font color="#0BDA51">sudah terbukti keberadaannya</font></b> pada tahun 2012 melalui eksperimen menggunakan LHC di CERN, Switzerland.</string>
+    <string name="solusi_contoh_6_3">Pilihan c salah, karena boson Higgs <b><font color="#0BDA51">sudah terbukti keberadaannya</font></b> pada tahun 2012 melalui eksperimen menggunakan LHC di CERN, Switzerland.</string>
     <string name="solusi_contoh_6_4">Pilihan d salah, karena model standard sudah banyak terbukti <b><font color="#0BDA51">baik secara teori maupun eksperimen</font></b>.</string>
 
     <string name="soal_20">Graviton diduga tidak memiliki massa karena…</string>
@@ -315,7 +316,7 @@
     <string name="soal_2">Partikel yang <b>tidak</b> memiliki massa diam disebut dengan…</string>
     <string name="soal_1">Berdasarkan spinnya, partikel subatomik dikelompokkan menjadi dua, yaitu…</string>
     <string name="mulaiBelajar">Yuk, mulai belajar!</string>
-    <string name="lanjutBelajar">Lanjut proses belajar</string>
+    <string name="lanjutBelajar">Lanjutkan proses belajar</string>
 
     <string name="minDuaE">-2<i>e</i></string>
     <string name="minE">-<i>e</i></string>
@@ -334,10 +335,10 @@
     </string-array>
     <string-array name="data_description">
         <item>Partikel subatomik, kecil, atom, susunannya, spin, elementer, komposit, boson, fermion, bose-einstein, fermi-dirac, materi, medan</item>
-        <item>Teori medan kuantum, quantum field theory, qft, digambarkan, partikel medan, model standard, tiga gaya dasar, boson higgs, large hadron collider, lhc, cern, Kromodinamika Kuantum, quantum chromodynamics, qcd, gaya kuat, gluon</item>
+        <item>Teori medan kuantum, quantum field theory, qft, digambarkan, partikel medan, model standard, tiga gaya dasar, boson Higgs, large hadron collider, lhc, cern, Kromodinamika Kuantum, quantum chromodynamics, qcd, gaya kuat, gluon</item>
         <item>famili hadron, sub famili, baryon, meson, tiga quark, proton, neutron, quark, partikel bebas, tetes minyak millikan, muatan proton, dua quark, antipartikel, sangat tidak stabil</item>
         <item>lepton, spin, tidak mengalami gaya kuat, bermuatan, tidak bermuatan, elektron, neutrino, muon, tau, antipartikel, muatan berlawanan, positron, cacah lepton </item>
-        <item>abad ke-20, ilmuwan, model standard, flavor, rasa, gauge boson, boson W, boson Z, gluon, tabel cacah partikel elementer, boson higgs</item>
+        <item>abad ke-20, ilmuwan, model standard, flavor, rasa, gauge boson, boson W, boson Z, gluon, tabel cacah partikel elementer, boson Higgs</item>
         <item>kelemahan, gravitasi, skala subatomik, Teori tentang Segalanya, theory of everything, toe, LHC, mendekati kecepatan cahaya, gaya dasar, graviton, tidak memiliki massa, teori penyatuan besar, grand unification theory, gut, tenaga tinggi, satu gaya</item>
     </string-array>
     <integer-array name="data_photo">

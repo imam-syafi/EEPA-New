@@ -22,7 +22,7 @@ class MateriPositron : AppCompatActivity() {
     private lateinit var binding: ActivityMateriPositronBinding
     private lateinit var sharedPred : SharedPreferences
     private lateinit var sharedPredLastRead : SharedPreferences
-    var URL : String = "https://upload.wikimedia.org/wikipedia/commons/5/5a/PositronDiscovery.png"
+    var URL : String = "https://docs.google.com/uc?id=1YG6H-JdH9f7Ve82qbxb5Ba35f8xB4gXA"
     var URL2 = "https://docs.google.com/uc?id=1YNNe_DU-bm3NdgveE_TwyeTynxPeUPo2"
     var page = 1
 

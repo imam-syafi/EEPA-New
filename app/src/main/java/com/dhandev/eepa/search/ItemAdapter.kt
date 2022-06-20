@@ -51,6 +51,7 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
                 "Lepton" ->{mContext.startActivity(Intent(mContext, MateriLepton::class.java))}
                 "Model Standard" ->{mContext.startActivity(Intent(mContext, MateriStandarModel::class.java))}
                 "Perkembangan Terkini" ->{mContext.startActivity(Intent(mContext, MateriTerkini::class.java))}
+
                 else -> {
 //                    val intent = Intent(mContext, dummyActivity::class.java)
 //                    intent.putExtra("name", name)
@@ -72,21 +73,24 @@ class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapte
                 charSearch = constraint.toString()
                 if (charSearch.isEmpty()) {
                     listSearchFilter = listSearch
-                } else {
+                } else if (listSearch.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))){
                     val resultList = ArrayList<Item>()
                     for (row in listSearch) {
-                        if (row.toString().lowercase(Locale.ROOT).contains(charSearch.lowercase(Locale.ROOT))) {
+                        val rowString = row.toString().lowercase(Locale.ROOT)
+                        if (rowString.contains(charSearch.lowercase(Locale.ROOT))) {
                             resultList.add(row)
-                        } else {
-                            val dataName = charSearch
-                            val dataDescription = mContext.resources.getStringArray(R.array.data_search_engine)
-                            val dataPhoto = mContext.resources.obtainTypedArray(R.array.data_photo_)
-                            for (i in dataDescription.indices) {
-                                val item = Item(dataName,dataDescription[i], dataPhoto.getResourceId(i, -1))
-                                resultList.clear()
-                                resultList.add(item)
-                            }
                         }
+                    }
+                    listSearchFilter = resultList
+                } else {
+                    val dataName = charSearch
+                    val dataDescription = mContext.resources.getStringArray(R.array.data_search_engine)
+                    val dataPhoto = mContext.resources.obtainTypedArray(R.array.data_photo_)
+                    val resultList = ArrayList<Item>()
+                    for (i in dataDescription.indices) {
+                        val item = Item(dataName,dataDescription[i], dataPhoto.getResourceId(i, -1))
+                        resultList.clear()
+                        resultList.add(item)
                     }
                     listSearchFilter = resultList
                 }

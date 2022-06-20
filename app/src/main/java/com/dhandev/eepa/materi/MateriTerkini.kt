@@ -171,10 +171,18 @@ class MateriTerkini : AppCompatActivity() {
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
+            binding.body2.setTextAppearance(R.style.FontParagraf)
+            binding.body21.setTextAppearance(R.style.FontParagraf)
             binding.body3.setTextAppearance(R.style.FontParagraf)
+            binding.body31.setTextAppearance(R.style.FontParagraf)
+            binding.body4.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
+            binding.body2.setTextAppearance(sharedUkuranId)
+            binding.body21.setTextAppearance(sharedUkuranId)
             binding.body3.setTextAppearance(sharedUkuranId)
+            binding.body31.setTextAppearance(sharedUkuranId)
+            binding.body4.setTextAppearance(sharedUkuranId)
             binding.toggleGroup.check(sharedTombolUkuranId)
         }
     }

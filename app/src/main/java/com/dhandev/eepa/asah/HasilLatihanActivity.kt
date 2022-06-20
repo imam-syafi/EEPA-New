@@ -43,6 +43,11 @@ class HasilLatihanActivity : AppCompatActivity() {
             soalKetigabelas.text = "13. "+ soal(12)
             soalKeempatbelas.text = "14. "+ soal(13)
             soalKelimabelas.text = "15. "+ soal(14)
+            soalKeenambelas.text = "16. "+ soal(15)
+            soalKetujuhbelas.text = "17. "+ soal(16)
+            soalKedelapanbelas.text = "18. "+ soal(17)
+            soalKesembilanbelas.text = "19. "+ soal(18)
+            soalKeduapuluh.text = "20. "+ soal(19)
 
             val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
 //            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
@@ -61,11 +66,16 @@ class HasilLatihanActivity : AppCompatActivity() {
             jawabanKetigabelas.style(jawaban(12))
             jawabanKeempatbelas.style(jawaban(13))
             jawabanKelimabelas.style(jawaban(14))
+            jawabanKeenambelas.style(jawaban(15))
+            jawabanKetujuhbelas.style(jawaban(16))
+            jawabanKedelapanbelas.style(jawaban(17))
+            jawabanKesembilanbelas.style(jawaban(18))
+            jawabanKeduapuluh.style(jawaban(19))
 
             fireworks.setAnimation("fireworks.json")
             fireworks.playAnimation()
 
-            val final : Double = (skor.toDouble()/150.0)*100.0
+            val final : Double = (skor.toDouble()/200.0)*100.0
             val df : DecimalFormat = DecimalFormat("#.##")
             skorTotal.text = df.format(final).toString()
             when(final){
@@ -123,6 +133,11 @@ class HasilLatihanActivity : AppCompatActivity() {
             13 -> isiSoal = getString(R.string.soal_13)
             14 -> isiSoal = getString(R.string.soal_14)
             15 -> isiSoal = getString(R.string.soal_15)
+            16 -> isiSoal = getString(R.string.soal_16)
+            17 -> isiSoal = getString(R.string.soal_17)
+            18 -> isiSoal = getString(R.string.soal_18)
+            19 -> isiSoal = getString(R.string.soal_19)
+            20 -> isiSoal = getString(R.string.soal_20)
             99 -> isiSoal = "Soal belum diakses"
         }
         return isiSoal

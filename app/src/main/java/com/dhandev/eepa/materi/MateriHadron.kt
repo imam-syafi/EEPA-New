@@ -126,7 +126,7 @@ class MateriHadron : AppCompatActivity() {
             mHadronKuark1.setOnClickListener { focusOnBottom() }
             mHadronKuark2.setOnClickListener { focusOnBottom() }
             footnote1.setOnClickListener { customTab.open(this@MateriHadron, "https://en.wikipedia.org/wiki/Free_particle") }
-            footnote2.setOnClickListener { customTab.open(this@MateriHadron, "https://www.coursehero.com/study-guides/introchem/millikans-oil-drop-experiment/") }
+            footnote2.setOnClickListener { customTab.open(this@MateriHadron, "https://www.thinksphysics.com/2020/07/eksperimen-tetes-minyak-milikan-dalam-menentukan-muatan-elektron.html") }
         }
     }
     private fun focusOnBottom() {
@@ -181,7 +181,9 @@ class MateriHadron : AppCompatActivity() {
         val sharedTombolUkuranId = sharedPred.getInt("tombolUkuranTerpilih", 3)
         if (sharedUkuranId.equals(0)){
             binding.body1.setTextAppearance(R.style.FontParagraf)
-            binding.mHadron.setTextAppearance(R.style.FontParagraf)
+            binding.mHadron1.setTextAppearance(R.style.FontParagraf)
+            binding.mHadron2.setTextAppearance(R.style.FontParagraf)
+            binding.mHadron3.setTextAppearance(R.style.FontParagraf)
             binding.mHadronKuark1.setTextAppearance(R.style.FontParagraf)
             binding.mHadronKuark2.setTextAppearance(R.style.FontParagraf)
             binding.mHadronKuark3.setTextAppearance(R.style.FontParagraf)
@@ -191,7 +193,9 @@ class MateriHadron : AppCompatActivity() {
             binding.mHadronMeson3.setTextAppearance(R.style.FontParagraf)
         } else {
             binding.body1.setTextAppearance(sharedUkuranId)
-            binding.mHadron.setTextAppearance(sharedUkuranId)
+            binding.mHadron1.setTextAppearance(sharedUkuranId)
+            binding.mHadron2.setTextAppearance(sharedUkuranId)
+            binding.mHadron3.setTextAppearance(sharedUkuranId)
             binding.mHadronKuark1.setTextAppearance(sharedUkuranId)
             binding.mHadronKuark2.setTextAppearance(sharedUkuranId)
             binding.mHadronKuark3.setTextAppearance(sharedUkuranId)

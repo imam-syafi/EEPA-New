@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp"
         tools:ignore="ExtraText">
 
         <androidx.appcompat.widget.Toolbar
@@ -43,11 +44,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="10dp"
             android:fontFamily="@font/nunito_sans_black"
             android:text="Muhammad Ramdhan"
             android:textColor="@color/white"
             android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView2" />
 
@@ -110,7 +112,7 @@
                 app:showBottomShadow="true"
                 app:showIndicator="true"
                 app:showNavigationButtons="false"
-                app:showTopShadow="false"></org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+                app:showTopShadow="false" />
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
@@ -237,6 +239,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/rounded_corner_smaller"
+            android:backgroundTint="@color/blue_200"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingStart="110dp"
@@ -252,7 +255,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:text="@string/mulaiBelajar"
-                android:textColor="@color/abu"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -263,7 +266,7 @@
                 android:fontFamily="@font/nunito_sans_black"
                 android:maxLines="2"
                 android:text="@string/_1_subatomik"
-                android:textColor="@color/abu"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -292,20 +295,10 @@
 
         <TextView
             android:id="@+id/contoh"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/rounded_corner_smaller"
-            android:backgroundTint="@color/yellow"
-            android:fontFamily="@font/nunito_sans_black"
-            android:gravity="center_horizontal|bottom"
             android:text="@string/example"
-            android:textColor="@color/abu"
-            android:textSize="18sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="10dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="55dp"
-            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner_smaller"
+            android:backgroundTint="#FFB74D"
+            style="@style/buttonHome"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/guideline3"
             app:layout_constraintTop_toTopOf="@id/iconContohSoal" />
@@ -314,6 +307,7 @@
             android:id="@+id/iconContohSoal"
             android:layout_width="80dp"
             android:layout_height="0dp"
+            android:layout_marginTop="-10dp"
             android:adjustViewBounds="true"
             android:src="@drawable/contohsoal"
             app:layout_constraintEnd_toEndOf="@+id/contoh"
@@ -322,20 +316,12 @@
 
         <TextView
             android:id="@+id/latihan"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:background="@drawable/rounded_corner_smaller"
-            android:backgroundTint="#FFCCBC"
-            android:fontFamily="@font/nunito_sans_black"
-            android:gravity="center_horizontal|bottom"
+            android:backgroundTint="#81C784"
             android:text="@string/exercise"
-            android:textColor="@color/abu"
+            style="@style/buttonHome"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="55dp"
-            android:layout_marginTop="20dp"
-            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/guideline3"
             app:layout_constraintTop_toTopOf="@id/iconLatihan" />
@@ -344,6 +330,7 @@
             android:id="@+id/iconLatihan"
             android:layout_width="80dp"
             android:layout_height="0dp"
+            android:layout_marginTop="-10dp"
             android:adjustViewBounds="true"
             android:src="@drawable/latihan"
             app:layout_constraintEnd_toEndOf="@+id/latihan"
@@ -364,46 +351,49 @@
             app:layout_constraintTop_toBottomOf="@+id/contoh" />
 
 
-        <Button
+        <TextView
             android:id="@+id/referensi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/rounded_corner_smaller"
-            android:drawableLeft="@drawable/referensi"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:letterSpacing="0"
             android:text="@string/referensi"
-            android:textAlignment="viewStart"
-            android:textAllCaps="false"
-            android:textColor="@color/abu"
-            android:textSize="18sp"
-            app:backgroundTint="@color/biru_seken"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fitur" />
-
-        <Button
-            android:id="@+id/lampiran"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="100dp"
             android:background="@drawable/rounded_corner_smaller"
-            android:drawableLeft="@drawable/ic_baseline_attach_file_24"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:letterSpacing="0"
+            android:backgroundTint="#E57373"
+            style="@style/buttonHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/iconReferensi" />
+
+        <ImageView
+            android:id="@+id/iconReferensi"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/referensi"
+            app:layout_constraintEnd_toEndOf="@+id/contoh"
+            app:layout_constraintStart_toStartOf="@+id/contoh"
+            app:layout_constraintTop_toBottomOf="@+id/fitur" />
+
+        <TextView
+            android:id="@+id/lampiran"
+            android:background="@drawable/rounded_corner_smaller"
+            android:backgroundTint="#7986CB"
             android:text="@string/attachment"
-            android:textAlignment="viewStart"
-            android:textAllCaps="false"
-            android:textColor="@color/abu"
-            android:textSize="18sp"
-            app:backgroundTint="@color/biru_seken"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/referensi"
-            app:layout_constraintTop_toBottomOf="@id/fitur" />
+            style="@style/buttonHome"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/iconLampiran" />
+
+        <ImageView
+            android:id="@+id/iconLampiran"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/lampiran"
+            app:layout_constraintEnd_toEndOf="@+id/latihan"
+            app:layout_constraintStart_toStartOf="@+id/latihan"
+            app:layout_constraintTop_toBottomOf="@+id/fitur" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"

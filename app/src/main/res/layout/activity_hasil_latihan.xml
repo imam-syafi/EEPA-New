@@ -48,7 +48,8 @@
             android:id="@+id/skorTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:gravity="center"
             tools:text="60"
             android:textSize="40sp"
@@ -320,6 +321,81 @@
 
                 <TextView
                     android:id="@+id/jawabanKelimabelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKeenambelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="16. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKeenambelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKetujuhbelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="17. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKetujuhbelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKedelapanbelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="18. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKedelapanbelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKesembilanbelas"
+                    style="@style/soalResultLatihan"
+                    tools:text="19. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKesembilanbelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/soalKeduapuluh"
+                    style="@style/soalResultLatihan"
+                    tools:text="20. Ini Soal Kesepuluh" />
+
+                <TextView
+                    android:id="@+id/jawabanKeduapuluh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>

@@ -268,4 +268,17 @@
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/nunito</item>
     </style>
+    <style name="buttonHome">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fontFamily">@font/nunito_sans_black</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">55dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
 </resources>

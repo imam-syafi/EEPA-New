@@ -215,10 +215,42 @@
                 android:id="@+id/headline2"
                 style="@style/headline"
                 android:text="B. Baryon" />
-            <TextView
-                android:id="@+id/m_hadron_"
-                style="@style/FontParagraf"
-                android:text="@string/m_hadron_1"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:stretchColumns="1">
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_1"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_1" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_2" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:textColor="@color/greenBright"/>
+                    <TextView
+                        android:id="@+id/m_hadron_3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/m_hadron_3" />
+                </TableRow>
+            </TableLayout>
             <TextView
                 android:id="@+id/subheadline3"
                 style="@style/headline"

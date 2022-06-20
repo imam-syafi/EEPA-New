@@ -181,6 +181,7 @@
             android:id="@+id/gambar"
             android:layout_marginVertical="20dp"
             style="@style/gambar"
+            android:layout_height="200dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/aturTeks">
@@ -241,7 +242,6 @@
             </TableLayout>
             <ImageView
                 android:id="@+id/gambar2"
-                android:layout_marginVertical="20dp"
                 android:layout_height="wrap_content"
                 style="@style/gambar">
             </ImageView>
@@ -250,6 +250,7 @@
                 android:id="@+id/tv_caption2"
                 android:paddingHorizontal="20dp"
                 style="@style/caption"
+                android:layout_marginTop="0dp"
                 android:text="@string/m_positron_caption2"/>
 
             <TextView
@@ -261,7 +262,6 @@
                 style="@style/FontParagraf"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp"
                 android:text="@string/m_positron4"
                 android:lineSpacingMultiplier="1.4"/>
         </LinearLayout>

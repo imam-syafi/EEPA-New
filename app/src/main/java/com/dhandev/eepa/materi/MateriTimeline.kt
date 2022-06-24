@@ -56,7 +56,6 @@ class MateriTimeline : AppCompatActivity() {
             listTittle()
             listDesc()
             it.adapter = BaseAdapter(ArrayList(listItem), ArrayList(listDesc))
-
             val colorPrimary = TypedValue()
             val theme: Resources.Theme = getTheme()
             theme.resolveAttribute(androidx.appcompat.R.attr.colorPrimary, colorPrimary, true)

@@ -23,7 +23,7 @@ class LatihanActivity : AppCompatActivity() {
         sharedPred = this.getSharedPreferences("User", MODE_PRIVATE)
 
         val latest = sharedPred.getInt("latestScore", 0)
-        val final : Double = (latest.toDouble()/150.0)*100.0
+        val final : Double = (latest.toDouble()/200.0)*100.0
         val df : DecimalFormat = DecimalFormat("#.##")
         binding.apply {
             arrowBack.setOnClickListener {

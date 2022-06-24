@@ -1,10 +1,13 @@
 package com.dhandev.eepa.asah
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.view.isVisible
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
@@ -78,28 +81,45 @@ class HasilLatihanActivity : AppCompatActivity() {
             val final : Double = (skor.toDouble()/200.0)*100.0
             val df : DecimalFormat = DecimalFormat("#.##")
             skorTotal.text = df.format(final).toString()
+            progressCircular.trackColor = Color.WHITE
+            val animation : ObjectAnimator = ObjectAnimator.ofInt(progressCircular, "progress", 0, final.toInt())
+            animation.setDuration(1000)
+            animation.interpolator
+            animation.start()
             when(final){
                 in 85.0..100.0 -> {
                     skorTotal.setTextColor(Color.BLUE)
-                    descHasil.text = "Luar biasa, pertahankan! 😍"
+                    progressCircular.setIndicatorColor(Color.BLUE)
+                    descHasil.text = "Kategori:\nSangat baik, pertahankan! 😍"
                 }
                 in 70.0..84.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.right))
-                    descHasil.text = "Hebat, tingkatkan! ✨"
+                    progressCircular.setIndicatorColor(resources.getColor(R.color.right))
+                    descHasil.text = "Kategori:\nBaik, tingkatkan! ✨"
                 }
                 in 55.0..69.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.orange))
-                    descHasil.text = "Cukup baik, belajar lagi! 👍"
+                    progressCircular.setIndicatorColor(resources.getColor(R.color.orange))
+                    descHasil.text = "Kategori:\nKurang, belajar lagi! 👍"
                 }
                 else -> {
                     skorTotal.setTextColor(Color.RED)
-                    descHasil.text = "Kurang, belajar lebih giat lagi ya! 👌"
+                    progressCircular.setIndicatorColor(Color.RED)
+                    descHasil.text = "Kategori:\nSangat kurang, belajar lebih giat lagi ya! 👌"
                 }
             }
 
             val Editor:SharedPreferences.Editor = sharedPred.edit()
             Editor.putInt("latestScore", skor)
             Editor.apply()
+
+            rincian.setOnClickListener {
+                if (rincianHasil.isVisible){
+                    rincianHasil.visibility = View.GONE
+                } else {
+                    rincianHasil.visibility = View.VISIBLE
+                }
+            }
         }
     }
 

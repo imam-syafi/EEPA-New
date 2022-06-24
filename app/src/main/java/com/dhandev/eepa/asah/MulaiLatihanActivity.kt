@@ -255,8 +255,8 @@ class MulaiLatihanActivity : AppCompatActivity() {
             soalLatihan.setText(R.string.soal_17)
             opsi1.text = "Proton, neutron, dan elektron"
             opsi2.text = "Kuark, lepton, dan boson W"
-            opsi3.text = "Gluon, foton, dan boson higss"
-            opsi4.text = "Boson Z, boson W, dan boson higgs"
+            opsi3.text = "Gluon, foton, dan boson Higgs"
+            opsi4.text = "Boson Z, boson W, dan boson Higgs"
 
             listHasil.add(17)
             btnNext.setOnClickListener {
@@ -303,7 +303,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
     private fun SoalKelimabelas() {
         binding.apply {
             soalLatihan.setText(R.string.soal_15)
-            opsi1.text = "Boson higgs dan foton"
+            opsi1.text = "Boson Higgs dan foton"
             opsi2.text = "Boson Z dan boson W"
             opsi3.text = "Gluon dan foton"
             opsi4.text = "Kuark dan lepton"
@@ -693,7 +693,7 @@ class MulaiLatihanActivity : AppCompatActivity() {
                 nomorSoal++
                 randomize(soal)
                 title.text = "Nomor 20/20"
-                btnNext.text = "Kumpulkan"
+                btnNext.text = "Kirim"
                 btnNext.backgroundTintList = ContextCompat.getColorStateList(this@MulaiLatihanActivity, R.color.right)
 
 //                Toast.makeText(this@MulaiLatihanActivity, listJawaban.toString(), Toast.LENGTH_SHORT).show()

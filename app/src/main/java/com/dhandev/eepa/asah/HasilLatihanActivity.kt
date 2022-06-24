@@ -31,26 +31,26 @@ class HasilLatihanActivity : AppCompatActivity() {
             }
             val username : String?  = sharedPred.getString("userName", null)
             descHasil.text = "Selamat $username, Kamu sudah berhasil menyelesaikan soal-soal latihan! \nBerikut rincian hasilnya:"
-            soalPertama.text = "1. "+ soal(0)
-            soalKedua.text = "2. "+ soal(1)
-            soalKetiga.text = "3. "+ soal(2)
-            soalKeempat.text = "4. "+ soal(3)
-            soalKelima.text = "5. "+ soal(4)
-            soalKeenam.text = "6. "+ soal(5)
-            soalKetujuh.text = "7. "+ soal(6)
-            soalKedelapan.text = "8. "+ soal(7)
-            soalKesembilan.text = "9. "+ soal(8)
-            soalKesepuluh.text = "10. "+ soal(9)
-            soalKesebelas.text = "11. "+ soal(10)
-            soalKeduabelas.text = "12. "+ soal(11)
-            soalKetigabelas.text = "13. "+ soal(12)
-            soalKeempatbelas.text = "14. "+ soal(13)
-            soalKelimabelas.text = "15. "+ soal(14)
-            soalKeenambelas.text = "16. "+ soal(15)
-            soalKetujuhbelas.text = "17. "+ soal(16)
-            soalKedelapanbelas.text = "18. "+ soal(17)
-            soalKesembilanbelas.text = "19. "+ soal(18)
-            soalKeduapuluh.text = "20. "+ soal(19)
+            soalPertama.text = "1. "+ soal(0) +"\nKunci jawaban: ${jawabanBenar(0)}"
+            soalKedua.text = "2. "+ soal(1) +"\nKunci jawaban: ${jawabanBenar(1)}"
+            soalKetiga.text = "3. "+ soal(2)+"\nKunci jawaban: ${jawabanBenar(2)}"
+            soalKeempat.text = "4. "+ soal(3) +"\nKunci jawaban: ${jawabanBenar(3)}"
+            soalKelima.text = "5. "+ soal(4) +"\nKunci jawaban: ${jawabanBenar(4)}"
+            soalKeenam.text = "6. "+ soal(5) +"\nKunci jawaban: ${jawabanBenar(5)}"
+            soalKetujuh.text = "7. "+ soal(6) +"\nKunci jawaban: ${jawabanBenar(6)}"
+            soalKedelapan.text = "8. "+ soal(7)+"\nKunci jawaban: ${jawabanBenar(7)}"
+            soalKesembilan.text = "9. "+ soal(8) +"\nKunci jawaban: ${jawabanBenar(8)}"
+            soalKesepuluh.text = "10. "+ soal(9) +"\nKunci jawaban: ${jawabanBenar(9)}"
+            soalKesebelas.text = "11. "+ soal(10) +"\nKunci jawaban: ${jawabanBenar(10)}"
+            soalKeduabelas.text = "12. "+ soal(11) +"\nKunci jawaban: ${jawabanBenar(11)}"
+            soalKetigabelas.text = "13. "+ soal(12) +"\nKunci jawaban: ${jawabanBenar(12)}"
+            soalKeempatbelas.text = "14. "+ soal(13) +"\nKunci jawaban: ${jawabanBenar(13)}"
+            soalKelimabelas.text = "15. "+ soal(14) +"\nKunci jawaban: ${jawabanBenar(14)}"
+            soalKeenambelas.text = "16. "+ soal(15) +"\nKunci jawaban: ${jawabanBenar(15)}"
+            soalKetujuhbelas.text = "17. "+ soal(16) +"\nKunci jawaban: ${jawabanBenar(16)}"
+            soalKedelapanbelas.text = "18. "+ soal(17) +"\nKunci jawaban: ${jawabanBenar(17)}"
+            soalKesembilanbelas.text = "19. "+ soal(18)+"\nKunci jawaban: ${jawabanBenar(18)}"
+            soalKeduapuluh.text = "20. "+ soal(19) +"\nKunci jawaban: ${jawabanBenar(19)}"
 
             val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
 //            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
@@ -161,6 +161,35 @@ class HasilLatihanActivity : AppCompatActivity() {
             99 -> isiSoal = "Soal belum diakses"
         }
         return isiSoal
+    }
+
+    private fun jawabanBenar (nomor : Int) : CharSequence{
+        val urutanSoal = intent.getIntegerArrayListExtra("urutanSoal")
+        var kunciJawaban= "Ini soal"
+        when(urutanSoal?.get(nomor)){
+            1 -> kunciJawaban = "Partikel fermion dan boson"
+            2 -> kunciJawaban = "Partikel medan"
+            3 -> kunciJawaban = "Memiliki spin bilangan bulat"
+            4 -> kunciJawaban = "Proton"
+            5 -> kunciJawaban = "Muon"
+            6 -> kunciJawaban = "Model Standard"
+            7 -> kunciJawaban = "Partikel pertukaran untuk gaya kuat"
+            8 -> kunciJawaban = "Teori Medan Kuantum"
+            9 -> kunciJawaban = "Baryon dan meson"
+            10 -> kunciJawaban = "Satu quark up dan dua quark down"
+            11 -> kunciJawaban = "Tersusun atas sebuah partikel dan antipartikel"
+            12 -> kunciJawaban = "Lepton"
+            13 -> kunciJawaban = getString(R.string.E)
+            14 -> kunciJawaban = "Pion"
+            15 -> kunciJawaban = "Kuark dan lepton"
+            16 -> kunciJawaban = "Up, down, bottom, top, strange dan charm"
+            17 -> kunciJawaban = "Gluon, foton, dan boson Higgs"
+            18 -> kunciJawaban = "Graviton"
+            19 -> kunciJawaban = "Teori Penyatuan Besar"
+            20 -> kunciJawaban = "Jangkauan gaya gravitasi sangat luas"
+            99 -> kunciJawaban = "Soal belum diakses"
+        }
+        return kunciJawaban
     }
 
     //TODO:SHOW THE RIGHT ANSWER

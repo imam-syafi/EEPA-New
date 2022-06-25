@@ -4,141 +4,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@id/scroll"
     android:background="@drawable/main_bg_splash"
     tools:context=".asah.HasilLatihanActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/ic_baseline_close_24"
-            app:tint="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/headerHasil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_sans_black"
-            android:gravity="center_horizontal"
-            android:text="Hasil Latihan"
-            android:textColor="@color/white"
-            android:layout_marginTop="150dp"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/close" />
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/fireworks"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:elevation="5dp"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true" />
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-        <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:id="@+id/progress_circular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:indicatorSize="150dp"
-            tools:progress="75"
-            app:indicatorColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/headerHasil"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/headerHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:gravity="center_horizontal"
+                android:text="Hasil Latihan"
+                android:textColor="@color/white"
+                android:layout_marginTop="150dp"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/close" />
 
-        <TextView
-            android:id="@+id/skorTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:paddingTop="5dp"
-            android:gravity="center"
-            tools:text="100"
-            android:background="@drawable/bg_circular_progress"
-            android:textSize="55sp"
-            android:fontFamily="@font/nunito_sans_black"
-            android:backgroundTint="@color/white"
-            app:layout_constraintTop_toTopOf="@id/progress_circular"
-            app:layout_constraintBottom_toBottomOf="@id/progress_circular"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/fireworks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="5dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Skor:"
-            android:textColor="@color/abu"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/skorTotal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/skorTotal"
-            app:layout_constraintVertical_bias="0.17" />
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorSize="150dp"
+                app:trackThickness="10dp"
+                app:trackCornerRadius="20dp"
+                tools:progress="75"
+                app:indicatorColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/headerHasil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-        <TextView
-            android:id="@+id/descHasil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:fontFamily="@font/nunito_sans_bold"
-            android:gravity="center_horizontal"
-            tools:text="Kategori\nSangat baik, pertahankan!"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/progress_circular" />
+            <TextView
+                android:id="@+id/skorTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="5dp"
+                android:gravity="center"
+                tools:text="100"
+                android:background="@drawable/bg_circular_progress"
+                android:textSize="55sp"
+                android:fontFamily="@font/nunito_sans_black"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="@id/progress_circular"
+                app:layout_constraintBottom_toBottomOf="@id/progress_circular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-        <View
-            style="@style/Divider"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/descHasil" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor:"
+                android:textColor="@color/abu"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/skorTotal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/skorTotal"
+                app:layout_constraintVertical_bias="0.17" />
+
+            <TextView
+                android:id="@+id/descHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:gravity="center_horizontal"
+                tools:text="Kategori\nSangat baik, pertahankan!"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_circular" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
             android:id="@+id/rincian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rincian jawaban:"
             android:drawablePadding="-5dp"
-            app:layout_constraintTop_toBottomOf="@id/descHasil"
-            android:layout_marginTop="40dp"
-            android:textColor="@color/white"
+            android:drawableTint="@color/white"
             android:fontFamily="@font/nunito_sans_bold"
-            android:textSize="18sp"
             android:gravity="center_horizontal"
-            app:drawableBottomCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
-            android:drawableTint="@color/white"/>
+            android:text="Rincian skor tiap soal:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:drawableBottomCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
         <LinearLayout
             android:id="@+id/rincianHasil"
             style="@style/bgDropDownList"
-            android:layout_marginTop="5dp"
-            android:visibility="gone"
             android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rincian">
+            android:visibility="gone">
 
+            <LinearLayout style="@style/layoutResultLatihan">
+
+                <TextView
+                    android:id="@+id/kolomSoal"
+                    style="@style/soalResultLatihan"
+                    android:text="Soal dan kunci jawaban"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
+
+                <TextView
+                    android:id="@+id/kolomSkor"
+                    style="@style/soalResultLatihan"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Skor"/>
+            </LinearLayout>
+
+            <View style="@style/Divider" />
             <LinearLayout style="@style/layoutResultLatihan">
 
                 <TextView
                     android:id="@+id/soalPertama"
                     style="@style/soalResultLatihan"
                     tools:text="1. Ini Soal Pertama" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanPertama"
@@ -154,6 +183,10 @@
                     android:id="@+id/soalKedua"
                     style="@style/soalResultLatihan"
                     tools:text="2. Ini Soal Kedua" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKedua"
@@ -169,6 +202,10 @@
                     android:id="@+id/soalKetiga"
                     style="@style/soalResultLatihan"
                     tools:text="3. Ini Soal Ketiga" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKetiga"
@@ -184,6 +221,10 @@
                     android:id="@+id/soalKeempat"
                     style="@style/soalResultLatihan"
                     tools:text="4. Ini Soal Keempat" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKeempat"
@@ -199,6 +240,10 @@
                     android:id="@+id/soalKelima"
                     style="@style/soalResultLatihan"
                     tools:text="5. Ini Soal Kelima" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKelima"
@@ -214,6 +259,10 @@
                     android:id="@+id/soalKeenam"
                     style="@style/soalResultLatihan"
                     tools:text="6. Ini Soal Keenam" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKeenam"
@@ -229,6 +278,10 @@
                     android:id="@+id/soalKetujuh"
                     style="@style/soalResultLatihan"
                     tools:text="7. Ini Soal Ketujuh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKetujuh"
@@ -244,6 +297,10 @@
                     android:id="@+id/soalKedelapan"
                     style="@style/soalResultLatihan"
                     tools:text="8. Ini Soal Kedelapan" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKedelapan"
@@ -259,6 +316,10 @@
                     android:id="@+id/soalKesembilan"
                     style="@style/soalResultLatihan"
                     tools:text="9. Ini Soal Kesembilan" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKesembilan"
@@ -274,6 +335,10 @@
                     android:id="@+id/soalKesepuluh"
                     style="@style/soalResultLatihan"
                     tools:text="10. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKesepuluh"
@@ -289,6 +354,10 @@
                     android:id="@+id/soalKesebelas"
                     style="@style/soalResultLatihan"
                     tools:text="11. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKesebelas"
@@ -304,6 +373,10 @@
                     android:id="@+id/soalKeduabelas"
                     style="@style/soalResultLatihan"
                     tools:text="12. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKeduabelas"
@@ -319,6 +392,10 @@
                     android:id="@+id/soalKetigabelas"
                     style="@style/soalResultLatihan"
                     tools:text="13. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKetigabelas"
@@ -334,6 +411,10 @@
                     android:id="@+id/soalKeempatbelas"
                     style="@style/soalResultLatihan"
                     tools:text="14. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKeempatbelas"
@@ -349,6 +430,10 @@
                     android:id="@+id/soalKelimabelas"
                     style="@style/soalResultLatihan"
                     tools:text="15. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKelimabelas"
@@ -364,6 +449,10 @@
                     android:id="@+id/soalKeenambelas"
                     style="@style/soalResultLatihan"
                     tools:text="16. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKeenambelas"
@@ -379,6 +468,10 @@
                     android:id="@+id/soalKetujuhbelas"
                     style="@style/soalResultLatihan"
                     tools:text="17. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKetujuhbelas"
@@ -394,6 +487,10 @@
                     android:id="@+id/soalKedelapanbelas"
                     style="@style/soalResultLatihan"
                     tools:text="18. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKedelapanbelas"
@@ -409,6 +506,10 @@
                     android:id="@+id/soalKesembilanbelas"
                     style="@style/soalResultLatihan"
                     tools:text="19. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKesembilanbelas"
@@ -424,6 +525,10 @@
                     android:id="@+id/soalKeduapuluh"
                     style="@style/soalResultLatihan"
                     tools:text="20. Ini Soal Kesepuluh" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/abu_terang"/>
 
                 <TextView
                     android:id="@+id/jawabanKeduapuluh"
@@ -431,5 +536,6 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
 </ScrollView>

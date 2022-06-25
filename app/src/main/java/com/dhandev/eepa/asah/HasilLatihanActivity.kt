@@ -4,14 +4,19 @@ import android.animation.ObjectAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewTreeObserver
+import android.widget.ScrollView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.core.widget.NestedScrollView
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
 import java.text.DecimalFormat
+
 
 class HasilLatihanActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHasilLatihanBinding
@@ -87,17 +92,17 @@ class HasilLatihanActivity : AppCompatActivity() {
             animation.interpolator
             animation.start()
             when(final){
-                in 85.0..100.0 -> {
+                in 76.0..100.0 -> {
                     skorTotal.setTextColor(Color.BLUE)
                     progressCircular.setIndicatorColor(Color.BLUE)
                     descHasil.text = "Kategori:\nSangat baik, pertahankan! 😍"
                 }
-                in 70.0..84.9 -> {
+                in 51.0..75.0 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.right))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.right))
                     descHasil.text = "Kategori:\nBaik, tingkatkan! ✨"
                 }
-                in 55.0..69.9 -> {
+                in 26.0..50.0 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.orange))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.orange))
                     descHasil.text = "Kategori:\nKurang, belajar lagi! 👍"
@@ -118,9 +123,14 @@ class HasilLatihanActivity : AppCompatActivity() {
                     rincianHasil.visibility = View.GONE
                 } else {
                     rincianHasil.visibility = View.VISIBLE
+                    scrollToViewTop(scroll, rincian)
                 }
             }
         }
+    }
+    private fun scrollToViewTop(scrollView: ScrollView, childView: View) {
+        val delay: Long = 100 //delay to let finish with possible modifications to ScrollView
+        scrollView.postDelayed({ scrollView.smoothScrollBy(0, childView.top) }, delay)
     }
 
     private fun jawaban(nomor : Int): Int {

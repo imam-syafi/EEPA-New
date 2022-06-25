@@ -125,7 +125,7 @@
     </string-array>
     <string name="skorAkhir">Skor Akhir:\n<b>%2$d</b></string>
     <string name="petunjuk_1"><b><font color="#0BDA51">Berdoa</font></b> sebelum mengerjakan.</string>
-    <string name="petunjuk_2">Total ada <b><font color="#0BDA51">20 soal</font></b> bertipe pilihan ganda dan soal <b><font color="#0BDA51">tampil secara acak</font></b>.</string>
+    <string name="petunjuk_2">Total ada <b><font color="#0BDA51">15 soal</font></b> bertipe pilihan ganda dan soal <b><font color="#0BDA51">tampil secara acak</font></b>.</string>
     <string name="petunjuk_3">Durasi pengerjaan <b><font color="#0BDA51">dapat Anda sesuaikan</font></b> melalui tombol <b><font color="#0BDA51">timer hijau</font></b>.</string>
     <string name="petunjuk_4">Anda <b><font color="#0BDA51">tidak bisa</font></b> melompati soal maupun kembali ke soal sebelumnya.</string>
     <string name="petunjuk_5">Tekan tombol <b><font color="#0BDA51">lanjutkan</font></b> untuk menyimpan jawaban dan melanjutkan ke soal berikutnya.</string>
@@ -154,12 +154,12 @@
     <string name="m_tmq_2_2"><b><font color="#FFA000">Kromodinamika Kuantum </font></b>(<i>Quantum Chromodynamics</i> = QCD)\nModel ini menjelaskan <b><font color="#0BDA51">gaya kuat yang terjadi antara quark dan gluon</font></b>. Gluon adalah partikel elementer yang bertindak sebagai <b><font color="#FFA000">partikel pertukaran (gauge boson)</font></b> untuk gaya kuat antara quark yang satu dengan quark yang lainnya.</string>
     <string name="m_tmq_footnote1">(1) Penemuan Boson Higgs</string>
 
-    <string name="m_hadron">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua sub famili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>. Baryon adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">tiga quark</font></b>, contohnya adalah nukleon, di mana proton terdiri atas dua quark up dan satu quark down serta neutron yang terdiri atas satu quark up dan dua quark down (lihat Gambar di atas).</string>
+    <string name="m_hadron">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua subfamili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>. Baryon adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">tiga quark</font></b>, contohnya adalah nukleon, di mana proton terdiri atas dua quark up dan satu quark down serta neutron yang terdiri atas satu quark up dan dua quark down (lihat Gambar di atas).</string>
     <string name="m_hadron2">Berbeda dengan <a href="https://en.wikipedia.org/wiki/Free_particle">partikel bebas</a>, muatan listrik quark <b><font color="#FF160C">bukan</font></b> kelipatan bilangan bulat dari e, melainkan <b><font color="#0BDA51">pecahan</font></b>, muatan listrik quark up (u) = +2e/3, down(d) = -e/3. Tetapi hingga saat ini, quark <b><font color="#0BDA51">belum bisa dibuktikan</font></b> kehadirannya secara langsung sebagai partikel bebas, jadi <b><font color="#0BDA51">masih aman</font></b> untuk berasumsi bahwa semua partikel bebas di alam mempunyai muatan listrik yang merupakan kelipatan bulat e, sesuai dengan <a href="https://www.coursehero.com/study-guides/introchem/millikans-oil-drop-experiment/">percobaan tetes minyak oleh Millikan</a>. Agar lebih jelas, ambil contoh quark pada proton untuk menghitung muatan listrik proton, di mana: </string>
     <string name="m_hadron3">Dapat dilihat, bahwa hasilnya sesuai dengan muatan listrik proton yaitu +e = 1.602 x 10⁻¹⁹ C. Coba buktikan dengan cara yang sama untuk muatan listrik neutron! \nKemudian ada meson, partikel hadron ini tersusun atas <b><font color="#0BDA51">dua quark saja</font></b> (satu quark dan satu antiquark). Contoh meson adalah pion (π+) tersusun atas quark up dan antiquark down. <b><font color="#0BDA51">Antipartikel</font></b> dari suatu meson adalah quark dan antiquarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar</font></b>, jadi antipion (π-) tersusun atas quark down dan antiquark up. Meson menjadi <b><font color="#FF160C">sangat tidak stabil</font></b>, karena tersusun atas sebuah partikel dan antipartikel.</string>
 
 <!--    revisi-->
-    <string name="m_hadron_">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua sub famili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>.</string>
+    <string name="m_hadron_">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua subfamili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>.</string>
     <string name="m_hadron_1"><b><font color="#FFA000">Baryon</font></b> adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">tiga quark</font></b>.</string>
     <string name="m_hadron_2">Misal: nukleon, di mana <b><font color="#FFA000">proton</font></b> terdiri atas <b><font color="#0BDA51">dua quark up</font></b> dan <b><font color="#0BDA51">satu quark down</font></b>, serta <b><font color="#FFA000">neutron</font></b> yang terdiri atas <b><font color="#0BDA51">satu quark up</font></b> dan <b><font color="#0BDA51">dua quark down</font></b> (lihat Gambar).</string>
     <string name="m_hadron_3">Penetapan warna masing-masing quark <b><font color="#0BDA51">bersifat arbitrer</font></b>, tetapi <b><font color="#0BDA51">semua tiga warna</font></b> (merah, biru, dan hijau) harus ada</string>
@@ -298,16 +298,16 @@
 
     <string name="soal_20">Graviton diduga tidak memiliki massa karena…</string>
     <string name="soal_19">Pada tenaga tinggi, tiga gaya dalam Model Standard disatukan dalam satu gaya, teori yang menjelaskan hal tersebut adalah…</string>
-    <string name="soal_18">Gauge bosons untuk gaya gravitasi disebut…</string>
+    <string name="soal_18">Partikel medan untuk gaya gravitasi disebut…</string>
     <string name="soal_17">Partikel berikut yang <b>tidak</b> memiliki antipartikel adalah…</string>
     <string name="soal_16">Rasa (<i>flavor</i>) quark terdiri atas…</string>
-    <string name="soal_15">Partikel berikut yang memiliki tiga generasi adalah…</string>
+    <string name="soal_15">Dalam Model Standard, kelompok partikel berikut yang memiliki tiga generasi adalah…</string>
     <string name="soal_14">Berikut yang <b>tidak</b> termasuk partikel lepton adalah…</string>
-    <string name="soal_13">Elektron memiliki muatan listrik -<i>e</i>, berapakah muatan listrik antipartikelnya…</string>
+    <string name="soal_13">Elektron memiliki muatan listrik -<i>e</i>. Berapakah muatan listrik antipartikelnya?</string>
     <string name="soal_12">Partikel dengan spin ½ dan <b>tidak</b> mengalami gaya kuat disebut…</string>
     <string name="soal_11">Meson sangat <b>tidak stabil</b> karena…</string>
     <string name="soal_10">Neutron tersusun atas beberapa quark, yaitu…</string>
-    <string name="soal_9">Berikut ini yang termasuk sub famili dari partikel hadron adalah…</string>
+    <string name="soal_9">Berikut ini yang termasuk subfamili dari partikel hadron adalah…</string>
     <string name="soal_8">Teori yang menjelaskan partikel-partikel subatomik di mana gaya digambarkan melalui perantara partikel medan adalah…</string>
     <string name="soal_7">Gluon berperan sebagai…</string>
     <string name="soal_6">Model QFT yang mampu menjelaskan gaya elektromagnetik, kuat dan lemah, tetapi belum dapat menjelaskan gaya gravitasi adalah…</string>
@@ -337,7 +337,7 @@
     <string-array name="data_description">
         <item>Partikel subatomik, kecil, atom, susunannya, spin, elementer, komposit, boson, fermion, bose-einstein, fermi-dirac, materi, medan</item>
         <item>Teori medan kuantum, quantum field theory, qft, digambarkan, partikel medan, model standard, tiga gaya dasar, boson Higgs, large hadron collider, lhc, cern, Kromodinamika Kuantum, quantum chromodynamics, qcd, gaya kuat, gluon</item>
-        <item>famili hadron, sub famili, baryon, meson, tiga quark, proton, neutron, quark, partikel bebas, tetes minyak millikan, muatan listrik proton, dua quark, antipartikel, sangat tidak stabil</item>
+        <item>famili hadron, subfamili, baryon, meson, tiga quark, proton, neutron, quark, partikel bebas, tetes minyak millikan, muatan listrik proton, dua quark, antipartikel, sangat tidak stabil</item>
         <item>lepton, spin, tidak mengalami gaya kuat, bermuatan, tidak bermuatan, elektron, neutrino, muon, tau, antipartikel, muatan berlawanan, positron, cacah lepton </item>
         <item>abad ke-20, ilmuwan, model standard, flavor, rasa, gauge boson, boson W, boson Z, gluon, tabel cacah partikel elementer, boson Higgs</item>
         <item>kelemahan, gravitasi, skala subatomik, Teori tentang Segalanya, theory of everything, toe, LHC, mendekati kecepatan cahaya, gaya dasar, graviton, tidak memiliki massa, teori penyatuan besar, grand unification theory, gut, tenaga tinggi, satu gaya</item>

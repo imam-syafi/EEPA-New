@@ -85,11 +85,13 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
+                android:id="@+id/tvskor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Skor:"
                 android:textColor="@color/abu"
                 android:textSize="20sp"
+                android:fontFamily="@font/nunito_sans_bold"
                 app:layout_constraintBottom_toBottomOf="@+id/skorTotal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -98,18 +100,42 @@
                 app:layout_constraintVertical_bias="0.17" />
 
             <TextView
-                android:id="@+id/descHasil"
+                android:id="@+id/kategori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:gravity="center_horizontal"
-                tools:text="Kategori\nSangat baik, pertahankan!"
+                android:text="Kategori:"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/progress_circular" />
+            <TextView
+                android:id="@+id/descHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_black"
+                android:gravity="center_horizontal"
+                tools:text="Sangat baik"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kategori" />
+            <TextView
+                android:id="@+id/keterangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:gravity="center_horizontal"
+                tools:text="Pertahankan 👍"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descHasil" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -123,7 +149,7 @@
             android:gravity="center_horizontal"
             android:text="Rincian skor tiap soal:"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:drawableBottomCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
         <LinearLayout
@@ -143,7 +169,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/kolomSkor"
@@ -167,7 +193,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanPertama"
@@ -186,7 +212,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKedua"
@@ -205,7 +231,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKetiga"
@@ -224,7 +250,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKeempat"
@@ -243,7 +269,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKelima"
@@ -262,7 +288,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKeenam"
@@ -281,7 +307,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKetujuh"
@@ -300,7 +326,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKedelapan"
@@ -319,7 +345,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKesembilan"
@@ -338,7 +364,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKesepuluh"
@@ -357,7 +383,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKesebelas"
@@ -376,7 +402,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKeduabelas"
@@ -395,7 +421,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKetigabelas"
@@ -414,7 +440,7 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKeempatbelas"
@@ -433,105 +459,10 @@
                 <View
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
+                    android:background="?android:attr/listDivider"/>
 
                 <TextView
                     android:id="@+id/jawabanKelimabelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <View style="@style/Divider" />
-
-            <LinearLayout style="@style/layoutResultLatihan">
-
-                <TextView
-                    android:id="@+id/soalKeenambelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="16. Ini Soal Kesepuluh" />
-                <View
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
-
-                <TextView
-                    android:id="@+id/jawabanKeenambelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <View style="@style/Divider" />
-
-            <LinearLayout style="@style/layoutResultLatihan">
-
-                <TextView
-                    android:id="@+id/soalKetujuhbelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="17. Ini Soal Kesepuluh" />
-                <View
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
-
-                <TextView
-                    android:id="@+id/jawabanKetujuhbelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <View style="@style/Divider" />
-
-            <LinearLayout style="@style/layoutResultLatihan">
-
-                <TextView
-                    android:id="@+id/soalKedelapanbelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="18. Ini Soal Kesepuluh" />
-                <View
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
-
-                <TextView
-                    android:id="@+id/jawabanKedelapanbelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <View style="@style/Divider" />
-
-            <LinearLayout style="@style/layoutResultLatihan">
-
-                <TextView
-                    android:id="@+id/soalKesembilanbelas"
-                    style="@style/soalResultLatihan"
-                    tools:text="19. Ini Soal Kesepuluh" />
-                <View
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
-
-                <TextView
-                    android:id="@+id/jawabanKesembilanbelas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <View style="@style/Divider" />
-
-            <LinearLayout style="@style/layoutResultLatihan">
-
-                <TextView
-                    android:id="@+id/soalKeduapuluh"
-                    style="@style/soalResultLatihan"
-                    tools:text="20. Ini Soal Kesepuluh" />
-                <View
-                    android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/abu_terang"/>
-
-                <TextView
-                    android:id="@+id/jawabanKeduapuluh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>

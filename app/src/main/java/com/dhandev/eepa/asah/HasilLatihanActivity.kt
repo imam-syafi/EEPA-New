@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.core.widget.NestedScrollView
@@ -35,27 +36,23 @@ class HasilLatihanActivity : AppCompatActivity() {
                 onBackPressed()
             }
             val username : String?  = sharedPred.getString("userName", null)
+            val urutanSoal = intent.getStringArrayListExtra("urutanJawabanUser")
             descHasil.text = "Selamat $username, Kamu sudah berhasil menyelesaikan soal-soal latihan! \nBerikut rincian hasilnya:"
-            soalPertama.text = "1. "+ soal(0) +"\nKunci jawaban: ${jawabanBenar(0)}"
-            soalKedua.text = "2. "+ soal(1) +"\nKunci jawaban: ${jawabanBenar(1)}"
-            soalKetiga.text = "3. "+ soal(2)+"\nKunci jawaban: ${jawabanBenar(2)}"
-            soalKeempat.text = "4. "+ soal(3) +"\nKunci jawaban: ${jawabanBenar(3)}"
-            soalKelima.text = "5. "+ soal(4) +"\nKunci jawaban: ${jawabanBenar(4)}"
-            soalKeenam.text = "6. "+ soal(5) +"\nKunci jawaban: ${jawabanBenar(5)}"
-            soalKetujuh.text = "7. "+ soal(6) +"\nKunci jawaban: ${jawabanBenar(6)}"
-            soalKedelapan.text = "8. "+ soal(7)+"\nKunci jawaban: ${jawabanBenar(7)}"
-            soalKesembilan.text = "9. "+ soal(8) +"\nKunci jawaban: ${jawabanBenar(8)}"
-            soalKesepuluh.text = "10. "+ soal(9) +"\nKunci jawaban: ${jawabanBenar(9)}"
-            soalKesebelas.text = "11. "+ soal(10) +"\nKunci jawaban: ${jawabanBenar(10)}"
-            soalKeduabelas.text = "12. "+ soal(11) +"\nKunci jawaban: ${jawabanBenar(11)}"
-            soalKetigabelas.text = "13. "+ soal(12) +"\nKunci jawaban: ${jawabanBenar(12)}"
-            soalKeempatbelas.text = "14. "+ soal(13) +"\nKunci jawaban: ${jawabanBenar(13)}"
-            soalKelimabelas.text = "15. "+ soal(14) +"\nKunci jawaban: ${jawabanBenar(14)}"
-            soalKeenambelas.text = "16. "+ soal(15) +"\nKunci jawaban: ${jawabanBenar(15)}"
-            soalKetujuhbelas.text = "17. "+ soal(16) +"\nKunci jawaban: ${jawabanBenar(16)}"
-            soalKedelapanbelas.text = "18. "+ soal(17) +"\nKunci jawaban: ${jawabanBenar(17)}"
-            soalKesembilanbelas.text = "19. "+ soal(18)+"\nKunci jawaban: ${jawabanBenar(18)}"
-            soalKeduapuluh.text = "20. "+ soal(19) +"\nKunci jawaban: ${jawabanBenar(19)}"
+            soalPertama.text = "1. "+ soal(0) +"\nJawaban: ${jawabanUser(0)}" +"\nKunci jawaban: ${jawabanBenar(0)}"
+            soalKedua.text = "2. "+ soal(1) +"\nJawaban: ${jawabanUser(1)}" +"\nKunci jawaban: ${jawabanBenar(1)}"
+            soalKetiga.text = "3. "+ soal(2) +"\nJawaban: ${jawabanUser(2)}"+"\nKunci jawaban: ${jawabanBenar(2)}"
+            soalKeempat.text = "4. "+ soal(3) +"\nJawaban: ${jawabanUser(3)}" +"\nKunci jawaban: ${jawabanBenar(3)}"
+            soalKelima.text = "5. "+ soal(4) +"\nJawaban: ${jawabanUser(4)}" +"\nKunci jawaban: ${jawabanBenar(4)}"
+            soalKeenam.text = "6. "+ soal(5) +"\nJawaban: ${jawabanUser(5)}" +"\nKunci jawaban: ${jawabanBenar(5)}"
+            soalKetujuh.text = "7. "+ soal(6) +"\nJawaban: ${jawabanUser(6)}" +"\nKunci jawaban: ${jawabanBenar(6)}"
+            soalKedelapan.text = "8. "+ soal(7) +"\nJawaban: ${jawabanUser(7)}"+"\nKunci jawaban: ${jawabanBenar(7)}"
+            soalKesembilan.text = "9. "+ soal(8) +"\nJawaban: ${jawabanUser(8)}" +"\nKunci jawaban: ${jawabanBenar(8)}"
+            soalKesepuluh.text = "10. "+ soal(9) +"\nJawaban: ${jawabanUser(9)}" +"\nKunci jawaban: ${jawabanBenar(9)}"
+            soalKesebelas.text = "11. "+ soal(10) +"\nJawaban: ${jawabanUser(10)}" +"\nKunci jawaban: ${jawabanBenar(10)}"
+            soalKeduabelas.text = "12. "+ soal(11) +"\nJawaban: ${jawabanUser(11)}" +"\nKunci jawaban: ${jawabanBenar(11)}"
+            soalKetigabelas.text = "13. "+ soal(12) +"\nJawaban: ${jawabanUser(12)}" +"\nKunci jawaban: ${jawabanBenar(12)}"
+            soalKeempatbelas.text = "14. "+ soal(13) +"\nJawaban: ${jawabanUser(13)}" +"\nKunci jawaban: ${jawabanBenar(13)}"
+            soalKelimabelas.text = "15. "+ soal(14) +"\nJawaban: ${jawabanUser(14)}" +"\nKunci jawaban: ${jawabanBenar(14)}"
 
             val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
 //            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
@@ -74,17 +71,12 @@ class HasilLatihanActivity : AppCompatActivity() {
             jawabanKetigabelas.style(jawaban(12))
             jawabanKeempatbelas.style(jawaban(13))
             jawabanKelimabelas.style(jawaban(14))
-            jawabanKeenambelas.style(jawaban(15))
-            jawabanKetujuhbelas.style(jawaban(16))
-            jawabanKedelapanbelas.style(jawaban(17))
-            jawabanKesembilanbelas.style(jawaban(18))
-            jawabanKeduapuluh.style(jawaban(19))
 
             fireworks.setAnimation("fireworks.json")
             fireworks.playAnimation()
 
-            val final : Double = (skor.toDouble()/200.0)*100.0
-            val df : DecimalFormat = DecimalFormat("#.##")
+            val final : Double = (skor.toDouble()/150.0)*100.0
+            val df : DecimalFormat = DecimalFormat("#.#")
             skorTotal.text = df.format(final).toString()
             progressCircular.trackColor = Color.WHITE
             val animation : ObjectAnimator = ObjectAnimator.ofInt(progressCircular, "progress", 0, final.toInt())
@@ -93,24 +85,32 @@ class HasilLatihanActivity : AppCompatActivity() {
             animation.start()
             when(final){
                 in 76.0..100.0 -> {
-                    skorTotal.setTextColor(Color.BLUE)
-                    progressCircular.setIndicatorColor(Color.BLUE)
-                    descHasil.text = "Kategori:\nSangat baik, pertahankan! 😍"
+                    skorTotal.setTextColor(resources.getColor(R.color.greenBright))
+                    tvskor.setTextColor(resources.getColor(R.color.greenBright))
+                    progressCircular.setIndicatorColor(resources.getColor(R.color.greenBright))
+                    descHasil.text = "Sangat baik"
+                    keterangan.text = "Pertahankan! 👍"
                 }
-                in 51.0..75.0 -> {
-                    skorTotal.setTextColor(resources.getColor(R.color.right))
-                    progressCircular.setIndicatorColor(resources.getColor(R.color.right))
-                    descHasil.text = "Kategori:\nBaik, tingkatkan! ✨"
+                in 51.0..75.9 -> {
+                    skorTotal.setTextColor(resources.getColor(R.color.yellow))
+                    tvskor.setTextColor(resources.getColor(R.color.yellow))
+                    progressCircular.setIndicatorColor(resources.getColor(R.color.yellow))
+                    descHasil.text = "Baik"
+                    keterangan.text = "Tingkatkan! ✨"
                 }
-                in 26.0..50.0 -> {
+                in 26.0..50.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.orange))
+                    tvskor.setTextColor(resources.getColor(R.color.orange))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.orange))
-                    descHasil.text = "Kategori:\nKurang, belajar lagi! 👍"
+                    descHasil.text = "Kurang"
+                    keterangan.text = "Belajar lagi! 👌"
                 }
                 else -> {
-                    skorTotal.setTextColor(Color.RED)
-                    progressCircular.setIndicatorColor(Color.RED)
-                    descHasil.text = "Kategori:\nSangat kurang, belajar lebih giat lagi ya! 👌"
+                    skorTotal.setTextColor(resources.getColor(R.color.wrong))
+                    tvskor.setTextColor(resources.getColor(R.color.wrong))
+                    progressCircular.setIndicatorColor(resources.getColor(R.color.wrong))
+                    descHasil.text = "Sangat kurang"
+                    keterangan.text = "Belajar lebih giat lagi ya! 💪"
                 }
             }
 
@@ -163,11 +163,6 @@ class HasilLatihanActivity : AppCompatActivity() {
             13 -> isiSoal = getString(R.string.soal_13)
             14 -> isiSoal = getString(R.string.soal_14)
             15 -> isiSoal = getString(R.string.soal_15)
-            16 -> isiSoal = getString(R.string.soal_16)
-            17 -> isiSoal = getString(R.string.soal_17)
-            18 -> isiSoal = getString(R.string.soal_18)
-            19 -> isiSoal = getString(R.string.soal_19)
-            20 -> isiSoal = getString(R.string.soal_20)
             99 -> isiSoal = "Soal belum diakses"
         }
         return isiSoal
@@ -177,32 +172,52 @@ class HasilLatihanActivity : AppCompatActivity() {
         val urutanSoal = intent.getIntegerArrayListExtra("urutanSoal")
         var kunciJawaban= "Ini soal"
         when(urutanSoal?.get(nomor)){
-            1 -> kunciJawaban = "Partikel fermion dan boson"
-            2 -> kunciJawaban = "Partikel medan"
-            3 -> kunciJawaban = "Memiliki spin bilangan bulat"
-            4 -> kunciJawaban = "Proton"
-            5 -> kunciJawaban = "Muon"
-            6 -> kunciJawaban = "Model Standard"
-            7 -> kunciJawaban = "Partikel pertukaran untuk gaya kuat"
-            8 -> kunciJawaban = "Teori Medan Kuantum"
-            9 -> kunciJawaban = "Baryon dan meson"
-            10 -> kunciJawaban = "Satu quark up dan dua quark down"
-            11 -> kunciJawaban = "Tersusun atas sebuah partikel dan antipartikel"
-            12 -> kunciJawaban = "Lepton"
-            13 -> kunciJawaban = getString(R.string.E)
-            14 -> kunciJawaban = "Pion"
-            15 -> kunciJawaban = "Kuark dan lepton"
-            16 -> kunciJawaban = "Up, down, bottom, top, strange dan charm"
-            17 -> kunciJawaban = "Gluon, foton, dan boson Higgs"
-            18 -> kunciJawaban = "Graviton"
-            19 -> kunciJawaban = "Teori Penyatuan Besar"
-            20 -> kunciJawaban = "Jangkauan gaya gravitasi sangat luas"
+            1 -> kunciJawaban = "Partikel medan"
+            2 -> kunciJawaban = "Memiliki spin bilangan bulat"
+            3 -> kunciJawaban = "Muon"
+            4 -> kunciJawaban = "Model Standard"
+            5 -> kunciJawaban = "Partikel pertukaran untuk gaya kuat"
+            6 -> kunciJawaban = "Teori Medan Kuantum"
+            7 -> kunciJawaban = "Baryon dan meson"
+            8 -> kunciJawaban = "Satu quark up dan dua quark down"
+            9 -> kunciJawaban = "Lepton"
+            10 -> kunciJawaban = getString(R.string.E)
+            11 -> kunciJawaban = "Pion"
+            12 -> kunciJawaban =  "Up, down, bottom, top, strange dan charm"
+            13 -> kunciJawaban = "Gluon, foton, dan boson Higgs"
+            14 -> kunciJawaban = "Graviton"
+            15 -> kunciJawaban =  "Teori Penyatuan Besar"
             99 -> kunciJawaban = "Soal belum diakses"
         }
         return kunciJawaban
     }
 
-    //TODO:SHOW THE RIGHT ANSWER
+    private fun jawabanUser (nomor : Int) : CharSequence{
+        val urutanSoal = intent.getIntegerArrayListExtra("urutanSoal")
+        val urutanJawaban = intent.getStringArrayListExtra("urutanJawabanUser")
+        var jawabanPengguna= "Ini soal"
+        when(urutanSoal?.get(nomor)){
+            1 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            2 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            3 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            4 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            5 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            6 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            7 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            8 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            9 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            10 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            11 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            12 -> jawabanPengguna =  "${urutanJawaban?.get(nomor)}"
+            13 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            14 -> jawabanPengguna = "${urutanJawaban?.get(nomor)}"
+            15 -> jawabanPengguna =  "${urutanJawaban?.get(nomor)}"
+            99 -> jawabanPengguna = "Soal belum diakses"
+        }
+        return jawabanPengguna
+    }
+
+
     override fun onBackPressed() {
         startActivity(Intent(this, LatihanActivity::class.java))
         finish()

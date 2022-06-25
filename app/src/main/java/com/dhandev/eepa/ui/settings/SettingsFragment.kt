@@ -17,6 +17,8 @@ import com.bumptech.glide.Glide
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentSettingsBinding
 import com.dhandev.eepa.onBoarding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import dev.shreyaspatil.MaterialDialog.AbstractDialog
 import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
@@ -43,15 +45,19 @@ class SettingsFragment : Fragment() {
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
         sharedPred2 = this.requireActivity().getSharedPreferences("Tampilan", AppCompatActivity.MODE_PRIVATE)
 
-        val username : String?  = sharedPred.getString("userName", "Pengguna")
+        val auth = Firebase.auth
+        val user = Firebase.auth.currentUser
+        val username = user?.displayName
+        val profilUrl = user?.photoUrl
         binding.userName.text = username
+        Glide.with(this).load(profilUrl).circleCrop().into(binding.imageView5)
 
         val baseUrl = "https://docs.google.com/uc?id="
-        val avatar : String? = sharedPred.getString("avatarDrawable", "0")
-        when(avatar){
-            "0" -> Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView5)
-            "1" -> Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView5)
-        }
+//        val avatar : String? = sharedPred.getString("avatarDrawable", "0")
+//        when(avatar){
+//            "0" -> Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView5)
+//            "1" -> Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView5)
+//        }
 
         binding.apply {
             logout.setOnClickListener {
@@ -59,10 +65,10 @@ class SettingsFragment : Fragment() {
                 val Editor2:SharedPreferences.Editor = sharedPred2.edit()
                 val BottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
                     .setTitle("Keluar?")
-                    .setMessage("$username, Kamu yakin mau keluar?")
+                    .setMessage("$username, Anda yakin mau keluar?")
                     .setCancelable(true)
                     .setPositiveButton("Keluar", R.drawable.ic_baseline_done_24){dialog, which ->
-                        Editor.remove("userName")
+                        auth.signOut()
                         Editor.remove("subMateri")
                         Editor2.remove("gantiLatar")
                         Editor2.remove("tombolTerpilih")

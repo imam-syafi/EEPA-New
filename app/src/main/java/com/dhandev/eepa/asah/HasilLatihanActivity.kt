@@ -16,6 +16,8 @@ import androidx.core.widget.NestedScrollView
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.text.DecimalFormat
 
 
@@ -35,9 +37,10 @@ class HasilLatihanActivity : AppCompatActivity() {
             close.setOnClickListener {
                 onBackPressed()
             }
-            val username : String?  = sharedPred.getString("userName", null)
+            val user = Firebase.auth.currentUser
+            val username = user?.displayName
+
             val urutanSoal = intent.getStringArrayListExtra("urutanJawabanUser")
-            descHasil.text = "Selamat $username, Kamu sudah berhasil menyelesaikan soal-soal latihan! \nBerikut rincian hasilnya:"
             soalPertama.text = "1. "+ soal(0) +"\nJawaban: ${jawabanUser(0)}" +"\nKunci jawaban: ${jawabanBenar(0)}"
             soalKedua.text = "2. "+ soal(1) +"\nJawaban: ${jawabanUser(1)}" +"\nKunci jawaban: ${jawabanBenar(1)}"
             soalKetiga.text = "3. "+ soal(2) +"\nJawaban: ${jawabanUser(2)}"+"\nKunci jawaban: ${jawabanBenar(2)}"
@@ -89,28 +92,28 @@ class HasilLatihanActivity : AppCompatActivity() {
                     tvskor.setTextColor(resources.getColor(R.color.greenBright))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.greenBright))
                     descHasil.text = "Sangat baik"
-                    keterangan.text = "Pertahankan! 👍"
+                    keterangan.text = "$username, pertahankan ya! 👍"
                 }
                 in 51.0..75.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.yellow))
                     tvskor.setTextColor(resources.getColor(R.color.yellow))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.yellow))
                     descHasil.text = "Baik"
-                    keterangan.text = "Tingkatkan! ✨"
+                    keterangan.text = "$username, tingkatkan terus! ✨"
                 }
                 in 26.0..50.9 -> {
                     skorTotal.setTextColor(resources.getColor(R.color.orange))
                     tvskor.setTextColor(resources.getColor(R.color.orange))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.orange))
                     descHasil.text = "Kurang"
-                    keterangan.text = "Belajar lagi! 👌"
+                    keterangan.text = "$username, belajar lagi! 👌"
                 }
                 else -> {
                     skorTotal.setTextColor(resources.getColor(R.color.wrong))
                     tvskor.setTextColor(resources.getColor(R.color.wrong))
                     progressCircular.setIndicatorColor(resources.getColor(R.color.wrong))
                     descHasil.text = "Sangat kurang"
-                    keterangan.text = "Belajar lebih giat lagi ya! 💪"
+                    keterangan.text = "$username, belajar lebih giat lagi ya! 💪"
                 }
             }
 

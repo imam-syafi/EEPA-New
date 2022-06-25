@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "212441250152",
+    "project_id": "eepa-8d147",
+    "storage_bucket": "eepa-8d147.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212441250152:android:49e5cca316798ea4903edd",
+        "android_client_info": {
+          "package_name": "com.dhandev.eepa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212441250152-6811fc6lcjh88cos39f3a6cd8rhimab8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dhandev.eepa",
+            "certificate_hash": "d908d88bd2cecffdb9f9ee6a0a927dd700850574"
+          }
+        },
+        {
+          "client_id": "212441250152-ui90oo5n3g5jrnc252vlevgip7bi4blk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dhandev.eepa",
+            "certificate_hash": "e9b4848454be95c7c6e59a0c5849978869700238"
+          }
+        },
+        {
+          "client_id": "212441250152-ptjagivot9thi1pkqu8qolj8f2bqc5fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJBI-YUNxxsS454VkVpJ_Ysks6GSBc4VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212441250152-ptjagivot9thi1pkqu8qolj8f2bqc5fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -510,12 +510,12 @@
             motion:layout_constraintTop_toBottomOf="@+id/editText_user"
             motion:layout_constraintStart_toStartOf="@id/bgLogin" />
     </ConstraintSet>
-    <Transition
-        motion:constraintSetStart="@+id/onBoard5"
-        motion:constraintSetEnd="@+id/login" >
-        <OnSwipe motion:dragDirection="dragUp" />
-        <OnClick motion:targetId="@id/btnSkip" />
-    </Transition>
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/onBoard5"-->
+<!--        motion:constraintSetEnd="@+id/login" >-->
+<!--        <OnSwipe motion:dragDirection="dragUp" />-->
+<!--        <OnClick motion:targetId="@id/btnSkip" />-->
+<!--    </Transition>-->
     <ConstraintSet>
         <Constraint
             android:layout_height="wrap_content"
@@ -538,28 +538,28 @@
             motion:layout_constraintStart_toStartOf="@id/avatar"
             android:alpha="0" />
     </ConstraintSet>
-    <Transition
-        motion:constraintSetStart="@+id/start"
-        motion:constraintSetEnd="@+id/login" >
-        <OnClick motion:targetId="@id/btnSkip" />
-        <OnSwipe motion:dragDirection="dragUp" />
-    </Transition>
-    <Transition
-        motion:constraintSetStart="@+id/end"
-        motion:constraintSetEnd="@+id/login" >
-        <OnClick motion:targetId="@id/btnSkip" />
-        <OnSwipe motion:dragDirection="dragUp" />
-    </Transition>
-    <Transition
-        motion:constraintSetStart="@+id/onBoard3"
-        motion:constraintSetEnd="@+id/login" >
-        <OnClick motion:targetId="@id/btnSkip" />
-        <OnSwipe motion:dragDirection="dragUp" />
-    </Transition>
-    <Transition
-        motion:constraintSetStart="@+id/onBoard4"
-        motion:constraintSetEnd="@+id/login" >
-        <OnClick motion:targetId="@id/btnSkip" />
-        <OnSwipe motion:dragDirection="dragUp" />
-    </Transition>
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/start"-->
+<!--        motion:constraintSetEnd="@+id/login" >-->
+<!--        <OnClick motion:targetId="@id/btnSkip" />-->
+<!--        <OnSwipe motion:dragDirection="dragUp" />-->
+<!--    </Transition>-->
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/end"-->
+<!--        motion:constraintSetEnd="@+id/login" >-->
+<!--        <OnClick motion:targetId="@id/btnSkip" />-->
+<!--        <OnSwipe motion:dragDirection="dragUp" />-->
+<!--    </Transition>-->
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/onBoard3"-->
+<!--        motion:constraintSetEnd="@+id/login" >-->
+<!--        <OnClick motion:targetId="@id/btnSkip" />-->
+<!--        <OnSwipe motion:dragDirection="dragUp" />-->
+<!--    </Transition>-->
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/onBoard4"-->
+<!--        motion:constraintSetEnd="@+id/login" >-->
+<!--        <OnClick motion:targetId="@id/btnSkip" />-->
+<!--        <OnSwipe motion:dragDirection="dragUp" />-->
+<!--    </Transition>-->
 </MotionScene>

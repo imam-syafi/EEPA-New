@@ -28,6 +28,8 @@ import com.dhandev.eepa.materi.*
 import com.dhandev.eepa.onBoarding
 import com.dhandev.eepa.search.SearchActivity
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
@@ -57,31 +59,32 @@ class HomeFragment : Fragment() {
 //        )
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 
-        val username : String?  = sharedPred.getString("userName", null)
+        val user = Firebase.auth.currentUser
+        val username = user?.displayName
 
         if (username != null){
             binding.userName.text = username
-
         } else {
             startActivity(Intent(activity, onBoarding::class.java))
             activity?.finish()
         }
+
 //        val baseUrl = "https://docs.google.com/uc?id="
 //        val avatar : String? = sharedPred.getString("avatarUrl", null)
 //        Glide.with(this).load(baseUrl+avatar).circleCrop().into(binding.imageView2)
-        val avatar = sharedPred.getString("avatarDrawable", "0")
-        when(avatar){
-            "0" -> {
-                Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView2)
-                binding.iconMateri.setImageResource(R.drawable.business_3d_businessman_in_dark_blue_suit_with_phone_looking_straight)
-//                binding.horizontalScrollView.background.setColorFilter(Color.parseColor("#ECF3FE"), PorterDuff.Mode.SRC_ATOP)
-            }
-            "1" -> {
-                Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView2)
-                binding.iconMateri.setImageResource(R.drawable.business_3d_businesswoman_in_red_suit_looking_at_phone)
-//                binding.horizontalScrollView.background.setColorFilter(Color.parseColor("#FEECF8"), PorterDuff.Mode.SRC_ATOP)
-            }
-        }
+//        val avatar = sharedPred.getString("avatarDrawable", "0")
+//        when(avatar){
+//            "0" -> {
+//                Glide.with(this).load(R.drawable.male).circleCrop().into(binding.imageView2)
+//                binding.iconMateri.setImageResource(R.drawable.business_3d_businessman_in_dark_blue_suit_with_phone_looking_straight)
+//            }
+//            "1" -> {
+//                Glide.with(this).load(R.drawable.female).circleCrop().into(binding.imageView2)
+//                binding.iconMateri.setImageResource(R.drawable.business_3d_businesswoman_in_red_suit_looking_at_phone)
+//            }
+//        }
+
+        Glide.with(this).load(user?.photoUrl).circleCrop().into(binding.imageView2)
 
         val valueSubMateri = sharedPred.getInt("subMateri", 0)
 

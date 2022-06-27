@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,92 +7,98 @@
     tools:context=".ui.settings.SettingsFragment">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/imageView4"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@drawable/news_bg"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/news_bg"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/nunito_sans_black"
-        android:text="@string/title_settings"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:text="@string/title_settings"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="28dp"
-        tools:background="@drawable/rounded_corner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="28dp"
+            tools:background="@drawable/rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/nunito_sans_black"
-        android:text="Muhammad Ramdhan"
-        android:textColor="@color/abu"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:text="Muhammad Ramdhan"
+            android:textColor="@color/abu"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-<!--    <Button-->
-<!--        android:id="@+id/editprofile2"-->
-<!--        style="@style/ButtonGeneral"-->
-<!--        android:drawableLeft="@drawable/edit"-->
-<!--        android:text="@string/edit"-->
-<!--        app:backgroundTint="@color/biru_seken"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/userName" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/editprofile2"-->
+    <!--        style="@style/ButtonGeneral"-->
+    <!--        android:drawableLeft="@drawable/edit"-->
+    <!--        android:text="@string/edit"-->
+    <!--        app:backgroundTint="@color/biru_seken"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/userName" />-->
 
-    <Button
-        android:id="@+id/tampilan"
-        style="@style/ButtonGeneral"
-        android:drawableLeft="@drawable/tampilan_icon"
-        android:text="@string/appearance"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
+        <Button
+            android:id="@+id/tampilan"
+            style="@style/ButtonGeneral"
+            android:drawableLeft="@drawable/tampilan_icon"
+            android:text="@string/appearance"
+            app:backgroundTint="@color/biru_seken"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userName" />
 
-    <Button
-        android:id="@+id/about"
-        style="@style/ButtonGeneral"
-        android:drawableLeft="@drawable/info_icon"
-        android:text="@string/about"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tampilan" />
+        <Button
+            android:id="@+id/about"
+            style="@style/ButtonGeneral"
+            android:drawableLeft="@drawable/info_icon"
+            android:text="@string/about"
+            app:backgroundTint="@color/biru_seken"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tampilan" />
 
-    <Button
-        android:id="@+id/logout"
-        style="@style/ButtonGeneral"
-        android:drawableLeft="@drawable/logout"
-        android:text="@string/log_out"
-        android:textColor="@color/merah"
-        android:drawableTint="@color/merah"
-        app:backgroundTint="@color/biru_seken"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/logout"
+            style="@style/ButtonGeneral"
+            android:drawableLeft="@drawable/logout"
+            android:text="@string/log_out"
+            android:scrollbars="none"
+            android:layout_marginBottom="100dp"
+            android:textColor="@color/merah"
+            android:drawableTint="@color/merah"
+            app:backgroundTint="@color/biru_seken"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

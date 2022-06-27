@@ -1,102 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".asah.ContohActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/news_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/arrowBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:src="@drawable/arrow_back"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:fontFamily="@font/nunito_sans_black"
-        android:text="@string/contoh_soal"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/arrowBack"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/headline"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/silahkan_pilih_nomor_untuk_melihat_soal_dan_penyelesaiannya"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="10dp"
-        android:justificationMode="inter_word"
-        android:fontFamily="@font/nunito_sans_bold"
-        android:textColor="@color/abu"
-        app:layout_constraintTop_toBottomOf="@id/imageView4"
-        android:textSize="18sp"/>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/news_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/row1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/headline"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
-        <Button
-            android:id="@+id/cth1"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:lines="1"
-            android:ellipsize="marquee"/>
-        <Button
-            android:id="@+id/cth2"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:lines="1"
-            android:ellipsize="marquee"/>
-        <Button
-            android:id="@+id/cth3"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:lines="1"
-            android:ellipsize="marquee"/>
-        <Button
-            android:id="@+id/cth4"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:lines="1"
-            android:ellipsize="marquee"/>
-        <Button
-            android:id="@+id/cth5"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:lines="1"
-            android:ellipsize="marquee"/>
-        <Button
-            android:id="@+id/cth6"
-            style="@style/ButtonGeneral"
-            app:backgroundTint="@color/biru_seken"
-            android:lines="1"
-            android:ellipsize="marquee"/>
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/nunito_sans_black"
+            android:text="@string/contoh_soal"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/arrowBack"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/silahkan_pilih_nomor_untuk_melihat_soal_dan_penyelesaiannya"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:textColor="@color/abu"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/headline"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/cth1"
+                style="@style/ButtonGeneral"
+                app:backgroundTint="@color/biru_seken"
+                android:lines="1"
+                android:ellipsize="marquee"/>
+            <Button
+                android:id="@+id/cth2"
+                style="@style/ButtonGeneral"
+                app:backgroundTint="@color/biru_seken"
+                android:lines="1"
+                android:ellipsize="marquee"/>
+            <Button
+                android:id="@+id/cth3"
+                style="@style/ButtonGeneral"
+                app:backgroundTint="@color/biru_seken"
+                android:lines="1"
+                android:ellipsize="marquee"/>
+            <Button
+                android:id="@+id/cth4"
+                style="@style/ButtonGeneral"
+                app:backgroundTint="@color/biru_seken"
+                android:lines="1"
+                android:ellipsize="marquee"/>
+            <Button
+                android:id="@+id/cth5"
+                style="@style/ButtonGeneral"
+                app:backgroundTint="@color/biru_seken"
+                android:lines="1"
+                android:ellipsize="marquee"/>
+            <Button
+                android:id="@+id/cth6"
+                style="@style/ButtonGeneral"
+                app:backgroundTint="@color/biru_seken"
+                android:lines="1"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="marquee"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

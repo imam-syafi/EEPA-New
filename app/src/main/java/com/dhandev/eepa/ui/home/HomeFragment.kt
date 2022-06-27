@@ -114,7 +114,7 @@ class HomeFragment : Fragment() {
                 }
             }
             seeAll.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
+                Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiActivity)
             )
             contoh.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_contohActivity)
@@ -201,20 +201,20 @@ class HomeFragment : Fragment() {
 //            val intent = Intent(requireActivity(), SearchActivity::class.java)
 //            startActivity(intent, activityOptionCompat.toBundle())
         }
-        val scrollDown = activity?.findViewById<TextView>(R.id.tvScroll)
-        binding.apply {
-            scroll.viewTreeObserver
-                .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener{
-                    override fun onScrollChanged() {
-                        if (scroll.getChildAt(0).getBottom()
-                            == (scroll.getHeight() + scroll.getScrollY())) {
-                            scrollDown?.visibility = View.GONE
-                        }
-                    }
-
-                })
-            scrollDown?.setOnClickListener { scroll.fullScroll(View.FOCUS_DOWN) }
-        }
+//        val scrollDown = activity?.findViewById<TextView>(R.id.tvScroll)
+//        binding.apply {
+//            scroll.viewTreeObserver
+//                .addOnScrollChangedListener(object : ViewTreeObserver.OnScrollChangedListener{
+//                    override fun onScrollChanged() {
+//                        if (scroll.getChildAt(0).getBottom()
+//                            == (scroll.getHeight() + scroll.getScrollY())) {
+//                            scrollDown?.visibility = View.GONE
+//                        }
+//                    }
+//
+//                })
+//            scrollDown?.setOnClickListener { scroll.fullScroll(View.FOCUS_DOWN) }
+//        }
     }
 
     //langsung akhiri activity ketika tekan kembali, bahkan setelah bernavigasi ke fragment news maupun settings

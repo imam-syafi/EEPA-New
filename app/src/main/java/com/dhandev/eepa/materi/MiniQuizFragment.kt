@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import com.dhandev.eepa.databinding.FragmentMateriBinding
 import com.dhandev.eepa.databinding.FragmentMiniQuizBinding
 
 class MiniQuizFragment : Fragment() {

@@ -28,13 +28,11 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             when(destination.id){
                 R.id.splashFragment -> hideNavScroll()
-                R.id.materiFragment -> hideNavScroll()
-                R.id.navigation_news -> binding.tvScroll.visibility = View.GONE
-                R.id.navigation_settings -> binding.tvScroll.visibility = View.GONE
-//                R.id.navigation_home -> onBackPressed()
+//                R.id.navigation_news -> binding.tvScroll.visibility = View.GONE
+//                R.id.navigation_settings -> binding.tvScroll.visibility = View.GONE
                 else -> {
                     navView.visibility = View.VISIBLE
-                    binding.tvScroll.visibility = View.VISIBLE
+//                    binding.tvScroll.visibility = View.VISIBLE
                 }
             }
         }
@@ -47,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     private fun hideNavScroll() {
         binding.apply {
             navView.visibility = View.GONE
-            tvScroll.visibility = View.GONE
+//            tvScroll.visibility = View.GONE
         }
     }
 }

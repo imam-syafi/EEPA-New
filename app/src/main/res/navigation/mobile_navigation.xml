@@ -11,13 +11,6 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_materiFragment"
-            app:destination="@id/materiFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-        <action
             android:id="@+id/action_navigation_home_to_contohActivity"
             app:destination="@id/contohActivity" />
         <action
@@ -32,6 +25,9 @@
         <action
             android:id="@+id/action_navigation_home_to_lampiranActivity"
             app:destination="@id/lampiranActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_materiActivity"
+            app:destination="@id/materiActivity" />
     </fragment>
 
     <fragment
@@ -51,15 +47,6 @@
         <action
             android:id="@+id/action_navigation_settings_to_tampilanActivity"
             app:destination="@id/tampilanActivity" />
-    </fragment>
-    <fragment
-        android:id="@+id/materiFragment"
-        android:name="com.dhandev.eepa.materi.MateriFragment"
-        android:label="fragment_materi"
-        tools:layout="@layout/fragment_materi" >
-        <action
-            android:id="@+id/action_materiFragment_to_navigation_home2"
-            app:destination="@id/navigation_home" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -114,4 +101,9 @@
         android:name="com.dhandev.eepa.addition.LampiranActivity"
         android:label="activity_lampiran"
         tools:layout="@layout/activity_lampiran" />
+    <activity
+        android:id="@+id/materiActivity"
+        android:name="com.dhandev.eepa.materi.MateriActivity"
+        android:label="activity_materi"
+        tools:layout="@layout/activity_materi" />
 </navigation>

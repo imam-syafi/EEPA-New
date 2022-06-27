@@ -3,15 +3,13 @@ package com.dhandev.eepa.ui.home
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Color
-import android.graphics.Color.argb
-import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver
+import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.view.animation.DecelerateInterpolator
+import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
@@ -30,14 +28,22 @@ import com.dhandev.eepa.search.SearchActivity
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.takusemba.spotlight.OnSpotlightListener
+import com.takusemba.spotlight.OnTargetListener
+import com.takusemba.spotlight.Spotlight
+import com.takusemba.spotlight.Target
+import com.takusemba.spotlight.shape.RoundedRectangle
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+
 
 class HomeFragment : Fragment() {
     private var _binding :FragmentHomeBinding? = null
     private val binding get() =_binding!!
     private lateinit var sharedPred : SharedPreferences
+    private var currentToast: Toast? = null
+    private var pedoman = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,13 +56,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        binding.introHome.setOnClickListener {
-//            val intent = Intent(activity, MateriSubatomik::class.java)
-//            startActivity(intent)
-//        }
-//        binding.more.setOnClickListener(
-//            Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_materiFragment)
-//        )
         sharedPred = this.requireActivity().getSharedPreferences("User", AppCompatActivity.MODE_PRIVATE)
 
         val user = Firebase.auth.currentUser
@@ -84,7 +83,7 @@ class HomeFragment : Fragment() {
 //            }
 //        }
 
-        Glide.with(this).load(user?.photoUrl).circleCrop().into(binding.imageView2)
+        Glide.with(this).load(user?.photoUrl).circleCrop().into(binding.profilPic)
 
         val valueSubMateri = sharedPred.getInt("subMateri", 0)
 
@@ -131,20 +130,26 @@ class HomeFragment : Fragment() {
             lampiran.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_lampiranActivity)
             )
+
         }
 
         return root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        pedoman = sharedPred.getInt("pedoman", 0)
+        if (pedoman==0){
+            spotlight()
+        }
         val carousel : ImageCarousel = view.findViewById(R.id.carousel)
         carousel.registerLifecycle(lifecycle)
 
         val list = mutableListOf<CarouselItem>()
 
-        val url1 = "https://cache.boston.com/universal/site_graphics/blogs/bigpicture/lhc_08_01/lhc1.jpg"
+        val url1 = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
         val url2 = "https://cdni.russiatoday.com/files/news/1e/57/20/00/eeee-run167675-evt876658967-rphi_copy.si.jpg"
         val url3 = "https://pbs.twimg.com/media/DcDmnE6X4AEwy01?format=jpg&name=medium"
 
@@ -186,12 +191,13 @@ class HomeFragment : Fragment() {
             }
 
             override fun onLongClick(position: Int, carouselItem: CarouselItem) {
-                Toast.makeText(
-                    activity,
-                    "You long clicked at position ${position + 1}.",
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
+//                Toast.makeText(
+//                    activity,
+//                    "You long clicked at position ${position + 1}.",
+//                    Toast.LENGTH_SHORT
+//                )
+//                    .show()
+                makeText(requireContext(), "Galeri", LENGTH_SHORT).show()
             }
         }
 
@@ -215,7 +221,136 @@ class HomeFragment : Fragment() {
 //                })
 //            scrollDown?.setOnClickListener { scroll.fullScroll(View.FOCUS_DOWN) }
 //        }
+        binding.profilPic.setOnClickListener {
+            val Editor:SharedPreferences.Editor = sharedPred.edit()
+            Editor.remove("pedoman").apply()
+            activity?.recreate() }
     }
+
+    private fun spotlight() {
+        pedoman++
+        val Editor:SharedPreferences.Editor = sharedPred.edit()
+        Editor.putInt("pedoman", pedoman).apply()
+
+        requireView().viewTreeObserver.addOnGlobalLayoutListener(
+            object : OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    // Layout has happened here.
+
+                    // put target and spotlight code here
+                    val targets = ArrayList<Target>()
+
+                    // first target
+                    val firstRoot = FrameLayout(requireContext())
+                    val first = layoutInflater.inflate(R.layout.layout_target, firstRoot)
+                    val firstTarget = Target.Builder()
+                        .setAnchor(binding.horizontalScrollView)
+                        .setShape(RoundedRectangle(binding.horizontalScrollView.height.toFloat(), binding.horizontalScrollView.width.toFloat(), 50f))
+                        .setOverlay(first)
+                        .setOnTargetListener(object : OnTargetListener {
+                            override fun onStarted() {
+                                first.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(1/3)"
+                                first.findViewById<TextView>(R.id.custom_text).text = "Mulai belajar atau lanjutkan proses belajar dapat diakses melalui tombol ini."
+                            }
+
+                            override fun onEnded() {
+                            }
+                        })
+                        .build()
+
+                    targets.add(firstTarget)
+
+                    // second target
+                    val secondRoot = FrameLayout(requireContext())
+                    val second = layoutInflater.inflate(R.layout.layout_target, secondRoot)
+                    val secondTarget = Target.Builder()
+                        .setAnchor(binding.carousel)
+                        .setShape(RoundedRectangle(binding.carousel.height.toFloat(), binding.carousel.width.toFloat(), 50f))
+                        .setOverlay(second)
+                        .setOnTargetListener(object : OnTargetListener {
+                            override fun onStarted() {
+                                second.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(2/3)"
+                                second.findViewById<TextView>(R.id.custom_text).text = "Galeri berisi foto terkait partikel elementer, tekan untuk melihat detail."
+                            }
+
+                            override fun onEnded() {
+                            }
+                        })
+                        .build()
+
+                    targets.add(secondTarget)
+
+                    // third target
+                    val thirdRoot = FrameLayout(requireContext())
+                    val third = layoutInflater.inflate(R.layout.layout_target, thirdRoot)
+                    val thirdTarget = Target.Builder()
+                        .setAnchor(binding.editText)
+                        .setShape(RoundedRectangle(binding.editText.height.toFloat(), binding.editText.width.toFloat(), 50f))
+                        .setOverlay(third)
+                        .setOnTargetListener(object : OnTargetListener {
+                            override fun onStarted() {
+                                third.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(3/3)"
+                                third.findViewById<TextView>(R.id.custom_text).text = "Cari kata kunci tertentu dengan fitur pencarian"
+                            }
+
+                            override fun onEnded() {
+                            }
+                        })
+                        .build()
+
+                    targets.add(thirdTarget)
+
+                    // create spotlight
+
+                    val spotlight = Spotlight.Builder(requireActivity())
+                        .setTargets(targets)
+                        .setBackgroundColorRes(R.color.transparent)
+                        .setDuration(1000L)
+                        .setAnimation(DecelerateInterpolator(2f))
+                        .setOnSpotlightListener(object : OnSpotlightListener {
+                            override fun onStarted() {
+                                currentToast?.cancel()
+                                currentToast = makeText(
+                                    requireContext(),
+                                    "Pedoman dimulai",
+                                    LENGTH_SHORT
+                                )
+                                currentToast?.show()
+                                binding.profilPic.isEnabled = false
+                            }
+
+                            override fun onEnded() {
+                                currentToast?.cancel()
+                                currentToast = makeText(
+                                    requireContext(),
+                                    "Pedoman berakhir",
+                                    LENGTH_SHORT
+                                )
+                                currentToast?.show()
+                                binding.profilPic.isEnabled = true
+                            }
+                        })
+                        .build()
+
+                    spotlight.start()
+
+                    val nextTarget = View.OnClickListener { spotlight.next() }
+
+                    val closeSpotlight = View.OnClickListener { spotlight.finish() }
+
+                    first.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
+                    second.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
+                    third.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
+
+                    first.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
+                    second.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
+                    third.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
+                    // Don't forget to remove your listener when you are done with it.
+                    view!!.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                }
+            })
+    }
+
 
     //langsung akhiri activity ketika tekan kembali, bahkan setelah bernavigasi ke fragment news maupun settings
     //sebelumnya akan terjadi penumpukan fragment

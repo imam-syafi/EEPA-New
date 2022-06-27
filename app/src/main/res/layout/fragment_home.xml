@@ -11,6 +11,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="100dp"
@@ -48,13 +49,13 @@
             android:text="Muhammad Ramdhan"
             android:textColor="@color/white"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/profilPic"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textView2" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/profilPic"
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:background="@drawable/rounded_corner"
@@ -77,6 +78,7 @@
             android:padding="10dp"
             android:text="@string/search_hint"
             android:textSize="14sp"
+            android:textColor="@color/abu_terang"
             android:transitionName="search"
             app:drawableEndCompat="@drawable/uil_search"
             app:drawableTint="@color/abu_terang"

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".NewOnBoarding"
+            android:exported="false" />
+        <activity
             android:name=".materi.MateriActivity"
             android:exported="false" />
         <activity

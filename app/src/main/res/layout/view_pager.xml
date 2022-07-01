@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/gambarOnBoarding"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="70dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/casual_life_3d_boy_sitting_at_the_desk_doing_exam_1" />
+
+    <TextView
+        android:id="@+id/judulOnBoarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/descOnBoarding"
+        android:fontFamily="@font/nunito_sans_black"
+        android:gravity="center_horizontal"
+        android:text="@string/cari_tahu"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/descOnBoarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBarLinear"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:text="@string/tahukah_anda_partikel_apa_n_yang_lebih_mendasar_dari_atom"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBarLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:trackCornerRadius="20dp"
+        app:trackThickness="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        tools:progress="70"
+        app:trackColor="@color/blue_200"
+        app:indicatorColor="@color/white"
+        />
+
+</RelativeLayout>

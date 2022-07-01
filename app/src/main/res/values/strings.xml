@@ -74,6 +74,7 @@
     <string name="sangat_bermanfaat">Sangat Bermanfaat!</string>
     <string name="dengan_mempelajari_ini_kita_bisa_nmengetahui_asal_usul_alam_semesta_lo">Dengan mempelajari ini, kita bisa \nmengetahui asal usul alam semesta lo!</string>
     <string name="penasaran">Penasaran?</string>
+    <string name="yuk_pelajari">Yuk, kita pelajari bersama!</string>
     <string name="latar_belakang">latar belakang</string>
     <string name="tuliskan_nama_anda">Tuliskan Nama Anda</string>
     <string name="mulai">Mulai</string>
@@ -146,7 +147,7 @@
     <string name="m_tmq2"><b><font color="#0BDA51">Dalam QFT terdapat berbagai model</font></b>, salah satunya yang populer adalah <b><font color="#0BDA51">Model Standard</font></b> (Standard Model = SM). Model ini adalah QFT yang mampu menjelaskan <b><font color="#0BDA51">tiga gaya dasar, yaitu elektromagnetik, kuat, dan lemah</font></b>. SM berhasil diselesaikan dengan terbuktinya keberadaan <b><font color="#0BDA51">boson Higgs</font></b> pada tahun 2012 menggunakan LHC (lihat Gambar 1) di <a href="https://home.cern/science/physics/higgs-boson">CERN</a> (Centre Européen pour la Recherche Nucléaire) di Geneva, Switzerland (lihat Gambar 2).</string>
     <string name="m_tmq3">Model lain dari QFT adalah <b><font color="#0BDA51">Kromodinamika Kuantum</font></b> (Quantum Chromodynamics = QCD). Model ini menjelaskan <b><font color="#0BDA51">gaya kuat yang terjadi antara quark dan gluon</font></b>. Gluon adalah partikel elementer yang bertindak sebagai <b><font color="#0BDA51">partikel pertukaran (gauge boson)</font></b> untuk gaya kuat antara quark yang satu dengan quark yang lainnya. Kata gluon sendiri diambil dari bahasa inggris glue yang artinya lem, nama yang sesuai dengan peran partikel ini.</string>
 
-<!--    revisi-->
+    <!--    revisi-->
     <string name="m_tmq_"><b><font color="#0BDA51">Untuk menjelaskan</font></b> partikel-partikel subatomik, ilmuwan menggunakan <b><font color="#FFA000">Teori Medan Quantum</font></b> (<i>Quantum Field Theory</i> = QFT). Teori ini digunakan untuk menyusun model-model mekanika kuantum partikel-partikel subatomik, di mana gaya <b><font color="#0BDA51">digambarkan</font></b> melalui perantara <b><font color="#FFA000">partikel medan</font></b>. </string>
     <string name="m_tmq_1"><b><font color="#FFA000">Partikel materi</font></b> (<i>material particle</i>), yaitu partikel dengan <b><font color="#FF160C">massa diam tidak nol</font></b>.\nMisal: elektron, proton, dsb.</string>
     <string name="m_tmq_1_2"><b><font color="#FFA000">Partikel medan</font></b> (<i>field particle</i>), yaitu partikel dengan <b><font color="#0BDA51">massa diam nol</font></b>.\nMisal: foton, graviton, dsb.</string>
@@ -158,7 +159,7 @@
     <string name="m_hadron2">Berbeda dengan <a href="https://en.wikipedia.org/wiki/Free_particle">partikel bebas</a>, muatan listrik quark <b><font color="#FF160C">bukan</font></b> kelipatan bilangan bulat dari e, melainkan <b><font color="#0BDA51">pecahan</font></b>, muatan listrik quark up (u) = +2e/3, down(d) = -e/3. Tetapi hingga saat ini, quark <b><font color="#0BDA51">belum bisa dibuktikan</font></b> kehadirannya secara langsung sebagai partikel bebas, jadi <b><font color="#0BDA51">masih aman</font></b> untuk berasumsi bahwa semua partikel bebas di alam mempunyai muatan listrik yang merupakan kelipatan bulat e, sesuai dengan <a href="https://www.coursehero.com/study-guides/introchem/millikans-oil-drop-experiment/">percobaan tetes minyak oleh Millikan</a>. Agar lebih jelas, ambil contoh quark pada proton untuk menghitung muatan listrik proton, di mana: </string>
     <string name="m_hadron3">Dapat dilihat, bahwa hasilnya sesuai dengan muatan listrik proton yaitu +e = 1.602 x 10⁻¹⁹ C. Coba buktikan dengan cara yang sama untuk muatan listrik neutron! \nKemudian ada meson, partikel hadron ini tersusun atas <b><font color="#0BDA51">dua quark saja</font></b> (satu quark dan satu antiquark). Contoh meson adalah pion (π+) tersusun atas quark up dan antiquark down. <b><font color="#0BDA51">Antipartikel</font></b> dari suatu meson adalah quark dan antiquarknya itu sendiri, <b><font color="#0BDA51">tapi saling tertukar</font></b>, jadi antipion (π-) tersusun atas quark down dan antiquark up. Meson menjadi <b><font color="#FF160C">sangat tidak stabil</font></b>, karena tersusun atas sebuah partikel dan antipartikel.</string>
 
-<!--    revisi-->
+    <!--    revisi-->
     <string name="m_hadron_">Partikel komposit yang tersusun atas <b><font color="#0BDA51">quark-quark yang terikat akibat gaya kuat</font></b> disebut dengan famili <b><font color="#FFA000">hadron</font></b>. Dalam famili hadron terdapat dua subfamili, yaitu <b><font color="#FFA000">baryon dan meson</font></b>.</string>
     <string name="m_hadron_1"><b><font color="#FFA000">Baryon</font></b> adalah partikel hadron yang tersusun atas <b><font color="#0BDA51">tiga quark</font></b>.</string>
     <string name="m_hadron_2">Misal: nukleon, di mana <b><font color="#FFA000">proton</font></b> terdiri atas <b><font color="#0BDA51">dua quark up</font></b> dan <b><font color="#0BDA51">satu quark down</font></b>, serta <b><font color="#FFA000">neutron</font></b> yang terdiri atas <b><font color="#0BDA51">satu quark up</font></b> dan <b><font color="#0BDA51">dua quark down</font></b> (lihat Gambar).</string>
@@ -351,7 +352,7 @@
         <item>@drawable/logobarubulat</item>
     </integer-array>
 
-<!--    searchOnBrowser-->
+    <!--    searchOnBrowser-->
     <string-array name="data_name_">
         <item>Partikel Subatomik</item>
     </string-array>

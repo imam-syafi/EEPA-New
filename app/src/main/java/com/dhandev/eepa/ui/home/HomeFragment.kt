@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
+import com.dhandev.eepa.NewOnBoarding
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
 import com.dhandev.eepa.materi.*
@@ -64,7 +65,7 @@ class HomeFragment : Fragment() {
         if (username != null){
             binding.userName.text = username
         } else {
-            startActivity(Intent(activity, onBoarding::class.java))
+            startActivity(Intent(activity, NewOnBoarding::class.java))
             activity?.finish()
         }
 

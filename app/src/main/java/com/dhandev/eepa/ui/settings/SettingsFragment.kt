@@ -7,21 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import cn.pedant.SweetAlert.SweetAlertDialog
 import com.bumptech.glide.Glide
+import com.dhandev.eepa.NewOnBoarding
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentSettingsBinding
-import com.dhandev.eepa.onBoarding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import dev.shreyaspatil.MaterialDialog.AbstractDialog
 import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
-import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
 
 class SettingsFragment : Fragment() {
 
@@ -77,7 +73,7 @@ class SettingsFragment : Fragment() {
                         Editor2.remove("tombolUkuranTerpilih")
                         Editor.apply()
                         Editor2.apply()
-                        val intent = Intent(activity, onBoarding::class.java)
+                        val intent = Intent(activity, NewOnBoarding::class.java)
                         startActivity(intent)
                         activity?.finish() }
                     .setNegativeButton("Batal", R.drawable.ic_baseline_close_24) { dialog, which ->

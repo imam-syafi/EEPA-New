@@ -1,18 +1,11 @@
 package com.dhandev.eepa.ui.news
 
-import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.browser.customtabs.CustomTabColorSchemeParams
-import androidx.browser.customtabs.CustomTabsIntent
-import androidx.browser.customtabs.CustomTabsIntent.SHARE_STATE_OFF
-import androidx.browser.customtabs.CustomTabsIntent.SHARE_STATE_ON
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentNewsBinding
 import com.dhandev.eepa.helper.customTab
 

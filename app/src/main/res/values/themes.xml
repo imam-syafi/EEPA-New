@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.EasyElementaryParticleApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!--    Change Light to DayNight if You want to make the app to change theme when dark-->
+    <style name="Theme.EasyElementaryParticleApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue_500</item>
         <item name="colorPrimaryVariant">@color/blue_700</item>

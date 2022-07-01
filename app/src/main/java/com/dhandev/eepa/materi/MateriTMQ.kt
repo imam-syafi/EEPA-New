@@ -8,13 +8,13 @@ import android.text.util.Linkify
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
 import com.dhandev.eepa.helper.customTab
 import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
+import com.skydoves.balloon.*
+import com.skydoves.balloon.overlay.BalloonOverlayRoundRect
 
 
 class MateriTMQ : AppCompatActivity() {
@@ -27,6 +27,7 @@ class MateriTMQ : AppCompatActivity() {
     var page = 1
     var desc = "Large Hadron Collider (Penubruk Hadron Raksasa) adalah pemercepat partikel berenergi tinggi terbesar di dunia, fasilitas percobaan paling kompleks yang pernah dibangun, dan mesin tunggal terbesar di dunia."
     var desc2 = "Fasilitas-fasilitas yang ada di CERN terdiri dari LHC (Large Hadron Collider), SPS (Super Proton Synchrotron), PS (Proton Synchrotron), serta fasilitas masa depan dengan keliling 100 km"
+    private var pedomanGambar = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +42,11 @@ class MateriTMQ : AppCompatActivity() {
         val editLastRead = sharedPredLastRead.edit()
         editLastRead.putInt("subMateri", 2)
         editLastRead.apply()
+
+        pedomanGambar = sharedPredLastRead.getInt("pedomanGambar", 0)
+        if (pedomanGambar==0){
+            newSpotlight()
+        }
 
         binding.apply{
             setContentView(root)
@@ -126,6 +132,35 @@ class MateriTMQ : AppCompatActivity() {
             footnote1.setOnClickListener { customTab.open(this@MateriTMQ, "https://home.cern/science/physics/higgs-boson") }
         }
     }
+
+    private fun newSpotlight() {
+        pedomanGambar++
+        val Editor:SharedPreferences.Editor = sharedPredLastRead.edit()
+        Editor.putInt("pedomanGambar", pedomanGambar).apply()
+        binding.apply {
+            val balloon = Balloon.Builder(this@MateriTMQ)
+                .setWidth(BalloonSizeSpec.WRAP)
+                .setHeight(BalloonSizeSpec.WRAP)
+                .setText("Tekan untuk memperbesar")
+                .setArrowPositionRules(ArrowPositionRules.ALIGN_BALLOON)
+                .setTextColorResource(R.color.white)
+                .setTextSize(15f)
+                .setIconDrawableResource(R.drawable.ic_baseline_info_24)
+                .setPadding(10)
+                .setCornerRadius(20f)
+                .setBackgroundColorResource(R.color.greenBright)
+                .setBalloonAnimation(BalloonAnimation.ELASTIC)
+                .setIsVisibleOverlay(true)
+                .setOverlayShape(BalloonOverlayRoundRect(20f, 20f))
+                .setOverlayColorResource(R.color.transparent)
+                .setLifecycleOwner(this@MateriTMQ)
+                .setBalloonHighlightAnimation(BalloonHighlightAnimation.SHAKE)
+                .build()
+
+            gambar.showAlignBottom(balloon)
+        }
+    }
+
     private fun focusOnBottom() {
         binding.latar.isFocusableInTouchMode = true
         binding.latar.smoothScrollTo(0, binding.latar.height)

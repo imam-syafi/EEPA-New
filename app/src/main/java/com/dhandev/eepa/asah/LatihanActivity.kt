@@ -2,9 +2,8 @@ package com.dhandev.eepa.asah
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dhandev.eepa.R
+import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.eepa.databinding.ActivityLatihanBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.text.DecimalFormat

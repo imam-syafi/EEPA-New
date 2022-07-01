@@ -1,7 +1,7 @@
 package com.dhandev.eepa.addition
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.eepa.databinding.ActivityDummyBinding
 
 class dummyActivity : AppCompatActivity() {

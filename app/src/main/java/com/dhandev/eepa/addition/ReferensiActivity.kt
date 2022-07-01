@@ -1,16 +1,7 @@
 package com.dhandev.eepa.addition
 
-import android.graphics.BitmapFactory
-import android.graphics.Color
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.content.res.AppCompatResources
-import androidx.browser.customtabs.CustomTabColorSchemeParams
-import androidx.browser.customtabs.CustomTabsIntent
-import androidx.core.graphics.drawable.DrawableCompat
-import androidx.core.graphics.drawable.toBitmap
-import com.dhandev.eepa.R
+import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.eepa.databinding.ActivityReferensiBinding
 import com.dhandev.eepa.helper.customTab
 

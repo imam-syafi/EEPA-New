@@ -4,15 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.dhandev.eepa.R
-import com.dhandev.eepa.addition.dummyActivity
 import com.dhandev.eepa.databinding.ItemSearchBinding
 import com.dhandev.eepa.helper.customTab
 import com.dhandev.eepa.materi.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 class ItemAdapter(private val listSearch: ArrayList<Item>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
 

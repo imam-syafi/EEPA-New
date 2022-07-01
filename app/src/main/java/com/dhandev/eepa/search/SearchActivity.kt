@@ -2,19 +2,13 @@ package com.dhandev.eepa.search
 
 import android.content.Context
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivitySearchBinding
-import java.lang.ref.WeakReference
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySearchBinding

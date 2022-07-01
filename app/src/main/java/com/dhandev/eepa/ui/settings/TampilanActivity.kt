@@ -1,9 +1,9 @@
 package com.dhandev.eepa.ui.settings
 
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityTampilanBinding
 

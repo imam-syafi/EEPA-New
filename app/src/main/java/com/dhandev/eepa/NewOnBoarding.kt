@@ -3,16 +3,13 @@ package com.dhandev.eepa
 import android.animation.Animator
 import android.app.Activity
 import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.dhandev.eepa.databinding.ActivityNewOnBoardingBinding
-import com.dhandev.eepa.databinding.ActivityOnBoardingBinding
 import com.dhandev.eepa.helper.ViewPagerAdapter
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient

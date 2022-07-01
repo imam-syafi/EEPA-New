@@ -1,17 +1,13 @@
 package com.dhandev.eepa.materi
 
-import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Resources
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.util.Linkify
 import android.util.TypedValue
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.airbnb.paris.R2.attr.colorPrimary
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriTimelineBinding
 import com.dhandev.eepa.helper.BaseAdapter

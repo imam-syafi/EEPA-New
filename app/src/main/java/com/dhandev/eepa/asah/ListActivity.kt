@@ -1,31 +1,23 @@
 package com.dhandev.eepa.asah
 
 import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.core.view.isVisible
+import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
-import androidx.preference.PreferenceManager
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityListBinding
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import java.lang.reflect.Type
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "listPernyataan")
 

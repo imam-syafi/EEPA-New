@@ -67,6 +67,8 @@ class SettingsFragment : Fragment() {
                         auth.signOut()
                         Editor.remove("subMateri")
                         Editor.remove("pedoman")
+                        Editor.remove("pedomanSetText")
+                        Editor.remove("pedomanGambar")
                         Editor2.remove("gantiLatar")
                         Editor2.remove("tombolTerpilih")
                         Editor2.remove("ukuranBaru")

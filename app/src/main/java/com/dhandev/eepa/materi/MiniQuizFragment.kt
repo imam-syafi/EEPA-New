@@ -1,16 +1,11 @@
 package com.dhandev.eepa.materi
 
-import android.content.Context
-import android.content.Intent
-import android.os.Binder
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.Fragment
 import com.dhandev.eepa.databinding.FragmentMiniQuizBinding
 
 class MiniQuizFragment : Fragment() {

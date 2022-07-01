@@ -2,13 +2,10 @@ package com.dhandev.eepa.materi
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.target.Target
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriStandarModelBinding
 import com.dhandev.eepa.helper.glideImage

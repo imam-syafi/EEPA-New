@@ -1,14 +1,9 @@
 package com.dhandev.eepa.addition
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
-import com.airbnb.paris.R2.id.list_item
+import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityDataBinding
 

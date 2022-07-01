@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriSubatomikBinding
+import com.skydoves.balloon.*
+import com.skydoves.balloon.overlay.BalloonOverlayRoundRect
 
 
 class MateriSubatomik : AppCompatActivity() {
@@ -20,6 +22,7 @@ class MateriSubatomik : AppCompatActivity() {
     private lateinit var binding: ActivityMateriSubatomikBinding
     private lateinit var sharedPred : SharedPreferences
     private lateinit var sharedPredLastRead : SharedPreferences
+    private var pedomanSetText = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,11 @@ class MateriSubatomik : AppCompatActivity() {
         if (highlight != null) {
             Toast.makeText(this, highlight, Toast.LENGTH_SHORT).show()
             setHighLightedText(binding.mSubatomik1, highlight)
+        }
+
+        pedomanSetText = sharedPredLastRead.getInt("pedomanSetText", 0)
+        if (pedomanSetText==0){
+            newSpotlight()
         }
 
         with(binding){
@@ -165,4 +173,33 @@ class MateriSubatomik : AppCompatActivity() {
             ofs = ofe + 1
         }
     }
+
+    private fun newSpotlight() {
+        pedomanSetText++
+        val Editor:SharedPreferences.Editor = sharedPredLastRead.edit()
+        Editor.putInt("pedomanSetText", pedomanSetText).apply()
+        binding.apply {
+            val balloon = Balloon.Builder(this@MateriSubatomik)
+                .setWidth(BalloonSizeSpec.WRAP)
+                .setHeight(BalloonSizeSpec.WRAP)
+                .setText("Ganti ukuran teks dan warna latar")
+                .setArrowPositionRules(ArrowPositionRules.ALIGN_BALLOON)
+                .setTextColorResource(R.color.white)
+                .setTextSize(15f)
+                .setIconDrawableResource(R.drawable.ic_baseline_info_24)
+                .setPadding(10)
+                .setCornerRadius(20f)
+                .setBackgroundColorResource(R.color.greenBright)
+                .setBalloonAnimation(BalloonAnimation.ELASTIC)
+                .setIsVisibleOverlay(true)
+                .setOverlayShape(BalloonOverlayRoundRect(20f, 20f))
+                .setOverlayColorResource(R.color.transparent)
+                .setLifecycleOwner(this@MateriSubatomik)
+                .setBalloonHighlightAnimation(BalloonHighlightAnimation.SHAKE)
+                .build()
+
+            setText.showAlignBottom(balloon)
+        }
+    }
+
 }

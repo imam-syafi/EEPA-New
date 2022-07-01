@@ -9,7 +9,6 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.get
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMulaiLatihanBinding
 import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog

@@ -5,11 +5,8 @@ import android.content.res.Resources
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.BaseListItemBinding
-import com.dhandev.eepa.search.ItemAdapter
 import com.lriccardo.timelineview.TimelineAdapter
 import com.lriccardo.timelineview.TimelineView
 

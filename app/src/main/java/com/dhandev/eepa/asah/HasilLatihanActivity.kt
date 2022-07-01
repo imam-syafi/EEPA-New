@@ -6,13 +6,9 @@ import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.view.ViewTreeObserver
 import android.widget.ScrollView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.core.widget.NestedScrollView
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding

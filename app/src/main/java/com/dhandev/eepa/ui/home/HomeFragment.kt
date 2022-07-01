@@ -7,10 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
-import android.view.animation.DecelerateInterpolator
-import android.widget.FrameLayout
-import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import android.widget.Toast.makeText
@@ -24,16 +20,12 @@ import com.dhandev.eepa.NewOnBoarding
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.FragmentHomeBinding
 import com.dhandev.eepa.materi.*
-import com.dhandev.eepa.onBoarding
 import com.dhandev.eepa.search.SearchActivity
 import com.dhandev.eepa.ui.imageViewer.ImageViewerActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.takusemba.spotlight.OnSpotlightListener
-import com.takusemba.spotlight.OnTargetListener
-import com.takusemba.spotlight.Spotlight
-import com.takusemba.spotlight.Target
-import com.takusemba.spotlight.shape.RoundedRectangle
+import com.skydoves.balloon.*
+import com.skydoves.balloon.overlay.BalloonOverlayRoundRect
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
@@ -143,7 +135,7 @@ class HomeFragment : Fragment() {
 
         pedoman = sharedPred.getInt("pedoman", 0)
         if (pedoman==0){
-            spotlight()
+            newSpotlight()
         }
         val carousel : ImageCarousel = view.findViewById(R.id.carousel)
         carousel.registerLifecycle(lifecycle)
@@ -226,130 +218,196 @@ class HomeFragment : Fragment() {
             val Editor:SharedPreferences.Editor = sharedPred.edit()
             Editor.remove("pedoman").apply()
             activity?.recreate() }
+
     }
 
-    private fun spotlight() {
+    private fun newSpotlight() {
         pedoman++
         val Editor:SharedPreferences.Editor = sharedPred.edit()
         Editor.putInt("pedoman", pedoman).apply()
+        binding.apply {
+            val balloon = Balloon.Builder(requireContext())
+                .setWidth(BalloonSizeSpec.WRAP)
+                .setHeight(BalloonSizeSpec.WRAP)
+                .setText("Mulai belajar dengan klik tombol ini")
+                .setTextColorResource(R.color.white)
+                .setTextSize(15f)
+                .setIconDrawableResource(R.drawable.ic_baseline_info_24)
+                .setPadding(10)
+                .setCornerRadius(20f)
+                .setBackgroundColorResource(R.color.greenBright)
+                .setBalloonAnimation(BalloonAnimation.ELASTIC)
+                .setIsVisibleOverlay(true)
+                .setOverlayShape(BalloonOverlayRoundRect(20f, 20f))
+                .setOverlayColorResource(R.color.transparent)
+                .setLifecycleOwner(requireActivity())
+                .setBalloonHighlightAnimation(BalloonHighlightAnimation.SHAKE)
+                .build()
+            val balloon2 = Balloon.Builder(requireContext())
+                .setWidth(BalloonSizeSpec.WRAP)
+                .setHeight(BalloonSizeSpec.WRAP)
+                .setText("Cari kata kunci dengan pencarian!")
+                .setTextColorResource(R.color.white)
+                .setTextSize(15f)
+                .setIconDrawableResource(R.drawable.ic_baseline_info_24)
+                .setPadding(10)
+                .setCornerRadius(20f)
+                .setBackgroundColorResource(R.color.greenBright)
+                .setBalloonAnimation(BalloonAnimation.ELASTIC)
+                .setIsVisibleOverlay(true)
+                .setOverlayShape(BalloonOverlayRoundRect(20f, 20f))
+                .setOverlayColorResource(R.color.transparent)
+                .setLifecycleOwner(requireActivity())
+                .setBalloonHighlightAnimation(BalloonHighlightAnimation.SHAKE)
+                .build()
+            val balloon3 = Balloon.Builder(requireContext())
+                .setWidth(BalloonSizeSpec.WRAP)
+                .setHeight(BalloonSizeSpec.WRAP)
+                .setText("Asah pemahamanmu dengan latihan soal!")
+                .setTextColorResource(R.color.white)
+                .setTextSize(15f)
+                .setIconDrawableResource(R.drawable.ic_baseline_info_24)
+                .setPadding(10)
+                .setCornerRadius(20f)
+                .setBackgroundColorResource(R.color.greenBright)
+                .setBalloonAnimation(BalloonAnimation.ELASTIC)
+                .setIsVisibleOverlay(true)
+                .setOverlayShape(BalloonOverlayRoundRect(20f, 20f))
+                .setOverlayColorResource(R.color.transparent)
+                .setLifecycleOwner(requireActivity())
+                .setBalloonHighlightAnimation(BalloonHighlightAnimation.SHAKE)
+                .build()
 
-        requireView().viewTreeObserver.addOnGlobalLayoutListener(
-            object : OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    // Layout has happened here.
+            balloon.relayShowAlignBottom(balloon2, editText)
+                .relayShowAlignTop(balloon3, latihan)
+            horizontalScrollView.showAlignBottom(balloon)
+        }
+    }
 
-                    // put target and spotlight code here
-                    val targets = ArrayList<Target>()
-
-                    // first target
-                    val firstRoot = FrameLayout(requireContext())
-                    val first = layoutInflater.inflate(R.layout.layout_target, firstRoot)
-                    val firstTarget = Target.Builder()
-                        .setAnchor(binding.horizontalScrollView)
-                        .setShape(RoundedRectangle(binding.horizontalScrollView.height.toFloat(), binding.horizontalScrollView.width.toFloat(), 50f))
-                        .setOverlay(first)
-                        .setOnTargetListener(object : OnTargetListener {
-                            override fun onStarted() {
-                                first.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(1/3)"
-                                first.findViewById<TextView>(R.id.custom_text).text = "Mulai belajar atau lanjutkan proses belajar dapat diakses melalui tombol ini."
-                            }
-
-                            override fun onEnded() {
-                            }
-                        })
-                        .build()
-
-                    targets.add(firstTarget)
-
-                    // second target
-                    val secondRoot = FrameLayout(requireContext())
-                    val second = layoutInflater.inflate(R.layout.layout_target, secondRoot)
-                    val secondTarget = Target.Builder()
-                        .setAnchor(binding.carousel)
-                        .setShape(RoundedRectangle(binding.carousel.height.toFloat(), binding.carousel.width.toFloat(), 50f))
-                        .setOverlay(second)
-                        .setOnTargetListener(object : OnTargetListener {
-                            override fun onStarted() {
-                                second.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(2/3)"
-                                second.findViewById<TextView>(R.id.custom_text).text = "Galeri berisi foto terkait partikel elementer, tekan untuk melihat detail."
-                            }
-
-                            override fun onEnded() {
-                            }
-                        })
-                        .build()
-
-                    targets.add(secondTarget)
-
-                    // third target
-                    val thirdRoot = FrameLayout(requireContext())
-                    val third = layoutInflater.inflate(R.layout.layout_target, thirdRoot)
-                    val thirdTarget = Target.Builder()
-                        .setAnchor(binding.editText)
-                        .setShape(RoundedRectangle(binding.editText.height.toFloat(), binding.editText.width.toFloat(), 50f))
-                        .setOverlay(third)
-                        .setOnTargetListener(object : OnTargetListener {
-                            override fun onStarted() {
-                                third.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(3/3)"
-                                third.findViewById<TextView>(R.id.custom_text).text = "Cari kata kunci tertentu dengan fitur pencarian"
-                            }
-
-                            override fun onEnded() {
-                            }
-                        })
-                        .build()
-
-                    targets.add(thirdTarget)
-
-                    // create spotlight
-
-                    val spotlight = Spotlight.Builder(requireActivity())
-                        .setTargets(targets)
-                        .setBackgroundColorRes(R.color.transparent)
-                        .setDuration(1000L)
-                        .setAnimation(DecelerateInterpolator(2f))
-                        .setOnSpotlightListener(object : OnSpotlightListener {
-                            override fun onStarted() {
-                                currentToast?.cancel()
-                                currentToast = makeText(
-                                    requireContext(),
-                                    "Pedoman dimulai",
-                                    LENGTH_SHORT
-                                )
-                                currentToast?.show()
-                                binding.profilPic.isEnabled = false
-                            }
-
-                            override fun onEnded() {
-                                currentToast?.cancel()
-                                currentToast = makeText(
-                                    requireContext(),
-                                    "Pedoman berakhir",
-                                    LENGTH_SHORT
-                                )
-                                currentToast?.show()
-                                binding.profilPic.isEnabled = true
-                            }
-                        })
-                        .build()
-
-                    spotlight.start()
-
-                    val nextTarget = View.OnClickListener { spotlight.next() }
-
-                    val closeSpotlight = View.OnClickListener { spotlight.finish() }
-
-                    first.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
-                    second.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
-                    third.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
-
-                    first.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
-                    second.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
-                    third.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
-                    // Don't forget to remove your listener when you are done with it.
-                    view!!.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                }
-            })
+    //good, but too complicated
+    //    implementation 'com.github.takusemba:spotlight:2.0.4'
+    private fun spotlight() {
+//        pedoman++
+//        val Editor:SharedPreferences.Editor = sharedPred.edit()
+//        Editor.putInt("pedoman", pedoman).apply()
+//
+//        requireView().viewTreeObserver.addOnGlobalLayoutListener(
+//            object : OnGlobalLayoutListener {
+//                override fun onGlobalLayout() {
+//                    // Layout has happened here.
+//
+//                    // put target and spotlight code here
+//                    val targets = ArrayList<Target>()
+//
+//                    // first target
+//                    val firstRoot = FrameLayout(requireContext())
+//                    val first = layoutInflater.inflate(R.layout.layout_target, firstRoot)
+//                    val firstTarget = Target.Builder()
+//                        .setAnchor(binding.horizontalScrollView)
+//                        .setShape(RoundedRectangle(binding.horizontalScrollView.height.toFloat(), binding.horizontalScrollView.width.toFloat(), 50f))
+//                        .setOverlay(first)
+//                        .setOnTargetListener(object : OnTargetListener {
+//                            override fun onStarted() {
+//                                first.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(1/3)"
+//                                first.findViewById<TextView>(R.id.custom_text).text = "Mulai belajar atau lanjutkan proses belajar dapat diakses melalui tombol ini."
+//                            }
+//
+//                            override fun onEnded() {
+//                            }
+//                        })
+//                        .build()
+//
+//                    targets.add(firstTarget)
+//
+//                    // second target
+//                    val secondRoot = FrameLayout(requireContext())
+//                    val second = layoutInflater.inflate(R.layout.layout_target, secondRoot)
+//                    val secondTarget = Target.Builder()
+//                        .setAnchor(binding.carousel)
+//                        .setShape(RoundedRectangle(binding.carousel.height.toFloat(), binding.carousel.width.toFloat(), 50f))
+//                        .setOverlay(second)
+//                        .setOnTargetListener(object : OnTargetListener {
+//                            override fun onStarted() {
+//                                second.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(2/3)"
+//                                second.findViewById<TextView>(R.id.custom_text).text = "Galeri berisi foto terkait partikel elementer, tekan untuk melihat detail."
+//                            }
+//
+//                            override fun onEnded() {
+//                            }
+//                        })
+//                        .build()
+//
+//                    targets.add(secondTarget)
+//
+//                    // third target
+//                    val thirdRoot = FrameLayout(requireContext())
+//                    val third = layoutInflater.inflate(R.layout.layout_target, thirdRoot)
+//                    val thirdTarget = Target.Builder()
+//                        .setAnchor(binding.editText)
+//                        .setShape(RoundedRectangle(binding.editText.height.toFloat(), binding.editText.width.toFloat(), 50f))
+//                        .setOverlay(third)
+//                        .setOnTargetListener(object : OnTargetListener {
+//                            override fun onStarted() {
+//                                third.findViewById<TextView>(R.id.Panduan).text = "Panduan\n(3/3)"
+//                                third.findViewById<TextView>(R.id.custom_text).text = "Cari kata kunci tertentu dengan fitur pencarian"
+//                            }
+//
+//                            override fun onEnded() {
+//                            }
+//                        })
+//                        .build()
+//
+//                    targets.add(thirdTarget)
+//
+//                    // create spotlight
+//
+//                    val spotlight = Spotlight.Builder(requireActivity())
+//                        .setTargets(targets)
+//                        .setBackgroundColorRes(R.color.transparent)
+//                        .setDuration(1000L)
+//                        .setAnimation(DecelerateInterpolator(2f))
+//                        .setOnSpotlightListener(object : OnSpotlightListener {
+//                            override fun onStarted() {
+//                                currentToast?.cancel()
+//                                currentToast = makeText(
+//                                    requireContext(),
+//                                    "Pedoman dimulai",
+//                                    LENGTH_SHORT
+//                                )
+//                                currentToast?.show()
+//                                binding.profilPic.isEnabled = false
+//                            }
+//
+//                            override fun onEnded() {
+//                                currentToast?.cancel()
+//                                currentToast = makeText(
+//                                    requireContext(),
+//                                    "Pedoman berakhir",
+//                                    LENGTH_SHORT
+//                                )
+//                                currentToast?.show()
+//                                binding.profilPic.isEnabled = true
+//                            }
+//                        })
+//                        .build()
+//
+//                    spotlight.start()
+//
+//                    val nextTarget = View.OnClickListener { spotlight.next() }
+//
+//                    val closeSpotlight = View.OnClickListener { spotlight.finish() }
+//
+//                    first.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
+//                    second.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
+//                    third.findViewById<View>(R.id.close_target).setOnClickListener(nextTarget)
+//
+//                    first.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
+//                    second.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
+//                    third.findViewById<View>(R.id.close_spotlight).setOnClickListener(closeSpotlight)
+//                    // Don't forget to remove your listener when you are done with it.
+//                    view!!.viewTreeObserver.removeOnGlobalLayoutListener(this)
+//                }
+//            })
     }
 
 

@@ -2,14 +2,11 @@ package com.dhandev.eepa.asah
 
 import android.content.SharedPreferences
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.dhandev.eepa.R
-import com.dhandev.eepa.databinding.ActivityContohBinding
 import com.dhandev.eepa.databinding.ActivityNomorContohBinding
 import com.dhandev.eepa.helper.utils
 

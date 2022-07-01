@@ -1,15 +1,8 @@
 package com.dhandev.eepa.ui.imageViewer
 
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MotionEvent
-import android.view.RoundedCorner
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.target.Target
-import com.dhandev.eepa.R
+import androidx.appcompat.app.AppCompatActivity
 import com.dhandev.eepa.databinding.ActivityImageViewerBinding
 import com.dhandev.eepa.helper.glideImage
 

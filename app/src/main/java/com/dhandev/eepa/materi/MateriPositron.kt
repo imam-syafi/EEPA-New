@@ -4,15 +4,11 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.TextUtils
-import android.text.util.Linkify
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriPositronBinding
-import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
 import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
 

@@ -8,12 +8,14 @@
 
     <ImageView
         android:id="@+id/gambarOnBoarding"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_above="@id/judulOnBoarding"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/casual_life_3d_boy_sitting_at_the_desk_doing_exam_1" />
+        tools:src="@drawable/_d_excited" />
 
     <TextView
         android:id="@+id/judulOnBoarding"

@@ -105,6 +105,10 @@ class MateriTMQ : AppCompatActivity() {
                 startActivity(Intent(this@MateriTMQ, MateriSubatomik::class.java))
             }
 
+            btnHome.setOnClickListener {
+                startActivity(Intent(this@MateriTMQ, MateriActivity::class.java))
+            }
+
 //            body1.transformationMethod = LinkTransformationMethod()
 //            body1.movementMethod = LinkMovementMethod.getInstance()
 

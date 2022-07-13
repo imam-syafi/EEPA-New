@@ -12,8 +12,8 @@ android {
         applicationId "com.dhandev.eepa"
         minSdk 24
         targetSdk 31
-        versionCode 4
-        versionName "Versi Alpha"
+        versionCode 7
+        versionName "Versi 1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -2,14 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/latar"
+    android:id="@+id/latarSubatomik"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".materi.MateriStandarModel">
+    tools:context=".materi.TinjauanMatkul">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/aturTeks"
@@ -158,9 +158,9 @@
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/textView6"
             style="@style/tittle"
-            android:text="@string/_5_model_standar"
+            android:text="@string/tinjauan_mata_kuliah"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintStart_toEndOf="@+id/arrowBack"
@@ -171,28 +171,11 @@
             android:id="@+id/setText"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:src="@drawable/ic_baseline_settings_24"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-        <ImageView
-            android:id="@+id/gambar"
-            android:layout_marginVertical="20dp"
-            style="@style/gambar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/aturTeks">
-        </ImageView>
-
-        <TextView
-            android:id="@+id/tv_caption1"
-            android:paddingHorizontal="20dp"
-            style="@style/caption"
-            android:text="Gambar Model Standar"
-            app:layout_constraintTop_toBottomOf="@id/gambar"
-            app:layout_constraintStart_toStartOf="parent"/>
 
         <LinearLayout
             android:id="@+id/body"
@@ -200,136 +183,114 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_caption1"
+            app:layout_constraintTop_toBottomOf="@id/aturTeks"
             android:orientation="vertical">
+
             <TextView
-                android:id="@+id/headline1"
-                style="@style/headline"
-                android:text="A. Perkembangan" />
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp"
-                android:stretchColumns="1">
-                <TableRow>
-                    <TextView style="@style/body_bullet"/>
-                    <TextView
-                        android:id="@+id/m_standar"
-                        style="@style/FontParagraf"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar2_alter" />
-                </TableRow>
-                <TableRow>
-                    <TextView style="@style/body_bullet"/>
-                    <TextView
-                        android:id="@+id/m_standar2"
-                        style="@style/FontParagraf"
-                        android:layout_weight="1"
-                        android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar2_alter2" />
-                </TableRow>
-            </TableLayout>
-            <TextView
-                android:id="@+id/headline2"
-                style="@style/headline"
-                android:text="B. Partikel di Model Standar" />
-            <TextView
-                android:id="@+id/m_standar3"
-                style="@style/FontParagraf"
-                android:paddingHorizontal="20dp"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="0dp"
-                android:text="@string/m_standar3" />
-            <TextView
-                android:id="@+id/tv_caption2"
-                android:paddingHorizontal="20dp"
+                android:id="@+id/body1"
                 android:layout_marginTop="10dp"
-                style="@style/caption"
-                android:text="Tabel cacah partikel elementer pada Model Standar"/>
-
-            <ImageView
-                android:id="@+id/gambar2"
-                android:layout_marginBottom="20dp"
-                style="@style/gambar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/m_standar4"
                 style="@style/FontParagraf"
-                android:paddingHorizontal="20dp"
-                android:layout_weight="1"
-                android:layout_marginHorizontal="0dp"
-                android:text="@string/m_standar4" />
+                android:text="@string/tinjauan_pembuka"/>
+
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="20dp"
                 android:stretchColumns="1">
                 <TableRow>
-                    <TextView style="@style/body_bullet"/>
+                    <TextView style="@style/body_bullet"
+                        android:text="1. "
+                        android:textColor="@color/abu"/>
                     <TextView
-                        android:id="@+id/m_standar5"
+                        android:id="@+id/m_subatomik1"
                         style="@style/FontParagraf"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar5" />
+                        android:text="@string/model_atom_mekanika_kuantum" />
                 </TableRow>
                 <TableRow>
-                    <TextView style="@style/body_bullet"/>
+                    <TextView style="@style/body_bullet"
+                        android:text="2. "
+                        android:textColor="@color/abu"/>
                     <TextView
-                        android:id="@+id/m_standar6"
+                        android:id="@+id/m_subatomik1_2"
                         style="@style/FontParagraf"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar6" />
+                        android:text="@string/spin_elektron" />
                 </TableRow>
                 <TableRow>
-                    <TextView style="@style/body_bullet"/>
+                    <TextView style="@style/body_bullet"
+                        android:text="3. "
+                        android:textColor="@color/abu"/>
                     <TextView
-                        android:id="@+id/m_standar7"
+                        android:id="@+id/m_subatomik2"
                         style="@style/FontParagraf"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar7" />
+                        android:text="@string/efek_zeeman" />
                 </TableRow>
                 <TableRow>
-                    <TextView style="@style/body_bullet"/>
+                    <TextView style="@style/body_bullet"
+                        android:text="4. "
+                        android:textColor="@color/abu"/>
                     <TextView
-                        android:id="@+id/m_standar8"
+                        android:id="@+id/m_subatomik2_2"
                         style="@style/FontParagraf"
                         android:layout_weight="1"
                         android:layout_marginHorizontal="0dp"
-                        android:text="@string/m_standar8" />
+                        android:text="@string/sinar_x" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:text="5. "
+                        android:textColor="@color/abu"/>
+                    <TextView
+                        android:id="@+id/m_subatomik3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/struktur_inti" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:text="6. "
+                        android:textColor="@color/abu"/>
+                    <TextView
+                        android:id="@+id/m_subatomik3_2"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/reaksi_inti" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:text="7. "
+                        android:textColor="@color/abu"/>
+                    <TextView
+                        android:id="@+id/m_subatomik3_3"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/fisika_partikel_elementer" />
+                </TableRow>
+                <TableRow>
+                    <TextView style="@style/body_bullet"
+                        android:text="8. "
+                        android:textColor="@color/abu"/>
+                    <TextView
+                        android:id="@+id/m_subatomik3_4"
+                        style="@style/FontParagraf"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="0dp"
+                        android:text="@string/peluruhan_radioaktif" />
                 </TableRow>
             </TableLayout>
-            <View
-                style="@style/Divider"
-                android:layout_height="3dp"/>
             <TextView
-                style="@style/footnote"
-                android:layout_marginHorizontal="15dp"
-                android:fontFamily="@font/nunito"/>
-            <TextView
-                android:id="@+id/footnote1"
-                android:text="@string/m_standar_footnote1"
-                android:layout_marginHorizontal="15dp"
-                style="@style/footnoteContent"/>
+                android:id="@+id/body2"
+                style="@style/FontParagraf"
+                android:text="@string/tinjauan_penutup"/>
         </LinearLayout>
-
-        <ImageButton
-            android:id="@+id/btn_prev"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/blue_500"
-            android:src="@drawable/ic_baseline_navigate_before_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/body"/>
-
 
         <ImageButton
             android:id="@+id/btn_home"

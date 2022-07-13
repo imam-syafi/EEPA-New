@@ -113,6 +113,10 @@ class MateriLepton : AppCompatActivity() {
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriLepton, MateriHadron::class.java))
             }
+
+            btnHome.setOnClickListener {
+                startActivity(Intent(this@MateriLepton, MateriActivity::class.java))
+            }
         }
     }
     private fun focusOnBottom() {

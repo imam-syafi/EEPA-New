@@ -113,6 +113,10 @@ class MateriStandarModel : AppCompatActivity() {
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriHadron::class.java))
             }
+
+            btnHome.setOnClickListener {
+                startActivity(Intent(this@MateriStandarModel, MateriActivity::class.java))
+            }
             mStandar2.setOnClickListener { focusOnBottom() }
             footnote1.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriTimeline::class.java))

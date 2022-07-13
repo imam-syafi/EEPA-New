@@ -131,6 +131,8 @@
                 android:fontFamily="@font/nunito_sans_bold"
                 android:gravity="center_horizontal"
                 tools:text="Pertahankan 👍"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -19,6 +19,8 @@ class MateriActivity : AppCompatActivity() {
             arrowBack.setOnClickListener {
                 onBackPressed()
             }
+            tinjauan.setOnClickListener { startActivity(Intent(this@MateriActivity, TinjauanMatkul::class.java)) }
+
             subatomik.setOnClickListener { startActivity(Intent(this@MateriActivity, MateriSubatomik::class.java)) }
             TMQ.setOnClickListener {startActivity(Intent(this@MateriActivity, MateriTMQ::class.java))}
             hadron.setOnClickListener { startActivity(Intent(this@MateriActivity, MateriHadron::class.java)) }

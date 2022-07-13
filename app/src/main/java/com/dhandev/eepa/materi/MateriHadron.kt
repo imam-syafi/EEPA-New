@@ -100,6 +100,9 @@ class MateriHadron : AppCompatActivity() {
                 startActivity(Intent(this@MateriHadron, MateriTMQ::class.java))
             }
 
+            btnHome.setOnClickListener {
+                startActivity(Intent(this@MateriHadron, MateriActivity::class.java))
+            }
 //            body1.transformationMethod = LinkTransformationMethod()
 //            body1.movementMethod = LinkMovementMethod.getInstance()
 

@@ -120,6 +120,10 @@ class MateriTerkini : AppCompatActivity() {
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriTerkini, MateriStandarModel::class.java))
             }
+
+            btnHome.setOnClickListener {
+                startActivity(Intent(this@MateriTerkini, MateriActivity::class.java))
+            }
         }
     }
 

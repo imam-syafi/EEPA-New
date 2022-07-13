@@ -2,6 +2,8 @@ package com.dhandev.eepa
 
 import android.animation.Animator
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -38,11 +40,11 @@ class NewOnBoarding : AppCompatActivity() {
 
         viewPager = findViewById(R.id.viewSlide)
         imageList = ArrayList()
-        imageList.add(R.drawable.casual_life_3d_boy_sitting_at_the_desk_doing_exam_1)
+        imageList.add(R.drawable._d_wondering)
         imageList.add(R.drawable.atom)
         imageList.add(R.drawable.atom_deep)
         imageList.add(R.drawable.galaxy)
-        imageList.add(R.drawable.casual_life_3d_20)
+        imageList.add(R.drawable._d_excited)
 
         judulList = ArrayList()
         judulList.add(getString(R.string.cari_tahu))
@@ -128,6 +130,10 @@ class NewOnBoarding : AppCompatActivity() {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e)
             }
+        } else {
+            Log.d(TAG, result.resultCode.toString())
+            dialog()
+            showLoading(false)
         }
     }
     private fun firebaseAuthWithGoogle(idToken: String) {
@@ -141,6 +147,8 @@ class NewOnBoarding : AppCompatActivity() {
                     updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
+                    dialog()
+                    showLoading(false)
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
                     updateUI(null)
                 }
@@ -162,6 +170,17 @@ class NewOnBoarding : AppCompatActivity() {
         } else {
             binding.progressBar.visibility = View.GONE
         }
+    }
+
+    private fun dialog(){
+        AlertDialog.Builder(this)
+            .setTitle("Gagal Masuk")
+            .setIcon(R.drawable.info_icon)
+            .setMessage("Mohon aktifkan internet untuk pengalaman belajar yang optimal")
+            .setPositiveButton("Ok") { dialog, id ->
+                dialog.cancel()
+            }
+            .show()
     }
 
     companion object {

@@ -98,7 +98,7 @@
     <string name="about_detail"><b>Fisika partikel elementer</b> menarik untuk dipelajari karena mempelajari fondasi dasar atas semua materi yang ada di alam semesta.\nPengetahuan di bidang fisika partikel elementer memberikan kontribusi bagi manusia untuk mengetahui penyusun materi dan bagaimana cara kerjanya.</string>
     <string name="MuhRamdhan"><b>Muhammad Ramdhan</b>\nPeneliti</string>
     <string name="DrOktova"><b>Dr. Raden Oktova</b>\nPembimbing</string>
-    <string name="DetailMuhRamdhan">Lahir di Sleman, 7 Desember 2000, saat ini sedang menempuh kuliah di Pendidikan Fisika S1 Universitas Ahmad Dahlan Yogyakarta. Selain tertarik dengan fisika, peneliti juga mendalami dunia <i>programming</i> khususnya pengembangan aplikasi <i>mobile</i> Android.</string>
+    <string name="DetailMuhRamdhan">Lahir di Sleman, 7 Desember 2000, saat ini sedang menempuh kuliah di S1 Pendidikan Fisika Universitas Ahmad Dahlan Yogyakarta. Selain tertarik dengan fisika, peneliti juga mendalami dunia <i>programming</i> khususnya pengembangan aplikasi <i>mobile</i> Android.</string>
     <string name="DetailDrOktova">Lahir di Yogyakarta, 15 Oktober 1961, menempuh studi Fisika S1 dan S2 pada jurusan Fisika FMIPA Universitas Gadjah Mada, Yogyakarta. Menyelesaikan program Doktor dalam bidang fisika nuklir teoritis dengan disertasi berjudul <i>\"Self-consistent β- Decay Calculation on Heavy Deformed Nuclei\"</i> pada Institut für Theoretiche Physik, Universität Hannover, Jerman. Saat ini berstatus dosen negeri Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah V Yogyakarta yang diperbantukan di Universitas Ahmad Dahlan, Yogyakarta.</string>
     <string name="loremIpsum">Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan Fisika Partikel Elementer Pendidikan Fisika Universitas Ahmad Dahlan</string>
     <string name="tampilan_disclaimer">Pengaturan tampilan berupa ukuran teks dan warna latar <b>hanya</b> berlaku pada tampilan materi</string>
@@ -130,7 +130,7 @@
     <string name="petunjuk_3">Durasi pengerjaan <b><font color="#0BDA51">dapat Anda sesuaikan</font></b> melalui tombol <b><font color="#0BDA51">timer hijau</font></b>.</string>
     <string name="petunjuk_4">Anda <b><font color="#0BDA51">tidak bisa</font></b> melompati soal maupun kembali ke soal sebelumnya.</string>
     <string name="petunjuk_5">Tekan tombol <b><font color="#0BDA51">lanjutkan</font></b> untuk menyimpan jawaban dan melanjutkan ke soal berikutnya.</string>
-    <string name="petunjuk_6">Setiap jawaban benar akan memberikan <b><font color="#0BDA51">tambahan 5 skor</font></b>, sedangkan salah dan kosong <b><font color="#0BDA51">tidak memberikan skor</font></b>. Untuk mengetahui skor akhir, tekan tombol <b><font color="#0BDA51">kirim</font></b> di soal terakhir.</string>
+    <string name="petunjuk_6">Setiap jawaban benar akan memberikan <b><font color="#0BDA51">tambahan skor</font></b>, sedangkan salah dan kosong <b><font color="#0BDA51">tidak memberikan skor</font></b>. Untuk mengetahui skor akhir, tekan tombol <b><font color="#0BDA51">kirim</font></b> di soal terakhir.</string>
     <string name="petunjuk_7">Jika Anda sudah siap, silahkan tekan tombol <b><font color="#0BDA51">mulai</font></b> di bawah!</string>
 
     <string name="pengantar1">\t <b><font color="#0BDA51">Semua</font></b> benda yang ada di alam semesta ini tersusun oleh komponen yang lebih kecil. Contohnya <a href="https://en.wikipedia.org/wiki/Galaxy">galaksi</a> tersusun atas sistem keplanetan yang juga tersusun atas planet-planet dan bintang. Contoh yang lebih sederhana dalam kehidupan sehari-hari yaitu baju, di mana benda tersebut tersusun oleh kain yang juga tersusun oleh ribuan helai benang.\n\t Dari dua contoh tersebut, kita bisa mengidentifikasi bahwa bahan penyusunnya masih terus dapat diperoleh hingga tidak bisa dibagi lagi. Saat bahan penyusun tidak dapat dibagi lagi, muncullah istilah atomos (tidak dapat dibagi) yang pertama kali dirumuskan oleh filsuf Yunani yaitu <a href="https://id.wikipedia.org/wiki/Demokritos">Demokritus</a> dan Leucippus  pada zaman Yunani Kuno 400 tahun sebelum masehi dan kini lebih dikenal dengan istilah</string>
@@ -324,6 +324,17 @@
     <string name="minE">-<i>e</i></string>
     <string name="E">+<i>e</i></string>
     <string name="duaE">+2<i>e</i></string>
+    <string name="tinjauan_mata_kuliah">Tinjauan Mata Kuliah</string>
+    <string name="tinjauan_pembuka">Mata kuliah <b><font color="#0BDA51">Fisika Atom dan Inti</font></b> merupakan mata kuliah yang membekali mahasiswa dengan wawasan tentang bagaimana <b><font color="#0BDA51">struktur inti atom serta interaksi yang terjadi dari penyusunnya</font></b> . Berdasarkan RPS (Rencana Pembelajaran Semester), mata kuliah ini terdiri atas beberapa pokok bahasan, yaitu</string>
+    <string name="tinjauan_penutup">Fisika Partikel Elementer yang disajikan dalam media ini merupakan materi yang <b><font color="#0BDA51">sesuai dengan RPS</font></b> .</string>
+    <string name="model_atom_mekanika_kuantum">Model Atom Mekanika Kuantum</string>
+    <string name="spin_elektron">Spin Elektron</string>
+    <string name="efek_zeeman">Efek Zeeman</string>
+    <string name="sinar_x">Sinar X</string>
+    <string name="struktur_inti">Struktur Inti</string>
+    <string name="reaksi_inti">Reaksi Inti</string>
+    <string name="fisika_partikel_elementer">Fisika Partikel Elementer</string>
+    <string name="peluruhan_radioaktif">Peluruhan Radioaktif</string>
 
 
     <!--    search-->

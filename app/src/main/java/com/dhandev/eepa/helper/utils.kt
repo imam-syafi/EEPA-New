@@ -1,5 +1,6 @@
 package com.dhandev.eepa.helper
 
+import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
@@ -66,5 +67,30 @@ object utils {
                 isJustify.set(true)
             }
         }
+    }
+
+    fun dialog(context: Context, icon: Int, title: String, message: String, url: String){
+        AlertDialog.Builder(context)
+            .setTitle(title)
+            .setIcon(icon)
+            .setMessage(message)
+            .setPositiveButton("Kunjungi situs") { dialog, id ->
+                customTab.open(context, url)
+            }
+            .setNegativeButton("Tutup") { dialog, id ->
+                dialog.cancel()
+            }
+            .show()
+    }
+
+    fun dialogHasil(context: Context, icon: Int, title: String, message: String){
+        AlertDialog.Builder(context)
+            .setTitle(title)
+            .setIcon(icon)
+            .setMessage(message)
+            .setPositiveButton("Tutup") { dialog, id ->
+                dialog.cancel()
+            }
+            .show()
     }
 }

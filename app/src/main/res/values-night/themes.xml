@@ -3,12 +3,12 @@
     <!--    Change Light to DayNight if You want to make the app to change theme when dark-->
     <style name="Theme.EasyElementaryParticleApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blue_200</item>
+        <item name="colorPrimary">@color/blue_500</item>
         <item name="colorPrimaryVariant">@color/blue_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blue_200</item>
-        <item name="colorSecondaryVariant">@color/blue_200</item>
+        <item name="colorSecondaryVariant">@color/blue_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -282,4 +282,13 @@
         <item name="android:paddingTop">55dp</item>
         <item name="android:layout_marginTop">20dp</item>
     </style>
+
+    <style name="rowHasil">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Theme.Dialog.Hasil" parent="Theme.MaterialComponents.DayNight.Dialog"/>
 </resources>

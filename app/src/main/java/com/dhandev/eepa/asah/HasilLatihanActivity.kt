@@ -1,19 +1,28 @@
 package com.dhandev.eepa.asah
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.view.isVisible
 import com.airbnb.paris.extensions.style
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityHasilLatihanBinding
+import com.dhandev.eepa.helper.utils
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import java.io.ByteArrayOutputStream
 import java.text.DecimalFormat
 
 
@@ -31,6 +40,9 @@ class HasilLatihanActivity : AppCompatActivity() {
         binding = ActivityHasilLatihanBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
+        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1)
+
         var skor = intent.getIntExtra("skor", 0)
         binding.apply {
             sharedPred = this@HasilLatihanActivity.getSharedPreferences("User", MODE_PRIVATE)
@@ -42,7 +54,7 @@ class HasilLatihanActivity : AppCompatActivity() {
             val username = user?.displayName
 
             val urutanSoal = intent.getStringArrayListExtra("urutanJawabanUser")
-            soalPertama.text = "1. "+ soal(0) +"\nJawaban: ${jawabanUser(0)}" +"\nKunci jawaban: ${jawabanBenar(0)}"
+            val soalPertama = "1. "+ soal(0) +"\nJawaban: ${jawabanUser(0)}" +"\nKunci jawaban: ${jawabanBenar(0)}"
             soalKedua.text = "2. "+ soal(1) +"\nJawaban: ${jawabanUser(1)}" +"\nKunci jawaban: ${jawabanBenar(1)}"
             soalKetiga.text = "3. "+ soal(2) +"\nJawaban: ${jawabanUser(2)}"+"\nKunci jawaban: ${jawabanBenar(2)}"
             soalKeempat.text = "4. "+ soal(3) +"\nJawaban: ${jawabanUser(3)}" +"\nKunci jawaban: ${jawabanBenar(3)}"
@@ -60,21 +72,21 @@ class HasilLatihanActivity : AppCompatActivity() {
 
             val urutanJawaban = intent.getIntegerArrayListExtra("urutanJawaban")
 //            Toast.makeText(this@HasilLatihanActivity, urutanJawaban.toString(), Toast.LENGTH_SHORT).show()
-            jawabanPertama.style(jawaban(0))
-            jawabanKedua.style(jawaban(1))
-            jawabanKetiga.style(jawaban(2))
-            jawabanKeempat.style(jawaban(3))
-            jawabanKelima.style(jawaban(4))
-            jawabanKeenam.style(jawaban(5))
-            jawabanKetujuh.style(jawaban(6))
-            jawabanKedelapan.style(jawaban(7))
-            jawabanKesembilan.style(jawaban(8))
-            jawabanKesepuluh.style(jawaban(9))
-            jawabanKesebelas.style(jawaban(10))
-            jawabanKeduabelas.style(jawaban(11))
-            jawabanKetigabelas.style(jawaban(12))
-            jawabanKeempatbelas.style(jawaban(13))
-            jawabanKelimabelas.style(jawaban(14))
+            jawaban1?.style(jawaban(0))
+            jawaban2?.style(jawaban(1))
+            jawaban3?.style(jawaban(2))
+            jawaban4?.style(jawaban(3))
+            jawaban5?.style(jawaban(4))
+            jawaban6?.style(jawaban(5))
+            jawaban7?.style(jawaban(6))
+            jawaban8?.style(jawaban(7))
+            jawaban9?.style(jawaban(8))
+            jawaban10?.style(jawaban(9))
+            jawaban11?.style(jawaban(10))
+            jawaban12?.style(jawaban(11))
+            jawaban13?.style(jawaban(12))
+            jawaban14?.style(jawaban(13))
+            jawaban15?.style(jawaban(14))
 
             fireworks.setAnimation("fireworks.json")
             fireworks.playAnimation()
@@ -122,16 +134,85 @@ class HasilLatihanActivity : AppCompatActivity() {
             Editor.putInt("latestScore", skor)
             Editor.apply()
 
+            download.setOnClickListener {
+                val bitmap = getScreenShot(scroll)
+                val uri = bitmap?.let { it1 -> getImageUri(applicationContext, it1) }
+                if (uri != null){
+                    shareImageUri(uri)
+                }
+            }
+
             rincian.setOnClickListener {
-                if (rincianHasil.isVisible){
-                    rincianHasil.visibility = View.GONE
+                if (tabelHasil.isVisible){
+                    tabelHasil.visibility = View.GONE
+                    rincian.setText(R.string.lihat_rincian_jawaban)
                 } else {
-                    rincianHasil.visibility = View.VISIBLE
+                    tabelHasil.visibility = View.VISIBLE
+                    rincian.text = "Tutup rincian jawaban"
                     scrollToViewTop(scroll, rincian)
                 }
             }
+
+            jawaban1.setOnClickListener {dataDialog("1", jawaban(0), soal(0) as String, jawabanUser(0) as String, jawabanBenar(0) as String) }
+            jawaban2.setOnClickListener {dataDialog("2", jawaban(1), soal(1) as String, jawabanUser(1) as String, jawabanBenar(1) as String) }
+            jawaban3.setOnClickListener {dataDialog("3", jawaban(2), soal(2) as String, jawabanUser(2) as String, jawabanBenar(2) as String) }
+            jawaban4.setOnClickListener {dataDialog("4", jawaban(3), soal(3) as String, jawabanUser(3) as String, jawabanBenar(3) as String) }
+            jawaban5.setOnClickListener {dataDialog("5", jawaban(4), soal(4) as String, jawabanUser(4) as String, jawabanBenar(4) as String) }
+            jawaban6.setOnClickListener {dataDialog("6", jawaban(5), soal(5) as String, jawabanUser(5) as String, jawabanBenar(5) as String) }
+            jawaban7.setOnClickListener {dataDialog("7", jawaban(6), soal(6) as String, jawabanUser(6) as String, jawabanBenar(6) as String) }
+            jawaban8.setOnClickListener {dataDialog("8", jawaban(7), soal(7) as String, jawabanUser(7) as String, jawabanBenar(7) as String) }
+            jawaban9.setOnClickListener {dataDialog("9", jawaban(8), soal(8) as String, jawabanUser(8) as String, jawabanBenar(8) as String) }
+            jawaban10.setOnClickListener {dataDialog("10", jawaban(9), soal(9) as String, jawabanUser(9) as String, jawabanBenar(9) as String) }
+            jawaban11.setOnClickListener {dataDialog("11", jawaban(10), soal(10) as String, jawabanUser(10) as String, jawabanBenar(10) as String) }
+            jawaban12.setOnClickListener {dataDialog("12", jawaban(11), soal(11) as String, jawabanUser(11) as String, jawabanBenar(11) as String) }
+            jawaban13.setOnClickListener {dataDialog("13", jawaban(12), soal(12) as String, jawabanUser(12) as String, jawabanBenar(12) as String) }
+            jawaban14.setOnClickListener {dataDialog("14", jawaban(13), soal(13) as String, jawabanUser(13) as String, jawabanBenar(13) as String) }
+            jawaban15.setOnClickListener {dataDialog("15", jawaban(14), soal(14) as String, jawabanUser(14) as String, jawabanBenar(14) as String) }
         }
     }
+
+    private fun dataDialog(no : String, hasil: Int, soal: String, jawabanMu: String, kunci: String) {
+        val intent = Intent(this@HasilLatihanActivity, DialogHasilActivity::class.java)
+        intent.putExtra("noSoal", no)
+        intent.putExtra("hasilPeriksa", hasil)
+        intent.putExtra("soal", soal)
+        intent.putExtra("jawabanMu", jawabanMu)
+        intent.putExtra("kunci", kunci)
+        startActivity(intent)
+    }
+
+    private fun shareImageUri(uri: Uri) {
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.putExtra(Intent.EXTRA_STREAM, uri)
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        intent.type = "image/png"
+        startActivity(intent)
+    }
+
+    fun getImageUri(context: Context, bitmap: Bitmap): Uri? {
+        val bytes = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+        val path = MediaStore.Images.Media.insertImage(
+            context.getContentResolver(),
+            bitmap,
+            "Title",
+            null
+        )
+        return Uri.parse(path)
+    }
+
+    private fun getScreenShot(v: View): Bitmap? {
+        var screenShot : Bitmap? = null
+        try {
+            screenShot = Bitmap.createBitmap(v.measuredWidth, v.measuredHeight, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(screenShot)
+            v.draw(canvas)
+        } catch (e: Exception){
+            Log.e("noBitmap", "Failed to capture view because" + e.message)
+        }
+        return screenShot
+    }
+
     private fun scrollToViewTop(scrollView: ScrollView, childView: View) {
         val delay: Long = 100 //delay to let finish with possible modifications to ScrollView
         scrollView.postDelayed({ scrollView.smoothScrollBy(0, childView.top) }, delay)

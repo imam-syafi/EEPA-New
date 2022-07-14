@@ -335,6 +335,10 @@
     <string name="reaksi_inti">Reaksi Inti</string>
     <string name="fisika_partikel_elementer">Fisika Partikel Elementer</string>
     <string name="peluruhan_radioaktif">Peluruhan Radioaktif</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="soalKe">Soal %1$s</string>
+    <string name="rincianHasil">Rincian Jawaban</string>
+    <string name="lihat_rincian_jawaban">Lihat rincian jawaban</string>
 
 
     <!--    search-->

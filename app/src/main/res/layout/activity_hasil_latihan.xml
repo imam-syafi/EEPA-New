@@ -28,6 +28,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
+            <ImageView
+                android:id="@+id/download"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:tooltipText="@string/bagikan"
+                android:src="@drawable/ic_baseline_share_24"
+                app:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
             <TextView
                 android:id="@+id/headerHasil"
                 android:layout_width="wrap_content"
@@ -36,7 +47,7 @@
                 android:gravity="center_horizontal"
                 android:text="Hasil Latihan"
                 android:textColor="@color/white"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="100dp"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -138,6 +149,190 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/descHasil" />
+
+            <TableLayout
+                android:id="@+id/tabelHasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_smaller"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_margin="10dp"
+                android:stretchColumns="1,4,7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/keterangan">
+                <TableRow
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="1."/>
+                    <TextView
+                        android:id="@+id/jawaban1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="6."/>
+                    <TextView
+                        android:id="@+id/jawaban6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="11."/>
+                    <TextView
+                        android:id="@+id/jawaban11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="2."/>
+                    <TextView
+                        android:id="@+id/jawaban2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="7."/>
+                    <TextView
+                        android:id="@+id/jawaban7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="12."/>
+                    <TextView
+                        android:id="@+id/jawaban12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="3."/>
+                    <TextView
+                        android:id="@+id/jawaban3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="8."/>
+                    <TextView
+                        android:id="@+id/jawaban8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="13."/>
+                    <TextView
+                        android:id="@+id/jawaban13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="4."/>
+                    <TextView
+                        android:id="@+id/jawaban4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="9."/>
+                    <TextView
+                        android:id="@+id/jawaban9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="14."/>
+                    <TextView
+                        android:id="@+id/jawaban14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:gravity="center_vertical">
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="5."/>
+                    <TextView
+                        android:id="@+id/jawaban5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="10."/>
+                    <TextView
+                        android:id="@+id/jawaban10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/listDivider"/>
+                    <!--                    ss-->
+                    <TextView
+                        style="@style/rowHasil"
+                        android:text="15."/>
+                    <TextView
+                        android:id="@+id/jawaban15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+            </TableLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -149,10 +344,11 @@
             android:drawableTint="@color/white"
             android:fontFamily="@font/nunito_sans_bold"
             android:gravity="center_horizontal"
-            android:text="Rincian skor tiap soal:"
+            android:text="@string/lihat_rincian_jawaban"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:drawableBottomCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            app:drawableTopCompat="@drawable/ic_baseline_keyboard_arrow_up_24" />
 
         <LinearLayout
             android:id="@+id/rincianHasil"

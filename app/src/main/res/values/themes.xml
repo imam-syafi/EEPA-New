@@ -243,7 +243,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/blue_500</item>
         <item name="android:paddingHorizontal">20dp</item>
-        <item name="android:layout_marginVertical">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">@font/nunito_sans_bold</item>
@@ -281,5 +282,17 @@
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingTop">55dp</item>
         <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="rowHasil">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/abu</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="Theme.Dialog.Hasil" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowNoTitle">true</item>
     </style>
 </resources>

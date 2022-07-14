@@ -108,14 +108,17 @@ class MateriLepton : AppCompatActivity() {
             }
             btnNext.setOnClickListener {
                 startActivity(Intent(this@MateriLepton, MateriStandarModel::class.java))
+                finish()
             }
 
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriLepton, MateriHadron::class.java))
+                finish()
             }
 
             btnHome.setOnClickListener {
                 startActivity(Intent(this@MateriLepton, MateriActivity::class.java))
+                finish()
             }
         }
     }

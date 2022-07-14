@@ -21,6 +21,11 @@ class HasilLatihanActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHasilLatihanBinding
     private lateinit var sharedPred : SharedPreferences
 
+
+    //TODO: Share Result Button
+    //option 1 = screenShot mode
+    //option 2 = custom report, lengkap dengan nama, skor, dan detail jawaban
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHasilLatihanBinding.inflate(layoutInflater)

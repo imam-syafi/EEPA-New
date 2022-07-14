@@ -99,14 +99,17 @@ class MateriTMQ : AppCompatActivity() {
 
             btnNext.setOnClickListener {
                 startActivity(Intent(this@MateriTMQ, MateriHadron::class.java))
+                finish()
             }
 
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriTMQ, MateriSubatomik::class.java))
+                finish()
             }
 
             btnHome.setOnClickListener {
                 startActivity(Intent(this@MateriTMQ, MateriActivity::class.java))
+                finish()
             }
 
 //            body1.transformationMethod = LinkTransformationMethod()

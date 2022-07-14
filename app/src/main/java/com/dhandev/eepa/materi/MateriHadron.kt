@@ -94,14 +94,17 @@ class MateriHadron : AppCompatActivity() {
 
             btnNext.setOnClickListener {
                 startActivity(Intent(this@MateriHadron, MateriLepton::class.java))
+                finish()
             }
 
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriHadron, MateriTMQ::class.java))
+                finish()
             }
 
             btnHome.setOnClickListener {
                 startActivity(Intent(this@MateriHadron, MateriActivity::class.java))
+                finish()
             }
 //            body1.transformationMethod = LinkTransformationMethod()
 //            body1.movementMethod = LinkMovementMethod.getInstance()

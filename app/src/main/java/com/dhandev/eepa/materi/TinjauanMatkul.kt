@@ -68,10 +68,12 @@ class TinjauanMatkul : AppCompatActivity() {
 
             btnNext.setOnClickListener {
                 startActivity(Intent(this@TinjauanMatkul, MateriSubatomik::class.java))
+                finish()
             }
 
             btnHome.setOnClickListener {
                 startActivity(Intent(this@TinjauanMatkul, MateriActivity::class.java))
+                finish()
             }
         }
     }

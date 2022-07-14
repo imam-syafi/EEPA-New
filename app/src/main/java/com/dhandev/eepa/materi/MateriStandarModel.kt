@@ -108,14 +108,17 @@ class MateriStandarModel : AppCompatActivity() {
             btnNext.visibility = View.VISIBLE
             btnNext.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriTerkini::class.java))
+                finish()
             }
 
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriHadron::class.java))
+                finish()
             }
 
             btnHome.setOnClickListener {
                 startActivity(Intent(this@MateriStandarModel, MateriActivity::class.java))
+                finish()
             }
             mStandar2.setOnClickListener { focusOnBottom() }
             footnote1.setOnClickListener {

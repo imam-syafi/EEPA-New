@@ -94,13 +94,16 @@ class MateriSubatomik : AppCompatActivity() {
             }
             btnPrev.setOnClickListener {
                 startActivity(Intent(this@MateriSubatomik, TinjauanMatkul::class.java))
+                finish()
             }
 
             btnNext.setOnClickListener {
                 startActivity(Intent(this@MateriSubatomik, MateriTMQ::class.java))
+                finish()
             }
             btnHome.setOnClickListener{
                 startActivity(Intent(this@MateriSubatomik, MateriActivity::class.java))
+                finish()
             }
         }
     }

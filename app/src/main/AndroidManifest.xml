@@ -17,9 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyElementaryParticleApp">
         <activity
+            android:name=".helper.VideoPlayerActivity"
+            android:exported="false" />
+        <activity
             android:name=".asah.DialogHasilActivity"
             android:exported="false"
-            android:theme="@style/Theme.Dialog.Hasil"/>
+            android:theme="@style/Theme.Dialog.Hasil" />
         <activity
             android:name=".materi.TinjauanMatkul"
             android:exported="false" />

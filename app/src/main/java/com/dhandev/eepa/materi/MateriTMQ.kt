@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.dhandev.eepa.R
 import com.dhandev.eepa.databinding.ActivityMateriTmqBinding
+import com.dhandev.eepa.helper.VideoPlayerActivity
 import com.dhandev.eepa.helper.customTab
 import com.dhandev.eepa.helper.glideImage
 import com.dhandev.eepa.ui.imageViewer.ImageViewerMateriActivity
@@ -24,6 +25,7 @@ class MateriTMQ : AppCompatActivity() {
     private lateinit var sharedPredLastRead : SharedPreferences
     var URL : String = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=medium"
     var URL2 = "https://cdn.mos.cms.futurecdn.net/7cvrrJxBe3N4Pfsv8q9oaM.jpg"
+    val urlVideo = "https://docs.google.com/uc?id=1w_KfnHhQ6UdWgKNAVXSzFaV_CoCV2Bbp"
     var page = 1
     var desc = "Large Hadron Collider (Penubruk Hadron Raksasa) adalah pemercepat partikel berenergi tinggi terbesar di dunia, fasilitas percobaan paling kompleks yang pernah dibangun, dan mesin tunggal terbesar di dunia."
     var desc2 = "Fasilitas-fasilitas yang ada di CERN terdiri dari LHC (Large Hadron Collider), SPS (Super Proton Synchrotron), PS (Proton Synchrotron), serta fasilitas masa depan dengan keliling 100 km"
@@ -94,7 +96,10 @@ class MateriTMQ : AppCompatActivity() {
 
             glideImage.load(this@MateriTMQ, URL, gambar)
             gambar.setOnClickListener {
-                openImageViewer(URL, desc)
+//                openImageViewer(URL, desc)
+                val intent = Intent(this@MateriTMQ, VideoPlayerActivity::class.java)
+                intent.putExtra("link", urlVideo)
+                startActivity(intent)
             }
 
             btnNext.setOnClickListener {

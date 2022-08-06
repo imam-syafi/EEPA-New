@@ -17,6 +17,7 @@ import me.saket.bettermovementmethod.BetterLinkMovementMethod
 
 class MateriTimeline : AppCompatActivity() {
     private lateinit var binding: ActivityMateriTimelineBinding
+    var listPenemu = mutableListOf<String>()
     var listItem = mutableListOf<String>()
     var listDesc = mutableListOf<CharSequence>()
     private lateinit var sharedPredLastRead : SharedPreferences
@@ -51,7 +52,8 @@ class MateriTimeline : AppCompatActivity() {
             it.layoutManager =LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
             listTittle()
             listDesc()
-            it.adapter = BaseAdapter(ArrayList(listItem), ArrayList(listDesc))
+            listPenemu()
+            it.adapter = BaseAdapter(this, ArrayList(listPenemu), ArrayList(listItem), ArrayList(listDesc))
             val colorPrimary = TypedValue()
             val theme: Resources.Theme = getTheme()
             theme.resolveAttribute(androidx.appcompat.R.attr.colorPrimary, colorPrimary, true)
@@ -65,6 +67,51 @@ class MateriTimeline : AppCompatActivity() {
             )
         }
 
+    }
+
+    private fun listPenemu() {
+        val item1 = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/JJ_Thomson_%28Nobel%29.jpg/220px-JJ_Thomson_%28Nobel%29.jpg"
+        val item2 = "https://lp2m.uma.ac.id/wp-content/uploads/2018/11/Albert-Einstein-jpg-385x385.jpg"
+        val item3 = "https://www.tentorku.com/wp-content/uploads/2015/08/Ernest-Rutherford.jpg"
+        val item4 = "https://www.aps.org/publications/apsnews/200705/images/chadwick_web.jpg"
+        val item5 = "https://www.nobelprize.org/images/anderson-13005-content-portrait-mobile-tiny.jpg"
+        val item6 = "https://history.aip.org/phn/Photos/anderson_herbert_c1_cropped.jpg"
+        val item7 = "https://collectionimages.npg.org.uk/std/mw227008/CF-Powell.jpg"
+        val item8 = "https://www.durham.ac.uk/media/durham-university/departments-/physics/major-lecture-series/George-Rochester.jpg"
+        val item9 = "https://sdm.uajy.ac.id/wp-content/uploads/2021/06/No_Image_Available.jpg"
+        val item10 = "https://upload.wikimedia.org/wikipedia/commons/6/69/Owen_Chamberlain.jpg"
+        val item11 = "https://assets-us-01.kc-usercontent.com/9dd25524-761a-000d-d79f-86a5086d4774/9ec278d3-438c-4185-9d15-862e820de519/reines1.jpg"
+        val item12 = "https://www.nobelprize.org/images/lederman-13406-portrait-small.jpg"
+        val item13 = "https://www.bnl.gov/science/images/facilities/nsls2.jpg"
+        val item14 = "https://history.aip.org/phn/Photos/perl_martin_a2.jpg"
+        val item15 = "https://cerncourier.com/wp-content/uploads/2021/10/2021-11-15-webinar-image.jpg"
+        val item16 = "https://www.desy.de/sites2009/site_www-desy/content/e141261/e158573/e158935/2017-03-20-XFEL_ger.jpg"
+        val item17 = "https://www.indiablooms.com/health_pic/2017/CERN-logo-1497376612.jpg"
+        val item18 = "https://cerncourier.com/wp-content/uploads/2021/10/2021-11-15-webinar-image.jpg"
+        val item19 = "http://mediaarchive.cern.ch/MediaArchive/Photo/Public/1990/9007366/9007366/9007366-A5-at-72-dpi.jpg"
+        val item20 = "https://cerncourier.com/wp-content/uploads/2021/10/2021-11-15-webinar-image.jpg"
+        val item21 = "https://cds.cern.ch/images/CERN-PHOTO-201802-030-10/file?size=small"
+        listPenemu.add(item1)
+        listPenemu.add(item2)
+        listPenemu.add(item3)
+        listPenemu.add(item4)
+        listPenemu.add(item5)
+        listPenemu.add(item6)
+        listPenemu.add(item7)
+        listPenemu.add(item8)
+        listPenemu.add(item9)
+        listPenemu.add(item10)
+        listPenemu.add(item11)
+        listPenemu.add(item12)
+        listPenemu.add(item13)
+        listPenemu.add(item14)
+        listPenemu.add(item15)
+        listPenemu.add(item16)
+        listPenemu.add(item17)
+        listPenemu.add(item18)
+        listPenemu.add(item19)
+        listPenemu.add(item20)
+        listPenemu.add(item21)
     }
 
     private fun listTittle() {

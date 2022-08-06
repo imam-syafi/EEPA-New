@@ -6,11 +6,12 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.dhandev.eepa.databinding.BaseListItemBinding
 import com.lriccardo.timelineview.TimelineAdapter
 import com.lriccardo.timelineview.TimelineView
 
-class BaseAdapter(val items: List<String>, val desc: List<CharSequence>) : RecyclerView.Adapter<BaseAdapter.BaseViewHolder>(), TimelineAdapter {
+class BaseAdapter(val context: Context, val penemu : List<String>, val items: List<String>, val desc: List<CharSequence>) : RecyclerView.Adapter<BaseAdapter.BaseViewHolder>(), TimelineAdapter {
 
     private var onItemClickCallback : OnItemClickCallback? = null
     lateinit var mContext: Context
@@ -27,19 +28,24 @@ class BaseAdapter(val items: List<String>, val desc: List<CharSequence>) : Recyc
     }
 
     inner class BaseViewHolder(val binding: BaseListItemBinding) :RecyclerView.ViewHolder(binding.root){
-        fun bind(items: String, desc: CharSequence){
+        fun bind(penemu: String, items: String, desc: CharSequence){
             binding.apply {
                 root.setOnClickListener {
-                    onItemClickCallback?.onItemClicked(items, desc)
+                    onItemClickCallback?.onItemClicked(penemu, items, desc)
                 }
             }
+            Glide.with(context)
+                .load(penemu)
+                .circleCrop()
+                .into(binding.penemu)
+            glideImage
             binding.title.text = items
             binding.desc.text = desc
         }
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        holder.bind(items[position], desc[position])
+        holder.bind(penemu[position], items[position], desc[position])
         holder.itemView.setOnClickListener {
 //            Toast.makeText(mContext, items[position], Toast.LENGTH_SHORT).show()
             when(holder.binding.title.text){
@@ -97,6 +103,6 @@ class BaseAdapter(val items: List<String>, val desc: List<CharSequence>) : Recyc
     }
 
     interface OnItemClickCallback{
-        fun onItemClicked(items: String, desc: CharSequence)
+        fun onItemClicked(penemu: String, items: String, desc: CharSequence)
     }
 }
